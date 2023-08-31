@@ -1,0 +1,2020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way To Master Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-python.min.js"></script>
+    <link rel="stylesheet" href="mainpage.css">
+    <link id="googleidentityservice" type="text/css" media="all" rel="stylesheet"
+        href="https://accounts.google.com/gsi/style">
+    <script src="https://cdn.cookielaw.org/scripttemplates/6.10.0/otBannerSdk.js" async=""
+        type="text/javascript"></script>
+
+    <style id="global-styles-inline-css" type="text/css">
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <style amp-custom="">
+        .author__block-image-wrap amp-img {
+            height: 100%;
+        }
+
+        figure amp-img img {
+            object-fit: cover;
+        }
+
+        .-mx-5 {
+            margin: 0 -20px;
+        }
+
+        .more-from-section>h2>amp-img {
+            height: 17px;
+            display: flex;
+        }
+
+        .more-from-section>h2>amp-img>img {
+            margin-left: 0;
+            width: 152px;
+            min-width: auto;
+        }
+    </style>
+    <style type="text/css" id="tts-styles">
+        [data-tts-block-id].tts-active {
+            background: rgba(206, 225, 255, 0.9) !important;
+        }
+
+        [data-tts-sentence-id].tts-active {
+            background: rgba(0, 89, 191, 0.7) !important;
+        }
+    </style>
+    <style>
+        /* Custom styling for the code block */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .backtick-text {
+            color: rgb(178, 99, 25);
+            margin-top: 1px;
+            font-size: 19px;
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var paragraphs = document.querySelectorAll('p'); // Select all <p> tags
+            paragraphs.forEach(function (paragraph) {
+                var text = paragraph.innerHTML;
+                var regex = /`([^`]+)`/g;
+                var styledText = text.replace(regex, '<span class="backtick-text">$1</span>');
+                paragraph.innerHTML = styledText;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="page">
+        <header id="masthead">
+            <div style="background-color: white;"
+                class="header-main headroom headroom--not-bottom headroom--pinned headroom--top">
+                <div class="container">
+                    <div class="flex items-center -mx-2">
+                        <div class="w-1/2 md:w-[20%] px-2">
+
+                            <a href="/">
+                                <img width="189" height="36" class="black-logo" src="logo-main.png" alt="">
+                                <img width="189" height="36" class="white-logo"
+                                    src="https://www.fisdom.com/wp-content/themes/theme/assets/img/fisdom-logo-white-text.svg"
+                                    alt="">
+                            </a>
+
+                        </div>
+
+
+                        <div class="w-full px-2">
+                            <div class="menu-main">
+                                <button id="hamburger" class="hamburger block xl:hidden ml-auto" fdprocessedid="flhd7f">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <ul class="nav-main items-center md:justify-end">
+
+
+                                    <li class="dropdown">
+                                        <a href="#">Products</a>
+
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/stocks.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Stocks
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/ipo.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        IPOs &amp; more
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/mutual-funds.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Mutual Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tax-filing.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Tax Filing
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/pension-funds-2.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Pension Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li><a href="index.html" target="_blank">Main Page</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Resources</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/research_icon.svg"
+                                                            alt="" style="width:auto;">
+                                                    </div>
+                                                    <span>
+                                                        Research
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#" target="_blank">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/learn.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        One Percent Academy
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/blogs.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Blogs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tools.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Calculators
+                                                    </span>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Company</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/fisdom-icon.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        About us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/careers.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Careers
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/contact.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Contact us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/partner.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Become a partner
+                                                    </span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" class="button button-secondary button-small">Login</a></li>
+                                    <li><a href="#" class="button  button-small">Download app</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-height" style="height: 92px;"></div>
+        </header>
+    </div>
+    <div style="margin-top: -60px;" id="header-root-vue">
+
+        <div id="root-app" class="flex flex-col min-h-screen" style="padding-top: 0px;">
+
+            <!--Main Page Starts here-->
+            <div id="default-page-vue-root" class="break-word">
+                <div class="main-container px-5 xl:px-0 article-link-wrapper">
+                    <div class="row ">
+                        <div class="w-full md:w-3/4 md:pr-30px main-content-wrapper mt-5">
+                            <div class="content-wrapper post-title-wrapper relative">
+                                <h1
+                                    class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                    Full Python in One Page
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right-rail-present">
+                        <div id="main-content__wrapper"
+                            class="w-full md:w-3/4 md:pr-30px main-content-wrapper relative ">
+                            <div class="content-wrapper article__content wysiwyg-content my-3 link__tracking">
+                                <div class="featured-img mb-3">
+                                    <figure class="w-full">
+                                        <div class="featured-img-container"><img
+                                                src="https://www.techrepublic.com/wp-content/uploads/2021/02/programming-coding.jpg?x71350"
+                                                alt="Featured Image" class="w-full"></div>
+                                        <figcaption class="capitalize"></figcaption>
+                                    </figure>
+                                </div>
+                                <div id="article-content__marker" class="article__content">
+                                    <p>Welcome to the world of programming with Python! Python is a versatile and
+                                        beginner-friendly programming language that has gained immense popularity due to
+                                        its simplicity and readability. In this section, we'll explore the basics of
+                                        Python and understand why it's a great choice for beginners.
+
+                                    </p>
+                                    <h2>What is Python?</h2>
+                                    <p>Python is an interpreted, high-level programming language that emphasizes code
+                                        readability and clear syntax. It was created by Guido van Rossum and first
+                                        released in 1991. Python is widely used for various purposes, including web
+                                        development, data analysis, scientific computing, and automation.</p>
+                                    <h2>Why Choose Python?</h2>
+                                    <p>Easy to Learn: Python's syntax is straightforward and resembles English, making
+                                        it ideal for beginners.</p>
+                                    <p>Readability: Python's code structure enforces indentation, enhancing code
+                                        readability and reducing common errors.</p>
+                                    <p>Versatile: Python can be used for web development, scientific computing, data
+                                        analysis, artificial intelligence, and more.</p>
+                                    <p>Large Community: A vast community of developers means ample resources, libraries,
+                                        and support.</p>
+                                    <p>Cross-Platform: Python is available on multiple platforms, including Windows,
+                                        macOS, and Linux.</p>
+
+                                    <h2>Is we can make AI with the help of Python? If yes, How?</h2>
+                                    <p><strong>Yes</strong>, you can definitely create <strong>AI</strong> (Artificial
+                                        Intelligence) applications using
+                                        Python. Python is one of the <strong>most popular and widely used</strong>
+                                        programming languages
+                                        for AI and machine learning due to its simplicity, rich libraries, and strong
+                                        community support. Here's how you can create AI with the help of Python:</p>
+                                    <p><strong>Choose Your AI Domain</strong>:
+                                        Decide what aspect of AI you want to work on. AI encompasses various fields such
+                                        as machine learning, deep learning, natural language processing, computer
+                                        vision, and more. Depending on your interest, you can choose the domain that
+                                        aligns with your goals.</p>
+                                    <p><strong>Learn Python</strong>:
+                                        If you're new to Python, start by learning the basics of the language.
+                                        Familiarize yourself with syntax, data structures, control statements, and
+                                        functions. This foundational knowledge is crucial for building AI applications.
+                                    </p>
+                                    <p><strong>Understand AI Concepts</strong>:
+                                        Before diving into coding, it's essential to understand the underlying concepts
+                                        of AI. Learn about algorithms, data preprocessing, feature engineering, neural
+                                        networks, and other fundamental AI principles.</p>
+                                    <p><strong>Use Libraries and Frameworks</strong>:
+                                        Python offers a variety of libraries and frameworks that simplify AI
+                                        development. Some <strong>popular libraries</strong> for <strong>AI</strong> and
+                                        <strong>Machine Learning</strong> include:
+                                        <br>
+                                        NumPy: For numerical computations.<br>
+                                        Pandas: For data manipulation and analysis.<br>
+                                        Scikit-learn: For machine learning algorithms.<br>
+                                        TensorFlow and PyTorch: For deep learning and neural networks.<br>
+                                        NLTK and SpaCy: For natural language processing tasks.<br>
+                                        OpenCV: For computer vision tasks.
+                                    </p>
+                                    <p><strong>Data Collection and Preparation</strong>:
+                                        AI models require data for training. Gather and preprocess data relevant to your
+                                        AI project. Clean the data, handle missing values, and perform any necessary
+                                        transformations.</p>
+                                    <p><strong>Choose an AI Approach</strong>:
+                                        Depending on your project's goals, decide whether you need to use traditional
+                                        machine learning algorithms, deep learning models, reinforcement learning, or
+                                        other AI techniques.</p>
+                                    <p><strong>Train and Evaluate Models</strong>:
+                                        Use the selected libraries to build and train your AI models. For example, if
+                                        you're working on image recognition, you can use pre-trained models like VGG,
+                                        ResNet, or Inception. Train the model on your data and evaluate its performance
+                                        using metrics.</p>
+                                    <p><strong>Fine-Tune and Optimize</strong>:
+                                        Experiment with hyperparameters, architecture choices, and optimization
+                                        techniques to improve your model's performance. This iterative process is
+                                        crucial for achieving better results.</p>
+                                    <p><strong>Deploy the Model</strong>:
+                                        Once you're satisfied with your AI model's performance, deploy it for real-world
+                                        applications. This could involve integrating the model into a web or mobile
+                                        application or embedding it in other systems.</p>
+                                    <p><strong>Continuous Learning and Improvement</strong>:
+                                        The field of AI is rapidly evolving. Stay updated with the latest research,
+                                        techniques, and advancements to continuously improve your AI applications.</p>
+                                    <p style="color: red;font-size: 20px;">Remember that creating AI applications is a
+                                        journey that requires learning,
+                                        experimentation, and persistence. Start with small projects and gradually work
+                                        your way up to more complex tasks as you build your expertise.</p>
+
+                                    <h2>Python Is Very Easy To Learn</h2>
+                                    <p>"Embarking on your journey to learn Python is a bold and exciting step towards
+                                        unlocking a world of possibilities. Remember, every coding journey starts with a
+                                        single line of code. Just like learning any new skill, it's completely okay to
+                                        start as a beginner. Python, known for its simplicity and readability, is the
+                                        perfect language for you to dive into the realm of programming.
+                                        <br><br>
+                                        At first, it might feel like a challenge, but remember that every expert was
+                                        once a beginner. Don't be afraid of making mistakes – they are the stepping
+                                        stones to mastering Python. The joy of coding comes from turning challenges into
+                                        victories, one problem at a time.
+                                        <br><br>
+                                        Python's supportive community and vast resources are here to guide you. With
+                                        dedication and practice, you'll soon find yourself creating programs, solving
+                                        problems, and even building exciting projects. And remember, every 'Hello,
+                                        World!' is a reminder of your progress and the limitless potential you hold.
+                                        <br><br>
+                                        Coding is not just about writing lines of text; it's about expressing your
+                                        creativity, solving real-world problems, and shaping the future. Embrace the
+                                        process, be patient with yourself, and celebrate every milestone – no matter how
+                                        small.
+                                        <br><br>
+                                        So, let go of any doubts or fears. Dive into Python with enthusiasm and an open
+                                        mind. Each line of code you write brings you closer to becoming a confident
+                                        programmer. Believe in yourself, because you have the power to turn your coding
+                                        dreams into reality. Your journey has just begun, and every challenge is an
+                                        opportunity to learn and grow. You've got this!"
+                                    </p>
+                                    <h2>let's write your first Python program</h2>
+                                    <p>Absolutely, let's write your first Python program! The traditional "Hello,
+                                        World!" program is a great way to start. It's a simple program that prints the
+                                        phrase "Hello, World!" on the screen. Here's how you can do it:</p>
+                                    <p>Create Python.py file</p>
+                                    <pre><code class="language-python">print("Hello, World!")</code></pre>
+                                    <p>To run this program, follow these steps: <br><br>
+                                        1.Open the vs code, Python must be Installed<br>
+                                        2.Install Code runner from extensions<br>
+                                        3.Click on the run icon at the Top<br>
+                                        4.You will see the Output
+                                    </p>
+
+                                    <h2>Now, We will start from what is keyword</h2>
+                                    <p>Keywords, also known as reserved words, are special words in Python that have
+                                        predefined meanings and cannot be used for naming variables, functions, or other
+                                        identifiers. These words are an integral part of the Python language and serve
+                                        specific purposes in the code's structure and logic.</p>
+
+                                    <p>Python has a set of keywords that are reserved for specific tasks. Some of the
+                                        most common keywords include: <br>
+                                        <strong>if, else, elif</strong>: Used for conditional branching in control
+                                        structures. <br>
+                                        <strong>while</strong>: Used for creating loops that execute while a condition
+                                        is true.<br>
+                                        <strong>for</strong>: Used for iterating over sequences (like lists, tuples, and
+                                        strings).<br>
+                                        <strong>def</strong>: Used for defining user-defined functions.<br>
+                                        <strong>return</strong>: Used to specify the return value of a function.<br>
+                                        <strong>import</strong>: Used to import modules and libraries into your
+                                        code.<br>
+                                        <strong>class</strong>: Used to define classes in object-oriented
+                                        programming.<br>
+                                        <strong>True, False, None</strong>: Used to represent Boolean values and the
+                                        absence of a value.<br>
+                                        <strong>and, or, not</strong>: Used for logical operations.<br>
+                                        <strong>in, is</strong>: Used for membership testing and identity testing.<br>
+                                        <strong> try, except, finally</strong>: Used for error handling and exception
+                                        handling.
+                                    </p>
+
+
+                                    <p>Here are a few examples demonstrating the use of keywords:</p>
+                                    <pre><code class="language-python"># Conditional statement
+if x > 10:
+    print("x is greater than 10")
+else:
+    print("x is not greater than 10")
+
+# Looping
+for i in range(5):
+    print(i)
+
+# Defining a function
+def greet(name):
+    return "Hello, " + name
+
+# Importing a module
+import math
+
+# Creating a class
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+</code></pre>
+                                    <p>Above code contains many things with Keywords. So, We will cover them below Just
+                                        Follow us.</p>
+                                    <p>Keywords are case-sensitive, so make sure to use lowercase when writing them.</p>
+                                    <p>Avoid using keywords as variable or function names to prevent conflicts and
+                                        errors.</p>
+                                    <p><strong>Conclusion:</strong>Keywords are fundamental components of the Python
+                                        language that play a crucial role in defining the structure, behavior, and logic
+                                        of your code. Understanding and correctly using keywords is essential for
+                                        writing effective and functional Python programs.</p>
+
+                                    <p>Here's a simple code snippet that demonstrates the use of some common keywords in
+                                        Python:</p>
+                                    <pre><code class="language-python"># Using if-else to check a condition
+age = 18
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are not yet an adult.")
+
+# Using for loop to iterate over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Defining and calling a function
+def add_numbers(a, b):
+    return a + b
+
+result = add_numbers(5, 7)
+print("The result of addition:", result)
+
+# Using in keyword for membership testing
+numbers = [1, 2, 3, 4, 5]
+if 3 in numbers:
+    print("3 is in the list.")
+
+# Using import to include a module
+import math
+print("Square root of 16:", math.sqrt(16))
+</code></pre>
+                                    <p>In this code, we've used keywords like <strong>if, else, for, def, in</strong>,
+                                        and <strong>import</strong> to
+                                        perform various tasks. Running this code will help beginners see these keywords
+                                        in action and understand how they contribute to the functionality of the
+                                        program.</p>
+                                    <h2>Understanding Identifiers in Python</h2>
+                                    <p>In Python, identifiers are names used to identify variables, functions, classes,
+                                        modules, or other objects. These names are essential for creating and
+                                        referencing different elements in your code. Understanding how to name
+                                        identifiers correctly is crucial for writing clean and readable Python programs.
+                                    </p>
+                                    <p><strong>Rules for Naming Identifiers:</strong></p>
+                                    <p>Python has specific rules and conventions for naming identifiers: <br>
+                                        1.Identifiers must start with a letter (a-z, A-Z) or an underscore (_). <br>
+                                        2.The rest of the identifier can include letters, underscores, and digits (0-9).
+                                        <br>
+                                        3.Identifiers are case-sensitive, so myVariable and myvariable are different
+                                        identifiers.<br>
+                                        4.Avoid using reserved words (keywords) as identifiers.<br>
+                                        5.Make identifiers descriptive and meaningful for better code readability.<br>
+                                        6.Use lowercase letters for variable and function names (my_variable,
+                                        calculate_area).<br>
+                                        7.Use CamelCase for class names (MyClass, EmployeeDetails).<br>
+                                        8.Leading underscores (_) indicate a private variable or function.<br>
+                                        9.Double underscores (__) at the beginning of identifiers are used for name
+                                        mangling in classes.
+                                    </p>
+                                    <p>Here are some examples of identifiers following the naming rules:</p>
+                                    <pre><code class="language-python"># Valid identifiers
+name = "Alice"
+_age = 25
+total_amount = 1000.50
+MyClass = "This is a class"
+
+# Invalid identifiers
+123abc = "Invalid"  # Starts with a digit
+my-variable = 5     # Contains a hyphen
+if = 10             # Uses a reserved keyword</code></pre>
+                                    <p><strong>Best Practices:</strong></p>
+                                    <p>Choose meaningful and descriptive names for identifiers to enhance code clarity.
+                                        <br>
+                                        - Follow naming conventions, such as using lowercase for variables and
+                                        functions, and CamelCase for classes. <br>
+                                        - Avoid using single characters or excessively long identifiers. <br>
+                                        - Use comments to explain the purpose of complex identifiers.
+                                    </p>
+                                    <p><strong>Conclusion</strong>:
+                                        Identifiers are essential for naming various elements in Python programs. By
+                                        adhering to the naming rules and best practices, you can create code that is
+                                        easier to read, understand, and maintain.</p>
+                                    <p>Here are some more examples of invalid identifiers in Python:</p>
+                                    <pre><code class="language-python"># Invalid identifiers
+1variable = "Invalid"    # Starts with a digit
+my-variable = 5          # Contains a hyphen
+my variable = 10         # Contains a space
+my-variable = 7          # Contains a hyphen
+$price = 50              # Starts with a special character
+if = "Keyword"           # Uses a reserved keyword
+my_variable! = 20        # Contains an exclamation mark
+    
+</code></pre>
+                                    <p>These examples demonstrate identifiers that violate Python's naming rules and
+                                        conventions. Identifiers need to adhere to the rules mentioned earlier, such as
+                                        starting with a letter or underscore, avoiding special characters (except
+                                        underscores), and not using reserved keywords as identifiers.</p>
+                                    <h2>Python Literals, Operators, and Punctuators</h2>
+                                    <p>Certainly! Let's dive into the topic of literals and values in Python, covering
+                                        different types of literals such as strings, numeric literals, floating-point
+                                        literals, boolean literals, and the special literal None. We'll also touch upon
+                                        operators and punctuators, providing examples for each.</p>
+                                    <p>1. <strong>String Literals</strong>:
+                                        Strings are sequences of characters enclosed in single (' ') or double (" ")
+                                        quotes. They can contain letters, digits, symbols, and even escape sequences.
+                                    </p>
+                                    <pre><code class="language-python">name = "Alice"
+message = 'Hello, world!'
+escaped_string = "This is an example of an escape sequence: \\n"
+</code></pre>
+                                    <p>2.<strong> Numeric Literals</strong>:
+                                        Numeric literals can be integers or floating-point numbers.</p>
+                                    <pre><code class="language-python">integer_number = 42
+negative_integer = -10
+hexadecimal_number = 0x1A   # Hexadecimal literal
+binary_number = 0b101010   # Binary literal
+</code></pre>
+                                    <p>3. <strong>Floating-Point Literals</strong>:
+                                        Floating-point literals represent real numbers with a decimal point or in
+                                        exponential form.</p>
+                                    <pre><code class="language-python">float_number = 3.14
+exponential_notation = 2.5e2  # Equivalent to 2.5 * 10^2
+</code></pre>
+                                    <p>4. <strong>Boolean Literals</strong>:
+                                        Boolean literals represent truth values, either True or False.</p>
+                                    <pre><code class="language-python">is_true = True
+is_false = False
+</code></pre>
+                                    <p>5. <strong>Special Literal: None</strong>:
+                                        None is a special literal representing the absence of a value or a null value.
+                                    </p>
+                                    <pre><code class="language-python">no_value = None
+</code></pre>
+                                    <p>6.<strong> Operators</strong>:
+
+                                        Python supports various operators for performing operations on variables and
+                                        values.</p>
+                                    <pre><code class="language-python"># Arithmetic operators
+addition = 5 + 3
+subtraction = 10 - 4
+multiplication = 6 * 2
+division = 15 / 3
+
+# Comparison operators
+is_equal = 7 == 7
+not_equal = 5 != 9
+greater_than = 8 > 5
+less_than = 3 < 10
+
+# Logical operators
+logical_and = True and False
+logical_or = True or False
+logical_not = not True
+
+# Assignment operator
+x = 5
+
+# String concatenation
+greeting = "Hello, " + "world!"
+
+# Membership operator
+is_in_list = 3 in [1, 2, 3, 4, 5]
+</code></pre>
+                                    <p>7.<strong> Punctuators</strong>:
+
+                                        Punctuators are symbols used for syntax and structure in Python code.</p>
+                                    <pre><code class="language-python">parentheses = (x + 2)
+square_brackets = [1, 2, 3]
+curly_braces = {"key": "value"}
+comma = 1, 2, 3
+colon = 5 : 10
+semicolon = print("Hello"); print("World")
+</code></pre>
+                                    <p><strong>Conclusion</strong>:
+
+                                        Literals, operators, and punctuators are fundamental components of Python
+                                        programming that allow you to work with values, perform operations, and
+                                        structure your code effectively. Understanding how to use these elements is
+                                        crucial for building functional and expressive Python programs.</p>
+
+
+
+
+                                </div>
+                            </div>
+                            <div
+                                class="article__editors-note article__editors-note-bottom p-2 my-3 text-xs tracking-tight font-work-sans w-full bg-f8f8f8">
+                                Absolutely, we are thrilled to offer you a Python course that stands out from the rest,
+                                and the best part is—it's completely free! Our commitment is to provide you with a
+                                learning experience that goes beyond the ordinary, empowering you to become a proficient
+                                Python programmer while working on real-world projects.<br><br>
+                                <h6 style="font-size: 15px; color: black;">Why Choose Our Python Course?</h6><br>
+                                At our platform, we believe in delivering quality education that makes a difference.
+                                Here's what sets our Python course apart:
+                                <br><br>
+                                Comprehensive Learning: Our course is carefully designed to take you from a beginner to
+                                a confident Python programmer. We cover a wide range of topics, ensuring you have a
+                                solid understanding of the language.
+                                <br><br>
+                                Project-Based Approach: Learning by doing is the most effective way to grasp concepts.
+                                Our course includes hands-on projects that let you apply your knowledge and build
+                                practical skills.
+                                <br><br>
+                                Expert Guidance: Our experienced instructors are passionate about teaching and are here
+                                to guide you every step of the way. Get answers to your questions, clear doubts, and
+                                receive valuable insights.
+                                <br><br>
+                                Interactive Learning: Engaging quizzes, coding challenges, and interactive exercises
+                                make your learning journey enjoyable and effective.
+                                <br><br>
+                                Real-World Relevance: We emphasize real-world applications of Python. You'll learn how
+                                Python is used in data analysis, web development, automation, and more.
+                            </div>
+
+                            <div class="article-sharing"><a href="#"
+                                    class="article-sharing__link article-sharing__link--facebook" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--twitter" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--linkdin" target="_blank"
+                                    rel="noopener"></a></div>
+                        </div>
+
+                        <!-- Sidebar-Wrapper Starts Here-->
+                        <div class="sidebar-wrapper w-full md:w-1/4 right-rail">
+                            <div id="right-rail__content" class="right-rail-content">
+                                <div class="best-of-content">
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="https://i.ytimg.com/vi/AxBOzm6v3bg/maxresdefault.jpg" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">Keywords are reserved words in a programming language that have predefined meanings and purposes. These words are used to perform specific tasks or operations within the language. In Python, keywords are used to define syntax rules and structure the code. You cannot use keywords as identifiers (such as variable names, function names, class names, etc.) because they have predefined meanings in the language.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Identifiers</p>
+                                            </div>
+                                            <img src="https://studyopedia.com/wp-content/uploads/2022/08/Python-Identifiers-300x242.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">In Python, an identifier is a name used to identify a variable, function, class, module, or other user-defined objects. Identifiers are essential for naming and referencing these entities in your code.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--
+                                         <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">Basics</div>
+                                            <ul class="boc__items">
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-equity-shares/"
+                                                        title="What Are Equity Shares" target="_blank"
+                                                        class="boc__item-link">What Are Equity Shares</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-a-mutual-fund-and-how-does-it-work/"
+                                                        title="What Is A Mutual Fund" target="_blank"
+                                                        class="boc__item-link">What Is A Mutual Fund</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-invits-and-how-do-they-work/"
+                                                        title="What Are InvITs" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Are InvITs</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-liquid-funds/"
+                                                        title="What Are Liquid Funds" target="_blank"
+                                                        class="boc__item-link">What Are Liquid Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-demat-account/"
+                                                        title="What Is A Demat Account" target="_blank"
+                                                        class="boc__item-link">What Is A Demat Account</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-elss-funds-and-how-do-they-work/"
+                                                        title="What Are ELSS Funds" target="_blank"
+                                                        class="boc__item-link">What Are ELSS Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-blockchain/"
+                                                        title="What Is Blockchain" target="_blank"
+                                                        class="boc__item-link">What Is Blockchain</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-cryptocurrency-and-how-does-it-work/"
+                                                        title="What Is Cryptocurrency" target="_blank"
+                                                        class="boc__item-link">What Is Cryptocurrency</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-an-nft-how-do-nfts-work/"
+                                                        title="What Is An NFT" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Is An NFT</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-index-funds-and-how-do-they-work/"
+                                                        title="What Are Index Funds" target="_blank"
+                                                        class="boc__item-link">What Are Index Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/blue-chip-stocks/"
+                                                        title="What Are Debt Mutual Funds" target="_blank"
+                                                        class="boc__item-link">What Are Debt Mutual Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-pe-price-earnings-ratio/"
+                                                        title="What Are Blue Chip Stocks" target="_blank"
+                                                        class="boc__item-link">What Are Blue Chip Stocks</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/gilt-funds/"
+                                                        title="Gilt Funds" target="_blank" class="boc__item-link">Gilt
+                                                        Funds</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--More from Advisors Starts Here-->
+            <section class="more-from-section-wrapper">
+                <div class="more-from-section px-15px mx-auto pb-5">
+                    <h2 class="font-merriweather font-bold leading-6 text-black py-30px flex items-baseline"><span
+                            class="flex-shrink-0">More from Advisors&nbsp;</span></h2>
+                    <ul class="more-for-grid flex flex-wrap">
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-option-trading-strategies/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg"
+                                    title="17 Best Option Trading Strategies You Should Know"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">17 Best Option Trading Strategies You Should
+                                        Know</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/alternative-to-fixed-deposit/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg"
+                                    title="8 Best Alternatives To Fixed Deposits In India"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">8 Best Alternatives To Fixed Deposits In
+                                        India</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/how-to-invest-in-ai/" target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">How To Invest In AI</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg"
+                                            title="Nikita Tambe"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Nikita Tambe</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-highest-dividend-paying-stocks/"
+                                target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">20 Highest Dividend Paying Stocks In
+                                        India 2023</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+        <div id="bottom__marker"></div>
+
+        <!--         <div class="main-form-container">
+            <div class="form-container" id="problem-form">
+                <form>
+                    <label for="name">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="problem">Problem:</label>
+                    <textarea id="problem" name="problem" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <p class="success-message" id="success-message"></p>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("#problem-form form");
+                const successMessage = document.querySelector("#success-message");
+    
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent form submission
+    
+                    // Here you can add logic to handle form submission and show success message
+                    // For now, let's just show a success message
+                    successMessage.textContent = "Problem submitted successfully!";
+                });
+            });
+        </script>-->
+        <!--Fotter Starts Here-->
+        <footer class="shared-footer">
+            <div class="row-inner">
+                <div style="margin-top: 0px;" class="footer-logo">
+                    <a style="margin-top: 15px;" href="#" class="logo logo-footer inline-block">
+                        <img width="100px" width="100px" src="logo.webp" alt="logo">
+                    </a>
+                    <span class="copy">© 2023 The One. All Rights Reserved.</span>
+                    <div class="flex justify-center mt-5">
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Facebook_f_logo_(2021).svg.webp" alt="Facebook">
+                            </a>
+                        </span>
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Logo_of_Twitter.svg.webp" alt="Twitter">
+                            </a>
+                        </span>
+                        <span class="cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="1200px-Linkedin.svg.png" alt="LinkedIn">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-links-wrapper">
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">AdChoices</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Statement</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Press Room</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">of the Day</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <footer>
+        <div class="row2">
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Contact Us</a></li>
+
+                    <li><a href="#">About Us</a></li>
+
+                    <li><a href="#">Careers</a></li>
+
+                    <li><a href="#">Media &amp; Press</a></li>
+
+                    <li><a href="#">User Reviews</a></li>
+
+                    <li><a href="#">TaxCloud India</a></li>
+
+                    <li><a href="#">ClearTDS</a></li>
+
+                    <li><a href="#">Engineering Blogs</a></li>
+
+                    <li><a href="#">FinTech Glossary</a></li>
+
+                    <li><a href="#">Download
+                            Clear Khata App</a></li>
+
+                    <li><a href="#">Download
+                            ClearTax Pro</a></li>
+
+                    <li><a href="#"> Download Black App</a></li>
+
+                    <li><a href="#">ClearTax Chronicles</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">File Income Tax
+                        Return</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Income Tax</a></li>
+
+                    <li><a href="#">Efiling Income
+                            Tax</a></li>
+
+                    <li><a href="#">Secion 80 Deductions</a></li>
+
+                    <li><a href="#">Income Tax for NRI</a></li>
+
+                    <li><a href="#">Capital Gains Income</a>
+                    </li>
+
+                    <li><a href="#">House Property</a></li>
+
+                    <li><a href="#">Income Tax
+                            Verification</a></li>
+
+                    <li><a href="#">How to efile ITR</a></li>
+
+                    <li><a href="#">Income Tax Refund status</a>
+                    </li>
+
+                    <li><a href="#">File TDS Returns</a></li>
+
+                    <li><a href="#">ITR</a></li>
+
+                    <li><a href="#">File TDS Returns</a></li>
+
+                    <li><a href="#">Income Tax Slabs</a></li>
+
+                    <li><a href="#">Form
+                            26AS</a></li>
+
+                    <li><a href="#">What is Form 16</a></li>
+
+                    <li><a href="#">Salary Income</a></li>
+
+                    <li><a href="#">How to File TDS Returns</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">GST</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">GST Software</a></li>
+
+                    <li><a href="#">New GST Returns</a></li>
+
+                    <li><a href="#">E-Invoicing</a>
+                    </li>
+
+                    <li><a href="#">E-Invoicing
+                            Software</a></li>
+
+                    <li><a href="#">Input Tax Credit</a></li>
+
+                    <li><a href="#">GST Returns</a></li>
+
+                    <li><a href="#">GST Invoice</a></li>
+
+                    <li><a href="#">GST Services</a></li>
+
+                    <li><a href="#">GST Training</a></li>
+
+                    <li><a href="#">GST Calendar</a></li>
+
+                    <li><a href="#">GST News</a></li>
+
+                    <li><a href="#">GST Guide</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">Tax Tools by ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Income Tax Calculator</a>
+                    </li>
+
+                    <li><a href="#">GST Calculator</a></li>
+
+                    <li><a href="#">HRA Calculator</a></li>
+
+                    <li><a href="#">Find HSN Code</a></li>
+
+                    <li><a href="#">SIP Calculator</a></li>
+
+                    <li><a href="#">Mutual fund
+                            Calculator</a></li>
+
+                    <li><a href="#">NPS Calculator</a></li>
+
+                    <li><a href="#">GST Number Search</a></li>
+
+                    <li><a href="#">EMI Calculator</a></li>
+
+                    <li><a href="#">PPF calculator</a></li>
+
+                    <li><a href="#">FD calculator</a></li>
+
+                    <li><a href="#">RD calculator</a></li>
+
+                    <li><a href="#">Home Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="#">Interest
+                            Calculator</a></li>
+
+                    <li><a href="#">Gratuity Calculator</a>
+                    </li>
+
+                    <li><a href="#">Personal Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="#">Car loan emi calculator</a></li>
+
+                    <li><a href="#">PF Calculator</a></li>
+
+                    <li><a href="#">Salary Calculator</a></li>
+
+                    <li><a href="#">CAGR Calculator</a></li>
+
+                    <li><a href="#">Generate Rent Receipts</a></li>
+
+                    <li><a href="#">IFSC Code Search</a></li>
+
+                    <li><a href="#">Gold Rates Today</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    Generic Topics
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">How to Link Aadhaar
+                            card to PAN</a></li>
+
+                    <li><a href="#">UIDAI</a></li>
+
+                    <li><a href="#">Pan Card Status</a></li>
+
+                    <li><a href="#">Aadhar card</a></li>
+
+                    <li><a href="#">EPFO</a></li>
+
+                    <li><a href="#">UAN</a></li>
+
+                    <li><a href="#">EPF Withdrawal</a></li>
+
+                    <li><a href="#">Voter ID</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">ClearTax Investment</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Mutual Funds</a></li>
+
+                    <li><a href="#">ELSS Funds</a></li>
+
+                    <li><a href="#">SIP</a></li>
+
+                    <li><a href="#">Types of Mutual Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Mutual funds</a></li>
+
+                    <li><a href="#">Best ELSS Funds</a></li>
+
+                    <li><a href="#">Best Debt Funds</a></li>
+
+                    <li><a href="#">Best Liquid Funds</a></li>
+
+                    <li><a href="#">Best SIP Plans</a>
+                    </li>
+
+                    <li><a href="#">Best Midcap Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Large Cap
+                            Funds</a></li>
+
+                    <li><a href="#">Best Multi Cap Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Small Cap
+                            Funds</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#"> ClearTax Business</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Tax Filing for
+                            Professionals</a></li>
+
+                    <li><a href="#">Tax Filing for Traders</a>
+                    </li>
+
+                    <li><a href="#">Trademark
+                            Registration</a></li>
+
+                    <li><a href="#">Company Registration</a>
+                    </li>
+
+                    <li><a href="#">Services for Businesses</a>
+                    </li>
+
+                    <li><a href="#">Launch your
+                            Business</a></li>
+
+                    <li><a href="#">Guide
+                            for Business &amp;amp; Professional</a></li>
+
+                    <li><a href="#">TDS Returns</a></li>
+
+                    <li><a href="#">Expert Assisted Tax Filing</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.menu-main');
+
+        const toggleNav = () => {
+            mainNav.classList.toggle('open');
+        };
+
+        hamburger.addEventListener('click', toggleNav);
+
+        const dropdown = document.querySelectorAll('.dropdown');
+
+        Array.from(dropdown).forEach((drop) => {
+            drop.addEventListener('click', () => {
+                dropdown.forEach((d) => {
+                    if (d !== drop) {
+                        d.classList.remove('open');
+                    }
+                });
+                drop.classList.toggle('open');
+            });
+        });
+
+        // hide header on scroll
+
+        // grab an element
+        const header = document.querySelector('.header-main');
+        // construct an instance of Headroom, passing the element
+        const headroom = new Headroom(header);
+        // initialise
+        headroom.init();
+    </script>
+
+</body>
+
+</html>

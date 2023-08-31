@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     .backtick-text {
+          color: rgb(208, 22, 167);
+          margin-top: 1px;
+          font-size: 13px;
+          font-family: 'Kanit', sans-serif;
+     }
+</style>
+<script>
+     window.addEventListener('DOMContentLoaded', function () {
+          var paragraphs = document.querySelectorAll('p'); // Select all <p> tags
+          paragraphs.forEach(function (paragraph) {
+               var text = paragraph.innerHTML;
+               var regex = /`([^`]+)`/g;
+               var styledText = text.replace(regex, '<span class="backtick-text">$1</span>');
+               paragraph.innerHTML = styledText;
+          });
+     });
+</script>
+</head>
+<body>
+     <p>
+          This is a sample paragraph with some `highlighted text` using backticks.
+     </p>
+     <p>
+          Another paragraph with `more highlighted text`.
+     </p>
+</body>
+</html>

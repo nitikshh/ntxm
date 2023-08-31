@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Way To Master Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-python.min.js"></script>
+    <link rel="stylesheet" href="mainpage.css">
+    <link id="googleidentityservice" type="text/css" media="all" rel="stylesheet"
+        href="https://accounts.google.com/gsi/style">
+    <script src="https://cdn.cookielaw.org/scripttemplates/6.10.0/otBannerSdk.js" async=""
+        type="text/javascript"></script>
+
+    <style id="global-styles-inline-css" type="text/css">
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <style amp-custom="">
+        .author__block-image-wrap amp-img {
+            height: 100%;
+        }
+
+        figure amp-img img {
+            object-fit: cover;
+        }
+
+        .-mx-5 {
+            margin: 0 -20px;
+        }
+
+        .more-from-section>h2>amp-img {
+            height: 17px;
+            display: flex;
+        }
+
+        .more-from-section>h2>amp-img>img {
+            margin-left: 0;
+            width: 152px;
+            min-width: auto;
+        }
+    </style>
+    <style type="text/css" id="tts-styles">
+        [data-tts-block-id].tts-active {
+            background: rgba(206, 225, 255, 0.9) !important;
+        }
+
+        [data-tts-sentence-id].tts-active {
+            background: rgba(0, 89, 191, 0.7) !important;
+        }
+    </style>
+    <style>
+        /* Custom styling for the code block */
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .backtick-text {
+            color: rgb(178, 99, 25);
+            margin-top: 1px;
+            font-size: 19px;
+            font-family: 'Kanit', sans-serif;
+        }
+    </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var paragraphs = document.querySelectorAll('p'); // Select all <p> tags
+            paragraphs.forEach(function (paragraph) {
+                var text = paragraph.innerHTML;
+                var regex = /`([^`]+)`/g;
+                var styledText = text.replace(regex, '<span class="backtick-text">$1</span>');
+                paragraph.innerHTML = styledText;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="page">
+        <header id="masthead">
+            <div style="background-color: white;"
+                class="header-main headroom headroom--not-bottom headroom--pinned headroom--top">
+                <div class="container">
+                    <div class="flex items-center -mx-2">
+                        <div class="w-1/2 md:w-[20%] px-2">
+
+                            <a href="/">
+                                <img width="189" height="36" class="black-logo" src="logo-main.png" alt="">
+                                <img width="189" height="36" class="white-logo"
+                                    src="https://www.fisdom.com/wp-content/themes/theme/assets/img/fisdom-logo-white-text.svg"
+                                    alt="">
+                            </a>
+
+                        </div>
+
+
+                        <div class="w-full px-2">
+                            <div class="menu-main">
+                                <button id="hamburger" class="hamburger block xl:hidden ml-auto" fdprocessedid="flhd7f">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <ul class="nav-main items-center md:justify-end">
+
+
+                                    <li class="dropdown">
+                                        <a href="#">Products</a>
+
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/stocks.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Stocks
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/ipo.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        IPOs &amp; more
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/mutual-funds.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Mutual Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tax-filing.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Tax Filing
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/pension-funds-2.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Pension Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li><a href="index.html" target="_blank">Main Page</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Resources</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/research_icon.svg"
+                                                            alt="" style="width:auto;">
+                                                    </div>
+                                                    <span>
+                                                        Research
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#" target="_blank">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/learn.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        One Percent Academy
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/blogs.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Blogs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tools.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Calculators
+                                                    </span>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Company</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/fisdom-icon.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        About us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/careers.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Careers
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/contact.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Contact us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/partner.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Become a partner
+                                                    </span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" class="button button-secondary button-small">Login</a></li>
+                                    <li><a href="#" class="button  button-small">Download app</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-height" style="height: 92px;"></div>
+        </header>
+    </div>
+    <div style="margin-top: -60px;" id="header-root-vue">
+
+        <div id="root-app" class="flex flex-col min-h-screen" style="padding-top: 0px;">
+
+            <!--Main Page Starts here-->
+            <div id="default-page-vue-root" class="break-word">
+                <div class="main-container px-5 xl:px-0 article-link-wrapper">
+                    <div class="row ">
+                        <div class="w-full md:w-3/4 md:pr-30px main-content-wrapper mt-5">
+                            <div class="content-wrapper post-title-wrapper relative">
+                                <h1
+                                    class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                    Android Development with JAVA
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right-rail-present">
+                        <div id="main-content__wrapper"
+                            class="w-full md:w-3/4 md:pr-30px main-content-wrapper relative ">
+                            <div class="content-wrapper article__content wysiwyg-content my-3 link__tracking">
+                                <div class="featured-img mb-3">
+                                    <figure class="w-full">
+                                        <div class="featured-img-container"><img
+                                                src="https://tms-outsource.com/blog/wp-content/uploads/2023/04/android-ide.jpg"
+                                                alt="Featured Image" class="w-full"></div>
+                                        <figcaption class="capitalize"></figcaption>
+                                    </figure>
+                                </div>
+                                <div id="article-content__marker" class="article__content">
+                                    <p></p>
+                                    <h2>What is Android?</h2>
+                                    <p>Android is an open-source operating system primarily designed for mobile devices
+                                        such as smartphones and tablets. It was developed by Android Inc., which was
+                                        later acquired by Google in 2005. Android has become one of the most popular and
+                                        widely used mobile operating systems in the world.</p>
+                                    <p>Key features of Android include:</p>
+                                    <p><strong>Open Source</strong>: Android is built on open-source software, which
+                                        means that the source code is freely available to developers. This openness has
+                                        led to a large and active community of developers contributing to its growth.
+                                    </p>
+                                    <p><strong>Customizability</strong>: Android offers a high level of customization
+                                        for both users and device manufacturers. Manufacturers can customize the user
+                                        interface (UI), and users can personalize their devices with various widgets,
+                                        launchers, and apps.</p>
+
+                                    <p><strong>Java/Kotlin Programming</strong>: Android app development primarily
+                                        involves programming in Java or Kotlin. These programming languages are used to
+                                        create the logic, user interfaces, and functionality of Android applications.
+                                    </p>
+                                    <p><strong>Application Components</strong>: Android applications are built using
+                                        various components such as Activities (UI screens), Services (background
+                                        processes), Broadcast Receivers (event listeners), and Content Providers (data
+                                        sharing between apps).</p>
+                                    <p><strong>Google Play Services</strong>: Google provides a set of services that
+                                        enhance the functionality of Android apps, including location services,
+                                        authentication, push notifications, and more.</p>
+                                    <p><strong>Fragmentation</strong>: Android runs on a wide range of devices from
+                                        different manufacturers, resulting in device fragmentation. This means that
+                                        developers need to account for variations in hardware capabilities, screen
+                                        sizes, and software versions when creating apps.</p>
+                                    <p><strong>Security</strong>: Android has implemented various security measures,
+                                        including app sandboxing (isolating apps from one another), permission-based app
+                                        access, and regular security updates.</p>
+                                    <p><strong>Updates</strong>: Android releases regular updates that introduce new
+                                        features, security enhancements, and bug fixes. However, the update process can
+                                        vary depending on device manufacturers and carriers.</p>
+                                    <p><strong>Material Design</strong>: Google's Material Design guidelines provide a
+                                        set of design principles for creating visually appealing and user-friendly
+                                        Android apps.</p>
+                                    <p>Android's versatility has extended beyond smartphones and tablets to other
+                                        devices such as smart TVs, smartwatches, and even embedded systems. As of my
+                                        last knowledge update in September 2021, Android continues to evolve with new
+                                        versions and features, so I recommend checking official Android resources for
+                                        the most up-to-date information.</p>
+                                    <h2>History and evolution of Android.</h2>
+                                    <p>Here is a list of some of the major versions of the Android operating system,
+                                        along with their release years and key features. </p>
+                                    <img src="https://cdn.cellphonedeal.com/2022/2/1643899028276-1._List_of_Android_Versions_and_Initial_Stable_Release_Dates.png"
+                                        alt="">
+                                    <h2>Is Android Development Easy? Embrace the Journey and Build Amazing Apps!</h2>
+                                    <p>Embarking on the path of Android development is an exciting adventure that holds
+                                        incredible potential. One of the most inspiring aspects of Android development
+                                        is its accessibility and user-friendly nature, making it an ideal platform for
+                                        both beginners and experienced developers to dive into the world of app
+                                        creation. <br>Android Development Is Easier. Just Follow Us</p>
+                                    <p>Remember, every successful Android developer was once a beginner, just like you.
+                                        Learning is a journey, not an overnight destination. Embrace challenges as
+                                        opportunities to grow and refine your skills. Each line of code you write and
+                                        each app you build contributes to your experience and expertise.</p>
+                                    <p>"Every great developer you know got there by solving problems they were
+                                        unqualified to solve until they actually did it." – Patrick McKenzie
+                                        <br><br>
+                                        Believe in your ability to learn and adapt. Android development offers a canvas
+                                        for your creativity and innovation to shine. The apps you create can impact
+                                        millions of lives, and the skills you acquire will open doors to endless
+                                        possibilities.
+                                        <br><br>
+                                        So, if you're wondering whether Android development is easy, remember that it's
+                                        a journey filled with learning, growth, and accomplishment. Embrace the
+                                        challenges, celebrate the victories, and keep pushing forward. Your journey as
+                                        an Android developer is what you make of it, and the possibilities are as vast
+                                        as your imagination.
+                                    </p>
+                                    <p>Start your Android development journey today and create apps that will leave your
+                                        mark on the digital world!</p>
+                                    <div class="content-wrapper post-title-wrapper relative">
+                                        <h1
+                                            class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                            Introduction to UI Design
+                                        </h1>
+                                    </div>
+                                    <p>In the dynamic world of app development, User Interface (UI) Design stands as a
+                                        vital cornerstone. UI design is the process of crafting the visual elements and
+                                        interactions that users experience when they interact with a digital product,
+                                        such as a mobile app. It's the art of creating user-centric interfaces that are
+                                        not only visually appealing but also intuitive and user-friendly.</p>
+                                    <h2>What is UI (User Interface) Design?</h2>
+                                    <p>Imagine you're holding your smartphone and scrolling through an app effortlessly,
+                                        tapping buttons, and navigating seamlessly. All these interactions are
+                                        facilitated by the user interface – the bridge between users and the
+                                        functionality of the app.</p>
+                                    <p>UI design encompasses a wide range of components, including:</p>
+                                    <p>Visual Elements: Icons, buttons, images, typography, colors, and more, all
+                                        working harmoniously to create a pleasing aesthetic.</p>
+                                    <p>Layouts and Structures: The arrangement of elements on the screen, ensuring
+                                        logical flow and easy navigation.</p>
+                                    <p>Interactivity: How users interact with the app – tapping buttons, scrolling
+                                        lists, swiping through images – all these actions are carefully designed for
+                                        smooth interaction.</p>
+                                    <p>Feedback and Responsiveness: Providing visual and auditory cues that inform users
+                                        about their actions and the app's responses.</p>
+                                    <p>Accessibility: Designing with inclusivity in mind, making the app usable by
+                                        people of all abilities.</p>
+                                    <h2>The Importance of Good UI Design in App Development:</h2>
+                                    <p>First Impressions Matter: A well-designed UI creates a positive first impression,
+                                        setting the tone for users' interaction with your app. A visually pleasing and
+                                        intuitive interface encourages users to explore further.</p>
+                                    <p>Enhanced User Experience: A thoughtfully designed UI anticipates users' needs,
+                                        making navigation and interaction seamless. This results in a superior user
+                                        experience that keeps users engaged and satisfied.</p>
+                                    <p>Ease of Use: A user-friendly UI reduces the learning curve and frustration. Clear
+                                        labels, intuitive navigation, and consistent design patterns guide users through
+                                        the app effortlessly.</p>
+                                    <p>Branding and Recognition: UI design is an opportunity to showcase your app's
+                                        branding. Consistent design elements establish recognition and trust among
+                                        users.</p>
+                                    <p>Reduced Abandonment Rates: Cluttered, confusing, or visually unappealing
+                                        interfaces can lead to users quickly abandoning an app. A well-designed UI
+                                        encourages users to stay and explore</p>
+                                    <p>Increased Retention: When users enjoy the experience your app offers, they are
+                                        more likely to return, leading to higher user retention rates.</p>
+                                    <p>Remember, UI design is not just about aesthetics; it's about crafting an
+                                        experience that aligns with user expectations and needs. By paying attention to
+                                        the principles of good UI design, you're creating a bridge that connects users
+                                        with the heart of your app's functionality. So, dive into the world of UI design
+                                        and embark on a journey that transforms digital interactions into delightful
+                                        experiences!</p>
+                                    <h2>Understanding the Difference between UI and UX:</h2>
+                                    <p>User Interface (UI) and User Experience (UX) are two essential components of the
+                                        design process that work hand in hand to shape the way users interact with
+                                        digital products. While they are interconnected, they have distinct roles and
+                                        focuses that contribute to creating exceptional user-centric designs.</p>
+                                    <p><strong>User Interface (UI)</strong>:
+
+                                        UI refers to the visual and interactive elements that users interact with when
+                                        using a digital product. It encompasses the design of buttons, icons, images,
+                                        typography, color schemes, and the overall look and feel of the interface. In
+                                        simpler terms, UI design deals with the aesthetics and presentation of the
+                                        product.</p>
+                                    <p><strong>User Experience (UX)</strong>:
+
+                                        UX, on the other hand, encompasses the overall experience and satisfaction that
+                                        users derive from interacting with a digital product. It takes a holistic
+                                        approach to design, focusing on understanding user needs, behaviors, and
+                                        emotions to create products that provide meaningful and enjoyable experiences.
+                                    </p>
+                                    <h2>The Synergy between UI and UX:</h2>
+                                    <p>While UI and UX have distinct focuses, they are closely intertwined. A visually
+                                        appealing UI enhances the overall user experience, and a seamless UX ensures
+                                        that the UI elements are logically organized and easy to use. The goal is to
+                                        strike a balance between aesthetic design and functional usability to create a
+                                        product that users enjoy using and find valuable.</p>
+                                    <p>In essence, UI and UX are two sides of the same coin, working together to create
+                                        digital experiences that captivate users and leave a positive impact. By
+                                        understanding and mastering both disciplines, designers can create products that
+                                        not only look great but also provide exceptional usability and satisfaction.</p>
+                                    <h2>Introduction to Common UI Element</h2>
+                                    <p>In the fascinating world of UI design, understanding common UI elements is like
+                                        discovering the alphabet – the fundamental building blocks that allow you to
+                                        create engaging and user-friendly digital experiences. These elements serve as
+                                        the bridge between users and your app's functionality, enabling seamless
+                                        interaction and communication. Let's explore some of the most essential UI
+                                        elements that form the backbone of user interfaces.</p>
+                                    <p><strong>Buttons:</strong>The Catalysts of Action</p>
+                                    <p>Buttons are the workhorses of UI design. They invite users to take action,
+                                        whether it's submitting a form, confirming a choice, or exploring further.
+                                        Buttons come in various styles, sizes, and colors, but their purpose remains
+                                        consistent – guiding users through the app's functionalities.</p>
+                                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210327221123/materialdesigngetpackcomposebuttongfg2png-642x660.jpg"
+                                        alt="">
+                                    <p>Creating your first XML layout file in Android Studio to include a basic button
+                                        is a great way to start your Android development journey. </p>
+                                    <p>If you haven't already, download and install Android Studio. Once it's installed,
+                                        open the application.</p>
+                                    <p>Once your project is set up, you'll be in the "Design" view of the
+                                        activity_main.xml file.</p>
+                                    <p>Replace the existing XML code with the following code to create a basic button:
+                                    </p>
+                                    <pre><code class="language-python">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+
+    &lt;Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me!"
+        android:layout_gravity="center"/&gt;
+
+&lt;/LinearLayout&gt;
+</code></pre>
+                                    <p>In this section, we will break down the XML code that creates a simple layout
+                                        with a button.</p>
+
+                                    <pre>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"&gt;
+</pre>
+
+                                    <p>The above lines of code define the root element of the layout, which is a
+                                        <code>LinearLayout</code>. This layout will hold the UI components.
+                                    </p>
+                                    <p>The <code>xmlns:android</code>, <code>xmlns:app</code>, and
+                                        <code>xmlns:tools</code> attributes define XML namespaces used in the layout
+                                        file.
+                                    </p>
+                                    <p>The <code>android:layout_width</code> and <code>android:layout_height</code>
+                                        attributes are set to <code>match_parent</code> to make the layout occupy the
+                                        entire available space.</p>
+                                    <p>The <code>android:orientation</code> attribute is set to <code>vertical</code>,
+                                        indicating that the components inside the layout will be stacked vertically.</p>
+                                    <p>The <code>tools:context</code> attribute specifies the context of the layout,
+                                        which is typically the main activity of the app.</p>
+
+                                    <pre>
+    &lt;Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me!"
+        android:layout_gravity="center"/&gt;
+</pre>
+
+                                    <p>This part of the code defines a <code>Button</code> element within the
+                                        <code>LinearLayout</code>.
+                                    </p>
+                                    <p>The <code>android:id</code> attribute assigns a unique ID to the button, which
+                                        can be used to refer to it programmatically.</p>
+                                    <p>The <code>android:layout_width</code> and <code>android:layout_height</code>
+                                        attributes are set to <code>wrap_content</code>, making the button size adjust
+                                        to its content.</p>
+                                    <p>The <code>android:text</code> attribute sets the text displayed on the button.
+                                    </p>
+                                    <p>The <code>android:layout_gravity</code> attribute is set to <code>center</code>,
+                                        aligning the button horizontally at the center of the layout.</p>
+
+                                    <pre>
+&lt;/LinearLayout&gt;
+</pre>
+
+                                    <p>The closing tag <code>&lt;/LinearLayout&gt;</code> marks the end of the layout
+                                        definition.</p>
+
+                                    <p>This concludes the explanation of the XML layout code. With this code, you've
+                                        created a simple layout containing a centered button. As you learn more about
+                                        Android development, you'll dive deeper into creating more complex and
+                                        interactive user interfaces.</p>
+                                    <h2>Material Design Buttons</h2>
+
+                                    <p>Google Material Design provides different types of buttons to suit your app's
+                                        style and purpose. Let's explore some common button types:</p>
+
+                                    <p><strong>Contained Button</strong></p>
+                                    <p>The contained button is a solid, elevated button that is filled with color. It's
+                                        used for primary actions.</p>
+
+                                    <pre>
+&lt;Button
+android:id="@+id/containedButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Contained Button"
+style="@style/Widget.MaterialComponents.Button"/&gt;
+                                        </pre>
+
+                                    <p><strong>Outlined Button</strong></p>
+                                    <p>The outlined button has a transparent background and a colored border. It's used
+                                        for secondary actions.</p>
+
+                                    <pre>
+&lt;Button
+android:id="@+id/outlinedButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Outlined Button"
+style="@style/Widget.MaterialComponents.Button.OutlinedButton"/&gt;
+                                        </pre>
+
+                                    <p><strong>Text Button</strong></p>
+                                    <p>The text button is minimalistic, without background or border. It's used for
+                                        text-based or less prominent actions.</p>
+
+                                    <pre>
+&lt;Button
+android:id="@+id/textButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Text Button"
+style="@style/Widget.MaterialComponents.Button.TextButton"/&gt;
+                                        </pre>
+
+                                    <p><strong>Toggle Button</strong></p>
+                                    <p>The toggle button is used to represent on/off or true/false states. It can be
+                                        customized to reflect different states.</p>
+
+                                    <pre>
+&lt;ToggleButton
+android:id="@+id/toggleButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:textOff="Off"
+android:textOn="On"
+style="@style/Widget.MaterialComponents.CompoundButton.ToggleButton"/&gt;
+                                        </pre>
+
+                                    <p>These are just a few examples of button types available in Material Design. Each
+                                        type has a distinct purpose and visual style, allowing you to create a cohesive
+                                        and engaging user interface.</p>
+
+                                    
+                                </div>
+                            </div>
+                            <div
+                                class="article__editors-note article__editors-note-bottom p-2 my-3 text-xs tracking-tight font-work-sans w-full bg-f8f8f8">
+                                Absolutely, we are thrilled to offer you a Python course that stands out from the rest,
+                                and the best part is—it's completely free! Our commitment is to provide you with a
+                                learning experience that goes beyond the ordinary, empowering you to become a proficient
+                                Python programmer while working on real-world projects.<br><br>
+                                <h6 style="font-size: 15px; color: black;">Why Choose Our Python Course?</h6><br>
+                                At our platform, we believe in delivering quality education that makes a difference.
+                                Here's what sets our Python course apart:
+                                <br><br>
+                                Comprehensive Learning: Our course is carefully designed to take you from a beginner to
+                                a confident Python programmer. We cover a wide range of topics, ensuring you have a
+                                solid understanding of the language.
+                                <br><br>
+                                Project-Based Approach: Learning by doing is the most effective way to grasp concepts.
+                                Our course includes hands-on projects that let you apply your knowledge and build
+                                practical skills.
+                                <br><br>
+                                Expert Guidance: Our experienced instructors are passionate about teaching and are here
+                                to guide you every step of the way. Get answers to your questions, clear doubts, and
+                                receive valuable insights.
+                                <br><br>
+                                Interactive Learning: Engaging quizzes, coding challenges, and interactive exercises
+                                make your learning journey enjoyable and effective.
+                                <br><br>
+                                Real-World Relevance: We emphasize real-world applications of Python. You'll learn how
+                                Python is used in data analysis, web development, automation, and more.
+                            </div>
+
+                            <div class="article-sharing"><a href="#"
+                                    class="article-sharing__link article-sharing__link--facebook" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--twitter" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--linkdin" target="_blank"
+                                    rel="noopener"></a></div>
+                        </div>
+
+                        <!-- Sidebar-Wrapper Starts Here-->
+                        <div class="sidebar-wrapper w-full md:w-1/4 right-rail">
+                            <div id="right-rail__content" class="right-rail-content">
+                                <div class="best-of-content">
+
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">Keywords</p>
+                                            </div>
+                                            <img src="" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">hello</p>
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--
+                                         <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">Basics</div>
+                                            <ul class="boc__items">
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-equity-shares/"
+                                                        title="What Are Equity Shares" target="_blank"
+                                                        class="boc__item-link">What Are Equity Shares</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-a-mutual-fund-and-how-does-it-work/"
+                                                        title="What Is A Mutual Fund" target="_blank"
+                                                        class="boc__item-link">What Is A Mutual Fund</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-invits-and-how-do-they-work/"
+                                                        title="What Are InvITs" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Are InvITs</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-liquid-funds/"
+                                                        title="What Are Liquid Funds" target="_blank"
+                                                        class="boc__item-link">What Are Liquid Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-demat-account/"
+                                                        title="What Is A Demat Account" target="_blank"
+                                                        class="boc__item-link">What Is A Demat Account</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-elss-funds-and-how-do-they-work/"
+                                                        title="What Are ELSS Funds" target="_blank"
+                                                        class="boc__item-link">What Are ELSS Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-blockchain/"
+                                                        title="What Is Blockchain" target="_blank"
+                                                        class="boc__item-link">What Is Blockchain</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-cryptocurrency-and-how-does-it-work/"
+                                                        title="What Is Cryptocurrency" target="_blank"
+                                                        class="boc__item-link">What Is Cryptocurrency</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-an-nft-how-do-nfts-work/"
+                                                        title="What Is An NFT" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Is An NFT</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-index-funds-and-how-do-they-work/"
+                                                        title="What Are Index Funds" target="_blank"
+                                                        class="boc__item-link">What Are Index Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/blue-chip-stocks/"
+                                                        title="What Are Debt Mutual Funds" target="_blank"
+                                                        class="boc__item-link">What Are Debt Mutual Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-pe-price-earnings-ratio/"
+                                                        title="What Are Blue Chip Stocks" target="_blank"
+                                                        class="boc__item-link">What Are Blue Chip Stocks</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/gilt-funds/"
+                                                        title="Gilt Funds" target="_blank" class="boc__item-link">Gilt
+                                                        Funds</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--More from Advisors Starts Here-->
+            <section class="more-from-section-wrapper">
+                <div class="more-from-section px-15px mx-auto pb-5">
+                    <h2 class="font-merriweather font-bold leading-6 text-black py-30px flex items-baseline"><span
+                            class="flex-shrink-0">More from Advisors&nbsp;</span></h2>
+                    <ul class="more-for-grid flex flex-wrap">
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-option-trading-strategies/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg"
+                                    title="17 Best Option Trading Strategies You Should Know"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">17 Best Option Trading Strategies You Should
+                                        Know</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/alternative-to-fixed-deposit/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg"
+                                    title="8 Best Alternatives To Fixed Deposits In India"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">8 Best Alternatives To Fixed Deposits In
+                                        India</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/how-to-invest-in-ai/" target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">How To Invest In AI</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg"
+                                            title="Nikita Tambe"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Nikita Tambe</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-highest-dividend-paying-stocks/"
+                                target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">20 Highest Dividend Paying Stocks In
+                                        India 2023</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+        <div id="bottom__marker"></div>
+
+        <!--         <div class="main-form-container">
+            <div class="form-container" id="problem-form">
+                <form>
+                    <label for="name">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="problem">Problem:</label>
+                    <textarea id="problem" name="problem" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <p class="success-message" id="success-message"></p>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("#problem-form form");
+                const successMessage = document.querySelector("#success-message");
+    
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent form submission
+    
+                    // Here you can add logic to handle form submission and show success message
+                    // For now, let's just show a success message
+                    successMessage.textContent = "Problem submitted successfully!";
+                });
+            });
+        </script>-->
+        <!--Fotter Starts Here-->
+        <footer class="shared-footer">
+            <div class="row-inner">
+                <div style="margin-top: 0px;" class="footer-logo">
+                    <a style="margin-top: 15px;" href="#" class="logo logo-footer inline-block">
+                        <img width="100px" width="100px" src="logo.webp" alt="logo">
+                    </a>
+                    <span class="copy">© 2023 The One. All Rights Reserved.</span>
+                    <div class="flex justify-center mt-5">
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Facebook_f_logo_(2021).svg.webp" alt="Facebook">
+                            </a>
+                        </span>
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Logo_of_Twitter.svg.webp" alt="Twitter">
+                            </a>
+                        </span>
+                        <span class="cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="1200px-Linkedin.svg.png" alt="LinkedIn">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-links-wrapper">
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">AdChoices</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Statement</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Press Room</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">of the Day</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <footer>
+        <div class="row2">
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Contact Us</a></li>
+
+                    <li><a href="#">About Us</a></li>
+
+                    <li><a href="#">Careers</a></li>
+
+                    <li><a href="#">Media &amp; Press</a></li>
+
+                    <li><a href="#">User Reviews</a></li>
+
+                    <li><a href="#">TaxCloud India</a></li>
+
+                    <li><a href="#">ClearTDS</a></li>
+
+                    <li><a href="#">Engineering Blogs</a></li>
+
+                    <li><a href="#">FinTech Glossary</a></li>
+
+                    <li><a href="#">Download
+                            Clear Khata App</a></li>
+
+                    <li><a href="#">Download
+                            ClearTax Pro</a></li>
+
+                    <li><a href="#"> Download Black App</a></li>
+
+                    <li><a href="#">ClearTax Chronicles</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">File Income Tax
+                        Return</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Income Tax</a></li>
+
+                    <li><a href="#">Efiling Income
+                            Tax</a></li>
+
+                    <li><a href="#">Secion 80 Deductions</a></li>
+
+                    <li><a href="#">Income Tax for NRI</a></li>
+
+                    <li><a href="#">Capital Gains Income</a>
+                    </li>
+
+                    <li><a href="#">House Property</a></li>
+
+                    <li><a href="#">Income Tax
+                            Verification</a></li>
+
+                    <li><a href="#">How to efile ITR</a></li>
+
+                    <li><a href="#">Income Tax Refund status</a>
+                    </li>
+
+                    <li><a href="#">File TDS Returns</a></li>
+
+                    <li><a href="#">ITR</a></li>
+
+                    <li><a href="#">File TDS Returns</a></li>
+
+                    <li><a href="#">Income Tax Slabs</a></li>
+
+                    <li><a href="#">Form
+                            26AS</a></li>
+
+                    <li><a href="#">What is Form 16</a></li>
+
+                    <li><a href="#">Salary Income</a></li>
+
+                    <li><a href="#">How to File TDS Returns</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">GST</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">GST Software</a></li>
+
+                    <li><a href="#">New GST Returns</a></li>
+
+                    <li><a href="#">E-Invoicing</a>
+                    </li>
+
+                    <li><a href="#">E-Invoicing
+                            Software</a></li>
+
+                    <li><a href="#">Input Tax Credit</a></li>
+
+                    <li><a href="#">GST Returns</a></li>
+
+                    <li><a href="#">GST Invoice</a></li>
+
+                    <li><a href="#">GST Services</a></li>
+
+                    <li><a href="#">GST Training</a></li>
+
+                    <li><a href="#">GST Calendar</a></li>
+
+                    <li><a href="#">GST News</a></li>
+
+                    <li><a href="#">GST Guide</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">Tax Tools by ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Income Tax Calculator</a>
+                    </li>
+
+                    <li><a href="#">GST Calculator</a></li>
+
+                    <li><a href="#">HRA Calculator</a></li>
+
+                    <li><a href="#">Find HSN Code</a></li>
+
+                    <li><a href="#">SIP Calculator</a></li>
+
+                    <li><a href="#">Mutual fund
+                            Calculator</a></li>
+
+                    <li><a href="#">NPS Calculator</a></li>
+
+                    <li><a href="#">GST Number Search</a></li>
+
+                    <li><a href="#">EMI Calculator</a></li>
+
+                    <li><a href="#">PPF calculator</a></li>
+
+                    <li><a href="#">FD calculator</a></li>
+
+                    <li><a href="#">RD calculator</a></li>
+
+                    <li><a href="#">Home Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="#">Interest
+                            Calculator</a></li>
+
+                    <li><a href="#">Gratuity Calculator</a>
+                    </li>
+
+                    <li><a href="#">Personal Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="#">Car loan emi calculator</a></li>
+
+                    <li><a href="#">PF Calculator</a></li>
+
+                    <li><a href="#">Salary Calculator</a></li>
+
+                    <li><a href="#">CAGR Calculator</a></li>
+
+                    <li><a href="#">Generate Rent Receipts</a></li>
+
+                    <li><a href="#">IFSC Code Search</a></li>
+
+                    <li><a href="#">Gold Rates Today</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    Generic Topics
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">How to Link Aadhaar
+                            card to PAN</a></li>
+
+                    <li><a href="#">UIDAI</a></li>
+
+                    <li><a href="#">Pan Card Status</a></li>
+
+                    <li><a href="#">Aadhar card</a></li>
+
+                    <li><a href="#">EPFO</a></li>
+
+                    <li><a href="#">UAN</a></li>
+
+                    <li><a href="#">EPF Withdrawal</a></li>
+
+                    <li><a href="#">Voter ID</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#">ClearTax Investment</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Mutual Funds</a></li>
+
+                    <li><a href="#">ELSS Funds</a></li>
+
+                    <li><a href="#">SIP</a></li>
+
+                    <li><a href="#">Types of Mutual Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Mutual funds</a></li>
+
+                    <li><a href="#">Best ELSS Funds</a></li>
+
+                    <li><a href="#">Best Debt Funds</a></li>
+
+                    <li><a href="#">Best Liquid Funds</a></li>
+
+                    <li><a href="#">Best SIP Plans</a>
+                    </li>
+
+                    <li><a href="#">Best Midcap Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Large Cap
+                            Funds</a></li>
+
+                    <li><a href="#">Best Multi Cap Funds</a>
+                    </li>
+
+                    <li><a href="#">Best Small Cap
+                            Funds</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="#"> ClearTax Business</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="#">Tax Filing for
+                            Professionals</a></li>
+
+                    <li><a href="#">Tax Filing for Traders</a>
+                    </li>
+
+                    <li><a href="#">Trademark
+                            Registration</a></li>
+
+                    <li><a href="#">Company Registration</a>
+                    </li>
+
+                    <li><a href="#">Services for Businesses</a>
+                    </li>
+
+                    <li><a href="#">Launch your
+                            Business</a></li>
+
+                    <li><a href="#">Guide
+                            for Business &amp;amp; Professional</a></li>
+
+                    <li><a href="#">TDS Returns</a></li>
+
+                    <li><a href="#">Expert Assisted Tax Filing</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.menu-main');
+
+        const toggleNav = () => {
+            mainNav.classList.toggle('open');
+        };
+
+        hamburger.addEventListener('click', toggleNav);
+
+        const dropdown = document.querySelectorAll('.dropdown');
+
+        Array.from(dropdown).forEach((drop) => {
+            drop.addEventListener('click', () => {
+                dropdown.forEach((d) => {
+                    if (d !== drop) {
+                        d.classList.remove('open');
+                    }
+                });
+                drop.classList.toggle('open');
+            });
+        });
+
+        // hide header on scroll
+
+        // grab an element
+        const header = document.querySelector('.header-main');
+        // construct an instance of Headroom, passing the element
+        const headroom = new Headroom(header);
+        // initialise
+        headroom.init();
+    </script>
+
+</body>
+
+</html>

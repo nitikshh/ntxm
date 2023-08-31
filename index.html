@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="en-GB" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" style="--vh: 7.86px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=4">
+    <link href="https://www.forbes.com/advisor/in/wp-content/themes/fadvuk/assets/images/favicon.png"
+        rel="shortcut icon">
+    <title>Introducing Technical Analysis</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="stylesheet" href="stylesheet2.css">
+    <style data-jss="" data-meta="MuiGrid">
+        .cds-10 {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        .cds-11 {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .cds-12 {
+            min-width: 0;
+        }
+
+        .cds-13 {
+            flex-direction: column;
+        }
+
+        .cds-14 {
+            flex-direction: column-reverse;
+        }
+
+        .cds-15 {
+            flex-direction: row-reverse;
+        }
+
+        .cds-16 {
+            flex-wrap: nowrap;
+        }
+
+        .cds-17 {
+            flex-wrap: wrap-reverse;
+        }
+
+        .cds-18 {
+            align-items: center;
+        }
+
+        .cds-19 {
+            align-items: flex-start;
+        }
+
+        .cds-20 {
+            align-items: flex-end;
+        }
+
+        .cds-21 {
+            align-items: baseline;
+        }
+
+        .cds-22 {
+            align-content: center;
+        }
+
+        .cds-23 {
+            align-content: flex-start;
+        }
+
+        .cds-24 {
+            align-content: flex-end;
+        }
+
+        .cds-25 {
+            align-content: space-between;
+        }
+
+        .cds-26 {
+            align-content: space-around;
+        }
+
+        .cds-27 {
+            justify-content: center;
+        }
+
+        .cds-28 {
+            justify-content: flex-end;
+        }
+
+        .cds-29 {
+            justify-content: space-between;
+        }
+
+        .cds-30 {
+            justify-content: space-around;
+        }
+
+        .cds-31 {
+            justify-content: space-evenly;
+        }
+
+        .cds-32 {
+            width: calc(100% + 0px);
+            margin: -0px;
+        }
+
+        .cds-32>.cds-11 {
+            padding: 0px;
+        }
+
+        .cds-33 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-33>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-34 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-34>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-35 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-35>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-36 {
+            width: calc(100% + NaNvar(--cds-spacing-50));
+            margin: -NaNvar(--cds-spacing-50);
+        }
+
+        .cds-36>.cds-11 {
+            padding: NaNvar(--cds-spacing-50);
+        }
+
+        .cds-37 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-37>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-38 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-38>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-39 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-39>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-40 {
+            width: calc(100% + NaNvar(--cds-spacing-100));
+            margin: -NaNvar(--cds-spacing-100);
+        }
+
+        .cds-40>.cds-11 {
+            padding: NaNvar(--cds-spacing-100);
+        }
+
+        .cds-41 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-41>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-42 {
+            width: calc(100% + NaNundefined);
+            margin: -NaNundefined;
+        }
+
+        .cds-42>.cds-11 {
+            padding: NaNundefined;
+        }
+
+        .cds-43 {
+            flex-grow: 0;
+            max-width: none;
+            flex-basis: auto;
+        }
+
+        .cds-44 {
+            flex-grow: 1;
+            max-width: 100%;
+            flex-basis: 0;
+        }
+
+        .cds-45 {
+            flex-grow: 0;
+            max-width: 8.333333%;
+            flex-basis: 8.333333%;
+        }
+
+        .cds-46 {
+            flex-grow: 0;
+            max-width: 16.666667%;
+            flex-basis: 16.666667%;
+        }
+
+        .cds-47 {
+            flex-grow: 0;
+            max-width: 25%;
+            flex-basis: 25%;
+        }
+
+        .cds-48 {
+            flex-grow: 0;
+            max-width: 33.333333%;
+            flex-basis: 33.333333%;
+        }
+
+        .cds-49 {
+            flex-grow: 0;
+            max-width: 41.666667%;
+            flex-basis: 41.666667%;
+        }
+
+        .cds-50 {
+            flex-grow: 0;
+            max-width: 50%;
+            flex-basis: 50%;
+        }
+
+        .cds-51 {
+            flex-grow: 0;
+            max-width: 58.333333%;
+            flex-basis: 58.333333%;
+        }
+
+        .cds-52 {
+            flex-grow: 0;
+            max-width: 66.666667%;
+            flex-basis: 66.666667%;
+        }
+
+        .cds-53 {
+            flex-grow: 0;
+            max-width: 75%;
+            flex-basis: 75%;
+        }
+
+        .cds-54 {
+            flex-grow: 0;
+            max-width: 83.333333%;
+            flex-basis: 83.333333%;
+        }
+
+        .cds-55 {
+            flex-grow: 0;
+            max-width: 91.666667%;
+            flex-basis: 91.666667%;
+        }
+
+        .cds-56 {
+            flex-grow: 0;
+            max-width: 100%;
+            flex-basis: 100%;
+        }
+
+        @media (min-width:600px) {
+            .cds-57 {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .cds-58 {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .cds-59 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .cds-60 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .cds-61 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .cds-62 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .cds-63 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .cds-64 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .cds-65 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .cds-66 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .cds-67 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .cds-68 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .cds-69 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .cds-70 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:1024px) {
+            .cds-71 {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .cds-72 {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .cds-73 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .cds-74 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .cds-75 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .cds-76 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .cds-77 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .cds-78 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .cds-79 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .cds-80 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .cds-81 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .cds-82 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .cds-83 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .cds-84 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:1440px) {
+            .cds-85 {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .cds-86 {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .cds-87 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .cds-88 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .cds-89 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .cds-90 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .cds-91 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .cds-92 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .cds-93 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .cds-94 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .cds-95 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .cds-96 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .cds-97 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .cds-98 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+        @media (min-width:1920px) {
+            .cds-99 {
+                flex-grow: 0;
+                max-width: none;
+                flex-basis: auto;
+            }
+
+            .cds-100 {
+                flex-grow: 1;
+                max-width: 100%;
+                flex-basis: 0;
+            }
+
+            .cds-101 {
+                flex-grow: 0;
+                max-width: 8.333333%;
+                flex-basis: 8.333333%;
+            }
+
+            .cds-102 {
+                flex-grow: 0;
+                max-width: 16.666667%;
+                flex-basis: 16.666667%;
+            }
+
+            .cds-103 {
+                flex-grow: 0;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .cds-104 {
+                flex-grow: 0;
+                max-width: 33.333333%;
+                flex-basis: 33.333333%;
+            }
+
+            .cds-105 {
+                flex-grow: 0;
+                max-width: 41.666667%;
+                flex-basis: 41.666667%;
+            }
+
+            .cds-106 {
+                flex-grow: 0;
+                max-width: 50%;
+                flex-basis: 50%;
+            }
+
+            .cds-107 {
+                flex-grow: 0;
+                max-width: 58.333333%;
+                flex-basis: 58.333333%;
+            }
+
+            .cds-108 {
+                flex-grow: 0;
+                max-width: 66.666667%;
+                flex-basis: 66.666667%;
+            }
+
+            .cds-109 {
+                flex-grow: 0;
+                max-width: 75%;
+                flex-basis: 75%;
+            }
+
+            .cds-110 {
+                flex-grow: 0;
+                max-width: 83.333333%;
+                flex-basis: 83.333333%;
+            }
+
+            .cds-111 {
+                flex-grow: 0;
+                max-width: 91.666667%;
+                flex-basis: 91.666667%;
+            }
+
+            .cds-112 {
+                flex-grow: 0;
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+    </style>
+    <style>
+        @font-face {
+            font-family: 'coursera-iconfont';
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/bundles/styleguide/icons/fonts/coursera.v26.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/bundles/styleguide/icons/fonts/coursera.v26.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/bundles/styleguide/icons/fonts/coursera.v26.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/bundles/styleguide/icons/fonts/coursera.v26.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/bundles/styleguide/icons/fonts/coursera.v26.svg") format('svg');
+        }
+
+        @font-face {
+            font-family: 'OpenSans-Light';
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Light.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Light.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-300.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-300.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Light.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Light.svg#OpenSans-Light") format('svg');
+        }
+
+        @font-face {
+            font-family: 'OpenSans';
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Regular.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Regular.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-regular.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-regular.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Regular.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Regular.svg#OpenSans-Regular") format('svg');
+        }
+
+        @font-face {
+            font-family: 'OpenSans-Semibold';
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Semibold.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Semibold.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-600.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-600.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Semibold.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Semibold.svg#OpenSans-Semibold") format('svg');
+        }
+
+        @font-face {
+            font-family: 'OpenSans-Bold';
+            font-weight: 700;
+            font-display: swap;
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot');
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-700.woff2') format('woff2'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-700.woff') format('woff'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.ttf') format('truetype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+        }
+
+        @font-face {
+            font-family: 'OpenSans';
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-700.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans-v17-latin-latinext-cyrillic/opensans-700.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/opensans/OpenSans-Bold.svg#OpenSans-Bold") format('svg');
+        }
+
+        @font-face {
+            font-family: 'Merriweather';
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.svg#Merriweather-Regular") format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Merriweather-Light';
+            font-display: swap;
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Light.eot");
+            src: url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Light.eot?#iefix") format('embedded-opentype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Light.woff2") format('woff2'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Light.woff") format('woff'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Light.ttf") format('truetype'),
+                url("https://d3njjcbhbojbot.cloudfront.net/web/type/merriweather/Merriweather-Regular.svg#Merriweather-Light") format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 300;
+            font-display: swap;
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.eot');
+            /* IE9 Compat Modes */
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.eot?#iefix') format('embedded-opentype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.woff2') format('woff2'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.woff') format('woff'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.ttf') format('truetype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-300.svg#SourceSansPro') format('svg');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.eot');
+            /* IE9 Compat Modes */
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.eot?#iefix') format('embedded-opentype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.woff2') format('woff2'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.woff') format('woff'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.ttf') format('truetype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-regular.svg#SourceSansPro') format('svg');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.eot');
+            /* IE9 Compat Modes */
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.eot?#iefix') format('embedded-opentype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.woff2') format('woff2'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.woff') format('woff'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.ttf') format('truetype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-600.svg#SourceSansPro') format('svg');
+        }
+
+        @font-face {
+            font-family: 'Source Sans Pro';
+            font-style: normal;
+            font-weight: bold;
+            font-display: swap;
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.eot');
+            src: url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.eot?#iefix') format('embedded-opentype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.woff2') format('woff2'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.woff') format('woff'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.ttf') format('truetype'),
+                url('https://d3njjcbhbojbot.cloudfront.net/web/type/source-sans-pro-v14-latin/source-sans-pro-v14-latin-700.svg#SourceSansPro') format('svg');
+        }
+    </style>
+    <link rel="stylesheet" href="mainpage.css">
+    <link id="googleidentityservice" type="text/css" media="all" rel="stylesheet"
+        href="https://accounts.google.com/gsi/style">
+    <script src="https://cdn.cookielaw.org/scripttemplates/6.10.0/otBannerSdk.js" async=""
+        type="text/javascript"></script>
+
+    <script type="text/javascript" async=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/927621030/?random=1693184625327&amp;cv=11&amp;fst=1693184625327&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45He38n0&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.coursera.org%2Fcourses%3Fquery%3Dtrading&amp;ref=https%3A%2F%2Fwww.google.com%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Best%20Trading%20Courses%20%26%20Certifications%20%5B2023%5D%20%7C%20Coursera%20Online%20Learning&amp;us_privacy=1---&amp;auid=938667590.1693184625&amp;fledge=1&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B116.0.5845.111%7CNot)A%253BBrand%3B24.0.0.0%7CGoogle%2520Chrome%3B116.0.5845.111&amp;uamb=0&amp;uap=Windows&amp;uapv=15.0.0&amp;uaw=0&amp;rfmt=3&amp;fmt=4"></script>
+    <script src="https://bat.bing.com/p/action/4076177.js" type="text/javascript" async=""
+        data-ueto="ueto_1d0febb14c"></script>
+    <script charset="utf-8"
+        src="https://d3njjcbhbojbot.cloudfront.net/webapps/r2-builds/br/seo-entity-page/21.80b365b0532a789d0f51.js"></script>
+    <script charset="utf-8"
+        src="https://d3njjcbhbojbot.cloudfront.net/webapps/r2-builds/br/seo-entity-page/55.3c8eb08e21164b110a03.js"></script>
+    <script charset="utf-8"
+        src="https://d3njjcbhbojbot.cloudfront.net/webapps/r2-builds/br/seo-entity-page/38.321df11af514efd3141a.js"></script>
+    <!--   <link rel="stylesheet" id="classic-theme-styles-css"
+        href="https://www.forbes.com/advisor/in/wp-includes/css/classic-themes.min.css?ver=1" type="text/css"
+        media="all">-->
+
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <style amp-custom="">
+        .author__block-image-wrap amp-img {
+            height: 100%;
+        }
+
+        figure amp-img img {
+            object-fit: cover;
+        }
+
+        .-mx-5 {
+            margin: 0 -20px;
+        }
+
+        .more-from-section>h2>amp-img {
+            height: 17px;
+            display: flex;
+        }
+
+        .more-from-section>h2>amp-img>img {
+            margin-left: 0;
+            width: 152px;
+            min-width: auto;
+        }
+    </style>
+    <style type="text/css" id="tts-styles">
+        [data-tts-block-id].tts-active {
+            background: rgba(206, 225, 255, 0.9) !important;
+        }
+
+        [data-tts-sentence-id].tts-active {
+            background: rgba(0, 89, 191, 0.7) !important;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+        
+<link
+href="https://cfl.dropboxstatic.com/static/typescript/component_libraries/dwg-components/src/index.web-vflzD11kY.css"
+rel="stylesheet" data-loader="CssEntryPoint">
+
+     
+
+     
+       <style id="privacy-consent-styles">
+            :root {
+                --privacy-consent-banner-height: 0px;
+            }
+        </style>
+        <style type="text/css" id="tts-styles">
+            [data-tts-block-id].tts-active {
+                background: rgba(206, 225, 255, 0.9) !important;
+            }
+
+            [data-tts-sentence-id].tts-active {
+                background: rgba(0, 89, 191, 0.7) !important;
+            }
+        </style>
+    </head>
+    <style>
+        @media (min-width:700px) {
+            .main-cont {
+                display: flex;
+            }
+        }
+    </style>
+
+<body class="post-template-default single single-post postid-39581 single-format-standard" id="verticalIndia"><iframe
+        marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="0" width="0" id="mnet"
+        src="https://hbx.media.net/checksync.php?cid=8CU25AH4U&amp;cs=1&amp;cv=37&amp;hb=1&amp;prvid=262%2C229%2C203%2C214%2C339%2C222%2C236%2C23%2C178%2C38%2C184%2C80%2C226%2C113%2C3015%2C193%2C273%2C108%2C2030%2C56%2C29%2C132%2C77%2C345%2C246%2C225%2C2033%2C117%2C251%2C3016%2C459%2C461%2C201%2C450%2C43%2C159%2C326%2C33%2C186%2C97%2C55%2C3%2C261%2C2026%2C51%2C175%2C70%2C82%2C2027%2C3012%2C188%2C145&amp;vsSync=1&amp;refUrl=https%3A%2F%2Fwww.google.com%2F&amp;gdpr=0&amp;gdprconsent=0&amp;gdprstring=&amp;usp_status=0&amp;usp_consent=1&amp;coppa=0&amp;ckdel=0&amp;gpp=&amp;gpp_sid="
+        style="display: none !important;"></iframe>
+
+
+    <div id="page">
+        <header id="masthead">
+            <div style="background-color: white;"
+                class="header-main headroom headroom--not-bottom headroom--pinned headroom--top">
+                <div class="container">
+                    <div class="flex items-center -mx-2">
+                        <div class="w-1/2 md:w-[20%] px-2">
+
+                            <a href="/">
+                                <img width="189" height="36" class="black-logo" src="logo-main.png" alt="">
+                                <img width="189" height="36" class="white-logo"
+                                    src="https://www.fisdom.com/wp-content/themes/theme/assets/img/fisdom-logo-white-text.svg"
+                                    alt="">
+                            </a>
+
+                        </div>
+
+
+                        <div class="w-full px-2">
+                            <div class="menu-main">
+                                <button id="hamburger" class="hamburger block xl:hidden ml-auto" fdprocessedid="flhd7f">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <ul class="nav-main items-center md:justify-end">
+
+
+                                    <li class="dropdown">
+                                        <a href="#">Courses</a>
+
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/stocks.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Stocks
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/ipo.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        IPOs &amp; more
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/mutual-funds.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Mutual Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tax-filing.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Tax Filing
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/pension-funds-2.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Pension Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" target="_blank">Private Wealth</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Resources</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/research_icon.svg"
+                                                            alt="" style="width:auto;">
+                                                    </div>
+                                                    <span>
+                                                        Research
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#" target="_blank">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/learn.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        One Percent Academy
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/blogs.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Blogs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tools.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Calculators
+                                                    </span>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Company</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/fisdom-icon.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        About us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/careers.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Careers
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/contact.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Contact us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/partner.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Become a partner
+                                                    </span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" class="button button-secondary button-small">Login</a></li>
+                                    <li><a href="#" class="button  button-small">Download app</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-height" style="height: 92px;"></div>
+        </header>
+    </div>
+
+
+
+
+
+    <div class="main-cont">
+        <div class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-81">
+
+            <ul  class="cds-9 css-18msmec cds-10 ">
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="TechnicalAnalysis-1.html" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://aapkainvestments.in/Course/BTA-02.jpg"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://static.vecteezy.com/system/resources/thumbnails/005/425/999/small/a-silhouette-of-the-bull-with-an-increased-chart-behind-for-bullish-trend-illustration-free-vector.jpg"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">The World of Technicals</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Technical Analysis</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Proficiency in Technical,Analysis Techniques,
+                                                    Chart Pattern Recognition,
+                                                    Candlestick Pattern Interpretation,
+                                                    Trend Identification and Analysis,
+                                                    Support and Resistance Analysis,
+                                                    Risk Management Strategies,
+                                                    Trading Psychology Insights,
+                                                    Application of Indicators and Oscillators,
+                                                    Interpretation of Price and Volume Data.
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="python.html" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://365datascience.com/resources/blog/2019-10-python-everything-you-should-know-1024x576.jpg"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://banner2.cleanpng.com/20180412/kye/kisspng-python-programming-language-computer-programming-language-5acfdc3636bac7.8891188615235717662242.jpg"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Ultimate Python</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Python Mastery for Machine Learning</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Proficiency in Python Programming, 
+                                                    Data Manipulation and Analysis, 
+                                                    Machine Learning Fundamentals, 
+                                                    Implementing Algorithms and Models, 
+                                                    Data Visualization and Interpretation, 
+                                                    Real-world Machine Learning Projects, 
+                                                    Deep Learning Concepts, 
+                                                    Model Evaluation and Optimization, 
+                                                    Python's Role in AI and Data Science</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 5 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="android_development.html" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://codecondo.com/wp-content/uploads/2015/03/20-Ways-To-Learn-Android-Programming-For-Free.png"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2019/12/09084248/android-device-identifiers-featured.jpg"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Unleashing the Android Development Tsunami</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Android App Development with Java</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Proficiency in Android App Development,
+                                                    Java Programming for Android,
+                                                    User Interface Design and Layout,
+                                                    Database Integration and Management,
+                                                    Mobile App Deployment and Testing,
+                                                    User Experience Enhancement,
+                                                    App Performance Optimization,
+                                                    In-depth Knowledge of Android SDK,
+                                                    Practical Problem-Solving in Mobile Development
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/learn/financial-markets-global" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://s3.amazonaws.com/coursera-course-photos/51/51d7604aba11e7ae3525d9720463e7/Shiller_FinancialMarkets_New.png?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Yale University</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Financial Markets</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Regulations and Compliance, Securities
+                                            Sales, Investment Management, Risk Management, Business Psychology,
+                                            Behavioral Economics, Securities Trading, Underwriting, Adaptability,
+                                            Financial Management, Innovation, Resilience, Taxes, Accounting, Banking,
+                                            Business Analysis, Business Process Management, Corporate Accounting,
+                                            Critical Thinking, Data Analysis, Decision Making, Entrepreneurship,
+                                            Financial Analysis, Generally Accepted Accounting Principles (GAAP),
+                                            Probability & Statistics, Statistical Tests, Strategy and Operations</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 1 - 3 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/specializations/financial-instruments-trading-investing" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://d15cw65ipctsrr.cloudfront.net/4d/0c984f576245efbc759f861facee4d/specialization-financial-instruments.jpg?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="http://coursera-university-assets.s3.amazonaws.com/79/a3332252c4434bae934afc609051f5/ib-logo-360x360.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Interactive Brokers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Practical Guide to Trading</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Investment Management, Accounting,
+                                            Business Analysis, Data Analysis, Financial Analysis, Probability &amp;
+                                            Statistics, Financial Accounting, Financial Management, Leadership and
+                                            Management, Taxes, General Accounting, Marketing, Regulations and Compliance
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/learn/financial-markets-global" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://s3.amazonaws.com/coursera-course-photos/51/51d7604aba11e7ae3525d9720463e7/Shiller_FinancialMarkets_New.png?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Yale University</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Financial Markets</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Regulations and Compliance, Securities
+                                            Sales, Investment Management, Risk Management, Business Psychology,
+                                            Behavioral Economics, Securities Trading, Underwriting, Adaptability,
+                                            Financial Management, Innovation, Resilience, Taxes, Accounting, Banking,
+                                            Business Analysis, Business Process Management, Corporate Accounting,
+                                            Critical Thinking, Data Analysis, Decision Making, Entrepreneurship,
+                                            Financial Analysis, Generally Accepted Accounting Principles (GAAP),
+                                            Probability & Statistics, Statistical Tests, Strategy and Operations</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 1 - 3 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/specializations/financial-instruments-trading-investing" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://d15cw65ipctsrr.cloudfront.net/4d/0c984f576245efbc759f861facee4d/specialization-financial-instruments.jpg?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="http://coursera-university-assets.s3.amazonaws.com/79/a3332252c4434bae934afc609051f5/ib-logo-360x360.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Interactive Brokers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Practical Guide to Trading</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Investment Management, Accounting,
+                                            Business Analysis, Data Analysis, Financial Analysis, Probability &amp;
+                                            Statistics, Financial Accounting, Financial Management, Leadership and
+                                            Management, Taxes, General Accounting, Marketing, Regulations and Compliance
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/learn/financial-markets-global" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://s3.amazonaws.com/coursera-course-photos/51/51d7604aba11e7ae3525d9720463e7/Shiller_FinancialMarkets_New.png?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Yale University</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Financial Markets</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Regulations and Compliance, Securities
+                                            Sales, Investment Management, Risk Management, Business Psychology,
+                                            Behavioral Economics, Securities Trading, Underwriting, Adaptability,
+                                            Financial Management, Innovation, Resilience, Taxes, Accounting, Banking,
+                                            Business Analysis, Business Process Management, Corporate Accounting,
+                                            Critical Thinking, Data Analysis, Decision Making, Entrepreneurship,
+                                            Financial Analysis, Generally Accepted Accounting Principles (GAAP),
+                                            Probability & Statistics, Statistical Tests, Strategy and Operations</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 1 - 3 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/specializations/financial-instruments-trading-investing" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://d15cw65ipctsrr.cloudfront.net/4d/0c984f576245efbc759f861facee4d/specialization-financial-instruments.jpg?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="http://coursera-university-assets.s3.amazonaws.com/79/a3332252c4434bae934afc609051f5/ib-logo-360x360.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Interactive Brokers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Practical Guide to Trading</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Investment Management, Accounting,
+                                            Business Analysis, Data Analysis, Financial Analysis, Probability &amp;
+                                            Statistics, Financial Accounting, Financial Management, Leadership and
+                                            Management, Taxes, General Accounting, Marketing, Regulations and Compliance
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/learn/financial-markets-global" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://s3.amazonaws.com/coursera-course-photos/51/51d7604aba11e7ae3525d9720463e7/Shiller_FinancialMarkets_New.png?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Yale University</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Financial Markets</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Regulations and Compliance, Securities
+                                            Sales, Investment Management, Risk Management, Business Psychology,
+                                            Behavioral Economics, Securities Trading, Underwriting, Adaptability,
+                                            Financial Management, Innovation, Resilience, Taxes, Accounting, Banking,
+                                            Business Analysis, Business Process Management, Corporate Accounting,
+                                            Critical Thinking, Data Analysis, Decision Making, Entrepreneurship,
+                                            Financial Analysis, Generally Accepted Accounting Principles (GAAP),
+                                            Probability & Statistics, Statistical Tests, Strategy and Operations</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 1 - 3 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/specializations/financial-instruments-trading-investing" target="_blank"
+                            rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://d15cw65ipctsrr.cloudfront.net/4d/0c984f576245efbc759f861facee4d/specialization-financial-instruments.jpg?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="http://coursera-university-assets.s3.amazonaws.com/79/a3332252c4434bae934afc609051f5/ib-logo-360x360.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Interactive Brokers">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Interactive Brokers</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Practical Guide to Trading</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Investment Management, Accounting,
+                                            Business Analysis, Data Analysis, Financial Analysis, Probability &amp;
+                                            Statistics, Financial Accounting, Financial Management, Leadership and
+                                            Management, Taxes, General Accounting, Marketing, Regulations and Compliance
+                                        </p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.3</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(453 reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Specialization · 3 - 6 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="cds-9 css-0 cds-11 cds-grid-item cds-56 cds-64 cds-76">
+                    <div class="css-1ek61wr">
+                        <a href="/learn/financial-markets-global" target="_blank" rel="noopener noreferrer">
+                            <div class="css-12svhik">
+                                <div class="css-uvmc60">
+                                    <img src="https://s3.amazonaws.com/coursera-course-photos/51/51d7604aba11e7ae3525d9720463e7/Shiller_FinancialMarkets_New.png?auto=format%2Ccompress%2C%20enhance&amp;dpr=3&amp;w=265&amp;h=216&amp;fit=crop&amp;q=50"
+                                        alt="">
+                                </div>
+                                <div class="css-1qbp9zc">
+                                    <p class="cds-119 css-e7lgfl cds-121">Free</p>
+                                </div>
+                                <div class="css-ilhc4l">
+                                    <div class="css-1rj417c">
+                                        <div class="partner-logo-lohp-legacy css-17cbn3s">
+                                            <div class="cds-9 css-1fhq39r cds-10 cds-16">
+                                                <div class="cds-9 css-11floa2 cds-11 cds-grid-item">
+                                                    <div class="_1x9ons3">
+                                                        <img src="https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&amp;dpr=3&amp;w=25&amp;h=25&amp;q=40"
+                                                            alt="Yale University">
+                                                    </div>
+                                                </div>
+                                                <div class="cds-9 css-1xdhyk6 cds-11 cds-grid-item">
+                                                    <span class="cds-119 css-1mru19s cds-121">Yale University</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2 class="cds-119 css-h1jogs cds-121">Financial Markets</h2>
+                                        <p class="cds-119 css-12ksubz cds-121"><span class="css-68g4j1"><b>Skills you'll
+                                                    gain: </b></span>Finance, Regulations and Compliance, Securities
+                                            Sales, Investment Management, Risk Management, Business Psychology,
+                                            Behavioral Economics, Securities Trading, Underwriting, Adaptability,
+                                            Financial Management, Innovation, Resilience, Taxes, Accounting, Banking,
+                                            Business Analysis, Business Process Management, Corporate Accounting,
+                                            Critical Thinking, Data Analysis, Decision Making, Entrepreneurship,
+                                            Financial Analysis, Generally Accepted Accounting Principles (GAAP),
+                                            Probability & Statistics, Statistical Tests, Strategy and Operations</p>
+                                    </div>
+                                    <div class="product-reviews css-pn23ng">
+                                        <p class="cds-119 css-11uuo4b cds-121">4.8</p>
+                                        <p class="cds-119 css-dmxkm1 cds-121">(25.6k reviews)</p>
+                                    </div>
+                                    <p class="cds-119 css-dmxkm1 cds-121">Beginner · Course · 1 - 3 Months</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+
+
+
+            </ul>
+
+        </div>
+        <!-- Sidebar-Wrapper Starts Here-->
+
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="dwg-plank-frame dwg-plank-frame--coconut dwg-box dwg-theme--coconut dwg-display--flex dwg-bg-color--core-secondary dwg-justify-content--center"
+        style="--dwg-plank-frame-mt--mobile:9;--dwg-plank-frame-mt--mobile-lg:9;--dwg-plank-frame-mt--tablet:9;--dwg-plank-frame-mt--tablet-lg:19;--dwg-plank-frame-mt--desktop:19;--dwg-plank-frame-mt--desktop-lg:19;--dwg-plank-frame-mt--ultrawide:19;--dwg-plank-frame-mb--mobile:9;--dwg-plank-frame-mb--mobile-lg:9;--dwg-plank-frame-mb--tablet:9;--dwg-plank-frame-mb--tablet-lg:19;--dwg-plank-frame-mb--desktop:19;--dwg-plank-frame-mb--desktop-lg:19;--dwg-plank-frame-mb--ultrawide:19"
+        id="dwg_faq_plank-1495ec0a4c">
+        <div
+            class="dwg-plank-frame__inner dwg-box dwg-display--flex dwg-width--full dwg-flex-direction--column dwg-align-items--center">
+            <div class="dwg-flex-grid dwg-box dwg-display--flex"
+                style="max-width:1280px;margin:auto;--dwg-flex-grid__columns--mobile:14;--dwg-flex-grid__columns--mobile-lg:14;--dwg-flex-grid__columns--tablet:26;--dwg-flex-grid__columns--tablet-lg:26;--dwg-flex-grid__columns--desktop:26;--dwg-flex-grid__columns--desktop-lg:26;--dwg-flex-grid__columns--ultrawide:26">
+                <div class="dwg-flex-grid__cell dwg-box"
+                    style="--dwg-flex-grid__col-span--mobile:12;--dwg-flex-grid__col-span--mobile-lg:12;--dwg-flex-grid__col-span--tablet:22;--dwg-flex-grid__col-span--tablet-lg:22;--dwg-flex-grid__col-span--desktop:22;--dwg-flex-grid__col-span--desktop-lg:22;--dwg-flex-grid__col-span--ultrawide:22;--dwg-flex-grid__col-pad-left--mobile:1;--dwg-flex-grid__col-pad-left--mobile-lg:1;--dwg-flex-grid__col-pad-left--tablet:2;--dwg-flex-grid__col-pad-left--tablet-lg:2;--dwg-flex-grid__col-pad-left--desktop:2;--dwg-flex-grid__col-pad-left--desktop-lg:2;--dwg-flex-grid__col-pad-left--ultrawide:2;--dwg-flex-grid__col-pad-right--mobile:1;--dwg-flex-grid__col-pad-right--mobile-lg:1;--dwg-flex-grid__col-pad-right--tablet:2;--dwg-flex-grid__col-pad-right--tablet-lg:2;--dwg-flex-grid__col-pad-right--desktop:2;--dwg-flex-grid__col-pad-right--desktop-lg:2;--dwg-flex-grid__col-pad-right--ultrawide:2">
+                    <div class="dwg-box dwg-mb--6">
+                        <h2
+                            class="dwg-text dwg-font-family--sharp-grotesk-23-book dwg-font-size--24 tablet:dwg-font-size--32 desktop:dwg-font-size--40 dwg-font-weight--regular dwg-line-height--120% desktop:dwg-line-height--110% dwg-text-align--center dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                            Frequently asked questions</h2>
+                    </div>
+                    <div class="dwg-accordion dwg-box">
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 140px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--0"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="What is a Dropbox for teams user?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--0--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--0"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true">What programming languages are covered in your coding courses?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--0--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--0">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Our coding courses cover a wide range of programming languages, including Python, Java, JavaScript, C++, and more. You can choose courses based on your interests and learning goals.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 164px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--1"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="How much space does my team get?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--1--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--1"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true"> Are the coding courses suitable for beginners with no prior programming experience?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--1--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--1">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Yes, our coding courses are designed to cater to learners of all levels, including beginners with no prior programming experience. We offer courses that start from the basics and gradually progress to more advanced topics.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 140px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--2"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="What is the difference between Dropbox Standard and Advanced?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--2--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--2"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true">How are the coding courses structured?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--2--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--2">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Our coding courses are structured as a series of modules or lessons, each focusing on a specific topic or concept. The lessons typically include video lectures, coding exercises, quizzes, and assignments to help you practice and apply what you've learned.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 236px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--3"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="Can I upgrade my existing Basic or Plus account? How does migration work?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--3--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--3"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true">Do I need to install any software or tools to take the coding courses?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--3--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--3">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Depending on the course, you might need to have specific coding environments or tools installed. We provide detailed instructions on setting up the required software, and our support team is available to assist you if you encounter any issues.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 212px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--4"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="Can I share files and folders with Basic or Plus users if I’m on a team plan?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--4--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--4"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true"> Can I access the coding courses on any device?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--4--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--4">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Yes, our courses are designed to be accessible on various devices, including computers, tablets, and smartphones. You can learn at your own pace and switch between devices as needed. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 140px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--5"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="Can I have fewer than 3 users on my account?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--5--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--5"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true">Do you offer any hands-on projects in the coding courses?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--5--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--5">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Absolutely! Hands-on projects are an integral part of our coding courses. They provide you with the opportunity to apply your skills to real-world scenarios and build a portfolio of practical projects that showcase your abilities to potential employers.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dwg-accordion-item dwg-accordion-item--is-collapsible dwg-box"
+                            style="--dwg-accordion-item__dropdown-max-height: 188px; --dwg-accordion-item__headline-padding-vertical: 4;">
+                            <input type="checkbox" class="dwg-accordion-item__checkbox"
+                                id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--6"
+                                name="warp-faq-dwg_faq_plank-1495ec0a4c-731069026" role="button" aria-expanded="false"
+                                aria-label="How does sharing and collaboration work with Dropbox team plans?"
+                                aria-controls="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--6--region">
+                            <div class="dwg-accordion-item__content-box dwg-box"><label
+                                    class="dwg-accordion-item__label-box dwg-box dwg-display--flex dwg-position--relative dwg-pt--4 dwg-pr--0 tablet-lg:dwg-pr--3 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-align-items--center dwg-justify-content--space-between"
+                                    for="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--6"><span
+                                        class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--medium dwg-font-style--normal dwg-line-height--20 dwg-accordion-item__label dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard"
+                                        aria-hidden="true">Can I enroll in multiple coding courses at once?</span>
+                                    <div class="dwg-box dwg-ml--3 tablet-lg:dwg-ml--19 dwg-color--standard"><span
+                                            class="dwg-accordion-item__chevron dwg-lazy-icon--standard dwg-box dwg-display--inline-block"><svg
+                                                viewBox="0 0 24 24" fill="none" class="dig-UIIcon dig-UIIcon--standard"
+                                                width="24" height="24" role="presentation" focusable="false">
+                                                <path d="m5.25 9.25 6.5 6.25 6.5-6.25" stroke="currentColor"
+                                                    stroke-width="1.5" stroke-miterlimit="10"
+                                                    vector-effect="non-scaling-stroke"></path>
+                                            </svg></span></div>
+                                </label>
+                                <div class="dwg-accordion-item__dropdown dwg-box" aria-live="polite">
+                                    <div class="dwg-accordion-item__dropdown-inner dwg-box" role="region"
+                                        id="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--6--region"
+                                        aria-labelledby="dwg-accordion-item-id__warp-faq-dwg_faq_plank-1495ec0a4c-731069026--6">
+                                        <div
+                                            class="dwg-box dwg-pt--1_5 dwg-pr--3 tablet-lg:dwg-pr--19 dwg-pb--4 dwg-pl--0 tablet-lg:dwg-pl--3 dwg-mr--0 tablet-lg:dwg-mr--6">
+                                            <div
+                                                class="dwg-text dwg-font-family--atlas-grotesk dwg-font-size--16 dwg-font-weight--regular dwg-font-style--normal dwg-line-height--24 dwg-typography--rich-text dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent dwg-color--standard">
+                                                <p
+                                                    class="dwg-text dwg-font-family--inherit dwg-box dwg-p--0 dwg-m--0 dwg-bg-color--transparent">
+                                                    Absolutely! You can enroll in multiple coding courses simultaneously to learn different languages, frameworks, or topics. Our platform allows you to manage your courses and progress efficiently.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div id="header-root-vue">
+        <!--Fotter Starts Here-->
+        <footer class="shared-footer">
+            <div class="row-inner">
+                <div style="margin-top: 0px;" class="footer-logo">
+                    <a style="margin-top: 15px;" href="#" class="logo logo-footer inline-block">
+                        <img width="100px" width="100px" src="logo-main.png" alt="logo">
+                    </a>
+                    <span class="copy">© 2023 The One. All Rights Reserved.</span>
+                    <div class="flex justify-center mt-5">
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Facebook_f_logo_(2021).svg.webp" alt="Facebook">
+                            </a>
+                        </span>
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Logo_of_Twitter.svg.webp" alt="Twitter">
+                            </a>
+                        </span>
+                        <span class="cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="1200px-Linkedin.svg.png" alt="LinkedIn">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-links-wrapper">
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">AdChoices</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Statement</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Press Room</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">of the Day</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--Footer - 2 Starts Here-->
+    <footer>
+        <div class="row2">
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="https://cleartax.in/?ref=finfo_footer">ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="/Meta/contact?ref=finfo_footer">Contact Us</a></li>
+
+                    <li><a href="/s/about-us?ref=finfo_footer">About Us</a></li>
+
+                    <li><a href="/s/careers?ref=finfo_footer">Careers</a></li>
+
+                    <li><a href="/Meta/Press?ref=finfo_footer">Media &amp; Press</a></li>
+
+                    <li><a href="/Meta/Reviews?ref=finfo_footer">User Reviews</a></li>
+
+                    <li><a href="https://taxcloudindia.com?ref=finfo_footer">TaxCloud India</a></li>
+
+                    <li><a href="https://cleartds.com?ref=finfo_footer">ClearTDS</a></li>
+
+                    <li><a href="https://medium.com/cleartax-engineering?ref=finfo_footer">Engineering Blogs</a></li>
+
+                    <li><a href="https://cleartax.in/g/terms/">FinTech Glossary</a></li>
+
+                    <li><a href="https://play.google.com/store/apps/details?id=com.cleartax.clear&amp;hl=en">Download
+                            Clear Khata App</a></li>
+
+                    <li><a href="https://play.google.com/store/apps/details?id=in.cleartax.pro&amp;hl=en">Download
+                            ClearTax Pro</a></li>
+
+                    <li><a href="https://clr.tax/black"> Download Black App</a></li>
+
+                    <li><a href="https://news.cleartax.in/">ClearTax Chronicles</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="https://cleartax.in/income-tax-efiling?ref=finfo_footer">File Income Tax
+                        Return</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/income-tax?ref=finfo_footer">Income Tax</a></li>
+
+                    <li><a href="https://cleartax.in/s/efiling-income-tax-return?ref=finfo_footer">Efiling Income
+                            Tax</a></li>
+
+                    <li><a href="https://cleartax.in/s/80c-80-deductions?ref=finfo_footer">Secion 80 Deductions</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-for-nri?ref=finfo_footer">Income Tax for NRI</a></li>
+
+                    <li><a href="https://cleartax.in/s/capital-gains-income?ref=finfo_footer">Capital Gains Income</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/house-property?ref=finfo_footer">House Property</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-e-verification-evc?ref=finfo_footer">Income Tax
+                            Verification</a></li>
+
+                    <li><a href="https://cleartax.in/s/how-to-efile-itr?ref=finfo_footer">How to efile ITR</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-refund?ref=finfo_footer">Income Tax Refund status</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/tds?ref=finfo_footer">File TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/itr?ref=finfo_footer">ITR</a></li>
+
+                    <li><a href="https://cleartax.in/tds?ref=finfo_footer">File TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-slabs?ref=finfo_footer">Income Tax Slabs</a></li>
+
+                    <li><a href="https://cleartax.in/s/view-form-26as-tax-credit-statement?ref=finfo_footer">Form
+                            26AS</a></li>
+
+                    <li><a href="https://cleartax.in/s/what-is-form-16?ref=finfo_footer">What is Form 16</a></li>
+
+                    <li><a href="https://cleartax.in/s/salary-income?ref=finfo_footer">Salary Income</a></li>
+
+                    <li><a href="https://cleartax.in/tds/guides?ref=finfo_footer">How to File TDS Returns</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link"
+                        href="https://cleartax.in/s/gst-law-goods-and-services-tax?ref=finfo_footer">GST</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/gst?ref=finfo_footer">GST Software</a></li>
+
+                    <li><a href="https://cleartax.in/s/new-gst-returns?ref=finfo_footer">New GST Returns</a></li>
+
+                    <li><a
+                            href="https://cleartax.in/s/e-invoicing-new-gst-return-system?ref=finfo_footer">E-Invoicing</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/e-invoicing-enterprise-software?ref=finfo_footer">E-Invoicing
+                            Software</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-input-tax-credit?ref=finfo_footer">Input Tax Credit</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-returns?ref=finfo_footer">GST Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-invoice?ref=finfo_footer">GST Invoice</a></li>
+
+                    <li><a href="https://cleartax.in/services/gst_services/c?ref=finfo_footer">GST Services</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-training?ref=finfo_footer">GST Training</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-calendar?ref=finfo_footer">GST Calendar</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-news-and-announcements?ref=finfo_footer">GST News</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-guide-introduction?ref=finfo_footer">GST Guide</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/tools?ref=finfo_footer">Tax Tools by ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/paytax/taxCalculator?ref=finfo_footer">Income Tax Calculator</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/tax-calculation-gst?ref=finfo_footer">GST Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/paytax/hraCalculator?ref=finfo_footer">HRA Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-hsn-lookup?ref=finfo_footer">Find HSN Code</a></li>
+
+                    <li><a href="https://cleartax.in/save/sip-calculator?ref=finfo_footer">SIP Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/mutual-fund-calculator?ref=finfo_footer">Mutual fund
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/nps-calculator?ref=finfo_footer">NPS Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/gst-number-search/?ref=finfo_footer">GST Number Search</a></li>
+
+                    <li><a href="https://cleartax.in/s/emi-calculator?ref=finfo_footer">EMI Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/ppf-calculator?ref=finfo_footer">PPF calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/fd-calculator?ref=finfo_footer">FD calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/rd-calculator?ref=finfo_footer">RD calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/home-loan-emi-calculator?ref=finfo_footer">Home Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/simple-compound-interest-calculator?ref=finfo_footer">Interest
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/gratuity-calculator?ref=finfo_footer">Gratuity Calculator</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/personal-loan-emi-calculator?ref=finfo_footer">Personal Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/emi-calculator?ref=finfo_footer">Car loan emi calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/pf-calculator?ref=finfo_footer">PF Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/salary-calculator?ref=finfo_footer">Salary Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/cagr-calculator?ref=finfo_footer">CAGR Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/save/rent?ref=finfo_footer">Generate Rent Receipts</a></li>
+
+                    <li><a href="https://cleartax.in/ifsc-code/?ref=finfo_footer">IFSC Code Search</a></li>
+
+                    <li><a href="https://cleartax.in/f/gold-rate/india?ref=finfo_footer">Gold Rates Today</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    Generic Topics
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/how-to-link-aadhaar-to-pan?ref=finfo_footer">How to Link Aadhaar
+                            card to PAN</a></li>
+
+                    <li><a href="https://cleartax.in/s/uidai?ref=finfo_footer">UIDAI</a></li>
+
+                    <li><a href="https://cleartax.in/s/pan-card-status?ref=finfo_footer">Pan Card Status</a></li>
+
+                    <li><a href="https://cleartax.in/s/aadhaar-card?ref=finfo_footer">Aadhar card</a></li>
+
+                    <li><a href="https://cleartax.in/s/epfo?ref=finfo_footer">EPFO</a></li>
+
+                    <li><a href="https://cleartax.in/s/universal-account-number?ref=finfo_footer">UAN</a></li>
+
+                    <li><a href="https://cleartax.in/s/epf-withdrawal-online?ref=finfo_footer">EPF Withdrawal</a></li>
+
+                    <li><a href="https://cleartax.in/s/voter-id?ref=finfo_footer">Voter ID</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/save?ref=finfo_footer">ClearTax Investment</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/mutual-funds?ref=finfo_footer">Mutual Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/elss?ref=finfo_footer">ELSS Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/sip?ref=finfo_footer">SIP</a></li>
+
+                    <li><a href="https://cleartax.in/s/mutual-fund-types?ref=finfo_footer">Types of Mutual Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-mutual-funds?ref=finfo_footer">Best Mutual funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-elss-mutual-funds?ref=finfo_footer">Best ELSS Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-debt-funds?ref=finfo_footer">Best Debt Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-liquid-funds?ref=finfo_footer">Best Liquid Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-sip-plans-mutual-fund?ref=finfo_footer">Best SIP Plans</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-mid-cap-mutual-funds?ref=finfo_footer">Best Midcap Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-large-cap-mutual-funds?ref=finfo_footer">Best Large Cap
+                            Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-multi-cap-funds?ref=finfo_footer">Best Multi Cap Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-small-cap-mutual-funds?ref=finfo_footer">Best Small Cap
+                            Funds</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/business?ref=finfo_footer"> ClearTax Business</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/presumptive-tax-for-professionals?ref=finfo_footer">Tax Filing for
+                            Professionals</a></li>
+
+                    <li><a href="https://cleartax.in/tax-filing-for-traders?ref=finfo_footer">Tax Filing for Traders</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/trademark-registration-procedure-india?ref=finfo_footer">Trademark
+                            Registration</a></li>
+
+                    <li><a href="https://cleartax.in/s/company-registration?ref=finfo_footer">Company Registration</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/services/business/c?ref=finfo_footer">Services for Businesses</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/services/startup_services/c?ref=finfo_footer">Launch your
+                            Business</a></li>
+
+                    <li><a href="https://cleartax.in/s/freelance-professional-business-income?ref=finfo_footer">Guide
+                            for Business &amp;amp; Professional</a></li>
+
+                    <li><a href="https://cleartax.in/services/tds_returns/c?ref=finfo_footer">TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/pricing?ref=finfo_footer">Expert Assisted Tax Filing</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.menu-main');
+
+        const toggleNav = () => {
+            mainNav.classList.toggle('open');
+        };
+
+        hamburger.addEventListener('click', toggleNav);
+
+        const dropdown = document.querySelectorAll('.dropdown');
+
+        Array.from(dropdown).forEach((drop) => {
+            drop.addEventListener('click', () => {
+                dropdown.forEach((d) => {
+                    if (d !== drop) {
+                        d.classList.remove('open');
+                    }
+                });
+                drop.classList.toggle('open');
+            });
+        });
+
+        // hide header on scroll
+
+        // grab an element
+        const header = document.querySelector('.header-main');
+        // construct an instance of Headroom, passing the element
+        const headroom = new Headroom(header);
+        // initialise
+        headroom.init();
+    </script>
+</body>
+
+</html>

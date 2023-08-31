@@ -1,0 +1,2284 @@
+<!DOCTYPE html>
+<html lang="en-GB" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" style="--vh: 7.86px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, maximum-scale=4">
+    <link href="https://www.forbes.com/advisor/in/wp-content/themes/fadvuk/assets/images/favicon.png"
+        rel="shortcut icon">
+    <title>Introducing Technical Analysis</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+    <link rel="stylesheet" href="stylesheet2.css">
+    <!--   <link rel="stylesheet" id="classic-theme-styles-css"
+        href="https://www.forbes.com/advisor/in/wp-includes/css/classic-themes.min.css?ver=1" type="text/css"
+        media="all">-->
+    <style id="global-styles-inline-css" type="text/css">
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mainpage.css">
+    <style amp-custom="">
+        .author__block-image-wrap amp-img {
+            height: 100%;
+        }
+
+        figure amp-img img {
+            object-fit: cover;
+        }
+
+        .-mx-5 {
+            margin: 0 -20px;
+        }
+
+        .more-from-section>h2>amp-img {
+            height: 17px;
+            display: flex;
+        }
+
+        .more-from-section>h2>amp-img>img {
+            margin-left: 0;
+            width: 152px;
+            min-width: auto;
+        }
+    </style>
+    <style type="text/css" id="tts-styles">
+        [data-tts-block-id].tts-active {
+            background: rgba(206, 225, 255, 0.9) !important;
+        }
+
+        [data-tts-sentence-id].tts-active {
+            background: rgba(0, 89, 191, 0.7) !important;
+        }
+    </style>
+</head>
+
+<body class="post-template-default single single-post postid-39581 single-format-standard" id="verticalIndia"><iframe
+        marginwidth="0" marginheight="0" scrolling="no" frameborder="0" height="0" width="0" id="mnet"
+        src="https://hbx.media.net/checksync.php?cid=8CU25AH4U&amp;cs=1&amp;cv=37&amp;hb=1&amp;prvid=262%2C229%2C203%2C214%2C339%2C222%2C236%2C23%2C178%2C38%2C184%2C80%2C226%2C113%2C3015%2C193%2C273%2C108%2C2030%2C56%2C29%2C132%2C77%2C345%2C246%2C225%2C2033%2C117%2C251%2C3016%2C459%2C461%2C201%2C450%2C43%2C159%2C326%2C33%2C186%2C97%2C55%2C3%2C261%2C2026%2C51%2C175%2C70%2C82%2C2027%2C3012%2C188%2C145&amp;vsSync=1&amp;refUrl=https%3A%2F%2Fwww.google.com%2F&amp;gdpr=0&amp;gdprconsent=0&amp;gdprstring=&amp;usp_status=0&amp;usp_consent=1&amp;coppa=0&amp;ckdel=0&amp;gpp=&amp;gpp_sid="
+        style="display: none !important;"></iframe>
+    <div id="page">
+        <header id="masthead">
+            <div style="background-color: white;"
+                class="header-main headroom headroom--not-bottom headroom--pinned headroom--top">
+                <div class="container">
+                    <div class="flex items-center -mx-2">
+                        <div class="w-1/2 md:w-[20%] px-2">
+
+                            <a href="/">
+                                <img width="189" height="36" class="black-logo" src="logo-main.png" alt="">
+                                <img width="189" height="36" class="white-logo"
+                                    src="https://www.fisdom.com/wp-content/themes/theme/assets/img/fisdom-logo-white-text.svg"
+                                    alt="">
+                            </a>
+
+                        </div>
+
+
+                        <div class="w-full px-2">
+                            <div class="menu-main">
+                                <button id="hamburger" class="hamburger block xl:hidden ml-auto" fdprocessedid="flhd7f">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <ul class="nav-main items-center md:justify-end">
+
+
+                                    <li class="dropdown">
+                                        <a href="#">Products</a>
+
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/stocks.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Stocks
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/ipo.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        IPOs &amp; more
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/mutual-funds.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Mutual Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tax-filing.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Tax Filing
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img width="20" height="20"
+                                                            src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/pension-funds-2.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Pension Funds
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </li>
+                                    <li><a href="index.html" target="_blank">Main Page</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#!">Resources</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/research_icon.svg"
+                                                            alt="" style="width:auto;">
+                                                    </div>
+                                                    <span>
+                                                        Research
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#" target="_blank">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/learn.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        One Percent Academy
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/blogs.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Blogs
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/tools.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Calculators
+                                                    </span>
+                                                </a>
+                                            </div>
+
+
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="!">Company</a>
+                                        <div class="dropdown-menu">
+                                            <div>
+                                                <a href="#">
+
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/fisdom-icon.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        About us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/careers.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Careers
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/contact.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Contact us
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="#">
+                                                    <div class="dropdown-icon">
+                                                        <img src="https://www.fisdom.com/wp-content/themes/theme/assets/img/icons/partner.svg?v=1.456"
+                                                            alt="">
+                                                    </div>
+                                                    <span>
+                                                        Become a partner
+                                                    </span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                    </li>
+                                    <li><a href="#" class="button button-secondary button-small">Login</a></li>
+                                    <li><a href="#" class="button  button-small">Download app</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-height" style="height: 92px;"></div>
+        </header>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div style="margin-top: -60px;" id="header-root-vue">
+
+        <div id="root-app" class="flex flex-col min-h-screen" style="padding-top: 0px;">
+
+            <!--Main Page Starts here-->
+            <div id="default-page-vue-root" class="break-word">
+                <div class="main-container px-5 xl:px-0 article-link-wrapper">
+                    <div class="row ">
+                        <div class="w-full md:w-3/4 md:pr-30px main-content-wrapper mt-5">
+                            <div class="content-wrapper post-title-wrapper relative">
+                                <h1
+                                    class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                    Introducing Technical Analysis
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row right-rail-present">
+                        <div id="main-content__wrapper"
+                            class="w-full md:w-3/4 md:pr-30px main-content-wrapper relative ">
+                            <div class="content-wrapper article__content wysiwyg-content my-3 link__tracking">
+                                <div class="featured-img mb-3">
+                                    <figure class="w-full">
+                                        <div class="featured-img-container"><img
+                                                src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/in/wp-content/uploads/2022/03/pexels-pixabay-163069-Cropped-scaled.jpg"
+                                                alt="Featured Image" class="w-full"></div>
+                                        <figcaption class="capitalize"></figcaption>
+                                    </figure>
+                                </div>
+                                <div id="article-content__marker" class="article__content">
+                                    <p>we briefly understood technical analysis and the main difference between
+                                        technical and fundamental analysis. In this chapter, we will dig a bit deeper
+                                        and explore the assumptions technical analysis is based upon.</p>
+                                    <h2>Application on asset types</h2>
+                                    <p>One of the greatest advantages of technical analysis is that you can apply TA on
+                                        any asset class as long as the asset type has historical time series data. Time
+                                        series data in technical analysis is the price information, namely – open high,
+                                        low, close, volume, etc.</p>
+                                    <p>Here is an analogy that may help. Think about learning how to drive a car. Once
+                                        you learn how to drive a car, you can drive any car, whether a Mahindra XUV or a
+                                        Maruti Swift. Likewise, you only need to learn technical analysis once. Once you
+                                        do so, you can apply TA on any asset class – equities, commodities, foreign
+                                        exchange, fixed income, etc.</p>
+                                    <p>The fact that TA can be applied to multiple assets is probably one of the biggest
+                                        advantages of TA compared to the other stock market research techniques. For
+                                        example, one has to study the profit and loss, balance sheet, and cash flow
+                                        statements when it comes to the fundamental analysis of equity. However, the
+                                        fundamental analysis of commodities is completely different.</p>
+                                    <p>When dealing with an agricultural commodity like Coffee or Pepper, the
+                                        fundamental analysis includes analyzing rainfall, harvest, demand, supply,
+                                        inventory etc. However, the fundamentals of metal commodities are different, so
+                                        it is for energy commodities. So every time you choose a commodity, the
+                                        fundamentals change.</p>
+                                    <p>On the other hand, the concept of technical analysis will remain the same
+                                        irrespective of the asset you are studying. For example, an indicator such as
+                                        ‘Moving average convergence divergence (MACD) or ‘Relative strength index (RSI)
+                                        is used the same way on equity, commodity, or currency.</p>
+
+
+                                    <h2>Assumption in Technical Analysis</h2>
+                                    <p>Unlike fundamental analysts, technical analysts don’t worry about the company’s
+                                        valuation. The only thing that matters is the stock’s historical trading data
+                                        (price and volume) and the insights the past data provides about the future
+                                        movement in stock price.</p>
+                                    <p>Technical Analysis is based on a few key assumptions. You need to know these
+                                        assumptions to ensure you use technical analysis effectively.</p>
+
+                                    <ul>
+                                        <p class="bold">Markets discount everything</p>
+                                        <p class="padding-left">This assumption tells us that all known and unknown
+                                            information in the public
+                                            domain is reflected in the latest stock price. For example, an insider could
+                                            buy the company’s stock in large quantities in anticipation of a good
+                                            quarterly earnings announcement. While the insider does this secretively,
+                                            the price reacts, revealing to the technical analyst that something is about
+                                            to happen in the stock price.</p>
+                                        <p class="bold">The ‘how’ is more important than the ‘why’</p>
+                                        <p class="padding-left">This is an extension of the first assumption. Going with
+                                            the same example
+                                            discussed above – the technical analyst would not be interested in
+                                            questioning why the insider bought the stock as long as the technical
+                                            analyst knows how the price reacted to the insider’s action.</p>
+                                        <p class="bold">Price moves in trend </p>
+                                        <p class="padding-left">All major moves in the market are an outcome of a trend.
+                                            The concept of trend
+                                            is the foundation of technical analysis. For example, the recent upward
+                                            movement in the NIFTY 50 Index to 18500 from 14750 did not happen overnight.
+                                            This move happened in a phased manner in over 11 months. Another way to look
+                                            at it is that once the trend is established, the price moves in the
+                                            direction of the trend.</p>
+                                        <p class="bold">History tends to repeat itself </p>
+                                        <p class="padding-left"> In the technical analysis context, the price trend
+                                            tends to repeat itself.
+                                            This happens because the market participants consistently react to price
+                                            movements in remarkably similar ways every time the price moves in a certain
+                                            direction. For example, in an uptrend, market participants get greedy and
+                                            want to buy irrespective of the high price. Likewise, market participants
+                                            want to sell in a downtrend irrespective of the low and unattractive prices.
+                                            This human reaction has been the same towards stock prices over time,
+                                            ensuring that history repeats itself.</p>
+
+                                    </ul>
+                                    <h2>The Trade Summary</h2>
+                                    <p>The Indian stock market is open from 9:15 AM to 03:30 PM. During the 6 hours
+                                        15-minute market session, millions of trades occur. Think about an individual
+                                        stock – every minute, a trade gets executed on the exchange. As market
+                                        participants do we need to keep track of all the different price points at which
+                                        a trade is executed?</p>
+
+                                    <p>To illustrate this further, let us consider this imaginary stock in which many
+                                        trades exist. Look at the picture below. Each point refers to a trade being
+                                        executed at a particular time. If one manages to plot a graph that includes
+                                        every second from 9:15 AM to 3:30 PM, the graph will be cluttered with many
+                                        points. I’ve tried to represent this in the chart below - </p>
+                                    <img class="images" src="black-background-trading-image7.jpg" alt="">
+                                    <p>The market opened at 9:15 AM and closed at 3:30 PM, during which there were many
+                                        trades. It will be practically impossible to track all these different price
+                                        points. One needs a summary of the trading action and not the details on all the
+                                        different price points.</p>
+                                    <p>We can summarise the price action by tracking the Open, high, low, and close.</p>
+                                    <p><strong>Open Price</strong> – When the markets open for trading, the first price
+                                        a trade executes
+                                        is called the opening price.
+                                        <br>
+                                        <strong>The High Price</strong> – This represents the highest price at which a
+                                        trade occurred for
+                                        the given day.
+                                        <br>
+                                        <strong>The Low Price</strong> – This represents the lowest price at which a
+                                        trade occurred for
+                                        the given day.
+                                        <br>
+                                        <strong>The Close Price </strong>– This is the most important price because it
+                                        is the final price at which the market closes for the day. The close indicates
+                                        the intraday strength and a reference price for the next day. If the close is
+                                        higher than the open, it is considered a positive day; otherwise negative. Of
+                                        course, we will deal with this in greater detail as we progress through the
+                                        module.
+                                        <br> <br>
+                                        The closing price also shows the market sentiment and serves as a reference
+                                        point for the next day’s trading. For these reasons, closing is more important
+                                        than the opening, high or low prices.
+                                        <br>
+                                        The main data points from the technical analysis perspective are open, high,
+                                        low, and close prices. Each of these prices has to be plotted on the chart and
+                                        analyzed. <br> <br>
+                                        <img class="images" src="black-background-trading-image4.jpg" alt="">
+                                    </p>
+                                    <div class="content-wrapper post-title-wrapper relative">
+                                        <h1
+                                            class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                            Chart Patterns
+                                        </h1>
+                                    </div>
+                                    <p>Having recognized that the Open (O), high (H), low (L), and close (C) serves as
+                                        the
+                                        best way to summarize the trading action for the given time period, we need a
+                                        charting technique that displays this information in the most comprehensible
+                                        way. If
+                                        not for a good charting technique, charts can get quite complex. Each trading
+                                        day
+                                        has four data points’ i.e the OHLC. If we are looking at a 10 day chart, we need
+                                        to
+                                        visualize 40 data points (1 day x 4 data points per day). So you can imagine how
+                                        complex it would be to visualize 6 months or a year’s data.</p>
+                                    <p>As you may have guessed, the regular charts that we are generally used to – like
+                                        the
+                                        column chart, pie chart, area chart etc does not work for technical analysis.
+                                        The only
+                                        exception to this is the line chart.</p>
+                                    <p>The regular charts don’t work mainly because they display one data point at a
+                                        given
+                                        point in time. However Technical Analysis requires four data points to be
+                                        displayed
+                                        at the same time.</p>
+                                    <p>Below are some of the chart types:</p>
+                                    <ul>
+                                        <li>Line chart</li>
+                                        <li>Bar Chart</li>
+                                        <li>Japanese Candlestick</li>
+                                        <p>The focus of this module will be on the Japanese Candlesticks however before
+                                            we
+                                            get to candlesticks, we will understand why we don’t use the line and bar
+                                            chart.
+                                        </p>
+                                    </ul>
+                                    <h2>The Line and Bar chart</h2>
+                                    <p>The line chart is the most basic chart type and it uses only one data point to
+                                        form
+                                        the chart. When it comes to technical analysis, a line chart is formed by
+                                        plotting the
+                                        closing prices of a stock or an index. A dot is placed for each closing price
+                                        and the
+                                        various dots are then connected by a line.</p>
+                                    <p>If we are looking 60 day data then the line chart is formed by connecting the
+                                        dots of
+                                        the closing prices for 60 days.</p>
+                                    <img src="https://www.investopedia.com/thmb/anUxQgkWpzi0AlOwp3WjNzn0nPw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_final_Range_Bar_Charts_A_Different_View_of_the_Markets_Dec_2020-01-98530a5c8f854a3ebc4440eed52054de.jpg"
+                                        alt="">
+                                    <p>The line charts can be plotted for various time frames namely monthly, weekly,
+                                        hourly etc. So ,if you wish to draw a weekly line chart, you can use weekly
+                                        closing
+                                        prices of securities and likewise for the other time frames as well.</p>
+                                    <p>The advantage of the line chart is its simplicity. With one glance, the trader
+                                        can
+                                        identify the generic trend of the security. However the disadvantage of the line
+                                        chart
+                                        is also its simplicity. Besides giving the analysts a view on the trend, the
+                                        line chart
+                                        does not provide any additional detail. Plus the line chart takes into
+                                        consideration
+                                        only the closing prices ignoring the open, high and low. For this reason traders
+                                        prefer not to use the line charts.</p>
+                                    <h2>History of the Japanese Candlestick</h2>
+                                    <img src="https://e1.pxfuel.com/desktop-wallpaper/881/94/desktop-wallpaper-importance-of-japanese-candlesticks-in-technical-analysis-technical-analysis.jpg"
+                                        alt="">
+                                    <p>Before we jump in, it is worth spending time to understand in brief the history
+                                        of
+                                        the Japanese Candlesticks. As the name suggests, the candlesticks originated
+                                        from
+                                        Japan. The earliest use of candlesticks dates back to the 18th century by a
+                                        Japanese
+                                        rice merchant named Homma Munehisa.
+                                    </p>
+                                    <p>Though the candlesticks have been in existence for a long time in Japan, and are
+                                        probably the oldest form of price analysis, the western world traders were
+                                        clueless
+                                        about it. It is believed that sometime around 1980’s a trader named Steve Nison
+                                        accidentally discovered candlesticks, and he actually introduced the methodology
+                                        to
+                                        the rest of the world. He authored the first ever book on candlesticks titled
+                                        “Japanese Candlestick Charting Techniques” which is still a favorite amongst
+                                        many
+                                        traders.</p>
+                                    <p>Most of the pattern in candlesticks still retains the Japanese names; thus giving
+                                        an
+                                        oriental feel to technical analysis.</p>
+                                    <h2>Candlestick patterns and what to expect</h2>
+                                    <p>The candlesticks are used to identify trading patterns. Patterns in turn help the
+                                        technical analyst to set up a trade. The patterns are formed by grouping two or
+                                        more candles in a certain sequence. However, sometimes powerful trading signals
+                                        can be identified by just single candlestick pattern.</p>
+                                    <p>Hence, candlesticks can be broken down into single candlestick pattern and
+                                        multiple
+                                        candlestick patterns.</p>
+                                    <style>
+                                        .candlestick-list {
+                                            list-style: none;
+                                            padding: 0;
+                                            margin: 0;
+                                            font-family: Arial, sans-serif;
+                                        }
+
+                                        .pattern {
+                                            border-bottom: 1px solid #ccc;
+                                            padding: 10px 0;
+                                            position: relative;
+                                            list-style-type: none;
+                                        }
+
+                                        .pattern-title {
+                                            font-weight: bold;
+                                            margin-right: 10px;
+                                            list-style-type: none;
+                                        }
+
+                                        .sub-patterns {
+                                            list-style-type: lower-alpha;
+                                            margin-left: 20px;
+                                            padding-left: 0;
+                                            margin-top: -25px;
+                                        }
+
+                                        .sub-patterns li {
+                                            margin-bottom: 5px;
+                                        }
+
+                                        /* Styling on hover */
+                                        .pattern:hover {
+                                            background-color: #f5f5f5;
+                                        }
+
+                                        /* Styling for sub-patterns on hover */
+                                        .sub-patterns li:hover {
+                                            color: #007bff;
+                                            cursor: pointer;
+                                        }
+
+                                        /* Styling for active sub-pattern */
+                                        .sub-patterns li.active {
+                                            font-weight: bold;
+                                        }
+                                    </style>
+                                    <p>Under the single candlestick pattern, we will be learning the following:</p>
+                                    <ul class="candlestick-list">
+                                        <p class="pattern">
+                                            <span class="pattern-title">1. Marubozu</span>
+                                        <ul class="sub-patterns">
+                                            <li>Bullish Marubozu</li>
+                                            <li>Bearish Marubozu</li>
+                                        </ul>
+                                        </p>
+                                        <p class="pattern">
+                                            <span class="pattern-title">2. Doji</span>
+                                        <ul class="sub-patterns">
+                                            <li>Classic Doji</li>
+                                            <li>Long-Legged Doji</li>
+                                            <li>Dragonfly Doji</li>
+                                            <li>Gravestone Doji</li>
+                                            <li>Four Price Doji</li>
+                                            <li>Tombstone Doji</li>
+                                            <li>Neutral Doji</li>
+                                        </ul>
+                                        </p>
+                                        <p class="pattern"><span class="pattern-title">3. Spinning Tops</span></p>
+                                        <p class="pattern">
+                                            <span class="pattern-title">4. Paper Umbrella</span>
+                                        <ul class="sub-patterns">
+                                            <li>Hammer</li>
+                                            <li>Hanging Man</li>
+                                        </ul>
+                                        </p>
+                                        <p class="pattern"><span class="pattern-title">5. Shooting Star</span></p>
+                                        <p class="pattern"><span class="pattern-title">6. Inverted Hammer</span></p>
+                                    </ul>
+
+                                    <p>Multiple candlestick patterns are a combination of multiple candles. Under the
+                                        multiple candlestick patterns, we will learn the following:</p>
+                                    <ul class="candlestick-list">
+                                        <p class="pattern">
+                                            <span class="pattern-title">1. Engulfing pattern</span>
+                                        <ul class="sub-patterns">
+                                            <li>Bullish Engulfing</li>
+                                            <li>Bearish Engulfing</li>
+                                        </ul>
+                                        </p>
+                                        <p class="pattern">
+                                            <span class="pattern-title">2. Harami</span>
+                                        <ul class="sub-patterns">
+                                            <li>Bullish Harami</li>
+                                            <li>Bearish Harami</li>
+                                        </ul>
+                                        </p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                3. Piercing Pattern
+                                            </span></p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                4. Dark Cloud Cover
+                                            </span></p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                5. Morning Star
+                                            </span></p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                6. Evening Star
+                                            </span></p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                7. Three White Soldiers
+                                            </span></p>
+                                        <p class="pattern"><span class="pattern-title">
+                                                8. Three Black Crows
+                                            </span></p>
+                                    </ul>
+                                    <p>Candlestick patterns help the trader develop a complete point of view. Each
+                                        pattern comes with an in-built risk mechanism. Candlesticks give insight into
+                                        both entry and stop loss prices.</p>
+
+                                </div>
+                                <h2>Few assumptions specific to candlesticks</h2>
+                                <p>Before we jump in and start learning about the patterns, there are few more
+                                    assumptions that we need to keep in mind. These assumptions are specific to
+                                    candlesticks. Do pay a lot of attention to these assumptions as we will keep
+                                    referring back to these assumptions quite often later.</p>
+                                <p>At this stage, these assumptions may not be very clear to you. I will explain them in
+                                    greater detail as and when we proceed. However, do keep these assumptions in the
+                                    back of your mind.</p>
+                                <p><strong>Buy strength and sell weakness</strong> – Strength is represented by a
+                                    bullish (blue)
+                                    candle and weakness by a bearish (red) candle. Hence whenever you are buying
+                                    ensure it is a blue candle day and whenever you are selling, ensure it’s a red
+                                    candle
+                                    day.</p>
+                                <p><strong>Be flexible with patterns (quantify and verify)</strong> – While the text
+                                    book definition of
+                                    a pattern could state a certain criteria, there could be minor variations to the
+                                    pattern owing to market conditions. So one needs to be a bit flexible. However one
+                                    needs to be flexible within limits, and hence it is required to always quantify the
+                                    flexibility</p>
+                                <p><strong>Look for a prior trend</strong> – If you are looking at a bullish pattern,
+                                    the prior trend
+                                    should be bearish and likewise if you are looking for a bearish pattern, the prior
+                                    trend should be bullish</p>
+                                <div class="content-wrapper post-title-wrapper relative">
+                                    <h1
+                                        class="farticle-title text-22px md:text-36px leading-33px md:leading-44px font-merriweather font-bold md:my-4 text-gray-500 break-words">
+                                        Let's Dive into patterns
+                                    </h1>
+                                </div>
+                                <h2>Candles</h2>
+                                <p><strong>Bullish Candle</strong>:
+                                    A bullish candlestick represents a period in which the price of an asset has
+                                    increased over that time frame. In a bullish candle, the opening price is typically
+                                    lower than the closing price, creating a body that is filled or colored. The upper
+                                    part of the body represents the closing price, and the lower part represents the
+                                    opening price. This candle is often associated with positive sentiment and an upward
+                                    movement in the market.</p>
+                                <p><strong>Bearish Candle</strong>:
+                                    A bearish candlestick represents a period in which the price of an asset has
+                                    decreased over that time frame. In a bearish candle, the opening price is typically
+                                    higher than the closing price, creating a body that is hollow or colored. The upper
+                                    part of the body represents the opening price, and the lower part represents the
+                                    closing price. This candle is often associated with negative sentiment and a
+                                    downward movement in the market.</p>
+                                <p>These terms are commonly used in technical analysis to assess market trends and make
+                                    trading decisions. Traders and analysts often look at patterns formed by these
+                                    candles, along with other indicators, to understand market sentiment and potential
+                                    price movements.</p>
+
+                                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg4v2XuC3mrv4hRGalGOIat5li9tCF0-4FSkr7dxU7mj4sDgRSyKmGhgZTaEDys5N4WdSfM9LpEiuyAcgXaNVMBMRQYHhfxIX-9mov2AlvHDf2RqbLH0hZ1nMDB4rrj3xJTndCUfHx7ITnv5KEGrn7YfxfltIOl4krheuzWzoYUGiw9ZCY-mGAaePA/s1200/basic%20candlestick.jpg"
+                                    alt="">
+                                <h2>Marubozu</h2>
+                                <p>A Marubozu is a candlestick pattern in technical analysis that consists of a single
+                                    candlestick with no or very short shadows (wicks) and a body that represents the
+                                    full price range between the opening and closing prices. There are two types of
+                                    Marubozu patterns:</p>
+                                <img src="Marubozu.avif" alt="">
+                                <p style="margin-left: 5px;"><strong>Bullish Marubozu</strong>: This pattern forms when
+                                    the opening price is equal to the low price, and the closing price is equal to the
+                                    high price. It suggests strong buying pressure throughout the session and indicates
+                                    a potential bullish trend continuation or reversal.</p>
+                                <img src="https://www.indiacharts.com/stock-market/wp-content/uploads/2022/05/Image-05-01.jpg"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Bearish Marubozu</strong>: In contrast, a Bearish
+                                    Marubozu occurs when the opening price is equal to the high price, and the closing
+                                    price is equal to the low price. It indicates strong selling pressure and suggests a
+                                    potential bearish trend continuation or reversal.</p>
+                                <img src="https://www.indiacharts.com/stock-market/wp-content/uploads/2022/05/Image-06-01.jpg"
+                                    alt="">
+                                <p>Marubozu patterns signify a lack of price retracement during the trading session,
+                                    highlighting the dominance of buyers or sellers. They are considered as strong
+                                    signals, especially when they appear after a trend or consolidation.</p>
+                                <p><strong>How do you identify a Marubozu pattern?</strong></p>
+                                <p>The Marubozu candlestick patterns can be identified by their apparent large bodies
+                                    and ideally without any wick or shadow.</p>
+                                <img src="Marubozu2.jpg" alt="">
+                                <p>The important part of this study is, that we can easily identify the Marubozu candles
+                                    just from their shapes. We don’t have to look at anything else to confirm what are
+                                    they. This is the easiest part. one can easily identify a Marubozu from their
+                                    structure and type their colors.</p>
+                                <img src="https://www.indiacharts.com/stock-market/wp-content/uploads/2022/05/Image-04-01.jpg"
+                                    alt="">
+                                <h2>Doji</h2>
+                                <p>A Doji is a candlestick pattern in technical analysis that occurs when the opening
+                                    and closing prices of an asset are very close to each other, resulting in a short or
+                                    almost non-existent body. This pattern signifies market indecision and uncertainty,
+                                    suggesting a potential reversal or significant price movement in the near future.
+                                    The Doji pattern is characterized by its cross-like appearance, with equal or nearly
+                                    equal lengths of the upper and lower shadows, indicating that neither buyers nor
+                                    sellers were able to establish dominance during the trading session.</p>
+                                <img src="https://a.c-dn.net/b/3K4xiq/doji-candlestick-pattern_body_standarddoji.png"
+                                    alt="">
+                                <img src="https://blog.elearnmarkets.com/wp-content/uploads/2020/07/dark-cloud-cover-candlestick.jpg"
+                                    alt="">
+                                <img src="https://www.indiacharts.com/stock-market/wp-content/uploads/2022/04/image-11-1160x528.png"
+                                    alt="">
+                                <img src="https://digiteckworlds.files.wordpress.com/2021/03/red-and-black-dark-gamer-sports-youtube-thumbnail-8.png"
+                                    alt="">
+                                <img src="https://a.c-dn.net/b/1OEMBK/doji-candlestick-pattern_body_GBPZARDoubleDojicandlefinal.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Classic Doji</strong>:
+                                    The Classic Doji pattern occurs when the opening and closing prices of an asset are
+                                    very close or equal, resulting in a very small or nonexistent body. This pattern
+                                    indicates a state of indecision in the market between buyers and sellers. It
+                                    suggests that the balance between supply and demand is uncertain, potentially
+                                    signaling a reversal in the current trend.</p>
+                                <img src="https://a.c-dn.net/b/0Y1p0y/types-of-Doji-candlesticks_body_standard.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Long-Legged Doji</strong>:
+                                    A Long-Legged Doji has both upper and lower shadows (wicks) that are significantly
+                                    longer than the body. This pattern reflects high levels of volatility and indecision
+                                    among traders. It implies that despite wide price fluctuations, the open and close
+                                    prices ended up being close to each other. It suggests potential trend reversals or
+                                    significant market moves.</p>
+                                <img src="https://a.c-dn.net/b/44j04F/types-of-Doji-candlesticks_body_longlegged.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Dragonfly Doji</strong>:
+                                    The Dragonfly Doji occurs when the open, high, and close prices are the same,
+                                    resulting in a small or nonexistent upper shadow and a long lower shadow. This
+                                    pattern often appears at the bottom of a downtrend and signifies potential bullish
+                                    reversal. It indicates that sellers were initially strong but lost control, and
+                                    buyers might take over.</p>
+                                <img src="https://a.c-dn.net/b/2QBo2Q/types-of-Doji-candlesticks_body_dragonfly.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Gravestone Doji</strong>:
+                                    The Gravestone Doji is the opposite of the Dragonfly Doji. It forms when the open,
+                                    low, and close prices are the same, creating a small or nonexistent lower shadow and
+                                    a long upper shadow. This pattern often appears at the top of an uptrend and
+                                    suggests potential bearish reversal. It indicates that buyers were initially strong
+                                    but lost control to sellers.</p>
+                                <img src="https://a.c-dn.net/b/0ANUo1/types-of-Doji-candlesticks_body_gravestone.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Four Price Doji</strong>:
+                                    The Four Price Doji is rare and occurs when the open, high, low, and close prices
+                                    are the same, forming a small square body. This pattern indicates a strong state of
+                                    indecision and can be a signal of a potential trend reversal or significant market
+                                    move. Traders interpret this pattern cautiously due to its rarity.</p>
+                                <img src="https://a.c-dn.net/b/3Mvkxy/types-of-Doji-candlesticks_body_4price.png"
+                                    alt="">
+                                <p style="margin-left: 5px;"><strong>Tombstone Doji</strong>:
+                                    The Tombstone Doji is similar to the Gravestone Doji, but it appears after an
+                                    uptrend. It suggests potential bearish reversal. The open, high, and close prices
+                                    are the same, creating a small or nonexistent lower shadow and a long upper shadow.
+                                    It indicates that buyers, who were strong during the uptrend, lost control to
+                                    sellers.</p>
+                                <p style="margin-left: 5px;"><strong>Neutral Doji</strong>:
+                                    The Neutral Doji occurs when the open and close prices are the same, but there's a
+                                    significant range between the high and low prices. This pattern represents
+                                    uncertainty and a balanced market between buyers and sellers. It indicates that
+                                    neither side has a clear advantage and might lead to a continuation of the current
+                                    trend or a potential reversal.</p>
+                                <img width="100px"
+                                    src="https://www.thinkmarkets.com/getmedia/1a8d8e5f-ef74-47b9-a6fe-157afa2efc57/doji_pattern_1.png.aspx"
+                                    alt="">
+                                <p>These Doji patterns provide insights into market sentiment and potential trend
+                                    changes, but traders should always consider other factors and technical analysis
+                                    tools for confirmation before making trading decisions.</p>
+                                <img style="margin-bottom: 5px;"
+                                    src="https://howtotrade.com/wp-content/uploads/2022/04/doji-candle-pattern-gravestone-1170x621.png"
+                                    alt="">
+                                <img src="https://howtotrade.com/wp-content/uploads/2022/04/doji-candle-pattern-example-1170x625.png"
+                                    alt="">
+
+                                <h3>Doji Reversal</h3>
+                                <p>A "Doji Reversal" refers to a candlestick pattern in technical analysis where a Doji
+                                    candlestick is followed by a significant price movement in the opposite direction. A
+                                    Doji candlestick is a candlestick pattern that has a small or nearly non-existent
+                                    body and occurs when the opening and closing prices are very close or identical. It
+                                    represents indecision in the market and suggests that buyers and sellers are in
+                                    balance.</p>
+                                <img src="https://centerpointsecurities.com/wp-content/uploads/2022/12/Doji-Reversal-Pattern-1024x653.png"
+                                    alt="">
+                                <img src="https://cdn-0.forexbee.co/wp-content/uploads/2021/12/live-example-1.png"
+                                    alt="">
+                                <img width="100%"
+                                    src="https://www.daytradetheworld.com/wp-content/uploads/2019/12/doji-at-the-top.png"
+                                    alt="">
+                                <h2>Spinning Top</h2>
+                                <p>A Spinning Top is a candlestick pattern in technical analysis that appears on price
+                                    charts. It is characterized by having a short real body (the difference between open
+                                    and close prices) and relatively long upper and lower shadows (also known as wicks
+                                    or tails). This creates a candlestick that looks like a spinning top or a small
+                                    umbrella.</p>
+                                <p>The Spinning Top pattern suggests that there is indecision in the market, where
+                                    neither buyers nor sellers have gained full control. The price has moved
+                                    significantly higher and lower during the trading period, but it has ultimately
+                                    closed near its opening price. This indicates that despite the volatility, the
+                                    market has ended up almost where it started.</p>
+                                <p>The presence of a Spinning Top can be seen as a potential reversal signal if it forms
+                                    after an uptrend or downtrend, indicating that the current trend might be losing
+                                    momentum. It can also act as a continuation pattern if it forms within a sideways or
+                                    consolidating market, suggesting that the indecision might lead to a continuation of
+                                    the existing trend.</p>
+                                <p>Traders often analyze other factors such as the preceding trend, volume, and nearby
+                                    support and resistance levels to determine the significance of a Spinning Top and
+                                    make informed trading decisions.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/ced4a557-68a0-4de7-8cb1-e04b9463c8d5/spinning_pattern_1.jpg.aspx"
+                                    alt="">
+                                <img src="https://navi.com/blog/wp-content/uploads/2022/12/Spinning-Top-Candlestick.jpg"
+                                    alt="">
+                                <p>Looking at the picture below, we have a GBP/USD daily chart.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/07d7f070-550a-4f46-bfd8-713a4e59f2b7/spinning_pattern_3.png.aspx"
+                                    alt="">
+                                <p> The price action is moving higher to a point where it prints a new short-term high,
+                                    but the bulls fail to force a high close, so instead, the price closes near the
+                                    opening price.</p>
+                                <p>
+                                    An end to a strong impulsive move upside has actually started with a spinning top
+                                    pattern. You can either wait for a confirmation candle or open a trade as soon as
+                                    the spinning top formation is created. A stop-loss order should be placed just above
+                                    the previous high.
+                                    <br>
+                                    With take profits you can be more flexible and this depends on your risk tolerance.
+                                </p>
+                                <p>A similar situation develops in the USD/CAD daily chart below.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/6f10cab5-1784-4ddb-985a-ba5554b7d2ca/spinning_pattern_4.jpg.aspx"
+                                    alt="">
+                                <h1>Difference between a Doji and a Spinning Top</h1>
+
+                                <img src="https://www.thinkmarkets.com/getmedia/8c8e863a-ee04-4558-b476-3ec9cb5a6a8b/spinning_patter_2.png.aspx"
+                                    alt="">
+                                <p>The main difference between a Doji and a Spinning Top lies in their appearance and
+                                    interpretation on price charts:
+                                    <br><br>
+                                    1. <strong> Doji</strong>:
+                                    - A Doji is a candlestick pattern with a very small or non-existent real body, where
+                                    the open and close prices are nearly equal or exactly the same. <br>
+                                    - It can have varying lengths of upper and lower shadows (wicks or tails).<br>
+                                    - Doji patterns suggest indecision in the market and potential trend reversals. They
+                                    indicate that neither buyers nor sellers were able to gain control during the
+                                    trading period.<br>
+                                    - Doji patterns are often considered more significant when they appear after a
+                                    strong uptrend or downtrend.<br>
+
+                                    2. <strong>Spinning Top</strong>:
+                                    - A Spinning Top is a candlestick pattern with a short real body (the difference
+                                    between open and close prices) and relatively long upper and lower shadows.<br>
+                                    - It resembles a small umbrella or spinning top due to the extended wicks on both
+                                    sides of the candle.<br>
+                                    - Spinning Tops also indicate indecision in the market, but they don't necessarily
+                                    imply a potential trend reversal. They suggest that price moved significantly both
+                                    higher and lower during the trading period, but closed near the opening price.
+                                    - Spinning Tops can be continuation patterns when they appear within a sideways
+                                    market or consolidation.<br><br>
+
+                                    In summary, both Doji and Spinning Top patterns reflect market indecision, but their
+                                    appearance and potential interpretations differ. Doji patterns focus on the equality
+                                    of open and close prices, while Spinning Tops emphasize the balance between price
+                                    movement and the eventual close. Traders often use these patterns in conjunction
+                                    with other technical tools and factors to make informed trading decisions.
+                                </p>
+                                <h2>Paper Umbrella</h2>
+                                <p>"Paper Umbrella" is not a widely recognized term in technical analysis. It's possible
+                                    that you might be referring to the "Hammer" and "Hanging Man" candlestick patterns,
+                                    which are also known as "Umbrella" patterns. These patterns are reversal patterns
+                                    that can indicate potential changes in the trend. Let's discuss them:</p>
+                                <img src="https://www.aimarrow.com/wp-content/uploads/2019/01/Paper-Umbrella.png"
+                                    alt="">
+                                <p><strong>Hammer</strong>:</p>
+                                <p>The Hammer pattern forms after a downtrend and consists of a small real body at the
+                                    upper end of the price range, with a long lower shadow (wick or tail).</p>
+                                <p> The candlestick resembles a hammer, with a small head and a long handle (shadow).
+                                </p>
+                                <p> The real body can be bullish or bearish.</p>
+                                <p> The long lower shadow indicates that prices dropped significantly during the trading
+                                    session but rebounded to close near the opening price.</p>
+                                <p> The Hammer pattern suggests potential bullish reversal, as it shows that buyers are
+                                    stepping in after a downtrend, signaling a possible trend reversal.</p>
+                                <p>
+                                    The hammer pattern is a single-candle bullish reversal pattern that can be spotted
+                                    at the end of a downtrend. The opening price, close, and top are approximately at
+                                    the same price, while there is a long wick that extends lower, twice as big as the
+                                    short body. </p>
+                                <img src="https://www.thinkmarkets.com/getmedia/bfb6906a-19c4-46e5-867b-097721a2cba7/hammer-1.jpg.aspx"
+                                    alt="">
+                                <p>
+                                    On the other hand, an inverted hammer is exactly what the name itself suggests i.e.
+                                    a hammer turned upside down. A long shadow shoots higher, while the close, open, and
+                                    low are all registered near the same level.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/365f1e43-80ad-4a8d-83d0-cec179813c1f/hammer-2.jpg.aspx"
+                                    alt="">
+                                <p>
+                                    Following a bullish reversal, the price action rotates lower again to briefly trade
+                                    in a downtrend. At one point, the inverted hammer was created as the bulls failed to
+                                    create a hammer, but still managed to press the price action higher. </p>
+                                <img src="https://www.thinkmarkets.com/getmedia/33b22600-f94d-4211-8e7e-2624ceac00df/hammer-chart-4.jpg.aspx"
+                                    alt="">
+                                <p>As a result, the next candle exploded higher as the bulls felt that the bears were
+                                    not so dominant anymore. Hence, the inverted hammer should be seen as a testing
+                                    field in this case. As soon as the bulls felt the bears’ weakness they reacted
+                                    quickly to drive the price action and secure a major victory.</p>
+                                <p><strong>Hanging Man</strong>: is a candlestick pattern in technical analysis that
+                                    often signals a potential reversal in an uptrend. It is a single candlestick pattern
+                                    that can provide traders with valuable insights into market sentiment and potential
+                                    changes in price direction.</p>
+                                <img width="50%"
+                                    src="https://www.thinkmarkets.com/tfxmain/media/images/SEO%20pages/Hanging-Man-Pattern.jpg"
+                                    alt="">
+                                <p>
+                                    On the chart below, we have a EUR/USD hourly chart where the price action moves
+                                    upside. Since this is a bearish reversal pattern, the trend must always be positive
+                                    and bullish for a hanging man pattern to occur.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/4da7bb06-177f-453c-a21e-730a8910d4df/EUR_USD_chart_2.png.aspx"
+                                    alt="">
+                                <p>In a short time frame, two hanging man candles are formed. The first candle hints
+                                    that a reversal may take place, which is then confirmed with a long bearish candle
+                                    afterwards. It’s a choppy price action so the price continues to trade without much
+                                    clarity.
+                                    <br>
+                                    Later, the price action forms the second hanging man pattern, followed by a bearish
+                                    candle and a doji. All these candles signal that the reversal is imminent, a
+                                    scenario that materializes shortly afterwards.
+                                </p>
+                                <h2>Shooting Star</h2>
+                                <p>The Shooting Star is a candlestick pattern in technical analysis that typically
+                                    signals a potential reversal in an uptrend. It is a single candlestick pattern with
+                                    distinct characteristics that provide insights into market sentiment and potential
+                                    price changes.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/44abeef4-e6e1-42aa-8572-779fdabd45ae/Shooting-star-pattern_1.jpg.aspx"
+                                    alt="">
+                                <p><strong>Inverted Hammer</strong>: While the Inverted Hammer is usually considered a
+                                    bullish reversal
+                                    pattern, it can sometimes appear as a variation of the Shooting Star. It has a small
+                                    real body at the upper end of the price range and a long upper shadow.</p>
+                               <!-- <img src="https://s32659.pcdn.co/wp-content/uploads/2023/03/Inverted-hammer.jpeg.optimal.jpeg"
+                                    alt="">-->
+                                <p><strong>Bearish Shooting Star</strong>: This is the classic Shooting Star pattern and
+                                    indicates a potential trend reversal. It has a small real body near the lower end of
+                                    the price range and a long upper shadow.</p>
+
+                                <p><strong>Long-Legged Shooting Star</strong>: This variation of the Shooting Star has
+                                    an even longer upper shadow, which indicates stronger selling pressure and potential
+                                    for a more significant reversal.</p>
+                                <p>
+                                    To demonstrate this, let us move your attention to a chart below. We have a NZD/USD
+                                    trading sideways for the most part. In the middle part of the chart, the price
+                                    action starts to move gradually higher.</p>
+                                <img src="https://www.thinkmarkets.com/getmedia/b88e455f-f530-4a17-bdaa-1f282353b096/chart-3-shooting-star_1.jpg.aspx"
+                                    alt="">
+                                <p>
+                                    At one point, there is a new high in place, above the horizontal resistance.
+                                    However, the buyers lose control over the price action, which initiates the
+                                    pullback. A failure at important resistance/support levels is not a normal failure,
+                                    it is usually much more important. For this reason, the price action rotates back
+                                    lower following a failure to clear the resistance and returns to support. </p>
+                                <p>The upper red line shows our stop-loss, which is around 20 pips above the session’s
+                                    high. Any move to these levels where our stopp-loss is means that the pair is in a
+                                    breakout territory and there is no reversal. </p>
+                                <p>Our profit-taking order (the lower horizontal black line) is a simple trend line that
+                                    shows where the pair bottomed during the previous attempt to move lower. Hence, we
+                                    are looking for a pullback to the old support.
+                                    <br>
+
+                                    In this situation, we are risking 20 pips to earn nearly 90 pips. A simple
+                                    calculation shows that it is a 1:4.5 risk ratio, an extremely profitable trade.
+                                    Opportunities as profitable as this one are quite rare in the markets, but this does
+                                    demonstrate how powerful a shooting star candlestick pattern can be.
+                                </p>
+                            </div>
+                            <div
+                                class="article__editors-note article__editors-note-bottom p-2 my-3 text-xs tracking-tight font-work-sans w-full bg-f8f8f8">
+                                Absolutely, we are here to guide and support you in your journey to learn trading. Our
+                                aim is to provide you with the knowledge, tools, and resources you need to navigate the
+                                world of trading with confidence. Whether you're a beginner just starting out or an
+                                experienced trader looking to refine your skills, our comprehensive range of educational
+                                materials, tutorials, and expert insights will empower you to make informed decisions in
+                                the financial markets.
+                                <br>
+                                From understanding the basics of trading to mastering advanced strategies, we're
+                                committed to being your learning partner every step of the way. Our goal is to demystify
+                                the complexities of trading, helping you build a strong foundation and grow your
+                                expertise. With access to real-time market data, interactive simulations, and a
+                                community of fellow learners, you'll have the opportunity to practice and refine your
+                                trading skills in a risk-free environment.
+                                <br>
+                                Trading can seem intimidating, but with our user-friendly approach and dedicated
+                                support, you'll find that it's a journey worth embarking on. So, whether you're
+                                interested in stocks, forex, cryptocurrencies, or any other financial instruments, we're
+                                here to ensure that you have the resources and guidance needed to develop into a
+                                confident and informed trader. Let's embark on this exciting learning adventure
+                                together!
+                            </div>
+
+                            <div class="article-sharing"><a href="#"
+                                    class="article-sharing__link article-sharing__link--facebook" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--twitter" target="_blank"
+                                    rel="noopener"></a> <a href="#"
+                                    class="article-sharing__link article-sharing__link--linkdin" target="_blank"
+                                    rel="noopener"></a></div>
+                        </div>
+
+                        <!-- Sidebar-Wrapper Starts Here-->
+                        <div class="sidebar-wrapper w-full md:w-1/4 right-rail">
+                            <div id="right-rail__content" class="right-rail-content">
+                                <div class="best-of-content">
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BEARISH MARUBOZU</p>
+                                            </div>
+                                            <img src="BEARISH_MARUBOZU.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Bearish Marubozu suggests
+                                                that sellers have complete control over the
+                                                market, leading to a strong downtrend.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BEARISH ENGULFING</p>
+                                            </div>
+                                            <img src="BEARISH_ENGULFING.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Bearish Engulfing is a
+                                                candlestick pattern where a larger bearish candle completely engulfs the
+                                                previous smaller bullish candle, suggesting a potential reversal to a
+                                                downtrend.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BEARISH HARAMI</p>
+                                            </div>
+                                            <img src="BEARISH_HARAMI.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Bearish Harami is a
+                                                reversal pattern formed by a small bullish candle followed by a larger
+                                                bearish candle, suggesting a potential trend change.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">SHOOTING STAR</p>
+                                            </div>
+                                            <img src="SHOOTING_STAR.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">A Shooting Star is a bearish
+                                                candlestick pattern with a small body and a long upper shadow,
+                                                suggesting a potential trend reversal after an uptrend.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">EVENING STAR</p>
+                                            </div>
+                                            <img src="EVENING_STAR.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Evening Star is a
+                                                candlestick pattern signaling a potential trend reversal, consisting of
+                                                three candles: a large bullish candle, a small indecisive or bearish
+                                                candle, and a larger bearish candle.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">HANGING MAN</p>
+                                            </div>
+                                            <img src="HANGING_MAN.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Hanging Man is a
+                                                candlestick pattern that signals a potential trend reversal from bullish
+                                                to bearish.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">THREE BLACK CROWS</p>
+                                            </div>
+                                            <img src="three_black_crows.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+
+                                            <p style="font-size: 15px; line-height: 20px;">The Three Black Crows pattern
+                                                consists of three consecutive long red (or black) candlesticks,
+                                                signaling a potential reversal or continuation of a downtrend.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BULLISH MARUBOZU</p>
+                                            </div>
+                                            <img src="BULLISH-MARUBOZU.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">A "Bullish Marubozu" is a
+                                                candlestick pattern in technical analysis characterized by a single
+                                                candle with an open at the low, a close at the high, and no or very
+                                                small shadows, indicating strong buying momentum and potential upward
+                                                price movement.</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BULLISH ENGULFING</p>
+                                            </div>
+                                            <img src="BULLISH-ENGULFING.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"Bullish Engulfing is a
+                                                candlestick pattern in technical analysis where a larger bullish candle
+                                                completely engulfs the previous smaller bearish candle, indicating a
+                                                potential bullish reversal."</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BULLISH HARAMI</p>
+                                            </div>
+                                            <img src="BULLISH-HARAMI.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">""Bullish Harami: A reversal
+                                                candlestick pattern indicating potential upward price movement.""</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BULLISH HAMMER</p>
+                                            </div>
+                                            <img src="BULLISH-HAMMER.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"Bullish Hammer: A bullish
+                                                candlestick pattern characterized by a small body and a long lower
+                                                shadow, indicating potential upward reversal."</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">INVERTED BULLISH HAMMER</p>
+                                            </div>
+                                            <img src="INVERTED-BULLISH-HAMMER.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">An "Inverted Bullish Hammer"
+                                                is a candlestick formation indicating a potential trend reversal in
+                                                technical analysis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">BULLISH PIERCING LINE</p>
+                                            </div>
+                                            <img src="BULLISH-PIERCING-LINE.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"Bullish Piercing Line is a
+                                                bullish reversal candlestick pattern."</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">MORNING STAR</p>
+                                            </div>
+                                            <img src="MORNING-STAR.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">Morning Star is a bullish
+                                                reversal candlestick pattern characterized by a small candlestick
+                                                situated between two larger candlesticks, indicating a potential upward
+                                                trend reversal.</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">THREE WHITE SOLDIERS</p>
+                                            </div>
+                                            <img src="THREE-WHITE-SOLDIERS.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"Three White Soldiers" is a
+                                                bullish candlestick pattern formed by three consecutive long white (or
+                                                green) candlesticks, indicating potential upward price movement in
+                                                technical analysis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">THREE INSIDE UP</p>
+                                            </div>
+                                            <img src="THREE-INSIDE-UP.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"Three Inside Up" is a
+                                                bullish candlestick pattern that indicates potential reversal in
+                                                technical analysis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">THREE OUT SIDE UP</p>
+                                            </div>
+                                            <img src="THREE-OUT-SIDE-UP.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">"THREE OUTSIDE UP" is a
+                                                bullish candlestick pattern indicating potential upward price reversal.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">
+                                                <p class="bold">TWEEZER BOTTOM</p>
+                                            </div>
+                                            <img src="TWEEZER-BOTTOM.png" alt="">
+                                        </div>
+                                        <div id="article-content__marker" class="article__content">
+                                            <p style="font-size: 15px; line-height: 20px;">The "Tweezer Bottom" is a
+                                                candlestick pattern indicating potential bullish reversal.</p>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+                                    <!--
+                                         <div class="boc__section">
+                                        <div class="boc__sub-section">
+                                            <div class="boc__sub-section-heading">Basics</div>
+                                            <ul class="boc__items">
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-equity-shares/"
+                                                        title="What Are Equity Shares" target="_blank"
+                                                        class="boc__item-link">What Are Equity Shares</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-a-mutual-fund-and-how-does-it-work/"
+                                                        title="What Is A Mutual Fund" target="_blank"
+                                                        class="boc__item-link">What Is A Mutual Fund</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-invits-and-how-do-they-work/"
+                                                        title="What Are InvITs" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Are InvITs</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-liquid-funds/"
+                                                        title="What Are Liquid Funds" target="_blank"
+                                                        class="boc__item-link">What Are Liquid Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-demat-account/"
+                                                        title="What Is A Demat Account" target="_blank"
+                                                        class="boc__item-link">What Is A Demat Account</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-elss-funds-and-how-do-they-work/"
+                                                        title="What Are ELSS Funds" target="_blank"
+                                                        class="boc__item-link">What Are ELSS Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-blockchain/"
+                                                        title="What Is Blockchain" target="_blank"
+                                                        class="boc__item-link">What Is Blockchain</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-cryptocurrency-and-how-does-it-work/"
+                                                        title="What Is Cryptocurrency" target="_blank"
+                                                        class="boc__item-link">What Is Cryptocurrency</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/cryptocurrency/what-is-an-nft-how-do-nfts-work/"
+                                                        title="What Is An NFT" target="_blank"
+                                                        class="boc__item-link">What
+                                                        Is An NFT</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-are-index-funds-and-how-do-they-work/"
+                                                        title="What Are Index Funds" target="_blank"
+                                                        class="boc__item-link">What Are Index Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/blue-chip-stocks/"
+                                                        title="What Are Debt Mutual Funds" target="_blank"
+                                                        class="boc__item-link">What Are Debt Mutual Funds</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/what-is-pe-price-earnings-ratio/"
+                                                        title="What Are Blue Chip Stocks" target="_blank"
+                                                        class="boc__item-link">What Are Blue Chip Stocks</a></li>
+                                                <li class="boc__item-list"><a
+                                                        href="https://www.forbes.com/advisor/in/investing/gilt-funds/"
+                                                        title="Gilt Funds" target="_blank" class="boc__item-link">Gilt
+                                                        Funds</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--More from Advisors Starts Here-->
+            <section class="more-from-section-wrapper">
+                <div class="more-from-section px-15px mx-auto pb-5">
+                    <h2 class="font-merriweather font-bold leading-6 text-black py-30px flex items-baseline"><span
+                            class="flex-shrink-0">More from Advisors&nbsp;</span></h2>
+                    <ul class="more-for-grid flex flex-wrap">
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-option-trading-strategies/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg"
+                                    title="17 Best Option Trading Strategies You Should Know"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-pixabay-260024_1-scaled-e1692196773119.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">17 Best Option Trading Strategies You Should
+                                        Know</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/alternative-to-fixed-deposit/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg"
+                                    title="8 Best Alternatives To Fixed Deposits In India"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/loans.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">8 Best Alternatives To Fixed Deposits In
+                                        India</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/how-to-invest-in-ai/" target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/08/pexels-kindel-media-8566473-Cropped.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">How To Invest In AI</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg"
+                                            title="Nikita Tambe"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/11/IMG_20221122_190758_344.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Nikita Tambe</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5  "><a
+                                href="https://www.forbes.com/advisor/in/investing/why-is-inflation-rising-right-now/"
+                                target="_blank"
+                                class="grid-card flex flex-col h-full bg-white border border-solid mx-10px">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg"
+                                    title="Why Is Inflation So High?"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/06/rsz_1rupixen-com-litbv5rqdbq-unsplash.jpg&quot;);">
+                                </div>
+                                <div class="grid-info flex-auto flex flex-col justify-between p-15px">
+                                    <h4 class="leading-7 font-merriweather">Why Is Inflation So High?</h4>
+                                    <div
+                                        class="grid-author flex items-center text-gray-400 font-euclidcircularb-regular">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg"
+                                            title="Dipen Pradhan"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2022/09/IMG20220913122100_3-scaled.jpg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Dipen Pradhan</strong>
+                                            Forbes Staff
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                        <li class="grid-item w-full mb-5 grid-item-full "><a
+                                href="https://www.forbes.com/advisor/in/investing/best-highest-dividend-paying-stocks/"
+                                target="_blank"
+                                class="grid-card relative flex flex-col justify-end h-full bg-cover bg-white border border-solid mx-10px cursor-pointer">
+                                <div data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png"
+                                    class="grid-image relative w-full bg-cover lazy-load-bg"
+                                    style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/03/pexels-ekaterina-bolovtsova-6193314.png&quot;);">
+                                </div>
+                                <div class="grid-info flex flex-col justify-end p-15px inset-x-0 bottom-0">
+                                    <h4 class="leading-7 mb-5px font-merriweather">20 Highest Dividend Paying Stocks In
+                                        India 2023</h4>
+                                    <div class="grid-author flex items-center font-euclidcircularb-regular text-white">
+                                        <span
+                                            data-bg-src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg"
+                                            title="Armaan Joshi"
+                                            class="author-img inline-block w-6 h-6 mr-5px bg-cover bg-no-repeat bg-center lazy-load-bg"
+                                            style="background-image: url(&quot;https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2021/02/Armaan-Joshi_.jpeg&quot;);"></span>
+                                        <span>
+                                            By
+                                            <strong>Armaan Joshi</strong>
+                                            Editor
+                                        </span>
+                                    </div>
+                                </div>
+                            </a></li>
+                    </ul>
+
+                </div>
+            </section>
+        </div>
+        <div id="bottom__marker"></div>
+
+        <!--         <div class="main-form-container">
+            <div class="form-container" id="problem-form">
+                <form>
+                    <label for="name">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="problem">Problem:</label>
+                    <textarea id="problem" name="problem" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                
+                <p class="success-message" id="success-message"></p>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("#problem-form form");
+                const successMessage = document.querySelector("#success-message");
+    
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent form submission
+    
+                    // Here you can add logic to handle form submission and show success message
+                    // For now, let's just show a success message
+                    successMessage.textContent = "Problem submitted successfully!";
+                });
+            });
+        </script>-->
+        <!--Fotter Starts Here-->
+        <footer class="shared-footer">
+            <div class="row-inner">
+                <div style="margin-top: 0px;" class="footer-logo">
+                    <a style="margin-top: 15px;" href="#" class="logo logo-footer inline-block">
+                        <img width="100px" width="100px" src="logo.webp" alt="logo">
+                    </a>
+                    <span class="copy">© 2023 The One. All Rights Reserved.</span>
+                    <div class="flex justify-center mt-5">
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Facebook_f_logo_(2021).svg.webp" alt="Facebook">
+                            </a>
+                        </span>
+                        <span class="mr-4 cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="Logo_of_Twitter.svg.webp" alt="Twitter">
+                            </a>
+                        </span>
+                        <span class="cursor-pointer">
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                <img width="20px" src="1200px-Linkedin.svg.png" alt="LinkedIn">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-links-wrapper">
+                    <ul class="footer-links">
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">AdChoices</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Privacy Statement</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Press Room</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">of the Day</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!--Footer - 2 Starts Here-->
+
+    <footer>
+        <div class="row2">
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="https://cleartax.in/?ref=finfo_footer">ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="/Meta/contact?ref=finfo_footer">Contact Us</a></li>
+
+                    <li><a href="/s/about-us?ref=finfo_footer">About Us</a></li>
+
+                    <li><a href="/s/careers?ref=finfo_footer">Careers</a></li>
+
+                    <li><a href="/Meta/Press?ref=finfo_footer">Media &amp; Press</a></li>
+
+                    <li><a href="/Meta/Reviews?ref=finfo_footer">User Reviews</a></li>
+
+                    <li><a href="https://taxcloudindia.com?ref=finfo_footer">TaxCloud India</a></li>
+
+                    <li><a href="https://cleartds.com?ref=finfo_footer">ClearTDS</a></li>
+
+                    <li><a href="https://medium.com/cleartax-engineering?ref=finfo_footer">Engineering Blogs</a></li>
+
+                    <li><a href="https://cleartax.in/g/terms/">FinTech Glossary</a></li>
+
+                    <li><a href="https://play.google.com/store/apps/details?id=com.cleartax.clear&amp;hl=en">Download
+                            Clear Khata App</a></li>
+
+                    <li><a href="https://play.google.com/store/apps/details?id=in.cleartax.pro&amp;hl=en">Download
+                            ClearTax Pro</a></li>
+
+                    <li><a href="https://clr.tax/black"> Download Black App</a></li>
+
+                    <li><a href="https://news.cleartax.in/">ClearTax Chronicles</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="https://cleartax.in/income-tax-efiling?ref=finfo_footer">File Income Tax
+                        Return</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/income-tax?ref=finfo_footer">Income Tax</a></li>
+
+                    <li><a href="https://cleartax.in/s/efiling-income-tax-return?ref=finfo_footer">Efiling Income
+                            Tax</a></li>
+
+                    <li><a href="https://cleartax.in/s/80c-80-deductions?ref=finfo_footer">Secion 80 Deductions</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-for-nri?ref=finfo_footer">Income Tax for NRI</a></li>
+
+                    <li><a href="https://cleartax.in/s/capital-gains-income?ref=finfo_footer">Capital Gains Income</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/house-property?ref=finfo_footer">House Property</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-e-verification-evc?ref=finfo_footer">Income Tax
+                            Verification</a></li>
+
+                    <li><a href="https://cleartax.in/s/how-to-efile-itr?ref=finfo_footer">How to efile ITR</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-refund?ref=finfo_footer">Income Tax Refund status</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/tds?ref=finfo_footer">File TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/itr?ref=finfo_footer">ITR</a></li>
+
+                    <li><a href="https://cleartax.in/tds?ref=finfo_footer">File TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/income-tax-slabs?ref=finfo_footer">Income Tax Slabs</a></li>
+
+                    <li><a href="https://cleartax.in/s/view-form-26as-tax-credit-statement?ref=finfo_footer">Form
+                            26AS</a></li>
+
+                    <li><a href="https://cleartax.in/s/what-is-form-16?ref=finfo_footer">What is Form 16</a></li>
+
+                    <li><a href="https://cleartax.in/s/salary-income?ref=finfo_footer">Salary Income</a></li>
+
+                    <li><a href="https://cleartax.in/tds/guides?ref=finfo_footer">How to File TDS Returns</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link"
+                        href="https://cleartax.in/s/gst-law-goods-and-services-tax?ref=finfo_footer">GST</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/gst?ref=finfo_footer">GST Software</a></li>
+
+                    <li><a href="https://cleartax.in/s/new-gst-returns?ref=finfo_footer">New GST Returns</a></li>
+
+                    <li><a
+                            href="https://cleartax.in/s/e-invoicing-new-gst-return-system?ref=finfo_footer">E-Invoicing</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/e-invoicing-enterprise-software?ref=finfo_footer">E-Invoicing
+                            Software</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-input-tax-credit?ref=finfo_footer">Input Tax Credit</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-returns?ref=finfo_footer">GST Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-invoice?ref=finfo_footer">GST Invoice</a></li>
+
+                    <li><a href="https://cleartax.in/services/gst_services/c?ref=finfo_footer">GST Services</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-training?ref=finfo_footer">GST Training</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-calendar?ref=finfo_footer">GST Calendar</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-news-and-announcements?ref=finfo_footer">GST News</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-guide-introduction?ref=finfo_footer">GST Guide</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/tools?ref=finfo_footer">Tax Tools by ClearTax</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/paytax/taxCalculator?ref=finfo_footer">Income Tax Calculator</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/tax-calculation-gst?ref=finfo_footer">GST Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/paytax/hraCalculator?ref=finfo_footer">HRA Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/gst-hsn-lookup?ref=finfo_footer">Find HSN Code</a></li>
+
+                    <li><a href="https://cleartax.in/save/sip-calculator?ref=finfo_footer">SIP Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/mutual-fund-calculator?ref=finfo_footer">Mutual fund
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/nps-calculator?ref=finfo_footer">NPS Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/gst-number-search/?ref=finfo_footer">GST Number Search</a></li>
+
+                    <li><a href="https://cleartax.in/s/emi-calculator?ref=finfo_footer">EMI Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/ppf-calculator?ref=finfo_footer">PPF calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/fd-calculator?ref=finfo_footer">FD calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/rd-calculator?ref=finfo_footer">RD calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/home-loan-emi-calculator?ref=finfo_footer">Home Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/simple-compound-interest-calculator?ref=finfo_footer">Interest
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/gratuity-calculator?ref=finfo_footer">Gratuity Calculator</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/personal-loan-emi-calculator?ref=finfo_footer">Personal Loan EMI
+                            Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/emi-calculator?ref=finfo_footer">Car loan emi calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/pf-calculator?ref=finfo_footer">PF Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/salary-calculator?ref=finfo_footer">Salary Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/s/cagr-calculator?ref=finfo_footer">CAGR Calculator</a></li>
+
+                    <li><a href="https://cleartax.in/save/rent?ref=finfo_footer">Generate Rent Receipts</a></li>
+
+                    <li><a href="https://cleartax.in/ifsc-code/?ref=finfo_footer">IFSC Code Search</a></li>
+
+                    <li><a href="https://cleartax.in/f/gold-rate/india?ref=finfo_footer">Gold Rates Today</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    Generic Topics
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/how-to-link-aadhaar-to-pan?ref=finfo_footer">How to Link Aadhaar
+                            card to PAN</a></li>
+
+                    <li><a href="https://cleartax.in/s/uidai?ref=finfo_footer">UIDAI</a></li>
+
+                    <li><a href="https://cleartax.in/s/pan-card-status?ref=finfo_footer">Pan Card Status</a></li>
+
+                    <li><a href="https://cleartax.in/s/aadhaar-card?ref=finfo_footer">Aadhar card</a></li>
+
+                    <li><a href="https://cleartax.in/s/epfo?ref=finfo_footer">EPFO</a></li>
+
+                    <li><a href="https://cleartax.in/s/universal-account-number?ref=finfo_footer">UAN</a></li>
+
+                    <li><a href="https://cleartax.in/s/epf-withdrawal-online?ref=finfo_footer">EPF Withdrawal</a></li>
+
+                    <li><a href="https://cleartax.in/s/voter-id?ref=finfo_footer">Voter ID</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/save?ref=finfo_footer">ClearTax Investment</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/s/mutual-funds?ref=finfo_footer">Mutual Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/elss?ref=finfo_footer">ELSS Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/sip?ref=finfo_footer">SIP</a></li>
+
+                    <li><a href="https://cleartax.in/s/mutual-fund-types?ref=finfo_footer">Types of Mutual Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-mutual-funds?ref=finfo_footer">Best Mutual funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-elss-mutual-funds?ref=finfo_footer">Best ELSS Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-debt-funds?ref=finfo_footer">Best Debt Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-liquid-funds?ref=finfo_footer">Best Liquid Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-sip-plans-mutual-fund?ref=finfo_footer">Best SIP Plans</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-mid-cap-mutual-funds?ref=finfo_footer">Best Midcap Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-large-cap-mutual-funds?ref=finfo_footer">Best Large Cap
+                            Funds</a></li>
+
+                    <li><a href="https://cleartax.in/s/best-multi-cap-funds?ref=finfo_footer">Best Multi Cap Funds</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/best-small-cap-mutual-funds?ref=finfo_footer">Best Small Cap
+                            Funds</a></li>
+
+                </ul>
+            </div>
+
+            <div class="footer-links col-sm-6 col-md-3 ">
+                <h4>
+
+                    <a class="naked-link" href="/business?ref=finfo_footer"> ClearTax Business</a>
+
+                </h4>
+                <ul class="list-unstyled">
+
+                    <li><a href="https://cleartax.in/presumptive-tax-for-professionals?ref=finfo_footer">Tax Filing for
+                            Professionals</a></li>
+
+                    <li><a href="https://cleartax.in/tax-filing-for-traders?ref=finfo_footer">Tax Filing for Traders</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/s/trademark-registration-procedure-india?ref=finfo_footer">Trademark
+                            Registration</a></li>
+
+                    <li><a href="https://cleartax.in/s/company-registration?ref=finfo_footer">Company Registration</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/services/business/c?ref=finfo_footer">Services for Businesses</a>
+                    </li>
+
+                    <li><a href="https://cleartax.in/services/startup_services/c?ref=finfo_footer">Launch your
+                            Business</a></li>
+
+                    <li><a href="https://cleartax.in/s/freelance-professional-business-income?ref=finfo_footer">Guide
+                            for Business &amp;amp; Professional</a></li>
+
+                    <li><a href="https://cleartax.in/services/tds_returns/c?ref=finfo_footer">TDS Returns</a></li>
+
+                    <li><a href="https://cleartax.in/s/pricing?ref=finfo_footer">Expert Assisted Tax Filing</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const mainNav = document.querySelector('.menu-main');
+
+        const toggleNav = () => {
+            mainNav.classList.toggle('open');
+        };
+
+        hamburger.addEventListener('click', toggleNav);
+
+        const dropdown = document.querySelectorAll('.dropdown');
+
+        Array.from(dropdown).forEach((drop) => {
+            drop.addEventListener('click', () => {
+                dropdown.forEach((d) => {
+                    if (d !== drop) {
+                        d.classList.remove('open');
+                    }
+                });
+                drop.classList.toggle('open');
+            });
+        });
+
+        // hide header on scroll
+
+        // grab an element
+        const header = document.querySelector('.header-main');
+        // construct an instance of Headroom, passing the element
+        const headroom = new Headroom(header);
+        // initialise
+        headroom.init();
+    </script>
+</body>
+
+</html>
