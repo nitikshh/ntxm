@@ -1,14 +1,28 @@
-const express = require("express");
+const express = require('express');
+const path = require('path');
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3000;
 
-app.get("/", (req, res) => res.type('html').send(html));
+// Define the path to the static directory
+const staticPath = path.join(__dirname, 'static');
 
-const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+// Serve static files from the static directory
+app.use('/static', express.static(staticPath));
 
-server.keepAliveTimeout = 120 * 1000;
-server.headersTimeout = 120 * 1000;
+// Serve index.html when accessing the root URL
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
-const html = `
-NTXM Org
-`
+app.get('/cources', (req, res) => {
+  res.sendFile(path.join(__dirname, 'cources.html'));
+});
+
+app.get('/blogs', (req, res) => {
+  res.sendFile(path.join(__dirname, 'blogs.html'));
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
