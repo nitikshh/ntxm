@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tag
+  -->
+  <title>techxcelerate</title>
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./static/assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./static/assets/images/hero-bg.svg">
+  <link rel="preload" as="image" href="./static/assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./static/assets/images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./static/assets/images/hero-shape-1.svg">
+  <link rel="preload" as="image" href="./static/assets/images/hero-shape-2.png">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+  <style>
+    .techxcelerate {
+      display: flex;
+      flex-direction: column;
+      margin: -15px 0;
+    }
+
+    .techxcelerate h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+      font-size: 40px;
+      color: black;
+    }
+
+    .techxcelerate div {
+      display: flex;
+      margin-top: -20px;
+    }
+
+    .techxcelerate div text {
+      font-family: "Poppins", sans-serif;
+      font-weight: bold;
+      font-size: 17px;
+      color: black;
+    }
+
+    .techxcelerate div span {
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      margin-top: -10px;
+      color: red;
+    }
+  </style>
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="techxcelerate">
+        <h1>NTXM</h1>
+        <div>
+          <text>Tech</text><span>X</span><text>celerate</text>
+        </div>
+      </div>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="wrapper">
+          <div class="techxcelerate">
+            <h1>NTXM</h1>
+            <div>
+              <text>Tech</text><span>X</span><text>celerate</text>
+            </div>
+          </div>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-link>Products</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="/cources" class="navbar-link" data-nav-link>Courses</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#blog" class="navbar-link" data-nav-link>Tech</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="header-action-btn" aria-label="toggle search" title="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="header-action-btn" aria-label="cart" title="Cart">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+
+          <span class="btn-badge">0</span>
+        </button>
+
+        <a href="#" class="btn has-before">
+          <span class="span">Join</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </a>
+
+        <button class="header-action-btn" aria-label="open menu" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+      <!-- 
+        - #BLOG
+      -->
+      -->
+      <style>
+        @media(max-width:1200px) {
+          .section-subtitle {
+            margin-top: 50px;
+          }
+        }
+      </style>
+      <style>
+        .card-banner {
+          max-width: 130px;
+          margin-bottom: 50px;
+        }
+
+        .grid-lists {
+          display: block;
+        }
+
+        .blog-card {
+          margin-bottom: 50px;
+        }
+
+        .figure-parent {
+          display: flex;
+          justify-content: last baseline;
+        }
+
+        .small-icon {
+          width: 30px;
+          height: 30px;
+          margin-left: 20px;
+          cursor: pointer;
+        }
+      </style>
+      <section class="section blog has-bg-image" id="blog" aria-label="blog"
+        style="background-image: url('./static/assets/images/blog-bg.svg')">
+        <div class="container">
+
+          <p class="section-subtitle">Latest Articles</p>
+
+
+
+          <ul class="grid-lists">
+
+            <li>
+              <div class="blog-card">
+
+                <div class="figure-parent">
+                  <figure class="card-banner img-holder has-after">
+                    <img src="./static/assets/images/blog-1.jpg" width="370" height="370" loading="lazy"
+                      alt="Become A Better Blogger: Content Planning" class="img-cover">
+                  </figure>
+
+                  <ion-icon class="small-icon" name="thumbs-up-outline"></ion-icon>
+                  <ion-icon class="small-icon" name="share-social-outline"></ion-icon>
+                  <ion-icon class="small-icon" name="add"></ion-icon>
+                </div>
+
+                <div class="card-content">
+
+
+
+                  <a href="#" class="card-subtitle">Online</a>
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">How Apple's Vision Pro Works : Study of Technology</a>
+                  </h3>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Feb 13, 2024</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="chatbubbles-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="span">Com 809</span>
+                    </li>
+
+                  </ul>
+
+                  <p class="card-text">
+                    This is how the Apple's New technology was rolling over the world.
+                    <br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis architecto deserunt earum vero
+                    repellat incidunt non nulla suscipit praesentium velit voluptatibus nemo debitis sed commodi, libero
+                    aliquid asperiores quae error qui hic quasi quia voluptatem voluptate quo? Tenetur magni ratione
+                    reprehenderit laboriosam iusto. Reiciendis sit, totam dolorem ipsa dolorum quae labore eveniet
+                    dignissimos harum blanditiis minima exercitationem, quis doloribus mollitia delectus. Debitis odit,
+                    enim similique nobis voluptas quos neque rerum aspernatur, nulla dicta eius minima quisquam
+                    accusantium laborum! Aspernatur adipisci, impedit officiis facere aut aliquid omnis dicta fugit
+                    asperiores pariatur, accusantium natus beatae quos voluptate quas fugiat molestiae nemo. Quod,
+                    doloremque blanditiis earum sunt alias similique? Nesciunt facilis pariatur recusandae rem repellat
+                    tempore fuga harum, magni asperiores voluptatem veniam debitis officiis? Ipsum, nisi molestiae,
+                    tenetur perferendis placeat dolore facilis dicta nesciunt eum deserunt consectetur iste? Nam, <br><br>
+                    aliquid illum. Sunt illum molestias nam fugiat alias natus eos hic. Facere, necessitatibus
+                    cupiditate quidem fuga labore provident natus delectus accusamus, porro repellendus mollitia minima
+                    dolores. Perferendis optio laudantium iusto voluptatibus. Quaerat consectetur sint ea dicta saepe
+                    tempore ipsam, aliquid maiores, dolorum, odit ipsa nam! Ducimus neque omnis quaerat velit suscipit
+                    iusto mollitia nemo! Officiis blanditiis dolorum architecto culpa mollitia, neque voluptate aut
+                    atque laudantium ad quod provident placeat odit? Laborum sed ratione dolore deserunt accusantium
+                    dicta hic nulla sint quibusdam, suscipit laudantium qui eius ullam ipsum provident! Beatae
+                    excepturi, et quis necessitatibus suscipit laborum, vitae earum, quae dolores ut molestiae. Ullam
+                    qui sequi obcaecati soluta animi placeat corporis dolores, quas harum error dolore, repellat <br><br>
+                    corrupti eius sed. Ipsa, saepe accusamus aut debitis labore quos itaque sequi magnam quo? At, magnam
+                    ducimus quo expedita ab sapiente nulla quasi? In facilis ducimus facere ipsa rem veniam sit
+                    reprehenderit quam, itaque suscipit mollitia nesciunt tenetur sunt beatae, ad corporis quasi sequi
+                    et quidem nam. Ipsum, voluptatum! Eveniet sapiente a vitae aperiam blanditiis, minima necessitatibus
+                    voluptatum quidem pariatur impedit neque, perferendis quisquam excepturi! Illo tempore laboriosam
+                    consequatur obcaecati iure velit debitis, possimus quisquam natus rerum magni ea quam est dolor
+                    consequuntur, officia ipsa nisi doloribus pariatur culpa veniam non. Nulla vero dolore laboriosam
+                    iste fugiat quam quasi sequi dignissimos voluptate ea quibusdam asperiores eveniet natus maxime, <br><br>
+                    obcaecati cupiditate? Eius a dolores cum beatae neque, placeat atque deserunt culpa eos quas
+                    dignissimos maxime fugit esse ab explicabo ut perspiciatis asperiores totam ratione vitae veniam,
+                    expedita necessitatibus dolorem. Maxime consectetur facere corporis reprehenderit quasi, esse vel,
+                    tempora qui maiores reiciendis, ratione cupiditate recusandae. Dolor, impedit alias eum aperiam,
+                    esse corporis sequi eveniet tempora dolorem accusamus perferendis repellendus unde. Consequatur
+                    deserunt, quae rerum incidunt ex dicta pariatur quaerat exercitationem quas non, corporis libero
+                    voluptates labore deleniti aliquid minus nobis doloremque quod tempore quisquam nostrum. Pariatur
+                    eius eos consectetur vel mollitia libero enim, earum placeat blanditiis recusandae nisi dolore
+                    adipisci laboriosam cumque eaque officia ut veniam iure aliquid nemo sint! Nemo, repellendus qui id
+                    a sint deleniti enim nobis fugiat voluptates est ducimus explicabo eaque ipsum natus dolorem
+                    sapiente ratione corrupti quae repudiandae quasi magnam at? Fugit exercitationem aliquid in quos.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+           
+
+          </ul>
+
+          <img src="./static/assets/images/blog-shape.png" width="186" height="186" loading="lazy" alt=""
+            class="shape blog-shape">
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./static/assets/images/footer-bg.png')">
+
+    <div class="footer-top section">
+      <div class="container grid-list">
+
+        <div class="footer-brand">
+
+          <div class="techxcelerate">
+            <h1 style="color: white;">NTXM</h1>
+            <div>
+              <text style="color: white;">Tech</text><span>X</span><text style="color: white;">celerate</text>
+            </div>
+          </div>
+
+          <p class="footer-brand-text">
+            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+          </p>
+
+          <div class="wrapper">
+            <span class="span">Add:</span>
+
+            <address class="address">70-80 Upper St Norwich NR2</address>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Call:</span>
+
+            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+          </div>
+
+          <div class="wrapper">
+            <span class="span">Email:</span>
+
+            <a href="mailto:info@techxcelerate.com" class="footer-link">info@techxcelerate.com</a>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Online Platform</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Courses</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Events</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Instructor Profile</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Purchase Guide</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Gallery</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">News & Articles</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">FAQ's</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Sign In/Registration</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Coming Soon</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Contacts</p>
+
+          <p class="footer-list-text">
+            Enter your email address to register to our newsletter subscription
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+            <button type="submit" class="btn has-before">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </button>
+          </form>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">NTXM organisation</a>
+        </p>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./static/assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
