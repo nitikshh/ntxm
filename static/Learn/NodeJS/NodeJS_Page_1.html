@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction to NodeJS</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+   </style>
+   <style>
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+
+      /* Modify the styling for the boldtag element */
+      boldtag {
+         font-weight: 100;
+         font-size: small;
+         font-family: "Krona One", sans-serif;
+         font-size: inherit;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      
+      <div class="info">
+         <h3><a href="NodeJS_Page_1.html">NodeJS</a></h3>
+         <p><a href="#">Why use NodeJS</a></p>
+         <p><a href="#">Features of NodeJS</a></p>
+         <p><a href="#">Event-driven architecture</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Installation</a></h3>
+         <p><a href="#">Install NodeJS</a></p>
+         <p><a href="#">Environment setup</a></p>
+         <p><a href="#">Version management with NVM</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_3.html">Basics</a></h3>
+         <p><a href="#">Introduction to Programming</a></p>
+         <p><a href="#">Variables and Data Types</a></p>
+         <p><a href="#">Control Structures: If...Else, While Loop, For Loop</a></p>
+         <p><a href="#">Functions and Scope</a></p>
+         <p><a href="#">Arrays and Lists</a></p>
+         <p><a href="#">Strings and String Manipulation</a></p>
+         <p><a href="#">Boolean Logic</a></p>
+         <p><a href="#">Type Casting and Coercion</a></p>
+         <p><a href="#">Math Operations</a></p>
+         <p><a href="#">npm Basics</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_4.html">Modules</a></h3>
+         <p><a href="#">What are Modules</a></p>
+         <p><a href="#">Using Modules</a></p>
+         <p><a href="#">Express Js</a></p>
+         <p><a href="#">Multer</a></p>
+         <p><a href="#">Connection to HTML</a></p>
+         <p><a href="#">Custom Modules</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_5.html">Data Parsing</a></h3>
+         <p><a href="#">Hello World Application</a></p>
+         <p><a href="#">Data Parsing to HTML</a></p>
+         <p><a href="#">Form Handling</a></p>
+         <p><a href="#">Image Handling</a></p>
+         <p><a href="#">Video Handling</a></p>
+         <p><a href="#">JSON Handling</a></p>
+         <p><a href="#">Asynchronous programming</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_6.html">File Handling</a></h3>
+         <p><a href="#">Accessing Files</a></p>
+         <p><a href="#">Reading Files</a></p>
+         <p><a href="#">Writing Files</a></p>
+         <p><a href="#">Create Files</a></p>
+         <p><a href="#">Deleting Files</a></p>
+         <p><a href="#">Creating Folders</a></p>
+         <p><a href="#">Saving Videos/Audios</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_7.html">Firebase</a></h3>
+         <p><a href="#">How to Connect</a></p>
+         <p><a href="#">Real-time Database</a></p>
+         <p><a href="#">Authentication</a></p>
+         <p><a href="#">Cloud Functions</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_8.html">Testing and Debugging</a></h3>
+         <p><a href="#">Unit Testing with Jest</a></p>
+         <p><a href="#">Debugging Techniques</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_9.html">Security</a></h3>
+         <p><a href="#">Input Validation</a></p>
+         <p><a href="#">Authentication Strategies</a></p>
+         <p><a href="#">Authorization Middleware</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_10.html">Deployment and Scaling</a></h3>
+         <p><a href="#">Containerization with Docker</a></p>
+         <p><a href="#">Deploying to Heroku</a></p>
+         <p><a href="#">Load Balancing</a></p>
+         <p><a href="#">Monitoring and Scaling</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="whatisnodejs">
+               <h4>
+                  What is NodeJS
+               </h4>
+               <p>
+                  Node.js is an asynchronous event-driven JavaScript runtime built on Chrome's V8 JavaScript engine. It
+                  is designed to build scalable network applications, handling multiple concurrent connections with high
+                  efficiency.
+                  <br><br>
+                  Node.js is open-source and cross-platform, allowing developers to write server-side applications using
+                  JavaScript. It executes JavaScript code outside of a web browser, enabling the development of
+                  server-side logic and applications.
+                  <br><br> Let’s explore some key aspects:
+                  <br>
+                  **JavaScript Runtime:** Node.js allows developers to execute JavaScript code on the server-side,
+                  providing a runtime environment outside of the browser.
+                  <br><br>
+                  **Asynchronous Programming:** Node.js utilizes an event-driven, non-blocking I/O model, allowing
+                  applications to handle multiple concurrent operations efficiently.
+                  <br><br>
+                  **Scalability:** Node.js applications can handle a large number of concurrent connections with minimal
+                  overhead, making it suitable for building scalable network applications.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">const http = require('http');
+
+// Create a simple HTTP server
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, World!\n');
+});
+
+// Listen on port 3000
+server.listen(3000, () => {
+  console.log('Server running on http://localhost:3000/');
+});</code></pre>
+               </div>
+               <p><span>Explanation</span> : This code creates a basic HTTP server using Node.js's built-in
+                  'http' module. It listens on port 3000 and responds with 'Hello, World!' to incoming requests.</p>
+            </div>
+            <div class="container" id="whyusenodejs">
+               <h4>
+                  Why Use Node.js
+               </h4>
+               <p>
+                  Node.js has gained immense popularity in the world of web development due to its unique features and
+                  capabilities. Understanding why to use Node.js involves exploring its key advantages and how it
+                  revolutionizes server-side development.
+               </p><br>
+               <p>
+                  **Asynchronous and Non-blocking I/O** <br>Node.js employs an event-driven, non-blocking I/O model,
+                  which allows it to handle multiple concurrent operations efficiently. <br>This asynchronous nature
+                  makes Node.js ideal for building real-time applications that require handling a large number of
+                  connections.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">// Example: Asynchronous File Reading
+const fs = require('fs');
+fs.readFile('file.txt', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+}); </code></pre>
+               </div>
+               <p>
+                  **Scalability:** <br>Node.js applications can scale horizontally by adding more instances to
+                  distribute the load. <br>
+                  Its lightweight architecture and event-driven nature make it highly scalable and suitable for building
+                  microservices and scalable network applications.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example: Scaling with Clustering
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+    for (let i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+} else {
+    http.createServer((req, res) => {
+        res.writeHead(200);
+        res.end('Hello, World!');
+    }).listen(8000);
+}
+
+                  </code></pre>
+               </div>
+               <p>
+                  **Single Language for Frontend and Backend:** <br>With Node.js, developers can use JavaScript for both
+                  client-side and server-side development, streamlining the development process and reducing context
+                  switching.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example: Shared Code Between Client and Server
+const sharedFunction = () => {
+    console.log('This function can be used both on the client and server side.');
+};
+sharedFunction();
+
+                  </code></pre>
+               </div>
+
+               <p>**Rich Ecosystem:** <br>
+                  Node.js has a vast ecosystem of npm packages, providing access to a wide range of libraries and tools
+                  for building various types of applications.
+                  This rich ecosystem accelerates development and enables developers to leverage existing solutions for
+                  common tasks.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example: Using Express.js for Web Application Framework
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello, World!');
+});
+
+app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000/');
+});
+
+               </code></pre>
+               </div>
+<p>**Community Support and Active Development:** <br>Node.js has a vibrant community of developers contributing to its growth and improvement. <br>
+   With regular updates and enhancements, Node.js remains at the forefront of server-side development.</p>
+            </div>
+<div class="container">
+    <h4>Features of Node.js</h4>
+    <p class="p">Node.js is a powerful runtime environment for executing JavaScript code on the server-side. It offers several features that make it suitable for building scalable and high-performance web applications.</p>
+    
+    <!-- List of Features -->
+    <h5>Key Features</h5>
+    <ul class="p">
+        <li>Asynchronous and Event-Driven: Node.js uses non-blocking, event-driven architecture, allowing applications to handle multiple concurrent operations efficiently.</li>
+        <li>Single-Threaded: Node.js uses a single-threaded event loop model, making it lightweight and ideal for handling I/O-intensive tasks.</li>
+        <li>Fast Execution: Node.js is built on the V8 JavaScript engine, which compiles JavaScript code into machine code, resulting in fast execution.</li>
+        <li>NPM (Node Package Manager): Node.js comes with NPM, a powerful package manager that provides access to a vast ecosystem of open-source libraries and modules.</li>
+        <li>Scalable: Node.js applications can be easily scaled horizontally by adding more instances to handle increased load.</li>
+        <li>Real-Time Communication: Node.js is well-suited for building real-time web applications, such as chat applications and gaming servers, due to its event-driven nature.</li>
+        <li>Cross-Platform: Node.js is cross-platform and runs on various operating systems, including Windows, macOS, and Linux.</li>
+        <li>Rich Ecosystem: Node.js has a thriving ecosystem of frameworks, tools, and libraries, making it easy to build diverse types of applications.</li>
+        <li>Community Support: Node.js has a large and active community of developers who contribute to its development and provide support through forums, tutorials, and documentation.</li>
+    </ul>
+</div>
+<div class="container">
+   <h4>Event-Driven Architecture in Node.js</h4>
+   <p class="p">Event-driven architecture is a fundamental concept in Node.js, enabling applications to handle multiple concurrent operations efficiently by responding to events asynchronously.</p>
+   
+   <!-- Explanation of Event-Driven Architecture -->
+   <h5>Key Concepts</h5>
+   <ul class="p">
+       <li>Events: Events are occurrences or signals that happen within the application, such as user interactions, file I/O operations, or network requests.</li>
+       <li>Event Emitters: Components in the application that emit events are called event emitters. Examples include HTTP servers, file system modules, and custom objects.</li>
+       <li>Event Listeners: Components that register to listen for specific events emitted by event emitters are called event listeners. When an event occurs, the corresponding event listener executes a callback function.</li>
+       <li>Callback Functions: Callback functions are functions passed as arguments to event listeners. They are invoked when the associated event is emitted, allowing asynchronous handling of events.</li>
+       <li>Non-Blocking I/O: Node.js uses non-blocking, asynchronous I/O operations to handle events efficiently without blocking the execution of other tasks.</li>
+       <li>Event Loop: The event loop is the core mechanism in Node.js that continuously listens for events and dispatches them to event listeners. It allows Node.js to handle multiple concurrent operations with a single thread.</li>
+   </ul>
+   
+   <!-- Code Examples -->
+   <h5>Code Examples</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example of event emitter
+const EventEmitter = require('events');
+const myEmitter = new EventEmitter();
+
+// Example of event listener
+myEmitter.on('myEvent', () => {
+   console.log('Event occurred');
+});
+
+// Example of emitting an event
+myEmitter.emit('myEvent');
+
+// Example of event listener with callback function
+myEmitter.on('myEvent', (arg) => {
+   console.log('Event occurred with argument:', arg);
+});
+
+// Example of emitting an event with argument
+myEmitter.emit('myEvent', 'Hello, World!');
+
+// Example of asynchronous event handling with callback function
+myEmitter.on('asyncEvent', (arg, callback) => {
+   setTimeout(() => {
+       console.log('Asynchronous event handling:', arg);
+       callback();
+   }, 1000);
+});
+
+// Example of emitting an asynchronous event
+myEmitter.emit('asyncEvent', 'Async', () => {
+   console.log('Callback function executed');
+});
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Event-driven architecture is central to the design of Node.js, enabling applications to scale and handle concurrent operations effectively. By leveraging asynchronous event handling and non-blocking I/O, Node.js applications can remain responsive and performant, making them well-suited for building real-time and high-throughput applications.</p>
+</div>
+
+<div class="container">
+   <h4>Node.js Installation</h4>
+   <p class="p">Node.js can be installed on various operating systems, including Windows, macOS, and Linux. Follow the steps below to install Node.js on your system.</p>
+   
+   <!-- Installation Steps -->
+   <h5>Installation Steps</h5>
+   <ol class="p">
+       <li>Download Node.js Installer: Visit the official Node.js website (<a href="https://nodejs.org" target="_blank">https://nodejs.org</a>) and download the installer for your operating system.</li>
+       <li>Run Installer: Double-click the downloaded installer file and follow the installation instructions. On Windows, you may need to accept the license agreement and choose the installation directory.</li>
+       <li>Verify Installation: After installation, open a terminal or command prompt and run the following commands to verify that Node.js and npm (Node Package Manager) are installed correctly:
+           <ul>
+               <li><code>node -v</code>: Check the installed version of Node.js.</li>
+               <li><code>npm -v</code>: Check the installed version of npm.</li>
+           </ul>
+       </li>
+   </ol>
+
+   
+   <p class="p"><span>Explanation</span>: Node.js installation is straightforward and can be completed in a few simple steps. Once installed, you can start developing Node.js applications and leveraging its powerful features.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+
+   <!--
+               <div class="container" id="">
+               <h4>
+                   
+               </h4>
+               <p class="p">
+                 
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+
+                  
+               </p>
+            </div>
+
+-->
+
+
+
+
+
+   <!-- Include Prism.js and its JavaScript language component for JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+   <!-- Include Prism.js plugin for Node.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/node/prism-node.min.js"></script>
+
+   <!-- Your other script imports -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script>
+      // This will highlight Node.js code blocks
+      Prism.highlightAll();
+   </script>
+   <script>
+      // Your other scripts
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag>$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

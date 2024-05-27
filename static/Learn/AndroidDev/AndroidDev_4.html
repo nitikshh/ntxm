@@ -1,0 +1,1669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>App Designing</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <!-- <i class="fas fa-phone"></i>-->
+         <h3><a href="AndroidDev_1.html">What is Android?</a></h3>
+         <p><a href="#versionsofandroid">Versions of Android</a></p>
+         <p><a href="#historyofandroid">History of Android</a></p>
+         <p><a href="#Programminglanguages">Programming languages</a></p>
+         <p><a href="#htmltemplatingwithJinja2">Designing Apps</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#AndroidDev_2.html">Our First App</a></h3>
+         <p><a href="#basicsructure">Basic Structure</a></p>
+         <p><a href="#javaprogramming">Java Programming</a></p>
+         <p><a href="#designingwithxml">Designing with XML</a></p>
+         <p><a href="#runningourfirstapp">Running Our First App</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#AndroidDev_3.html">Java</a></h3>
+         <p><a href="variables">Variables</a></p>
+         <p><a href="#comments">Comments</a></p>
+         <p><a href="#opereators">Operators</a></p>
+         <p><a href="#controlstatements">Control Statements</a></p>
+         <p><a href="#arrays">Arrays</a></p>
+         <p><a href="#methods">Methods</a></p>
+         <p><a href="#classesandobjects">Classes and Objects</a></p>
+         <p><a href="#inheritance">Inheritance</a></p>
+         <p><a href="#polymorphism">Polymorphism</a></p>
+         <p><a href="#exceptionhandling">Exception Handling</a></p>
+         <p><a href="#collectionframework">Collections Framework</a></p>
+         <p><a href="#multithreading">Multithreading</a></p>
+         <p><a href="#filehandling">File Handling</a></p>
+         <p><a href="#AsynchronousProgramming">Asynchronous Programming </a></p>
+      </div>
+      <div class="info">
+         <h3><a href="AndroidDev_3.html">App Designing</a></h3>
+         <p><a href="#xml">What is XML</a></p>
+         <p><a href="#basic_structure">Basic XML Structure</a></p>
+         <p><a href="#layouts">Layouts</a></p>
+         <p><a href="#textviews">TextViews</a></p>
+         <p><a href="#imageviews">ImageViews</a></p>
+         <p><a href="#videoView">VideoView</a></p>
+         <p><a href="#audioplayer">Audio Player</a></p>
+         <p><a href="#buttons">Buttons</a></p>
+         <p><a href="#edittext">EditText</a></p>
+         <p><a href="#scrollviews">ScrollViews</a></p>
+         <p><a href="#listviews">ListViews</a></p>
+         <p><a href="#recyclerviews">RecyclerViews</a></p>
+         <p><a href="#cardview">CardView</a></p>
+         <p><a href="#checkbox">CheckBox</a></p>
+         <p><a href="#radiobutton">RadioButton</a></p>
+         <p><a href="#spinner">Spinner</a></p>
+         <p><a href="#autocompletetextview">AutoCompleteTextView</a></p>
+         <p><a href="#seekbar">SeekBar</a></p>
+         <p><a href="#switch">Switch</a></p>
+         <p><a href="#datepicker">DatePicker</a></p>
+         <p><a href="#timepicker">TimePicker</a></p>
+         <p><a href="#ratingbar">RatingBar</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#firebaseconnection">Firebase Connection</a></h3>
+         <p><a href="#firebaseoverview">Firebase Overview</a></p>
+         <p><a href="#firebaseprojectsetup">Firebase Project Setup</a></p>
+         <p><a href="#firebasedatabase">Firebase Realtime Database</a></p>
+         <p><a href="#firebasestorage">Firebase Storage</a></p>
+         <p><a href="#firebaseauthentication">Firebase Authentication</a></p>
+     </div>
+     
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="xml">
+               <h4>What is XML?</h4>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;note>
+    &lt;to>Tove&lt;/to>
+    &lt;from>Jani&lt;/from>
+    &lt;heading>Reminder&lt;/heading>
+    &lt;body>Don't forget me this weekend!&lt;/body>
+&lt;/note>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>XML (eXtensible Markup Language)</redtag> is a markup language that defines a set of rules for
+                  encoding documents in a format that is both human-readable and machine-readable. It provides a way to
+                  structure and organize data using tags, similar to HTML.
+               </p>
+
+               <p class="p">
+                  XML is widely used in Android app development for defining layouts, data structures, and configuration
+                  files. In Android, XML files are used to describe the user interface of an app (layouts), as well as
+                  for storing data in various formats such as preferences, resources, and more.
+               </p>
+
+               <p class="p">
+                  The example above demonstrates a simple XML document representing a note. It contains elements like
+                  <code>&lt;to></code>, <code>&lt;from></code>, <code>&lt;heading></code>, and <code>&lt;body></code>,
+                  each enclosed within a pair of angle brackets. These elements define the structure and content of the
+                  note.
+               </p>
+            </div>
+            <div class="container" id="basic_structure">
+               <h4>Basic XML Structure</h4>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;root_element>
+    &lt;child_element attribute="value">Content&lt;/child_element>
+&lt;/root_element>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Basic XML Structure:</redtag><br>
+                  In XML, documents are structured as a hierarchy of elements enclosed within angle brackets. Each
+                  element can have attributes and may contain text content or other elements.
+               </p>
+
+               <p class="p">
+                  <redtag>Example 1: TextView</redtag><br>
+                  TextView is a fundamental UI component used to display text content in an Android app.
+               </p>
+
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Hello, World!"
+    android:textSize="18sp"
+    android:textColor="#000000"/>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 2: Button</redtag><br>
+                  Button is a UI component used to trigger actions or events when clicked by the user.
+               </p>
+
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;Button
+    android:id="@+id/button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click Me"
+    android:onClick="onButtonClick"/>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 3: EditText</redtag><br>
+                  EditText is a UI component used to capture user input, such as text or numbers.
+               </p>
+
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;EditText
+    android:id="@+id/editText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter your name"/>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 4: ImageView</redtag><br>
+                  ImageView is a UI component used to display images in an Android app.
+               </p>
+
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;ImageView
+    android:id="@+id/imageView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/image"/>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 5: CheckBox</redtag><br>
+                  CheckBox is a UI component used to allow users to select one or more options from a set of choices.
+               </p>
+
+               <div class="chart" id="chart6">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Check me"/>
+        </code></pre>
+               </div>
+            </div>
+
+
+
+            <div class="container" id="layouts">
+               <h4>Layouts</h4>
+
+               <p class="p">
+                  <redtag>Layouts:</redtag><br>
+                  In Android, layouts are used to define the structure and arrangement of user interface components
+                  within an activity or fragment. Different layout types offer various ways to organize and display UI
+                  elements on the screen.
+               </p>
+
+               <p class="p">
+                  <redtag>LinearLayout:</redtag><br>
+                  LinearLayout arranges its child views either horizontally or vertically in a single direction.
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1"/>
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 2"/>
+&lt;/LinearLayout>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>GridView:</redtag><br>
+                  GridView displays its child views in a grid arrangement, typically used for displaying items in a
+                  grid-like fashion, such as images or data.
+               </p>
+
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;GridView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:numColumns="2">
+    &lt;ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image1"/>
+    &lt;ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/image2"/>
+&lt;/GridView>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>TableLayout:</redtag><br>
+                  TableLayout arranges its child views into rows and columns, similar to an HTML table.
+               </p>
+
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    &lt;TableRow>
+        &lt;TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 1, Column 1"/>
+        &lt;TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 1, Column 2"/>
+    &lt;/TableRow>
+    &lt;TableRow>
+        &lt;TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 2, Column 1"/>
+        &lt;TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Row 2, Column 2"/>
+    &lt;/TableRow>
+&lt;/TableLayout>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>RelativeLayout:</redtag><br>
+                  RelativeLayout arranges its child views relative to one another or to the parent, allowing for
+                  flexible UI designs.
+               </p>
+
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    &lt;Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1"/>
+    &lt;Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 2"
+        android:layout_below="@id/button1"/>
+&lt;/RelativeLayout>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>AbsoluteLayout:</redtag><br>
+                  AbsoluteLayout positions its child views at specific coordinates, which may result in UI elements
+                  overlapping on different screen sizes.
+               </p>
+
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;AbsoluteLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    &lt;Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button 1"
+        android:layout_x="50dp"
+        android:layout_y="100dp"/>
+&lt;/AbsoluteLayout>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>ListView:</redtag><br>
+                  ListView displays a scrollable list of items, allowing users to select one or more items from the
+                  list.
+               </p>
+
+               <div class="chart" id="chart6">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>FrameLayout:</redtag><br>
+                  FrameLayout is a simple layout used to contain a single view or fragment, often used for displaying
+                  fragments dynamically.
+               </p>
+
+               <div class="chart" id="chart7">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;FrameLayout
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+  &lt;TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="This is a FrameLayout"/>
+&lt;/FrameLayout>
+      </code></pre>
+               </div>
+
+
+               <p class="p">
+                  <redtag>ConstraintLayout:</redtag><br>
+                  ConstraintLayout allows you to create large and complex layouts with a flat view hierarchy (no nested
+                  layouts). It allows you to create constraints between views to define their position relative to each
+                  other or to the parent layout.
+               </p>
+
+               <div class="chart" id="chart11">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+        </code></pre>
+               </div>
+
+            </div>
+            <div class="container" id="textviews">
+               <h4>TextView</h4>
+               <p class="p">TextView is a fundamental UI component in Android used to display text to the user. It can
+                  be used to show simple text, formatted text, or even HTML content.</p>
+
+               <!-- Example of TextView in XML layout -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;TextView
+    android:id="@+id/textView"        <!-- Unique identifier for the TextView -->
+    android:layout_width="wrap_content" <!-- Width of the TextView -->
+    android:layout_height="wrap_content"<!-- Height of the TextView -->
+    android:text="Hello, TextView!"     <!-- Text content of the TextView -->
+    android:textSize="18sp"             <!-- Text size of the TextView -->
+    android:textColor="#000000"/&gt;     <!-- Text color of the TextView -->
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In this example, we define a TextView element in an XML layout
+                  file. We set its attributes such as <code>android:id</code> to uniquely identify the TextView,
+                  <code>android:layout_width</code> and <code>android:layout_height</code> to specify its size,
+                  <code>android:text</code> to set the text content, <code>android:textSize</code> to define the text
+                  size, and <code>android:textColor</code> to specify the text color.
+               </p>
+            </div>
+
+            <div class="container" id="imageviews">
+               <h4>ImageView</h4>
+               <p class="p">ImageView is a UI component in Android used to display images. It can load images from
+                  various sources such as resources, assets, or network URLs, and supports different image formats such
+                  as JPEG, PNG, GIF, etc.</p>
+
+               <!-- Example of ImageView in XML layout -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;ImageView
+    android:id="@+id/imageView"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/ic_image"
+    android:scaleType="centerCrop"
+    android:contentDescription="Image Description"/&gt;
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In this example, we define an ImageView element in an XML layout
+                  file. Here's an explanation of the attributes used:</p>
+
+               <ul class="p">
+                  <li><code>android:id</code>: Unique identifier for the ImageView.</li>
+                  <li><code>android:layout_width</code> and <code>android:layout_height</code>: Specify the width and
+                     height of the ImageView.</li>
+                  <li><code>android:src</code>: Specifies the image resource to be displayed. It can be a drawable
+                     resource, asset, or network URL.</li>
+                  <li><code>android:scaleType</code>: Defines how the image should be scaled and/or cropped to fit
+                     within the ImageView's bounds. Common values include <code>centerCrop</code>,
+                     <code>fitCenter</code>, <code>centerInside</code>, etc.
+                  </li>
+                  <li><code>android:contentDescription</code>: Provides a textual description of the image for
+                     accessibility purposes.</li>
+               </ul>
+            </div>
+            <div class="container" id="videoView">
+               <h4>VideoView in Android</h4>
+               <p class="p">VideoView is a UI component in Android that allows playing video files. It is typically used
+                  to embed videos in an Android application.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;VideoView
+   android:id="@+id/videoView"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.net.Uri;
+import android.os.Bundle;
+import android.widget.MediaController;
+import android.widget.VideoView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       VideoView videoView = findViewById(R.id.videoView);
+
+       // Set video URL
+       String videoUrl = "https://www.example.com/video.mp4";
+       Uri uri = Uri.parse(videoUrl);
+
+       // Set MediaController
+       MediaController mediaController = new MediaController(this);
+       mediaController.setAnchorView(videoView);
+       videoView.setMediaController(mediaController);
+
+       // Set video URI
+       videoView.setVideoURI(uri);
+
+       // Start playing video
+       videoView.start();
+   }
+}
+       </code></pre>
+               </div>
+            </div>
+            <div class="container" id="audioplayer">
+               <h4>AudioPlayer in Android</h4>
+               <p class="p">AudioPlayer is a UI component in Android that allows playing audio files. It is typically
+                  used to embed audio playback functionality in an Android application.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;LinearLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:orientation="vertical"&gt;
+
+   &lt;Button
+       android:id="@+id/buttonPlay"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Play"/&gt;
+
+   &lt;Button
+       android:id="@+id/buttonPause"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Pause"/&gt;
+
+   &lt;Button
+       android:id="@+id/buttonStop"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Stop"/&gt;
+
+&lt;/LinearLayout&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+   private MediaPlayer mediaPlayer;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       Button buttonPlay = findViewById(R.id.buttonPlay);
+       Button buttonPause = findViewById(R.id.buttonPause);
+       Button buttonStop = findViewById(R.id.buttonStop);
+
+       buttonPlay.setOnClickListener(this);
+       buttonPause.setOnClickListener(this);
+       buttonStop.setOnClickListener(this);
+
+       // Initialize MediaPlayer
+       mediaPlayer = new MediaPlayer();
+       mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+           @Override
+           public void onPrepared(MediaPlayer mp) {
+               mediaPlayer.start();
+           }
+       });
+
+       // Set audio URL
+       String audioUrl = "https://www.example.com/audio.mp3";
+       Uri uri = Uri.parse(audioUrl);
+
+       try {
+           mediaPlayer.setDataSource(MainActivity.this, uri);
+           mediaPlayer.prepareAsync(); // Prepare asynchronously to avoid blocking the UI thread
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+   }
+
+   @Override
+   public void onClick(View v) {
+       switch (v.getId()) {
+           case R.id.buttonPlay:
+               if (!mediaPlayer.isPlaying()) {
+                   mediaPlayer.start();
+               }
+               break;
+           case R.id.buttonPause:
+               if (mediaPlayer.isPlaying()) {
+                   mediaPlayer.pause();
+               }
+               break;
+           case R.id.buttonStop:
+               if (mediaPlayer.isPlaying()) {
+                   mediaPlayer.stop();
+                   mediaPlayer.prepareAsync();
+               }
+               break;
+       }
+   }
+
+   @Override
+   protected void onDestroy() {
+       super.onDestroy();
+       if (mediaPlayer != null) {
+           mediaPlayer.release();
+       }
+   }
+}
+       </code></pre>
+               </div>
+            </div>
+
+            <div class="container" id="scrollviews">
+               <h4>ScrollView</h4>
+               <p class="p">ScrollView is a layout container in Android that allows its content to be scrolled
+                  vertically or horizontally. It is used when the content within a layout exceeds the screen size and
+                  needs to be scrolled to view the entire content.</p>
+
+               <!-- Example of ScrollView in XML layout -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"&gt;
+
+    &lt;LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"&gt;
+        
+        &lt;TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scrollable Content"
+            android:textSize="18sp"
+            android:textColor="#000000"/&gt;
+        
+        &lt;!-- Add more views here --&gt;
+        
+    &lt;/LinearLayout&gt;
+
+&lt;/ScrollView&gt;
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In this example, we define a ScrollView element in an XML layout
+                  file. The ScrollView contains a LinearLayout as its child, which holds the scrollable content. Here's
+                  an explanation of the attributes used:</p>
+
+               <ul class="p">
+                  <li><code>android:layout_width</code> and <code>android:layout_height</code>: Specify the width and
+                     height of the ScrollView.</li>
+                  <li><code>android:layout_width</code> and <code>android:layout_height</code> of the LinearLayout:
+                     Match the width of the parent ScrollView and wrap the height content.</li>
+                  <li><code>android:orientation="vertical"</code>: Arrange child views vertically within the
+                     LinearLayout.</li>
+                  <li><code>android:id</code>, <code>android:layout_width</code>, <code>android:layout_height</code>,
+                     <code>android:text</code>, <code>android:textSize</code>, <code>android:textColor</code>:
+                     Attributes for the TextView, specifying its unique identifier, size, color, and content.
+                  </li>
+               </ul>
+            </div>
+            <div class="container" id="listviews">
+               <h4>ListView in Android</h4>
+               <p class="p">ListView is a view group that displays a list of scrollable items. It is a versatile UI
+                  element commonly used to present data in a vertically scrollable list.</p>
+
+               <!-- Example of ListView in XML layout -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;ListView
+    android:id="@+id/listView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/&gt;
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation (XML)</span>: In this example, we define a ListView element in an XML
+                  layout file. We specify its unique identifier, width, and height to match the parent.</p>
+
+               <!-- Example of populating ListView in Java -->
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+    private ListView listView;
+    private String[] data = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5"};
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        listView = findViewById(R.id.listView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
+        listView.setAdapter(adapter);
+    }
+}
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation (Java)</span>: In this example, we populate the ListView with data using
+                  an ArrayAdapter. We create an array of strings representing the data items, create an ArrayAdapter
+                  with the context, layout resource (here, using a built-in layout), and the data array, and set the
+                  adapter to the ListView.</p>
+            </div>
+            <div class="container" id="recyclerviews">
+               <h4>RecyclerView in Android</h4>
+               <p class="p">RecyclerView is a more advanced and flexible version of ListView in Android. It is used to
+                  efficiently display large datasets by recycling and reusing views as the user scrolls.</p>
+
+               <!-- Example of XML layout file -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/&gt;
+        </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Sample data
+        String[] countries = {"USA", "Canada", "UK", "Australia", "Japan", "Germany"};
+
+        // RecyclerView setup
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new MyAdapter(countries));
+    }
+}
+        </code></pre>
+               </div>
+
+               <!-- Explanation -->
+               <p class="p"><span>Explanation</span>: In this example, we define the RecyclerView in the XML layout file
+                  (activity_main.xml) and initialize it in the Java code (MainActivity.java). We also set up a
+                  LinearLayoutManager and attach it to the RecyclerView. Additionally, we create a sample dataset (array
+                  of countries) and pass it to a custom adapter (MyAdapter) to populate the RecyclerView with data.</p>
+            </div>
+            <div class="container" id="cardview">
+               <h4>CardView in Android</h4>
+               <p class="p">CardView is a UI component in Android that provides a flexible and customizable way to
+                  display content in a card-like layout. It is often used to represent items in lists or grids with
+                  consistent elevation and rounded corners.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;androidx.cardview.widget.CardView
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/cardView"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="16dp"
+   app:cardCornerRadius="8dp"
+   app:cardElevation="4dp"
+   app:cardBackgroundColor="#FFFFFF"&gt;
+
+   &lt;TextView
+       android:id="@+id/textView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="CardView Content"
+       android:padding="16dp"/&gt;
+
+&lt;/androidx.cardview.widget.CardView&gt;
+       </code></pre>
+               </div>
+
+               <!-- Explanation -->
+               <p class="p"><span>Explanation</span>: In this example, we define a CardView element in an XML layout
+                  file (activity_main.xml). The CardView contains a TextView as its child to display content. Here's an
+                  explanation of the attributes used:</p>
+
+               <ul class="p">
+                  <li><code>android:id</code>: Unique identifier for the CardView.</li>
+                  <li><code>android:layout_width</code> and <code>android:layout_height</code>: Specify the width and
+                     height of the CardView.</li>
+                  <li><code>android:layout_margin</code>: Sets the margin around the CardView.</li>
+                  <li><code>app:cardCornerRadius</code>: Defines the corner radius of the CardView.</li>
+                  <li><code>app:cardElevation</code>: Specifies the elevation (shadow) of the CardView.</li>
+                  <li><code>app:cardBackgroundColor</code>: Sets the background color of the CardView.</li>
+               </ul>
+            </div>
+            <div class="container" id="checkbox">
+               <h4>CheckBox in Android</h4>
+               <p class="p">CheckBox is a UI component in Android that allows users to make a binary choice, such as
+                  selecting or deselecting an option. It is typically used in forms or settings screens.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;CheckBox
+    android:id="@+id/checkBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Check me"
+    android:checked="false"/&gt;
+        </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        CheckBox checkBox = findViewById(R.id.checkBox);
+
+        // Method 1: Using setOnCheckedChangeListener
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(MainActivity.this, "CheckBox checked", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "CheckBox unchecked", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        // Method 2: Retrieving CheckBox state
+        boolean isChecked = checkBox.isChecked();
+        if (isChecked) {
+            Toast.makeText(MainActivity.this, "CheckBox is checked", Toast.LENGTH_SHORT).show();
+            // CheckBox is checked
+        } else {
+            // CheckBox is not checked
+            Toast.makeText(MainActivity.this, "CheckBox is not checked", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+        </code></pre>
+               </div>
+            </div>
+            <div class="container" id="radiobutton">
+               <h4>RadioButton in Android</h4>
+               <p class="p">RadioButton is a UI component in Android that allows users to select one option from a group
+                  of options. It is typically used in radio groups to represent mutually exclusive choices.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;RadioGroup
+    android:id="@+id/radioGroup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"&gt;
+
+    &lt;RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 1"/&gt;
+
+    &lt;RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Option 2"/&gt;
+
+&lt;/RadioGroup&gt;
+        </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        RadioGroup radioGroup = findViewById(R.id.radioGroup);
+        RadioButton radioButton1 = findViewById(R.id.radioButton1);
+        RadioButton radioButton2 = findViewById(R.id.radioButton2);
+
+        // Method 1: Using setOnCheckedChangeListener
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton radioButton = findViewById(checkedId);
+                String selectedOption = radioButton.getText().toString();
+                Toast.makeText(MainActivity.this, "Selected option: " + selectedOption, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Method 2: Retrieving selected RadioButton
+        RadioButton selectedRadioButton = findViewById(radioGroup.getCheckedRadioButtonId());
+        if (selectedRadioButton != null) {
+            String selectedOption = selectedRadioButton.getText().toString();
+            Toast.makeText(MainActivity.this, "Selected option: " + selectedOption, Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+        </code></pre>
+               </div>
+            </div>
+            <div class="container" id="spinner">
+               <h4>Spinner in Android</h4>
+               <p class="p">Spinner is a UI component in Android that provides a dropdown menu with a list of selectable
+                  items. It is typically used to allow users to choose one item from a list of options.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;Spinner
+    android:id="@+id/spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:entries="@array/countries"/&gt;
+        </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        Spinner spinner = findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.countries, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        // Method 1: Using setOnItemSelectedListener
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedCountry = parent.getItemAtPosition(position).toString();
+                Toast.makeText(MainActivity.this, "Selected country: " + selectedCountry, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Do nothing
+            }
+        });
+
+        // Method 2: Retrieving selected item
+        String selectedCountry = spinner.getSelectedItem().toString();
+        Toast.makeText(MainActivity.this, "Selected country: " + selectedCountry, Toast.LENGTH_SHORT).show();
+    }
+}
+        </code></pre>
+               </div>
+            </div>
+            <div class="container" id="autocompletetextview">
+               <h4>AutoCompleteTextView </h4>
+               <p class="p">AutoCompleteTextView is a UI component in Android that provides suggestions while the user
+                  types. It is typically used to help users quickly enter text by providing completion suggestions.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;AutoCompleteTextView
+   android:id="@+id/autoCompleteTextView"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:completionThreshold="1"
+   android:hint="Enter a country"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
+
+       // Sample data
+       String[] countries = {"USA", "Canada", "UK", "Australia", "Japan", "Germany"};
+
+       // ArrayAdapter setup
+       ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+               android.R.layout.simple_dropdown_item_1line, countries);
+
+       // Set adapter to AutoCompleteTextView
+       autoCompleteTextView.setAdapter(adapter);
+   }
+}
+       </code></pre>
+               </div>
+            </div>
+            <div class="container" id="seekbar">
+               <h4>SeekBar with Audio Player</h4>
+               <p class="p">SeekBar is a UI component in Android that allows users to select a value from a range by
+                  sliding a thumb along a horizontal track. It is often used to control playback progress in media
+                  players.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;SeekBar
+   android:id="@+id/seekBar"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:max="100"
+   android:progress="0"
+   android:layout_marginTop="16dp"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.widget.SeekBar;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   private MediaPlayer mediaPlayer;
+   private SeekBar seekBar;
+   private boolean isPlaying = false;
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       mediaPlayer = MediaPlayer.create(this, R.raw.sample_audio);
+       seekBar = findViewById(R.id.seekBar);
+
+       // Set seekbar listener
+       seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+           @Override
+           public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+               if (fromUser) {
+                   mediaPlayer.seekTo(progress);
+               }
+           }
+
+           @Override
+           public void onStartTrackingTouch(SeekBar seekBar) {
+               // No implementation needed
+           }
+
+           @Override
+           public void onStopTrackingTouch(SeekBar seekBar) {
+               // No implementation needed
+           }
+       });
+
+       // Start audio playback
+       mediaPlayer.start();
+       isPlaying = true;
+
+       // Update seekbar progress
+       updateSeekBar();
+   }
+
+   // Method to update seekbar progress
+   private void updateSeekBar() {
+       if (mediaPlayer.isPlaying()) {
+           int currentPosition = mediaPlayer.getCurrentPosition();
+           seekBar.setProgress(currentPosition);
+           Runnable runnable = new Runnable() {
+               @Override
+               public void run() {
+                   updateSeekBar();
+               }
+           };
+           seekBar.postDelayed(runnable, 1000); // Update every second
+       }
+   }
+
+   @Override
+   protected void onDestroy() {
+       super.onDestroy();
+       mediaPlayer.release();
+       mediaPlayer = null;
+   }
+}
+       </code></pre>
+               </div>
+            </div>
+            <div class="container" id="switch">
+               <h4>Switch in Android</h4>
+               <p class="p">Switch is a UI component in Android that allows users to toggle between two states, such as
+                  on/off or light/dark mode. It is often used to enable or disable specific features or settings.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;Switch
+   android:id="@+id/switchMode"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Dark Mode"
+   android:checked="false"
+   android:layout_marginTop="16dp"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       Switch switchMode = findViewById(R.id.switchMode);
+
+       // Check the current theme mode and set the switch accordingly
+       int currentNightMode = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+       switchMode.setChecked(currentNightMode == Configuration.UI_MODE_NIGHT_YES);
+
+       // Set switch listener to toggle between light and dark mode
+       switchMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+           @Override
+           public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+               if (isChecked) {
+                   // Switch to dark mode
+                   getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+               } else {
+                   // Switch to light mode
+                   getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+               }
+               recreate();
+           }
+       });
+   }
+}
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> : The above code demonstrates the implementation of a Switch in
+                  Android to toggle between light and dark mode. Here's a breakdown of the code:</p>
+               <ul class="p">
+                  <li>XML Layout: Defines a Switch component in the layout XML file (`activity_main.xml`). The Switch is
+                     initialized with a text label "Dark Mode" and starts unchecked.</li>
+                  <li>Java Code: Initializes the Switch in the `onCreate()` method of the MainActivity. It checks the
+                     current theme mode and sets the Switch accordingly. A listener is set on the Switch to detect
+                     changes in its state. When the Switch is toggled, it updates the app's theme to either light or
+                     dark mode and recreates the activity to apply the changes.</li>
+               </ul>
+            </div>
+
+            <div class="container" id="datepicker">
+               <h4>DatePicker in Android</h4>
+               <p class="p">DatePicker is a UI component in Android that allows users to select a date from a calendar
+                  view. It is often used in forms or dialogs to input dates.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;DatePicker
+   android:id="@+id/datePicker"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:calendarViewShown="false"
+   android:datePickerMode="spinner"
+   android:layout_marginTop="16dp"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.DatePicker;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+import java.util.Calendar;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       DatePicker datePicker = findViewById(R.id.datePicker);
+
+       // Set initial date to current date
+       Calendar calendar = Calendar.getInstance();
+       int year = calendar.get(Calendar.YEAR);
+       int month = calendar.get(Calendar.MONTH);
+       int day = calendar.get(Calendar.DAY_OF_MONTH);
+       datePicker.init(year, month, day, new DatePicker.OnDateChangedListener() {
+           @Override
+           public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+               // Display selected date
+               String selectedDate = dayOfMonth + "/" + (monthOfYear + 1) + "/" + year;
+               Toast.makeText(MainActivity.this, "Selected Date: " + selectedDate, Toast.LENGTH_SHORT).show();
+           }
+       });
+   }
+}
+       </code></pre>
+               </div>
+            </div>
+
+            <div class="container" id="timepicker">
+               <h4>TimePicker in Android</h4>
+               <p class="p">TimePicker is a UI component in Android that allows users to select a time. It is often used
+                  in forms or dialogs to input time.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;TimePicker
+   android:id="@+id/timePicker"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:layout_marginTop="16dp"/&gt;
+       </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.TimePicker;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+
+       TimePicker timePicker = findViewById(R.id.timePicker);
+       timePicker.setIs24HourView(true); // Set 24-hour format
+
+       // Set time changed listener
+       timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+           @Override
+           public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+               // Display selected time
+               String selectedTime = String.format("%02d:%02d", hourOfDay, minute);
+               Toast.makeText(MainActivity.this, "Selected Time: " + selectedTime, Toast.LENGTH_SHORT).show();
+           }
+       });
+   }
+}
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span>: The above code demonstrates the implementation of a TimePicker in
+                  Android to allow users to select a time. The TimePicker is initialized in the XML layout file
+                  (`activity_main.xml`). In the Java code (`MainActivity.java`), we retrieve the TimePicker and set it
+                  to display time in a 24-hour format. We also set a time changed listener to detect changes in the
+                  selected time. When the user selects a time, a Toast message displays the selected time.</p>
+            </div>
+            <div class="container" id="ratingbar">
+               <h4>RatingBar in Android</h4>
+               <p class="p">RatingBar is a UI component in Android that allows users to provide ratings by selecting a
+                  number of stars. It is often used in review systems or feedback forms.</p>
+
+               <!-- Example of XML layout file -->
+               <h5>XML Layout (activity_main.xml)</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;RatingBar
+    android:id="@+id/ratingBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:numStars="5"
+    android:rating="3"
+    android:stepSize="1"
+    android:layout_marginTop="16dp"/&gt;
+        </code></pre>
+               </div>
+
+               <!-- Example of Java code -->
+               <h5>Java Code (MainActivity.java)</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import android.os.Bundle;
+import android.widget.RatingBar;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        
+        // Set rating change listener
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                // Display selected rating
+                Toast.makeText(MainActivity.this, "Rating: " + rating, Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+}
+        </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span>: The above code demonstrates the implementation of a RatingBar in
+                  Android to allow users to provide ratings. The RatingBar is initialized in the XML layout file
+                  (`activity_main.xml`). In the Java code (`MainActivity.java`), we retrieve the RatingBar and set a
+                  rating change listener to detect changes in the selected rating. When the user selects a rating, a
+                  Toast message displays the selected rating.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+
+
+   </section>
+
+   <!--
+    <div class="container">
+               <h4>
+
+               </h4>
+               <p class="p">
+
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span> :
+
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-xml.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

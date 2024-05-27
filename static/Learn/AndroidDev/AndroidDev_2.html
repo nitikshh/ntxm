@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Creating First App</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <!-- <i class="fas fa-phone"></i>-->
+         <h3><a href="AndroidDev_1.html">What is Android?</a></h3>
+         <p><a href="#versionsofandroid">Versions of Android</a></p>
+         <p><a href="#historyofandroid">History of Android</a></p>
+         <p><a href="#Programminglanguages">Programming languages</a></p>
+         <p><a href="#htmltemplatingwithJinja2">Designing Apps</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="AndroidDev_2.html">Our First App</a></h3>
+         <p><a href="">Basic Structure</a></p>
+         <p><a href="">Java Programming</a></p>
+         <p><a href="">Designing with XML</a></p>
+         <p><a href="">Running Our First App</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="AndroidDev_3.html">Java</a></h3>
+         <p><a href="">Variables</a></p>
+         <p><a href="">Comments</a></p>
+         <p><a href="">Operators</a></p>
+         <p><a href="">Control Statements</a></p>
+         <p><a href="">Arrays</a></p>
+         <p><a href="#Methods">Methods</a></p>
+         <p><a href="">Classes and Objects</a></p>
+         <p><a href="">Inheritance</a></p>
+         <p><a href="">Polymorphism</a></p>
+         <p><a href="">Exception Handling</a></p>
+         <p><a href="">Collections Framework</a></p>
+         <p><a href="">Multithreading</a></p>
+         <p><a href="">File Handling</a></p>
+         <p><a href="#AsynchronousProgramming">Asynchronous Programming </a></p>
+      </div>
+      <div class="info">
+         <h3><a href="AndroidDev_4.html">App Designing</a></h3>
+         <p><a href="#xml">What is XML</a></p>
+         <p><a href="#basic_structure">Basic XML Structure</a></p>
+         <p><a href="#layouts">Layouts</a></p>
+         <p><a href="#textviews">TextViews</a></p>
+         <p><a href="#imageviews">ImageViews</a></p>
+         <p><a href="#buttons">Buttons</a></p>
+         <p><a href="#edittext">EditText</a></p>
+         <p><a href="#scrollviews">ScrollViews</a></p>
+         <p><a href="#listviews">ListViews</a></p>
+         <p><a href="#recyclerviews">RecyclerViews</a></p>
+         <p><a href="#cardview">CardView</a></p>
+         <p><a href="#checkbox">CheckBox</a></p>
+         <p><a href="#radiobutton">RadioButton</a></p>
+         <p><a href="#radiogroup">RadioGroup</a></p>
+         <p><a href="#spinner">Spinner</a></p>
+         <p><a href="#autocompletetextview">AutoCompleteTextView</a></p>
+         <p><a href="#seekbar">SeekBar</a></p>
+         <p><a href="#switch">Switch</a></p>
+         <p><a href="#datepicker">DatePicker</a></p>
+         <p><a href="#timepicker">TimePicker</a></p>
+         <p><a href="#ratingbar">RatingBar</a></p>
+     </div>
+     
+     <div class="info">
+      <h3><a href="#firebaseconnection">Firebase Connection</a></h3>
+      <p><a href="#firebaseoverview">Firebase Overview</a></p>
+      <p><a href="#firebaseprojectsetup">Firebase Project Setup</a></p>
+      <p><a href="#firebasedatabase">Firebase Realtime Database</a></p>
+      <p><a href="#firebasestorage">Firebase Storage</a></p>
+      <p><a href="#firebaseauthentication">Firebase Authentication</a></p>
+  </div>
+  
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+   <style>
+      table {
+         width: 100%;
+         border-collapse: collapse;
+      }
+
+      th,
+      td {
+         padding: 8px;
+         text-align: left;
+         border-bottom: 1px solid #ddd;
+      }
+
+      th {
+         background-color: #f2f2f2;
+      }
+   </style>
+   <section class="home">
+      <main>
+         <section>
+         <div class="container">
+    <h4>Our First Android App</h4>
+    <p class="p">In this lesson, we will create our first Android app. We'll start by setting up a basic project structure and creating a simple user interface.</p>
+    
+    <!-- Android Studio Project Structure -->
+    <h5>Android Studio Project Structure</h5>
+    <p class="p">Android Studio organizes projects into various directories and files. Let's take a look at the basic structure of an Android project:</p>
+    <div class="chart" id="chart1">
+        <pre onclick="copyText(this)"><code class="language-java" id="code">
+MyFirstApp/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com.example.myfirstapp/
+│   │   │   │       └── MainActivity.java
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml
+│   │   │   │   └── values/
+│   │   │   │       └── strings.xml
+│   │   │   └── AndroidManifest.xml
+│   └── build.gradle
+└── build.gradle
+        </code></pre>
+    </div>
+    
+    <!-- Creating User Interface -->
+    <h5>Creating User Interface</h5>
+    <p class="p">We'll start by creating a simple user interface using XML in Android Studio's layout editor.(activity_main.xml)</p>
+    <div class="chart" id="chart2">
+        <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    &lt;TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+        </code></pre>
+    </div>
+    
+    <!-- Explanation -->
+    <p class="p"><span>Explanation</span>: In this lesson, we learned how to set up our first Android app project in Android Studio and created a simple user interface using XML in the layout editor. We'll continue building upon this foundation in the upcoming lessons.</p>
+</div>
+<div class="container">
+   <h4>What is Java Programming?</h4>
+   <p class="p">Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle Corporation) in the mid-1990s. It was designed to be platform-independent, meaning that Java programs can run on any device that has a Java Virtual Machine (JVM) installed.</p>
+   
+   <!-- Features of Java -->
+   <h5>Features of Java</h5>
+   <p class="p">Java is known for its simplicity, platform independence, security, and robustness. Some key features of Java include:</p>
+   <ul class="p">
+       <li>Object-oriented: Java follows the object-oriented programming paradigm, making it easy to organize and structure code.</li>
+       <li>Platform independence: Java programs can run on any device that has a JVM, regardless of the underlying hardware and operating system.</li>
+       <li>Automatic memory management: Java provides automatic garbage collection, relieving developers from managing memory allocation and deallocation.</li>
+       <li>Strongly typed: Java enforces strict type checking, reducing the likelihood of runtime errors.</li>
+       <li>Multi-threaded: Java supports multi-threading, allowing concurrent execution of multiple tasks within a single program.</li>
+       <li>Rich standard library: Java comes with a comprehensive standard library that provides ready-to-use classes and functions for common programming tasks.</li>
+   </ul>
+   
+   <!-- Example of Java Code -->
+   <h5>Example of Java Code</h5>
+   <p class="p">Here's a simple "Hello, World!" program written in Java:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-java" id="code">
+public class HelloWorld {
+   public static void main(String[] args) {
+       System.out.println("Hello, World!");
+   }
+}
+       </code></pre>
+   </div>
+   
+   <!-- Explanation -->
+   <p class="p"><span>Explanation</span>: Java is a versatile and widely-used programming language known for its simplicity, platform independence, and robustness. It offers a rich set of features and a comprehensive standard library, making it suitable for a wide range of application development tasks.</p>
+</div>
+<div class="container">
+   <h4>Designing with XML</h4>
+   <p class="p">XML (eXtensible Markup Language) is a markup language that is commonly used for structuring and storing data in a human-readable format. In Android app development, XML is frequently used to define the layout and appearance of user interfaces.</p>
+   
+   <!-- XML Layouts in Android -->
+   <h5>XML Layouts in Android</h5>
+   <p class="p">In Android development, XML files are used to define the layout and appearance of user interfaces. These XML files are stored in the <code>res/layout</code> directory of the Android project. Let's take a look at an example of an XML layout file:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+
+   &lt;TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Hello, World!"
+       android:layout_centerInParent="true" />
+
+&lt;/RelativeLayout>
+       </code></pre>
+   </div>
+   
+   <!-- Explanation -->
+   <p class="p"><span>Explanation</span>: XML is commonly used in Android app development to define the layout and appearance of user interfaces. Layout XML files are stored in the <code>res/layout</code> directory of the Android project and contain hierarchical descriptions of the UI elements.</p>
+</div>
+<div class="container">
+   <h4>Running Our First App</h4>
+   <p class="p">In this lesson, we'll create our first Android app and run it on an emulator or a physical device. We'll start by setting up a basic project structure, creating a simple user interface, and then running the app.</p>
+   
+   <!-- Android Studio Project Structure -->
+   <h5>Android Studio Project Structure</h5>
+   <p class="p">Android Studio organizes projects into various directories and files. Let's take a look at the basic structure of an Android project:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+MyFirstApp/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/
+│   │   │   │   └── com.example.myfirstapp/
+│   │   │   │       └── MainActivity.java
+│   │   │   ├── res/
+│   │   │   │   ├── layout/
+│   │   │   │   │   └── activity_main.xml
+│   │   │   │   └── values/
+│   │   │   │       └── strings.xml
+│   │   │   └── AndroidManifest.xml
+│   └── build.gradle
+└── build.gradle
+       </code></pre>
+   </div>
+   
+   <!-- Creating User Interface -->
+   <h5>Creating User Interface</h5>
+   <p class="p">We'll start by creating a simple user interface using XML in Android Studio's layout editor.</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".MainActivity">
+
+   &lt;TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Hello, World!"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+       </code></pre>
+   </div>
+   
+   <!-- MainActivity.java -->
+   <h5>MainActivity.java</h5>
+   <p class="p">Next, we'll create the main activity class to handle the app's behavior.</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-java" id="code">
+package com.example.myfirstapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+public class MainActivity extends AppCompatActivity {
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity_main);
+   }
+}
+       </code></pre>
+   </div>
+   
+   <!-- Explanation -->
+   <p class="p"><span>Explanation</span>: In this lesson, we learned how to create and run our first Android app. We set up a basic project structure, created a simple user interface using XML, and defined the main activity class to handle the app's behavior. Running the app allows us to see our creation in action on an emulator or a physical device.</p>
+</div>
+
+       
+
+
+         </section>
+      </main>
+   </section>
+
+   <!--
+    <div class="container">
+               <h4>
+
+               </h4>
+               <p class="p">
+
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+
+                  </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span> :
+
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+<script>
+   window.addEventListener('DOMContentLoaded', function () {
+      var paragraphs = document.querySelectorAll('.p');
+      paragraphs.forEach(function (paragraph) {
+         var text = paragraph.innerHTML;
+         // Regular expression to match text within **double asterisks**
+         var regex = /\*\*([^*]+)\*\*/g;
+         var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+         paragraph.innerHTML = styledText;
+      });
+   });
+</script>
+</body>
+
+</html>

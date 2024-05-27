@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project 1</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+   </style>
+   <style>
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+
+      /* Modify the styling for the boldtag element */
+      boldtag {
+         font-weight: 100;
+         font-size: small;
+         font-family: "Krona One", sans-serif;
+         font-size: inherit;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      
+      <div class="info">
+         <h3><a href="NodeJS_Page_1.html">NodeJS</a></h3>
+         <p><a href="#">Why use NodeJS</a></p>
+         <p><a href="#">Features of NodeJS</a></p>
+         <p><a href="#">Event-driven architecture</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Installation</a></h3>
+         <p><a href="#">Install NodeJS</a></p>
+         <p><a href="#">Environment setup</a></p>
+         <p><a href="#">Version management with NVM</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Basics</a></h3>
+         <p><a href="#">Introduction to Programming</a></p>
+         <p><a href="#">npm Basics</a></p>
+         <p><a href="#">Variables and Data Types</a></p>
+         <p><a href="#">If...Else</a></p>
+         <p><a href="#">While Loop</a></p>
+         <p><a href="#">For Loop</a></p>
+         <p><a href="#">Functions and Scope</a></p>
+         <p><a href="#">Arrays and Lists</a></p>
+         <p><a href="#">Strings and String Manipulation</a></p>
+         <p><a href="#">Boolean Logic</a></p>
+         <p><a href="#">Type Casting and Coercion</a></p>
+         <p><a href="#">Math Operations</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_3.html">Modules</a></h3>
+         <p><a href="#">What are Modules</a></p>
+         <p><a href="#">Using Modules</a></p>
+         <p><a href="#">Express Js</a></p>
+         <p><a href="#">Multer</a></p>
+         <p><a href="#">Connection to HTML</a></p>
+         <p><a href="#">Custom Modules</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_4.html">Data Parsing</a></h3>
+         <p><a href="#">Hello World Application</a></p>
+         <p><a href="#">Data Parsing to HTML</a></p>
+         <p><a href="#">Form Handling</a></p>
+         <p><a href="#">Image Handling</a></p>
+         <p><a href="#">Video Handling</a></p>
+         <p><a href="#">JSON Handling</a></p>
+         <p><a href="#">Asynchronous programming</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_5html">File Handling</a></h3>
+         <p><a href="#">Accessing Files</a></p>
+         <p><a href="#">Reading Files</a></p>
+         <p><a href="#">Writing Files</a></p>
+         <p><a href="#">Create Files</a></p>
+         <p><a href="#">Deleting Files</a></p>
+         <p><a href="#">Creating Folders</a></p>
+         <p><a href="#">Saving Videos/Audios</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_6.html">Firebase</a></h3>
+         <p><a href="#">How to Connect</a></p>
+         <p><a href="#">Real-time Database</a></p>
+         <p><a href="#">Authentication</a></p>
+         <p><a href="#">Cloud Functions</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_7.html">Testing and Debugging</a></h3>
+         <p><a href="#">Unit Testing with Jest</a></p>
+         <p><a href="#">Debugging Techniques</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_8.html">Security</a></h3>
+         <p><a href="#">Input Validation</a></p>
+         <p><a href="#">Authentication Strategies</a></p>
+         <p><a href="#">Authorization Middleware</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_9.html">Deployment and Scaling</a></h3>
+         <p><a href="#">Containerization with Docker</a></p>
+         <p><a href="#">Deploying to Heroku</a></p>
+         <p><a href="#">Load Balancing</a></p>
+         <p><a href="#">Monitoring and Scaling</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+  <div class="container" id="">
+    <h4>
+        Employee Attendance Page
+    </h4>
+    <p>
+        Below is the code for a Node.js application that passes data of multiple employees to an HTML page, which resembles an attendance sheet.
+    </p>
+    <div class="chart" id="chart1">
+        <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// app.js - Main file
+const express = require('express');
+const app = express();
+const path = require('path');
+
+// Sample employee data
+const employees = [
+    { id: 1, name: 'John', age: 30 },
+    { id: 2, name: 'Alice', age: 25 },
+    { id: 3, name: 'Bob', age: 35 },
+    { id: 4, name: 'Eva', age: 28 },
+    { id: 5, name: 'Michael', age: 32 },
+    { id: 6, name: 'Emma', age: 27 },
+    { id: 7, name: 'Ryan', age: 29 },
+    { id: 8, name: 'Sophia', age: 31 },
+    { id: 9, name: 'David', age: 26 },
+    { id: 10, name: 'Olivia', age: 33 }
+];
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/employees', (req, res) => {
+    res.send(employees);
+});
+
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+        </code></pre>
+    </div>
+    <div class="chart" id="chart1">
+        <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html - HTML page -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Employee Attendance&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Employee Attendance Sheet&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID&lt;/th&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Age&lt;/th&gt;
+        &lt;/tr&gt;
+        <!-- Employee data will be dynamically inserted here -->
+    &lt;/table&gt;
+    &lt;script&gt;
+        fetch('/employees')
+            .then(response =&gt; response.json())
+            .then(data =&gt; {
+                const table = document.querySelector('table');
+                data.forEach(employee =&gt; {
+                    const row = table.insertRow();
+                    row.innerHTML = `&lt;td&gt;${employee.id}&lt;/td&gt;&lt;td&gt;${employee.name}&lt;/td&gt;&lt;td&gt;${employee.age}&lt;/td&gt;`;
+                });
+            });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+        </code></pre>
+    </div>
+    <p><span>Explanation</span> :
+        <br>
+        <ul>
+            <li><code>app.js</code>: This file defines a Node.js application using Express. It contains an array of sample employee data and sets up routes to serve the HTML page and employee data.</li>
+            <li><code>index.html</code>: This HTML page displays an employee attendance sheet. It dynamically fetches employee data from the server and populates the table with the retrieved data using JavaScript.</li>
+        </ul>
+    </p>
+</div>
+<div class="container" id="">
+   <h4>
+       Passing Tables from 45 to 50
+   </h4>
+   <p class="p">
+       Below is the code for a Node.js application that passes tables with numbers from 45 to 50 to an HTML page.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// app.js - Main file
+const express = require('express');
+const app = express();
+const path = require('path');
+
+app.get('/', (req, res) => {
+   res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.get('/tables', (req, res) => {
+   const tables = [];
+   for (let i = 45; i <= 50; i++) {
+       const table = [];
+       for (let j = 1; j <= 10; j++) {
+           table.push(`${i} x ${j} = ${i * j}`);
+       }
+       tables.push(table);
+   }
+   res.json(tables);
+});
+
+app.listen(3000, () => {
+   console.log('Server is running on port 3000');
+});
+       </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+      <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Tables from 45 to 50&lt;/title&gt;
+  &lt;script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="tables"&gt;&lt;/div&gt;
+  &lt;script&gt;
+      axios.get('/tables')
+          .then(response =&gt; {
+              const tables = response.data;
+              const tablesContainer = document.getElementById('tables');
+              tables.forEach(table =&gt; {
+                  const tableElement = document.createElement('table');
+                  table.forEach(row =&gt; {
+                      const tr = document.createElement('tr');
+                      const td = document.createElement('td');
+                      td.textContent = row;
+                      tr.appendChild(td);
+                      tableElement.appendChild(tr);
+                  });
+                  tablesContainer.appendChild(tableElement);
+              });
+          })
+          .catch(error =&gt; {
+              console.error('Error fetching tables:', error);
+          });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+      </code></pre>
+  </div>
+   <p class="p"><span>Explanation</span> :
+       <br>
+       This code defines a Node.js application using Express. It sets up routes to serve an HTML page and generate tables from 45 to 50. Each table contains multiplication results from 1 to 10.
+   </p>
+</div>
+
+
+
+<div class="container" id="">
+   <h4>
+       Expenses Details for USA States
+   </h4>
+   <p class="p">
+       Below is the code for parsing expenses details for multiple USA states.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const express = require('express');
+const app = express();
+
+// Mock data for expenses details of multiple USA states (This data was not real)
+const expensesData = [
+    {
+        name: 'New York',
+        expenses: [
+            { category: 'Housing', amount: 1500 },
+            { category: 'Food', amount: 600 },
+            { category: 'Transportation', amount: 300 },
+            // Add more expenses data for New York...
+        ]
+    },
+    {
+        name: 'California',
+        expenses: [
+            { category: 'Housing', amount: 1800 },
+            { category: 'Food', amount: 700 },
+            { category: 'Transportation', amount: 400 },
+            // Add more expenses data for California...
+        ]
+    },
+    {
+        name: 'Texas',
+        expenses: [
+            { category: 'Housing', amount: 1600 },
+            { category: 'Food', amount: 550 },
+            { category: 'Transportation', amount: 350 },
+            // Add more expenses data for Texas...
+        ]
+    },
+    {
+        name: 'Florida',
+        expenses: [
+            { category: 'Housing', amount: 1700 },
+            { category: 'Food', amount: 650 },
+            { category: 'Transportation', amount: 370 },
+            // Add more expenses data for Florida...
+        ]
+    },
+    // Add more states and their expenses data...
+];
+
+// Endpoint to fetch expenses details
+app.get('/expenses', (req, res) => {
+   res.json(expensesData);
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log(`Server is running on port ${PORT}`);
+});
+       </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Expenses Details&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Expenses Details for USA States&lt;/h1&gt;
+   &lt;table border="1"&gt;
+       &lt;thead&gt;
+           &lt;tr&gt;
+               &lt;th&gt;State&lt;/th&gt;
+               &lt;th&gt;Category&lt;/th&gt;
+               &lt;th&gt;Amount&lt;/th&gt;
+           &lt;/tr&gt;
+       &lt;/thead&gt;
+       &lt;tbody id="expensesTable"&gt;
+           &lt;!-- Expenses details will be dynamically inserted here --&gt;
+       &lt;/tbody&gt;
+   &lt;/table&gt;
+
+   &lt;script&gt;
+       fetch('/expenses')
+           .then(response =&gt; response.json())
+           .then(data =&gt; {
+               const expensesTable = document.getElementById('expensesTable');
+               data.forEach(state =&gt; {
+                   state.expenses.forEach(expense =&gt; {
+                       const row = document.createElement('tr');
+                       row.innerHTML = `
+                           &lt;td&gt;${state.name}&lt;/td&gt;
+                           &lt;td&gt;${expense.category}&lt;/td&gt;
+                           &lt;td&gt;${expense.amount}&lt;/td&gt;
+                       `;
+                       expensesTable.appendChild(row);
+                   });
+               });
+           })
+           .catch(error =&gt; console.error('Error fetching expenses:', error));
+   &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   <p class="p"><span>Explanation</span> :
+       <br>
+       <ul>
+           <li>The Node.js file sets up an Express.js server and defines a route "/expenses" to serve expenses data.</li>
+           <li>The HTML file contains a table to display expenses details fetched from the server using JavaScript.</li>
+           <li>JavaScript fetches data from the server and dynamically populates the table with expenses details.</li>
+       </ul>
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+
+   <!--
+               <div class="container" id="">
+               <h4>
+                   
+               </h4>
+               <p class="p">
+                 
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+
+                  
+               </p>
+            </div>
+
+-->
+
+
+
+
+
+   <!-- Include Prism.js and its JavaScript language component for JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+   <!-- Include Prism.js plugin for Node.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/node/prism-node.min.js"></script>
+
+   <!-- Your other script imports -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script>
+      // This will highlight Node.js code blocks
+      Prism.highlightAll();
+   </script>
+   <script>
+      // Your other scripts
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag>$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

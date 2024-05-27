@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction to Python</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+      <div class="info">
+         <h3><a href="Python_Page_1.html">Introduction</a></h3>
+         <p><a href="#Overview">Overview of Python</a></p>
+         <p><a href="#Introduction">Installation and setup</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_2.html">Basic Python Concepts</a></h3>
+         <p><a href="#variablesanddatatypes">Variables and Data Types</a></p>
+         <p><a href="#operators">Operators</a></p>
+         <p><a href="#controlflow">Control Flow (if statements, loops)</a></p>
+         <p><a href="#functions">Functions</a></p>
+         <p><a href="#datastructures">Data Structures (lists, tuples, dictionaries)</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#intermediatepython">Intermediate Python</a></h3>
+         <p><a href="#filehandling">File Handling</a></p>
+         <p><a href="#errorhandling">Error Handling (try-except blocks)</a></p>
+         <p><a href="#modulesandpackages">Modules and Packages</a></p>
+         <p><a href="#oop">Object-Oriented Programming (Classes and Objects)</a></p>
+         <p><a href="#regex">Regular Expressions</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#advancedpython">Advanced Python</a></h3>
+         <p><a href="#decorators">Decorators</a></p>
+         <p><a href="#generatorsanditerators">Generators and Iterators</a></p>
+         <p><a href="#lambdafunctions">Lambda Functions</a></p>
+         <p><a href="#threadingandmultiprocessing">Threading and Multiprocessing</a></p>
+         <p><a href="#unittesting">Unit Testing</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#pythonanddatabases">Python and Databases</a></h3>
+         <p><a href="#introductiontodatabases">Introduction to Databases</a></p>
+         <p><a href="#workingwithsqlite">Working with SQLite (basic CRUD operations)</a></p>
+         <p><a href="#introductiontomysql">Introduction to MySQL</a></p>
+         <p><a href="#usingmysqlwithpython">Using MySQL with Python (CRUD operations)</a></p>
+         <p><a href="#advancedmysqlqueries">Advanced MySQL Queries</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#webdevelopmentwithpython">Web Development with Python</a></h3>
+         <p><a href="#introductiontowebdevelopment">Introduction to Web Development</a></p>
+         <p><a href="#flaskordjango">Flask or Django Framework</a></p>
+         <p><a href="#handlinghttprequests">Handling HTTP Requests</a></p>
+         <p><a href="#templating">Templating</a></p>
+         <p><a href="#workingwithdatabasesinwebapplications">Working with Databases in Web Applications</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#deploymentandscaling">Deployment and Scaling</a></h3>
+         <p><a href="#deploymentoptions">Deployment Options (e.g., Heroku, AWS)</a></p>
+         <p><a href="#scalingstrategies">Scaling Strategies</a></p>
+         <p><a href="#loadbalancing">Load Balancing</a></p>
+         <p><a href="#databasescalingstrategies">Database Scaling Strategies</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#additionaltopics">Additional Topics</a></h3>
+         <p><a href="#webscrapingwithpython">Web Scraping with Python</a></p>
+         <p><a href="#datavisualization">Data Visualization (using libraries like Matplotlib, Seaborn)</a></p>
+         <p><a href="#machinelearningwithpython">Machine Learning with Python (overview)</a></p>
+         <p><a href="#naturallanguageprocessing">Natural Language Processing (overview)</a></p>
+         <p><a href="#buildingapiswithpython">Building APIs with Python</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#projectideas">Project Ideas</a></h3>
+         <p><a href="#simplecrudapplicationwithmysql">Simple CRUD application with MySQL</a></p>
+         <p><a href="#webscrapingproject">Web Scraping Project</a></p>
+         <p><a href="#webapplicationwithflaskorDjangoandmysql">Web Application with Flask/Django and MySQL</a></p>
+         <p><a href="#dataanalysisproject">Data Analysis Project</a></p>
+         <p><a href="#machinelearningproject">Machine Learning Project</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#resourcesandfurtherlearning">Resources and Further Learning</a></h3>
+         <p><a href="#recommendedbooks">Recommended Books</a></p>
+         <p><a href="#onlinecoursesandtutorials">Online Courses and Tutorials</a></p>
+         <p><a href="#communityforumsandgroups">Community Forums and Groups</a></p>
+         <p><a href="#documentationandadditionalreading">Documentation and Additional Reading</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="BasicFlaskCode">
+               <h4>
+                  What is Python
+               </h4>
+               <p>
+                  Python is a Programming language that is interpreted, object-oriented, and considered to be high-level
+                  too. Python is one of the easiest yet most useful programming languages which is widely used in the
+                  software industry. People use Python for Competitive Programming, Web Development, and creating
+                  software. Due to its easiest syntax, it is recommended for beginners who are new to the software
+                  engineering field. Its demand is growing at a very rapid pace due to its vast use cases in Modern
+                  Technological fields like Data Science, Machine learning, and Automation Tasks. For many years now, it
+                  has been ranked among the top Programming languages. <br><br>
+                  Python was created in 1980s by Guido van Rossum. During his research at the National Research
+                  Institute for Mathematics and Computer Science in the Netherlands, he created Python – a super easy
+                  programming language in terms of reading and usage. The first ever version was released in the year
+                  1991 which had only a few built-in data types and basic functionality.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># This is a basic Python program that calculates the factorial of a number
+
+def factorial(n):
+    """Function to calculate the factorial of a number"""
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+def main():
+    """Main function"""
+    number = int(input("Enter a number: "))  # Ask the user to enter a number
+    result = factorial(number)  # Calculate the factorial of the entered number
+    print("The factorial of", number, "is", result)  # Print the result
+
+if __name__ == "__main__":
+    main()</code></pre>
+               </div>
+               <p><span>Explanation</span> : <br><br>
+                  - This program calculates the factorial of a number entered by the user. <br><br>
+                  - The `factorial()` function is a recursive function that calculates the factorial of a given number
+                  `n`. It checks if `n` is equal to 0 and returns 1, otherwise, it recursively calls itself with `n-1`
+                  until `n` becomes 0.<br><br>
+                  - The `main()` function is the entry point of the program. It prompts the user to enter a number using
+                  `input()`, then calls the `factorial()` function with the entered number and prints the
+                  result.<br><br>
+                  - The `if __name__ == "__main__":` block ensures that the `main()` function is called only when the
+                  script is executed directly, not when it's imported as a module into another script. This allows the
+                  script to be reusable in other programs without running the `main()` function automatically.<br><br>
+                  - To use this program, you simply run the script, enter a number when prompted, and it will print out
+                  the factorial of that number.
+
+               </p>
+            </div>
+            <div class="container" id="Overview">
+               <h4>Overview of Python</h4>
+               <p>
+                  Python is a high-level, interpreted programming language known for its simplicity and readability.
+                  Guido van Rossum created Python, and it was first released in 1991. Python emphasizes code readability
+                  and allows programmers to express concepts in fewer lines of code compared to other programming
+                  languages. It supports multiple programming paradigms, including procedural, object-oriented, and
+                  functional programming.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Python code example
+print("Hello, World!")
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: The code snippet demonstrates the classic "Hello, World!" program in Python.
+                  The print() function is used to display the text "Hello, World!" on the screen.</p>
+            </div>
+
+            <div class="container" id="Introduction">
+               <h4>Installation and Setup</h4>
+               <p>Python is an `important` high-level language widely used for various purposes such as web development,
+                  data analysis, artificial intelligence, and more. Setting up Python on your system is a
+                  straightforward process.</p> <br><br>
+               <p>Follow these steps to install and set up Python:</p><br>
+               <p>**Download Python installer** from the official Python website
+                  ([https://www.python.org/downloads/](https://www.python.org/downloads/)).</p><br><br>
+               <p>**Run the installer** and follow the installation wizard.</p><br><br>
+               <p>During installation, make sure to **check the option to add Python to PATH**.</p><br><br>
+               <p>Once installed, **open a command prompt or terminal** and type `python` to verify the installation.
+               </p><br><br>
+               <p>You can also install Python using **package managers like pip** for more advanced usage.</p><br><br>
+               <p>For a more enhanced development experience, you can install **Visual Studio Code (VS Code)**, a
+                  popular code editor, along with Python:</p>
+               <p>**Download the VS Code installer** from the official website
+                  (https://code.visualstudio.com/).</p><br><br>
+               <p>**Run the installer** and follow the installation instructions.</p><br><br>
+               <p>Once installed, open VS Code and install the Python extension for VS Code.</p><br><br>
+               <p>You can now use VS Code as your development environment for Python projects.</p><br><br>
+            </div>
+
+
+
+         </section>
+      </main>
+
+
+
+   </section>
+
+   <!--
+   <div class="container" id="BasicFlaskCode">
+               <h4>
+                   
+               </h4>
+               <p  >
+                  
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p  ><span>Explanation</span> :
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

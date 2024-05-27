@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Basic Python Concepts</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+      <div class="info">
+         <h3><a href="Python_Page_1.html">Introduction</a></h3>
+         <p><a href="#Overview">Overview of Python</a></p>
+         <p><a href="#Introduction">Installation and setup</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_2.html">Basic Python Concepts</a></h3>
+         <p><a href="#variablesanddatatypes">Variables and Data Types</a></p>
+         <p><a href="#operators">Operators</a></p>
+         <p><a href="#controlflow">Control Flow (if statements, loops)</a></p>
+         <p><a href="#functions">Functions</a></p>
+         <p><a href="#datastructures">Data Structures (lists, tuples, dictionaries)</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_3.html">Intermediate Python</a></h3>
+         <p><a href="#filehandling">File Handling</a></p>
+         <p><a href="#errorhandling">Error Handling (try-except blocks)</a></p>
+         <p><a href="#modulesandpackages">Modules and Packages</a></p>
+         <p><a href="#oop">Object-Oriented Programming (Classes and Objects)</a></p>
+         <p><a href="#regex">Regular Expressions</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#advancedpython">Advanced Python</a></h3>
+         <p><a href="#decorators">Decorators</a></p>
+         <p><a href="#generatorsanditerators">Generators and Iterators</a></p>
+         <p><a href="#lambdafunctions">Lambda Functions</a></p>
+         <p><a href="#threadingandmultiprocessing">Threading and Multiprocessing</a></p>
+         <p><a href="#unittesting">Unit Testing</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#pythonanddatabases">Python and Databases</a></h3>
+         <p><a href="#introductiontodatabases">Introduction to Databases</a></p>
+         <p><a href="#workingwithsqlite">Working with SQLite (basic CRUD operations)</a></p>
+         <p><a href="#introductiontomysql">Introduction to MySQL</a></p>
+         <p><a href="#usingmysqlwithpython">Using MySQL with Python (CRUD operations)</a></p>
+         <p><a href="#advancedmysqlqueries">Advanced MySQL Queries</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#webdevelopmentwithpython">Web Development with Python</a></h3>
+         <p><a href="#introductiontowebdevelopment">Introduction to Web Development</a></p>
+         <p><a href="#flaskordjango">Flask or Django Framework</a></p>
+         <p><a href="#handlinghttprequests">Handling HTTP Requests</a></p>
+         <p><a href="#templating">Templating</a></p>
+         <p><a href="#workingwithdatabasesinwebapplications">Working with Databases in Web Applications</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#deploymentandscaling">Deployment and Scaling</a></h3>
+         <p><a href="#deploymentoptions">Deployment Options (e.g., Heroku, AWS)</a></p>
+         <p><a href="#scalingstrategies">Scaling Strategies</a></p>
+         <p><a href="#loadbalancing">Load Balancing</a></p>
+         <p><a href="#databasescalingstrategies">Database Scaling Strategies</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#additionaltopics">Additional Topics</a></h3>
+         <p><a href="#webscrapingwithpython">Web Scraping with Python</a></p>
+         <p><a href="#datavisualization">Data Visualization (using libraries like Matplotlib, Seaborn)</a></p>
+         <p><a href="#machinelearningwithpython">Machine Learning with Python (overview)</a></p>
+         <p><a href="#naturallanguageprocessing">Natural Language Processing (overview)</a></p>
+         <p><a href="#buildingapiswithpython">Building APIs with Python</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#projectideas">Project Ideas</a></h3>
+         <p><a href="#simplecrudapplicationwithmysql">Simple CRUD application with MySQL</a></p>
+         <p><a href="#webscrapingproject">Web Scraping Project</a></p>
+         <p><a href="#webapplicationwithflaskorDjangoandmysql">Web Application with Flask/Django and MySQL</a></p>
+         <p><a href="#dataanalysisproject">Data Analysis Project</a></p>
+         <p><a href="#machinelearningproject">Machine Learning Project</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#resourcesandfurtherlearning">Resources and Further Learning</a></h3>
+         <p><a href="#recommendedbooks">Recommended Books</a></p>
+         <p><a href="#onlinecoursesandtutorials">Online Courses and Tutorials</a></p>
+         <p><a href="#communityforumsandgroups">Community Forums and Groups</a></p>
+         <p><a href="#documentationandadditionalreading">Documentation and Additional Reading</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="BasicFlaskCode">
+               <h4>Basic Python Concepts</h4>
+               <p>Python is a versatile and `high-level` programming language with a simple and easy-to-learn syntax.
+                  Understanding basic Python concepts is essential for building a strong foundation in programming.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Example code demonstrating basic Python concepts
+variable = 10
+print(variable)
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: This code snippet demonstrates the use of variables and the print() function
+                  in Python. A variable named 'variable' is assigned the value 10, and then it is printed to the
+                  console.</p>
+            </div>
+
+            <div class="container" id="variablesanddatatypes">
+               <h4>
+                  Variables and Data Types
+               </h4>
+               <p>
+                  Variables and data types are fundamental concepts in Python programming. They are used to store and
+                  manipulate data within a program. Let's explore each of these concepts in detail:
+               </p>
+               <br>
+               <p>**Variables:**</p>
+               <p>
+                  In Python, a variable is a symbolic name that refers to a value. <br>
+                  Variables are used to store data so that it can be easily accessed and manipulated throughout the
+                  program. <br>
+                  Variable names can contain letters, numbers, and underscores but cannot start with a number. <br>
+                  Python is dynamically typed, meaning you do not need to explicitly declare the data type of a
+                  variable. <br>
+                  Variables are created when you assign a value to them. <br>
+                  You can assign different types of values to variables, such as integers, floats, strings, lists,
+                  tuples, dictionaries, etc. <br>
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Assigning values to variables
+x = 10
+y = 3.14
+name = "John"
+                  </code></pre>
+               </div>
+               <p>**Data Types:**</p>
+               <p>
+                  Data types in Python represent the type or kind of data that a variable can store. <br> <br>
+                  Python has several built-in data types, including:<br>
+                  Numeric Types: Integers (int), Floating-point numbers (float), Complex numbers (complex)<br>
+                  `Sequence Types`: Strings (str), Lists (list), Tuples (tuple) <br>
+                  `Mapping Type`: Dictionaries (dict)<br>
+                  `Boolean Type`: Boolean (bool)<br>
+                  `None Type`: None (NoneType)<br> <br>
+                  Each data type has specific characteristics and operations that can be performed on it.<br>
+                  Python provides functions to convert between different data types, such as int(), float(), str(),
+                  etc.<br>
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Numeric Types
+num_int = 10       # Integer
+num_float = 3.14   # Float
+num_complex = 2 + 3j  # Complex
+
+# Sequence Types
+str_var = "Hello, World!"  # String
+list_var = [1, 2, 3, 4]     # List
+tuple_var = (1, 2, 3, 4)    # Tuple
+
+# Mapping Type
+dict_var = {"name": "John", "age": 30}  # Dictionary
+
+# Boolean Type
+bool_var = True   # Boolean
+
+# None Type
+none_var = None   # NoneType
+                  </code></pre>
+               </div>
+            </div>
+
+            <div class="container" id="operators">
+               <h4>
+                  Operators
+               </h4>
+               <p>
+                  In Python, operators are symbols or keywords used to perform operations on operands. Operands can be
+                  variables, literals, or expressions. Python supports various types of operators, each serving a
+                  specific purpose. Let's explore the different types of operators in Python:
+               </p> <br>
+               <p>
+                  **Arithmetic Operators**: Arithmetic operators are used to perform mathematical operations like
+                  addition, subtraction, multiplication, division, etc.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Addition
+result = 10 + 5  # result = 15
+      
+ # Subtraction
+ result = 10 - 5  # result = 5
+      
+ # Multiplication
+ result = 10 * 5  # result = 50
+      
+ # Division
+ result = 10 / 5  # result = 2.0 (float division)
+                  </code></pre>
+
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)">
+        <code class="language-python" id="code">
+# Addition
+result = 10 + 5
+print("Addition:", result)
+
+# Subtraction
+result = 20 - 8
+print("Subtraction:", result)
+
+# Multiplication
+result = 6 * 4
+print("Multiplication:", result)
+
+# Division
+result = 15 / 3
+print("Division:", result)
+
+# Floor Division (Integer Division)
+result = 17 // 4
+print("Floor Division:", result)
+
+# Modulus (Remainder)
+result = 17 % 4
+print("Modulus:", result)
+
+# Exponentiation
+result = 2 ** 4
+print("Exponentiation:", result)
+        </code>
+    </pre>
+               </div>
+
+
+
+               <p>
+                  **Comparison Operators**:
+                  Comparison operators are used to compare values. They return True or False based on the comparison
+                  result.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Equal to
+ result = (10 == 5)  # result = False
+      
+ # Not equal to
+           result = (10 != 5)  # result = True
+      
+ # Greater than
+           result = (10 > 5)   # result = True
+      
+ # Less than or equal to
+ result = (10 <= 5)  # result = False
+                  </code></pre>
+
+
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)">
+        <code class="language-python" id="code">
+# Comparison Operators
+
+# Equal to
+print(5 == 5)  # True
+print(5 == 6)  # False
+
+# Not equal to
+print(5 != 6)  # True
+print(5 != 5)  # False
+
+# Greater than
+print(6 > 5)   # True
+print(5 > 6)   # False
+
+# Less than
+print(5 < 6)   # True
+print(6 < 5)   # False
+
+# Greater than or equal to
+print(6 >= 5)  # True
+print(6 >= 6)  # True
+print(5 >= 6)  # False
+
+# Less than or equal to
+print(5 <= 6)  # True
+print(6 <= 6)  # True
+print(6 <= 5)  # False
+        </code>
+    </pre>
+               </div>
+
+
+
+
+
+               <p>
+                  **Assignment Operators**:
+                  Assignment operators are used to assign values to variables.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># Assignment
+ x = 10
+      
+ # Addition assignment
+ x += 5   # Equivalent to: x = x + 5
+      
+ # Subtraction assignment
+ x -= 5   # Equivalent to: x = x - 5
+                  </code></pre>
+
+
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Assignment Operators
+
+# Simple assignment
+x = 5
+print("Simple assignment:", x)
+
+# Addition assignment
+x += 3
+print("Addition assignment:", x)
+
+# Subtraction assignment
+x -= 2
+print("Subtraction assignment:", x)
+
+# Multiplication assignment
+x *= 4
+print("Multiplication assignment:", x)
+
+# Division assignment
+x /= 2
+print("Division assignment:", x)
+
+# Modulus assignment
+x %= 3
+print("Modulus assignment:", x)
+
+# Floor division assignment
+x //= 2
+print("Floor division assignment:", x)
+
+# Exponentiation assignment
+x **= 3
+print("Exponentiation assignment:", x)
+</code></pre>
+               </div>
+
+
+               <p>
+                  **Logical Operators**:
+                  Logical operators are used to combine conditional statements.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># AND operator
+ result = (True and False)   # result = False
+      
+ # OR operator
+ result = (True or False)    # result = True
+      
+ # NOT operator
+ result = not True           # result = False
+                  </code></pre>
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Logical Operators
+
+# AND
+x = 5
+y = 10
+print("AND:", x < 10 and y > 5)  # True
+
+# OR
+print("OR:", x < 10 or y < 5)  # True
+
+# NOT
+print("NOT:", not(x < 10 and y > 5))  # False
+</code></pre>
+               </div>
+
+               <p>
+                  **Membership Operators**:
+                  Membership operators are used to test if a value is present in a sequence.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"># In operator
+ result = (1 in [1, 2, 3]) # result = True
+
+ # Not in operator
+ result = (4 not in [1, 2, 3]) # result = True
+                  </code></pre>
+
+
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Membership Operators
+
+# in
+my_list = [1, 2, 3, 4, 5]
+print("in:", 3 in my_list)  # True
+
+# not in
+print("not in:", 6 not in my_list)  # True
+
+# in with strings
+my_string = "Hello, world!"
+print("in with strings:", "H" in my_string)  # True
+
+# not in with strings
+print("not in with strings:", "z" not in my_string)  # True
+</code></pre>
+               </div>
+
+
+
+               <p>
+                  **Identity Operators**:
+                  Identity operators are used to compare the memory locations of two objects.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+ # Is operator
+ x = [1, 2, 3]
+ y = [1, 2, 3]
+ result = (x is y) # result = False
+
+ # Is not operator
+ result = (x is not y) # result = True
+                  </code></pre>
+
+               </div>
+               <p><Span>Examples -</Span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Identity Operators
+
+# is
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+print("is:", x is y)  # False
+print("is:", x is z)  # True
+
+# is not
+print("is not:", x is not y)  # True
+print("is not:", x is not z)  # False
+</code></pre>
+               </div>
+
+            </div>
+            <div class="container" id="controlflow">
+               <h4>
+                  Control Flow Statements
+               </h4>
+               <p>
+
+                  Control flow statements in Python allow you to execute different blocks of code based on certain
+                  conditions or to repeatedly execute code. The main control flow statements include if statements and
+                  loops.
+               </p> <br>
+               <p>
+                  **If Statements**:
+                  If statements are used to execute a block of code only if a specified condition is true.
+               </p>
+               <p><span>Syntax : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">if condition:
+# Code to execute if condition is True
+elif another_condition:
+# Code to execute if another_condition is True
+else:
+# Code to execute if none of the above conditions are True
+                  </code></pre>
+               </div>
+               <p><span>Code : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">x = 10
+if x > 5:
+print("x is greater than 5")
+elif x == 5:
+print("x is equal to 5")
+else:
+print("x is less than 5")
+                  </code></pre>
+               </div>
+               <p><span>Examples : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# If Statements
+
+x = 10
+
+# Simple if statement
+if x > 5:
+    print("x is greater than 5")
+
+# If-else statement
+if x % 2 == 0:
+    print("x is even")
+else:
+    print("x is odd")
+
+# If-elif-else statement
+if x > 10:
+    print("x is greater than 10")
+elif x == 10:
+    print("x is equal to 10")
+else:
+    print("x is less than 10")
+
+# Nested if statements
+y = 5
+if x > 5:
+    if y > 2:
+        print("Both x and y are greater than their respective thresholds")
+
+# if statement with logical operator
+if x > 5 and y > 2:
+    print("Both x and y are greater than their respective thresholds")
+</code></pre>
+               </div>
+
+
+
+
+               <p>
+                  **Loops**:
+                  Loops are used to repeatedly execute a block of code until a specified condition is met. <br> <br>
+                  Python supports two main types of loops: **for** loops and **while** loops.
+               </p>
+               <p>
+                  **For Loops**:
+                  For loops are used to iterate over a sequence (such as a list, tuple, string, or range).
+               </p>
+               <p><span>Syntax : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">for item in sequence:
+# Code to execute for each item in the sequence
+                  </code></pre>
+               </div>
+               <p><span>Code : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+print(fruit)
+                  </code></pre>
+               </div>
+               <p><span>Examples : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# For Loops
+
+# Iterating over a list
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# Iterating over a string
+for char in "hello":
+    print(char)
+
+# Iterating over a range of numbers
+for i in range(5):
+    print(i)
+
+# Using range with start and end values
+for i in range(2, 6):
+    print(i)
+
+# Using range with step value
+for i in range(1, 10, 2):
+    print(i)
+
+# Nested for loops
+for i in range(3):
+    for j in range(2):
+        print(i, j)
+</code></pre>
+               </div>
+
+
+
+
+               <p>
+                  **While Loops**: While loops are used to repeatedly execute a block of code as long as a specified
+                  condition is true.
+               </p>
+               <p><span>Syntax : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">while condition:
+# Code to execute while condition is True
+                  </code></pre>
+               </div>
+               <p><span>Code : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">x = 0
+while x < 5:
+   print(x) x +=1
+                  </code></pre>
+               </div>
+               <p><span>Examples : </span></p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# While Loops
+
+# Simple while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+
+# While loop with break statement
+num = 0
+while True:
+    print(num)
+    num += 1
+    if num == 5:
+        break
+
+# While loop with continue statement
+num = 0
+while num < 5:
+    num += 1
+    if num == 3:
+        continue
+    print(num)
+
+# While loop with else statement
+num = 0
+while num < 5:
+    print(num)
+    num += 1
+else:
+    print("Loop ended because num reached 5")
+</code></pre>
+               </div>
+
+
+               <p>
+                  Control flow statements are essential for making decisions and controlling
+                  the flow of execution in your Python programs. They enable you to execute code conditionally and
+                  iterate
+                  over sequences efficiently.
+               </p> <br>
+               <p>
+                  Here are the some More Examples of if-else statements, for loops, and while loops:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# If-else Statements
+
+# Example 1
+x = 10
+if x > 0:
+    print("Positive")
+else:
+    print("Non-positive")
+
+# Example 2
+temperature = 25
+if temperature > 30:
+    print("Hot")
+elif temperature > 20:
+    print("Warm")
+else:
+    print("Cold")
+
+# Example 3
+number = -5
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+# For Loops
+
+# Example 4
+colors = ["red", "green", "blue"]
+for color in colors:
+    print("Color:", color)
+
+# Example 5
+for i in range(1, 6):
+    print("Square of", i, "is", i*i)
+
+# Example 6
+sentence = "Hello, world!"
+for char in sentence:
+    if char.isalpha():
+        print(char)
+
+# While Loops
+
+# Example 7
+count = 0
+while count < 5:
+    print("Count:", count)
+    count += 1
+
+# Example 8
+num = 10
+while num > 0:
+    print("Number:", num)
+    num -= 2
+
+# Example 9
+total = 0
+num = 1
+while num <= 10:
+    total += num
+    num += 1
+print("Sum of first 10 natural numbers:", total)
+
+# Example 10
+age = 15
+while age < 18:
+    print("You are under 18, not eligible to vote.")
+    age += 1
+else:
+    print("You are 18 or older, eligible to vote.")
+
+# Nested Loops
+
+# Example 11
+for i in range(3):
+    for j in range(2):
+        print("i:", i, "j:", j)
+
+# Example 12
+for i in range(1, 4):
+    print("Table of", i)
+    for j in range(1, 11):
+        print(i, "*", j, "=", i*j)
+
+# Example 13
+rows = 4
+for i in range(rows):
+    for j in range(i + 1):
+        print("*", end=" ")
+    print()
+
+# Example 14
+number = 7
+while number > 0:
+    print(number)
+    number -= 1
+    if number == 4:
+        break
+
+# Example 15
+number = 10
+while number > 0:
+    number -= 1
+    if number % 2 == 0:
+        continue
+    print(number)
+</code></pre>
+               </div>
+
+
+            </div>
+
+            <div class="container" id="functions">
+               <h4>
+                  Functions
+               </h4>
+               <p>
+                  Functions are a fundamental concept in Python programming that allow you to organize code into
+                  reusable blocks. They help improve code modularity, readability, and reusability. Let's explore
+                  various aspects of functions in Python:
+               </p>
+            </div> <br>
+            <div class="container" >
+               <p>**Defining a Function**</p>
+               <p>A function is a block of reusable code that performs a specific task. It typically takes input,
+                  performs some operations, and returns output.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Function definition
+def greet(name):
+    return "Hello, " + name + "!"
+
+# Function call
+message = greet("Alice")
+print(message)  # Output: Hello, Alice!
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: This code defines a function named <code>greet</code> that takes one
+                  parameter <code>name</code>. Inside the function, it concatenates the input name with a greeting
+                  message and returns it. Then, it calls the <code>greet</code> function with the argument
+                  <code>"Alice"</code> and prints the returned message.
+               </p>
+            </div> <br>
+            <div class="container" >
+               <p>**Calling a Function**</p>
+               <p>Calling a function means to execute the code within the function block with the provided arguments (if
+                  any). When a function is called, the program jumps to the function definition, executes the code
+                  inside it, and then returns to the point where the function was called.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Function definition
+def greet(name):
+   return "Hello, " + name + "!"
+
+# Calling the function
+message = greet("Bob")
+
+# Printing the message
+print(message)  # Output: Hello, Bob!
+       </code></pre>
+               </div>
+               <p><span>Explanation</span>: In this code snippet, we define a function named <code>greet</code> that
+                  takes one parameter <code>name</code>. When we call the function <code>greet</code> with the argument
+                  <code>"Bob"</code>, it returns the string <code>"Hello, Bob!"</code>, which we store in the variable
+                  <code>message</code>. Finally, we print the <code>message</code>, resulting in the output
+                  <code>Hello, Bob!</code>.
+               </p>
+            </div> <br>
+            <div class="container" >
+               <p>**Function Types: Void and Non-Void**</p>
+               <p>In programming, functions can be categorized into two types based on their return value: void
+                  functions and non-void functions.</p>
+               <p><strong>Void functions</strong> are functions that do not return any value. They are typically used to
+                  perform a task or operation without returning any result.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Void function definition
+def greet(name):
+    print("Hello, " + name + "!")
+
+# Calling the void function
+greet("Alice")
+        </code></pre>
+               </div>
+               <p><strong>Explanation:</strong> In this code snippet, we define a void function named <code>greet</code>
+                  that takes one parameter <code>name</code>. Inside the function, it prints the greeting message
+                  directly to the console without returning any value. When we call the function <code>greet</code> with
+                  the argument <code>"Alice"</code>, it prints <code>"Hello, Alice!"</code> to the console.</p>
+               <p><strong>Non-void functions</strong>, on the other hand, are functions that return a value. They
+                  perform a task or operation and then return a result to the caller.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Non-void function definition
+def add(x, y):
+    return x + y
+
+# Calling the non-void function
+result = add(3, 5)
+print("Result of addition:", result)
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we define a non-void function named
+                  <code>add</code> that takes two parameters <code>x</code> and <code>y</code>. Inside the function, it
+                  adds the two parameters and returns the result using the <code>return</code> statement. When we call
+                  the function <code>add</code> with the arguments <code>3</code> and <code>5</code>, it returns
+                  <code>8</code>, which we store in the variable <code>result</code>. Finally, we print the
+                  <code>result</code>, resulting in the output <code>Result of addition: 8</code>.
+               </p>
+            </div> <br>
+            <div class="container" >
+               <p>**Arguments and Parameters**</p>
+               <p>In Python functions, parameters are variables used to define the inputs that a function can accept.
+                  Arguments, on the other hand, are the actual values passed to the function when it is called.</p>
+               <p>Functions can have zero or more parameters. When calling a function, you need to provide the same
+                  number of arguments as the number of parameters defined in the function.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Function with parameters
+def greet(name):
+    print("Hello, " + name + "!")
+
+# Calling the function with an argument
+greet("Alice")
+
+# Function with multiple parameters
+def add(x, y):
+    return x + y
+
+# Calling the function with multiple arguments
+result = add(3, 5)
+print("Result of addition:", result)
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we define two functions. The first function
+                  <code>greet</code> has one parameter <code>name</code>, and when it is called with the argument
+                  <code>"Alice"</code>, it prints <code>"Hello, Alice!"</code> to the console. The second function
+                  <code>add</code> has two parameters <code>x</code> and <code>y</code>, and when it is called with the
+                  arguments <code>3</code> and <code>5</code>, it returns <code>8</code>, which is then printed as
+                  <code>"Result of addition: 8"</code>.
+               </p>
+            </div>
+            <div class="container" >
+               <br><br>
+               <p>**Passing Parameters**</p>
+               <p>Parameters can be passed to a function in several ways:</p>
+
+               <p>`Positional Arguments:` Arguments passed based on their position in the function call.
+                  </li>
+               <p>`Keyword Arguments:` Arguments passed with the parameter name explicitly specified.
+                  </li>
+               <p>`Default Arguments:` Parameters with default values specified in the function
+                  definition.</li>
+               <p>`Arbitrary Arguments:` Functions can accept a variable number of arguments using *args
+                  or **kwargs.</li>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Positional Arguments
+def greet(name, message):
+    print(f"{message}, {name}!")
+
+greet("Alice", "Hello")  # Output: Hello, Alice!
+
+# Keyword Arguments
+def greet(name, message):
+    print(f"{message}, {name}!")
+
+greet(message="Hello", name="Alice")  # Output: Hello, Alice!
+
+# Default Arguments
+def greet(name, message="Hello"):
+    print(f"{message}, {name}!")
+
+greet("Alice")  # Output: Hello, Alice!
+greet("Bob", "Hi")  # Output: Hi, Bob!
+
+# Arbitrary Arguments
+def greet(*names):
+    for name in names:
+        print("Hello,", name)
+
+greet("Alice", "Bob", "Charlie")  # Output: Hello, Alice, Hello, Bob, Hello, Charlie
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we demonstrate different ways of passing parameters to
+                  functions.</p>
+
+               <p>In the first example, we pass arguments "Alice" and "Hello" to the function <code>greet</code> as
+                  positional arguments.</p>
+               <p>In the second example, we use keyword arguments to pass the arguments to the function
+                  <code>greet</code>, explicitly specifying the parameter names.
+               </p>
+               <p>The third example shows how to define default arguments in a function. If no value is provided for the
+                  message parameter, it defaults to "Hello".</p>
+               <p>In the fourth example, we use arbitrary arguments (*args) to allow the function to accept a variable
+                  number of arguments. Inside the function, *names acts as a tuple containing all the passed arguments.
+               </p>
+
+            </div>
+
+            <div class="container" > <br>
+               <p>**Scope of Variables**</p>
+               <p>In Python, the scope of a variable refers to the region of the code where the variable is accessible.
+                  Python has the following scopes:</p>
+               <ul>
+                  <li><strong>Local Scope:</strong> Variables defined inside a function have a local scope. They can
+                     only be accessed within that function.</li>
+                  <li><strong>Enclosing (nonlocal) Scope:</strong> Variables defined in the enclosing function of a
+                     nested function have an enclosing scope. They can be accessed by the nested function.</li>
+                  <li><strong>Global Scope:</strong> Variables defined outside of any function or declared as global
+                     within a function have a global scope. They can be accessed from anywhere in the code.</li>
+                  <li><strong>Built-in Scope:</strong> Python predefines several built-in functions and constants. These
+                     are available in a built-in scope and can be accessed from anywhere in the code.</li>
+               </ul>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Global variable
+global_var = "I am global"
+
+def my_function():
+    # Local variable
+    local_var = "I am local"
+    print("Inside the function:", local_var)
+    print("Inside the function (global variable):", global_var)
+
+my_function()
+print("Outside the function (global variable):", global_var)
+
+# Accessing a global variable inside a function
+def another_function():
+    print("Inside another function (global variable):", global_var)
+
+another_function()
+
+# Modifying a global variable inside a function
+def modify_global():
+    global global_var
+    global_var = "I am modified"
+
+modify_global()
+print("Outside the function (modified global variable):", global_var)
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we demonstrate the scope of variables in Python.</p>
+               <ul>
+                  <li>We define a global variable <code>global_var</code> outside any function, which can be accessed
+                     from anywhere in the code.</li>
+                  <li>Inside the function <code>my_function</code>, we define a local variable <code>local_var</code>,
+                     which is accessible only within the function.</li>
+                  <li>We demonstrate accessing a global variable inside a function and modifying a global variable
+                     inside a function using the <code>global</code> keyword.</li>
+               </ul>
+            </div>
+            <p>
+               Here are some examples of functions:
+            </p>
+
+            <div class="chart" id="chart1">
+               <pre onclick="copyText(this)"><code class="language-python" id="code"># Example 1: Simple function without parameters
+def greet():
+    print("Hello, world!")
+
+# Example 2: Function with parameters
+def greet_with_name(name):
+    print("Hello, " + name + "!")
+
+# Example 3: Function with default parameter
+def greet_with_default(name="world"):
+    print("Hello, " + name + "!")
+
+# Example 4: Function with return statement
+def add(x, y):
+    return x + y
+
+# Example 5: Function with multiple return values
+def divide(x, y):
+    quotient = x // y
+    remainder = x % y
+    return quotient, remainder
+
+# Example 6: Function with keyword arguments
+def person_info(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+# Example 7: Recursive function
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Example 8: Lambda function
+square = lambda x: x * x
+
+# Example 9: Function with variable-length arguments
+def average(*args):
+    return sum(args) / len(args)
+
+# Example 10: Function as an argument
+def apply_operation(operation, x, y):
+    return operation(x, y)
+
+# Function calls
+greet()
+greet_with_name("Alice")
+greet_with_default()
+print("Sum:", add(3, 5))
+quotient, remainder = divide(10, 3)
+print("Quotient:", quotient, "Remainder:", remainder)
+person_info(age=30, name="Bob")
+print("Factorial of 5:", factorial(5))
+print("Square of 7:", square(7))
+print("Average:", average(1, 2, 3, 4, 5))
+print("Result of applying operation:", apply_operation(add, 4, 6))
+               </code></pre>
+            </div>
+
+            <div class="container" id="datastructures">
+               <h4>
+                  Data Structures
+               </h4>
+               <p>
+                  Data structures are used to store and organize data in Python. Each data structure has its own
+                  characteristics and is suitable for different types of tasks. Let's explore the three main data
+                  structures in Python:
+               </p>
+            </div>
+            <div class="container"  > <br>
+               <p>**Lists**</p>
+               <p>In Python, a list is a collection of items enclosed in square brackets <code>[]</code>. Lists can
+                  contain elements of different data types, and they are mutable, meaning their elements can be changed
+                  after the list is created.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Creating a list
+my_list = [1, 2, 3, 4, 5]
+print("List:", my_list)
+
+# Accessing elements in a list
+print("First element:", my_list[0])  # Output: 1
+print("Last element:", my_list[-1])  # Output: 5
+
+# Slicing a list
+print("Sliced list:", my_list[2:4])  # Output: [3, 4]
+
+# Modifying elements in a list
+my_list[1] = 10
+print("Modified list:", my_list)  # Output: [1, 10, 3, 4, 5]
+
+# Adding elements to a list
+my_list.append(6)
+print("List after append:", my_list)  # Output: [1, 10, 3, 4, 5, 6]
+
+# Removing elements from a list
+my_list.remove(3)
+print("List after removal:", my_list)  # Output: [1, 10, 4, 5, 6]
+
+# Iterating over a list
+for item in my_list:
+    print("Item:", item)
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we demonstrate the usage of lists in Python.</p>
+               <ul>
+                  <li>We create a list <code>my_list</code> containing integers from 1 to 5.</li>
+                  <li>We access elements in the list using index notation and negative indices to access elements from
+                     the end.</li>
+                  <li>Slicing is used to extract a subset of elements from the list.</li>
+                  <li>We modify elements in the list using index assignment.</li>
+                  <li>Elements can be added to the end of the list using the <code>append()</code> method.</li>
+                  <li>Elements can be removed from the list using the <code>remove()</code> method.</li>
+                  <li>We iterate over the list using a <code>for</code> loop to access each element.</li>
+               </ul>
+            </div>
+            <br>
+            <div class="container" >
+               <p>**Tuples**</p>
+               <p>In Python, a tuple is a collection of items enclosed in parentheses <code>()</code>. Tuples are
+                  similar to lists, but they are immutable, meaning their elements cannot be changed after the tuple is
+                  created.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Creating a tuple
+my_tuple = (1, 2, 3, 4, 5)
+print("Tuple:", my_tuple)
+
+# Accessing elements in a tuple
+print("First element:", my_tuple[0])  # Output: 1
+print("Last element:", my_tuple[-1])  # Output: 5
+
+# Slicing a tuple
+print("Sliced tuple:", my_tuple[2:4])  # Output: (3, 4)
+
+# Modifying elements in a tuple (This will raise an error)
+try:
+    my_tuple[1] = 10
+except TypeError as e:
+    print("Error:", e)
+
+# Tuple unpacking
+a, b, c, d, e = my_tuple
+print("Unpacked values:", a, b, c, d, e)  # Output: 1 2 3 4 5
+
+# Length of a tuple
+print("Length of tuple:", len(my_tuple))  # Output: 5
+        </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we demonstrate the usage of tuples in Python.</p>
+               <ul>
+                  <li>We create a tuple <code>my_tuple</code> containing integers from 1 to 5.</li>
+                  <li>We access elements in the tuple using index notation and negative indices to access elements from
+                     the end.</li>
+                  <li>Slicing is used to extract a subset of elements from the tuple.</li>
+                  <li>Tuples are immutable, so attempting to modify elements in a tuple will raise a
+                     <code>TypeError</code>.</li>
+                  <li>Tuple unpacking allows us to assign the values of a tuple to separate variables.</li>
+                  <li>We can use the <code>len()</code> function to determine the length of a tuple.</li>
+               </ul>
+            </div>
+            <br>
+            <div class="container" >
+               <p>**Dictionaries**</p>
+               <p>In Python, a dictionary is a collection of key-value pairs enclosed in curly braces <code>{}</code>.
+                  Dictionaries are unordered, mutable, and indexed data structures.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Creating a dictionary
+my_dict = {"name": "Alice", "age": 30, "city": "New York"}
+print("Dictionary:", my_dict)
+
+# Accessing elements in a dictionary
+print("Value for key 'name':", my_dict["name"])  # Output: Alice
+print("Value for key 'age':", my_dict["age"])  # Output: 30
+
+# Modifying elements in a dictionary
+my_dict["age"] = 35
+print("Modified dictionary:", my_dict)  # Output: {'name': 'Alice', 'age': 35, 'city': 'New York'}
+
+# Adding elements to a dictionary
+my_dict["gender"] = "Female"
+print("Dictionary after addition:", my_dict)  # Output: {'name': 'Alice', 'age': 35, 'city': 'New York', 'gender': 'Female'}
+
+# Removing elements from a dictionary
+del my_dict["city"]
+print("Dictionary after removal:", my_dict)  # Output: {'name': 'Alice', 'age': 35, 'gender': 'Female'}
+
+# Iterating over a dictionary
+for key, value in my_dict.items():
+   print(f"Key: {key}, Value: {value}")
+       </code></pre>
+               </div>
+               <p><span>Explanation:</span> In this code snippet, we demonstrate the usage of dictionaries in Python.
+               </p>
+               <ul>
+                  <li>We create a dictionary <code>my_dict</code> containing key-value pairs representing the name, age,
+                     and city of a person.</li>
+                  <li>We access elements in the dictionary using key notation.</li>
+                  <li>We modify elements in the dictionary by assigning new values to existing keys.</li>
+                  <li>Elements can be added to the dictionary by specifying a new key-value pair.</li>
+                  <li>Elements can be removed from the dictionary using the <code>del</code> keyword.</li>
+                  <li>We iterate over the dictionary using a <code>for</code> loop and the <code>items()</code> method,
+                     which returns a view object that displays a list of dictionary's (key, value) tuple pairs.</li>
+               </ul>
+            </div> <br><br>
+            <p>Here are the some Examples of tuples, lists, and dictionaries:</p>
+            <div class="chart" id="chart1">
+               <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Example 1: Looping through a list
+my_list = [1, 2, 3, 4, 5]
+for num in my_list:
+    print(num)
+
+# Example 2: Looping through a tuple
+my_tuple = (1, 2, 3, 4, 5)
+for num in my_tuple:
+    print(num)
+
+# Example 3: Looping through a dictionary
+my_dict = {"a": 1, "b": 2, "c": 3}
+for key, value in my_dict.items():
+    print(key, value)
+
+# Example 4: Checking if an element exists in a list
+if 3 in my_list:
+    print("3 exists in the list")
+
+# Example 5: Checking if an element exists in a tuple
+if 3 in my_tuple:
+    print("3 exists in the tuple")
+
+# Example 6: Checking if a key exists in a dictionary
+if "b" in my_dict:
+    print("Key 'b' exists in the dictionary")
+
+# Example 7: Function to calculate the sum of elements in a list
+def calculate_sum(lst):
+    total = 0
+    for num in lst:
+        total += num
+    return total
+
+print("Sum of elements in my_list:", calculate_sum(my_list))
+
+# Example 8: Function to find the maximum element in a tuple
+def find_max(tup):
+    return max(tup)
+
+print("Maximum element in my_tuple:", find_max(my_tuple))
+
+# Example 9: Function to count the occurrences of a value in a dictionary
+def count_occurrences(dct, value):
+    count = 0
+    for val in dct.values():
+        if val == value:
+            count += 1
+    return count
+
+print("Number of occurrences of value 2 in my_dict:", count_occurrences(my_dict, 2))
+
+# Example 10: Adding elements to a list using a loop
+new_list = []
+for i in range(1, 6):
+    new_list.append(i)
+
+print("New list:", new_list)
+
+# Example 11: Creating a list of squares using list comprehension
+squares = [x ** 2 for x in range(1, 6)]
+print("Squares of numbers from 1 to 5:", squares)
+
+# Example 12: Creating a dictionary from two lists using zip function
+keys = ["a", "b", "c"]
+values = [1, 2, 3]
+combined_dict = dict(zip(keys, values))
+print("Combined dictionary:", combined_dict)
+
+# Example 13: Filtering elements in a list using a conditional expression
+filtered_list = [x for x in my_list if x % 2 == 0]
+print("Filtered list (even numbers):", filtered_list)
+
+# Example 14: Sorting a list of tuples based on the second element
+tuples_list = [(2, "b"), (1, "a"), (3, "c")]
+sorted_tuples = sorted(tuples_list, key=lambda x: x[1])
+print("Sorted list of tuples:", sorted_tuples)
+
+# Example 15: Reversing a list in-place
+my_list.reverse()
+print("Reversed list:", my_list)
+
+# Example 16: Concatenating two tuples
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+concatenated_tuple = tuple1 + tuple2
+print("Concatenated tuple:", concatenated_tuple)
+
+# Example 17: Merging two dictionaries
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+merged_dict = {**dict1, **dict2}
+print("Merged dictionary:", merged_dict)
+
+# Example 18: Removing an element from a list using list comprehension
+filtered_list = [x for x in my_list if x != 3]
+print("Filtered list (excluding 3):", filtered_list)
+
+# Example 19: Checking if all elements in a list satisfy a condition
+if all(x > 0 for x in my_list):
+    print("All elements in the list are positive")
+
+# Example 20: Checking if any element in a list satisfies a condition
+if any(x < 0 for x in my_list):
+    print("At least one element in the list is negative")
+
+# Example 21: Finding the index of an element in a list
+index = my_list.index(4)
+print("Index of element 4 in my_list:", index)
+   </code></pre>
+            </div>
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+   <!--
+   <div class="container" id="BasicFlaskCode">
+               <h4>
+                   
+               </h4>
+               <p>
+                  
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p><span>Explanation</span> :
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

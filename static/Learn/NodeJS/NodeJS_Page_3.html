@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Modules</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+   </style>
+   <style>
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+
+      /* Modify the styling for the boldtag element */
+      boldtag {
+         font-weight: 100;
+         font-size: small;
+         font-family: "Krona One", sans-serif;
+         font-size: inherit;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      
+      <div class="info">
+         <h3><a href="NodeJS_Page_1.html">NodeJS</a></h3>
+         <p><a href="#">Why use NodeJS</a></p>
+         <p><a href="#">Features of NodeJS</a></p>
+         <p><a href="#">Event-driven architecture</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Installation</a></h3>
+         <p><a href="#">Install NodeJS</a></p>
+         <p><a href="#">Environment setup</a></p>
+         <p><a href="#">Version management with NVM</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Basics</a></h3>
+         <p><a href="#">Introduction to Programming</a></p>
+         <p><a href="#">npm Basics</a></p>
+         <p><a href="#">Variables and Data Types</a></p>
+         <p><a href="#">If...Else</a></p>
+         <p><a href="#">While Loop</a></p>
+         <p><a href="#">For Loop</a></p>
+         <p><a href="#">Functions and Scope</a></p>
+         <p><a href="#">Arrays and Lists</a></p>
+         <p><a href="#">Strings and String Manipulation</a></p>
+         <p><a href="#">Boolean Logic</a></p>
+         <p><a href="#">Type Casting and Coercion</a></p>
+         <p><a href="#">Math Operations</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_3.html">Modules</a></h3>
+         <p><a href="#">What are Modules</a></p>
+         <p><a href="#">Using Modules</a></p>
+         <p><a href="#">Express Js</a></p>
+         <p><a href="#">Multer</a></p>
+         <p><a href="#">Connection to HTML</a></p>
+         <p><a href="#">Custom Modules</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_4.html">Data Parsing</a></h3>
+         <p><a href="#">Hello World Application</a></p>
+         <p><a href="#">Data Parsing to HTML</a></p>
+         <p><a href="#">Form Handling</a></p>
+         <p><a href="#">Image Handling</a></p>
+         <p><a href="#">Video Handling</a></p>
+         <p><a href="#">JSON Handling</a></p>
+         <p><a href="#">Asynchronous programming</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_5html">File Handling</a></h3>
+         <p><a href="#">Accessing Files</a></p>
+         <p><a href="#">Reading Files</a></p>
+         <p><a href="#">Writing Files</a></p>
+         <p><a href="#">Create Files</a></p>
+         <p><a href="#">Deleting Files</a></p>
+         <p><a href="#">Creating Folders</a></p>
+         <p><a href="#">Saving Videos/Audios</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_6.html">Firebase</a></h3>
+         <p><a href="#">How to Connect</a></p>
+         <p><a href="#">Real-time Database</a></p>
+         <p><a href="#">Authentication</a></p>
+         <p><a href="#">Cloud Functions</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_7.html">Testing and Debugging</a></h3>
+         <p><a href="#">Unit Testing with Jest</a></p>
+         <p><a href="#">Debugging Techniques</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_8.html">Security</a></h3>
+         <p><a href="#">Input Validation</a></p>
+         <p><a href="#">Authentication Strategies</a></p>
+         <p><a href="#">Authorization Middleware</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_9.html">Deployment and Scaling</a></h3>
+         <p><a href="#">Containerization with Docker</a></p>
+         <p><a href="#">Deploying to Heroku</a></p>
+         <p><a href="#">Load Balancing</a></p>
+         <p><a href="#">Monitoring and Scaling</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+  
+
+<div class="container" id="">
+   <h4>
+       What are Modules
+   </h4>
+   <p>
+       Modules in Node.js are reusable blocks of code that encapsulate functionality. They allow you to organize your code into separate files and folders, making it easier to maintain and reuse. Modules can be imported into other files using the `require` function.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example of a module exporting a function
+// math.js
+module.exports = {
+   add: function(a, b) {
+       return a + b;
+   },
+   subtract: function(a, b) {
+       return a - b;
+   }
+};
+
+// Example of importing and using the module
+// app.js
+const math = require('./math.js');
+
+console.log(math.add(5, 3)); // Output: 8
+console.log(math.subtract(10, 4)); // Output: 6
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       In this example, we create a module named `math.js` that exports two functions: `add` and `subtract`. These functions perform addition and subtraction, respectively. In the `app.js` file, we import the `math` module using the `require` function and then use its exported functions to perform mathematical operations.
+   </p>
+</div>
+<br>
+<div class="container" id="">
+   <p>
+       **Importing Pre-built Modules**
+   </p>
+   <p>
+       In Node.js, you can easily import pre-built modules provided by the Node.js core or third-party libraries using the `require` function. These modules extend the functionality of your application and allow you to perform various tasks without reinventing the wheel.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example of importing a core module (fs module for file system operations)
+const fs = require('fs');
+
+// Example of importing a third-party module (express.js for web server)
+const express = require('express');
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       In this example, we import two types of modules:
+       <br>
+       1. Core modules: These are modules provided by Node.js core, such as `fs` module for file system operations.
+       <br>
+       2. Third-party modules: These are modules developed by third-party developers and available through the npm (Node Package Manager) registry. Here, we import the `express` module, which is a popular web framework for building web servers and web applications.
+   </p>
+</div>
+
+
+
+<div class="container" id="">
+   <h4>
+       Using Modules
+   </h4>
+   <p>
+       Once you have imported pre-built modules into your Node.js application, you can use them to leverage their functionality. Here's an example of how to use the <code>express</code> module for creating a simple web server:
+   </p>
+   <div class="chart" id="chart1">
+      <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Run this in Terminal
+npm install express
+      </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Importing the express module
+const express = require('express');
+
+// Creating an instance of the express application
+const app = express();
+
+// Handling GET requests to the root URL
+app.get('/', (req, res) => {
+   res.send('Hello, World!');
+});
+
+// Starting the server on port 3000
+app.listen(3000, () => {
+   console.log('Server is running on port 3000');
+});
+       </code></pre>
+   </div>   
+</div>
+<div class="container" id="">
+   <h4>
+       Express.js
+   </h4>
+   <p>
+       Express.js is a web application framework for Node.js, designed for building web applications and APIs. Below are some examples demonstrating various features of Express.js:
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example 1: Basic server setup
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+   res.send('Hello, World!');
+});
+
+app.listen(port, () => {
+   console.log(`Server is running on port ${port}`);
+});
+
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       <ul>
+           <li><code>const express = require('express');</code>: Imports the express module.</li>
+           <li><code>const app = express();</code>: Creates an instance of the express application.</li>
+           <li><code>const port = 3000;</code>: Defines the port number on which the server will listen.</li>
+           <li><code>app.get('/', (req, res) => { ... });</code>: Defines a route handler for the root URL (<code>'/'</code>) that sends a simple text response (<code>'Hello, World!'</code>) when a GET request is received.</li>
+           <li><code>app.listen(port, () => { ... });</code>: Starts the server on the specified port and logs a message to the console once the server is running.</li>
+       </ul>
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Serving static files
+app.use(express.static('public'));
+
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       <ul>
+           <li><code>app.use(express.static('public'));</code>: Configures Express to serve static files from the <code>public</code> directory. This allows files such as HTML, CSS, and client-side JavaScript to be served to the client.</li>
+       </ul>
+   </p>
+</div>
+
+<div class="container" id="">
+   <h4>
+       Multer
+   </h4>
+   <p>
+       Multer is a middleware for handling multipart/form-data, primarily used for uploading files. Below is an example demonstrating how to use Multer to upload files in an Express.js application:
+   </p>
+   <div class="chart" id="chart1">
+      <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Run this in Terminal
+npm install multer
+      </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example: File Upload with Multer
+const express = require('express');
+const multer = require('multer');
+const app = express();
+const port = 3000;
+
+// Configure Multer
+const storage = multer.diskStorage({
+   destination: function (req, file, cb) {
+       cb(null, 'uploads/');
+   },
+   filename: function (req, file, cb) {
+       cb(null, file.originalname);
+   }
+});
+
+const upload = multer({ storage: storage });
+
+// Handle file upload
+app.post('/upload', upload.single('file'), (req, res) => {
+   res.send('File uploaded successfully');
+});
+
+app.listen(port, () => {
+   console.log(`Server is running on port ${port}`);
+});
+
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       <ul>
+           <li><code>const multer = require('multer');</code>: Imports the Multer middleware.</li>
+           <li><code>const storage = multer.diskStorage({ ... });</code>: Configures the storage engine for Multer. In this example, files are stored on disk with a destination directory specified as <code>uploads/</code> and the original filename.</li>
+           <li><code>const upload = multer({ storage: storage });</code>: Creates a Multer instance with the specified storage configuration.</li>
+           <li><code>app.post('/upload', upload.single('file'), (req, res) => { ... });</code>: Defines a route handler for handling file uploads. In this example, it expects a single file upload with the field name <code>'file'</code>.</li>
+       </ul>
+   </p>
+</div>
+<div class="container" id="">
+   <h4>
+       Connection to HTML
+   </h4>
+   <p>
+       To connect your Express.js application with HTML, you can use templating engines like EJS (Embedded JavaScript) or Pug (formerly known as Jade). Here's how you can render HTML files and pass data to them using EJS:
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Example: Connection to HTML with EJS
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// Set the view engine to EJS
+app.set('view engine', 'ejs');
+
+// Define a route to render HTML
+app.get('/', (req, res) => {
+   const data = {
+       title: 'Hello, World!',
+       message: 'Welcome to my Express.js application!'
+   };
+   res.render('index', { data });
+});
+
+app.listen(port, () => {
+   console.log(`Server is running on port ${port}`);
+});
+       </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+      <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lthtml>
+  &lthead>
+      &lttitle>&lt%= data.title %>&lt/title>
+  &lt/head>
+  &ltbody>
+      &lth1>&lt%= data.title %>&lt/h1>
+      &ltp>&lt%= data.message %>&lt/p>
+  &lt/body>
+&lt/html>
+      </code></pre>
+  </div>
+  <p><span>Explanation</span> :
+      <br>
+      <ul>
+          <li><code>app.set('view engine', 'ejs');</code>: Sets EJS as the view engine for rendering HTML templates.</li>
+          <li><code>app.get('/', (req, res) => { ... });</code>: Defines a route handler for the root URL. Inside the handler function, the <code>res.render()</code> method is used to render the 'index' template (assumed to be an EJS file) and pass data to it.</li>
+      </ul>
+  </p>
+</div>
+<br>
+
+<div class="container" id="">
+   <p>
+      ** Another Example of Connection to HTML**
+   </p>
+   <p>
+       Here's an example of passing employee details (name and age) from Express.js to an HTML template using EJS:
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const express = require('express');
+const app = express();
+
+// Set EJS as the view engine
+app.set('view engine', 'ejs');
+
+// Route handler for the root URL
+app.get('/', (req, res) => {
+   // Employee details
+   const employee = {
+       name: 'John Doe',
+       age: 30
+   };
+   // Render the 'employee' template and pass employee details
+   res.render('employee', { employee: employee });
+});
+
+// Start the server
+app.listen(3000, () => {
+   console.log('Server is running on port 3000');
+});
+       </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lthtml>
+   &lthead>
+       &lttitle>Employee Details&lt/title>
+   &lt/head>
+   &ltbody>
+       &lth1>Employee Details&lt/h1>
+       &ltp>Name: &lt%= employee.name %>&lt/p>
+       &ltp>Age: &lt%= employee.age %>&lt/p>
+   &lt/body>
+&lt/html>
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       <ul>
+           <li><code>const employee = { name: 'John Doe', age: 30 };</code>: Defines an object containing employee details.</li>
+           <li><code>res.render('employee', { employee: employee });</code>: Renders the 'employee' template (assumed to be an EJS file) and passes the employee object to it.</li>
+       </ul>
+   </p>
+</div>
+<div class="container" id="">
+   <h4>
+       Custom Modules in Node.js
+   </h4>
+   <p>
+       Here's an example of creating and using custom modules in Node.js:
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// mathUtils.js - Custom module
+const add = (a, b) => {
+   return a + b;
+}
+
+const subtract = (a, b) => {
+   return a - b;
+}
+
+const multiply = (a, b) => {
+   return a * b;
+}
+
+const divide = (a, b) => {
+   if (b === 0) {
+       throw new Error('Division by zero');
+   }
+   return a / b;
+}
+
+module.exports = { add, subtract, multiply, divide };
+       </code></pre>
+   </div>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// app.js - Main file
+const mathUtils = require('./mathUtils');
+
+console.log(mathUtils.add(5, 3));        // Output: 8
+console.log(mathUtils.subtract(10, 4));   // Output: 6
+console.log(mathUtils.multiply(2, 6));    // Output: 12
+console.log(mathUtils.divide(8, 2));      // Output: 4
+       </code></pre>
+   </div>
+   <p><span>Explanation</span> :
+       <br>
+       <ul>
+           <li><code>mathUtils.js</code>: This file defines a custom module with functions for basic math operations.</li>
+           <li><code>module.exports</code>: Exports the functions <code>add</code>, <code>subtract</code>, <code>multiply</code>, and <code>divide</code> to be used in other files.</li>
+           <li><code>require('./mathUtils')</code>: Imports the custom module <code>mathUtils.js</code> into the main file <code>app.js</code>.</li>
+       </ul>
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+
+   <!--
+               <div class="container" id="">
+               <h4>
+                   
+               </h4>
+               <p class="p">
+                 
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+
+                  
+               </p>
+            </div>
+
+-->
+
+
+
+
+
+   <!-- Include Prism.js and its JavaScript language component for JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+   <!-- Include Prism.js plugin for Node.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/node/prism-node.min.js"></script>
+
+   <!-- Your other script imports -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script>
+      // This will highlight Node.js code blocks
+      Prism.highlightAll();
+   </script>
+   <script>
+      // Your other scripts
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag>$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

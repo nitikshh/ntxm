@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction to Android</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <!-- <i class="fas fa-phone"></i>-->
+         <h3><a href="AndroidDev_1.html">What is Android?</a></h3>
+         <p><a href="#versionsofandroid">Versions of Android</a></p>
+         <p><a href="#historyofandroid">History of Android</a></p>
+         <p><a href="#Programminglanguages">Programming languages</a></p>
+         <p><a href="#htmltemplatingwithJinja2">Designing Apps</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="">Our First App</a></h3>
+         <p><a href="">Basic Structure</a></p>
+         <p><a href="">Java Programming</a></p>
+         <p><a href="">Designing with XML</a></p>
+         <p><a href="">Running Our First App</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#java">Java</a></h3>
+         <p><a href="">Variables</a></p>
+         <p><a href="">Comments</a></p>
+         <p><a href="">Operators</a></p>
+         <p><a href="">Control Statements</a></p>
+         <p><a href="">Arrays</a></p>
+         <p><a href="#Methods">Methods</a></p>
+         <p><a href="">Classes and Objects</a></p>
+         <p><a href="">Inheritance</a></p>
+         <p><a href="">Polymorphism</a></p>
+         <p><a href="">Exception Handling</a></p>
+         <p><a href="">Collections Framework</a></p>
+         <p><a href="">Multithreading</a></p>
+         <p><a href="">File Handling</a></p>
+         <p><a href="#AsynchronousProgramming">Asynchronous Programming </a></p>
+      </div>
+      <div class="info">
+         <h3><a href="AndroidDev_2.html">App Designing</a></h3>
+         <p><a href="#xml">What is XML</a></p>
+         <p><a href="#basic_structure">Basic XML Structure</a></p>
+         <p><a href="#layouts">Layouts</a></p>
+         <p><a href="#textviews">TextViews</a></p>
+         <p><a href="#imageviews">ImageViews</a></p>
+         <p><a href="#buttons">Buttons</a></p>
+         <p><a href="#edittext">EditText</a></p>
+         <p><a href="#scrollviews">ScrollViews</a></p>
+         <p><a href="#listviews">ListViews</a></p>
+         <p><a href="#recyclerviews">RecyclerViews</a></p>
+         <p><a href="#cardview">CardView</a></p>
+         <p><a href="#checkbox">CheckBox</a></p>
+         <p><a href="#radiobutton">RadioButton</a></p>
+         <p><a href="#radiogroup">RadioGroup</a></p>
+         <p><a href="#spinner">Spinner</a></p>
+         <p><a href="#autocompletetextview">AutoCompleteTextView</a></p>
+         <p><a href="#seekbar">SeekBar</a></p>
+         <p><a href="#switch">Switch</a></p>
+         <p><a href="#datepicker">DatePicker</a></p>
+         <p><a href="#timepicker">TimePicker</a></p>
+         <p><a href="#ratingbar">RatingBar</a></p>
+     </div>
+     <div class="info">
+      <h3><a href="#firebaseconnection">Firebase Connection</a></h3>
+      <p><a href="#firebaseoverview">Firebase Overview</a></p>
+      <p><a href="#firebaseprojectsetup">Firebase Project Setup</a></p>
+      <p><a href="#firebasedatabase">Firebase Realtime Database</a></p>
+      <p><a href="#firebasestorage">Firebase Storage</a></p>
+      <p><a href="#firebaseauthentication">Firebase Authentication</a></p>
+  </div>
+  
+
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+   <style>
+      table {
+         width: 100%;
+         border-collapse: collapse;
+      }
+
+      th,
+      td {
+         padding: 8px;
+         text-align: left;
+         border-bottom: 1px solid #ddd;
+      }
+
+      th {
+         background-color: #f2f2f2;
+      }
+   </style>
+   <section class="home">
+      <main>
+         <section>
+            <div class="container">
+               <h4>
+                  What is Android?
+               </h4>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"></code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+                  Android operating system is the largest installed base among various mobile platforms across the
+                  globe. Hundreds of millions of mobile devices are powered by Android in more than 190 countries of the
+                  world. It conquered around 71% of the global market share by the end of 2021, and this trend is
+                  growing bigger every other day.
+                  <br><br>
+                  The company named Open Handset Alliance developed Android for the first time. <br>Google sponsored the
+                  project at initial stages and in the year 2005, it acquired the whole company. In September 2008, the
+                  first Android-powered device was launched in the market. <br><br>
+                  Android dominates the mobile OS industry because of the long list of features it provides. It’s
+                  user-friendly, has huge community support, provides a greater extent of customization, and a large
+                  number of companies build Android-compatible smartphones. As a result, the market observes a sharp
+                  increase in the demand for developing Android mobile applications, and with that companies need smart
+                  developers with the right skill set. At first, the purpose of Android was thought of as a mobile
+                  operating system. However, with the advancement of code libraries and its popularity among developers
+                  of the divergent domain, Android becomes an absolute set of software for all devices like tablets,
+                  wearables, set-top boxes, smart TVs, notebooks, etc.
+               </p>
+            </div>
+            <div class="container">
+               <h4>
+                  Android Versions
+               </h4>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code"></code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+                  Google first publicly announced Android in November 2007 but was released on 23 SEPTEMBER 2008 to be
+                  exact. The first device to bring Android into the market was the HTC Dream with the version Android
+                  1.0. Since then, Google released a lot of android versions such as Apple Pie, Banana Bread, Cupcake,
+                  Donut, Éclair, Froyo, Gingerbread, Jellybeans, Kitkat, Lollipop, marshmallow, Nougat, Oreo, etc. with
+                  extra functionalities and new features.
+               <table>
+                  <tr>
+                     <th>Version Name</th>
+                     <th>Release Date</th>
+                     <th>Key Features</th>
+                  </tr>
+                  <tr>
+                     <td>Android 1.0</td>
+                     <td>September 23, 2008</td>
+                     <td>Basic smartphone features, web browser, camera support, Google services integration.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 1.5 (Cupcake)</td>
+                     <td>April 27, 2009</td>
+                     <td>On-screen keyboard, widgets, copy-paste functionality, video recording.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 1.6 (Donut)</td>
+                     <td>September 15, 2009</td>
+                     <td>Improved search functionality, support for different screen sizes, enhanced camera and gallery
+                        apps.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 2.0/2.1 (Eclair)</td>
+                     <td>October 26, 2009</td>
+                     <td>Expanded device support, updated user interface, HTML5 support in browser, Bluetooth 2.1
+                        support.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 2.2 (Froyo)</td>
+                     <td>May 20, 2010</td>
+                     <td>Improved performance, support for Adobe Flash, USB tethering, Wi-Fi hotspot functionality.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 2.3 (Gingerbread)</td>
+                     <td>December 6, 2010</td>
+                     <td>Near Field Communication (NFC) support, improved copy-paste functionality, enhanced gaming
+                        experience.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 3.0/3.1/3.2 (Honeycomb)</td>
+                     <td>February 22, 2011</td>
+                     <td>Designed for tablets, holographic user interface, support for multi-core processors, improved
+                        multitasking.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 4.0 (Ice Cream Sandwich)</td>
+                     <td>October 18, 2011</td>
+                     <td>Unified user interface for smartphones and tablets, facial recognition unlock, resizable
+                        widgets.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 4.1/4.2/4.3 (Jelly Bean)</td>
+                     <td>July 9, 2012</td>
+                     <td>Project Butter for smoother performance, Google Now, expandable notifications, improved
+                        accessibility.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 4.4 (KitKat)</td>
+                     <td>October 31, 2013</td>
+                     <td>Optimized for lower-end devices, immersive mode, cloud printing support, better memory
+                        management.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 5.0/5.1 (Lollipop)</td>
+                     <td>November 12, 2014</td>
+                     <td>Material Design overhaul, improved notifications, battery saving mode, device sharing.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 6.0 (Marshmallow)</td>
+                     <td>October 5, 2015</td>
+                     <td>App permissions system, Doze mode for improved battery life, Google Now on Tap, fingerprint
+                        support.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 7.0/7.1 (Nougat)</td>
+                     <td>August 22, 2016</td>
+                     <td>Split-screen mode, improved notifications, Vulkan API support, Daydream VR compatibility.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 8.0/8.1 (Oreo)</td>
+                     <td>August 21, 2017</td>
+                     <td>Picture-in-Picture mode, Autofill API, notification dots, adaptive icons, Project Treble.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 9 (Pie)</td>
+                     <td>August 6, 2018</td>
+                     <td>Gesture-based navigation, Adaptive Battery and Brightness, Digital Wellbeing, improved security
+                        features.</td>
+                  </tr>
+                  <tr>
+                     <td>Android 10</td>
+                     <td>September 3, 2019</td>
+                     <td>System-wide dark mode, enhanced privacy controls, Focus mode, Live Caption, Project Mainline.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Android 11</td>
+                     <td>September 8, 2020</td>
+                     <td>Conversation notifications, Chat Bubbles, one-time permissions, media controls, 5G support.
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>Android 12</td>
+                     <td>October 4, 2021</td>
+                     <td>Material You design language, privacy indicators, enhanced notifications, improved performance.
+                     </td>
+                  </tr>
+               </table>
+               </p>
+            </div>
+            <div class="container">
+               <h4>
+                  History of Android
+               </h4>
+               <p class="p">
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code"></code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+                  The history of Android traces back to October 2003 when Andy Rubin, Rich Miner, Nick Sears, and Chris
+                  White founded Android Inc. in Palo Alto, California. Initially, the company aimed to develop an
+                  advanced operating system for digital cameras. However, recognizing the potential of their project,
+                  they shifted their focus towards creating an operating system for mobile devices. In 2005, Google
+                  acquired Android Inc., laying the foundation for what would become one of the most dominant mobile
+                  operating systems worldwide. The first commercial Android device, the HTC Dream (also known as the
+                  T-Mobile G1), was released in September 2008, running Android version 1.0. Since then, Android has
+                  undergone significant evolution, with frequent updates introducing new features, enhancements, and
+                  optimizations. The platform's open-source nature has fostered a vibrant ecosystem of developers,
+                  manufacturers, and users, contributing to its widespread adoption across a diverse range of devices,
+                  from smartphones and tablets to wearables, TVs, and automotive systems. Today, Android stands as the
+                  most popular mobile operating system globally, powering billions of devices and revolutionizing the
+                  way we interact with technology.
+               </p>
+            </div>
+
+            <div class="container">
+               <h4>
+                  Programming Languages
+               </h4>
+               <p class="p">
+                  Programming languages are like tools that developers use to tell computers what to do. Just like
+                  people speak different languages like English, Spanish, or Chinese, computers understand languages
+                  like Java, Kotlin, and XML. In Android development, Java and Kotlin are the main languages used to
+                  write the code that makes apps work. Java is like the foundation of Android development, while Kotlin
+                  is newer and more modern. XML is another language used to design how apps look, like arranging buttons
+                  and text on the screen. These languages help developers create amazing apps for smartphones and
+                  tablets.
+               </p>
+               <p class="p">
+                  <redtag>1. Java:</redtag> has been the primary programming language for Android development since the
+                  platform's inception. It's a versatile and widely-used language known for its stability and extensive
+                  library support. Java provides developers with features like object-oriented programming, which
+                  organizes code into reusable components, making it easier to manage large projects. Below is a basic
+                  template for a Java class in Android development:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        // Your code goes here
+    }
+}
+               </code></pre>
+               </div>
+               <p class="p">
+                  <redtag>2. Kotlin:</redtag>
+                  Kotlin is a modern programming language developed by JetBrains and officially supported by Google for
+                  Android development. It offers concise syntax, null safety, and other modern features that enhance
+                  developer productivity and code safety. Kotlin is interoperable with Java, meaning developers can
+                  seamlessly use both languages within the same project. Here's a basic template for a Kotlin class in
+                  Android development:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+                     <div class="chart" id="chart1">
+                        <pre onclick="copyText(this)"><code class="language-python" id="code">
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        // Your code goes here
+    }
+}</code></pre>
+               </div>
+               </code></pre>
+            </div>
+            <p class="p">
+               <redtag>3. XML (eXtensible Markup Language):</redtag> XML is a markup language used for designing layouts
+               in Android development. It allows developers to define the structure and appearance of user interfaces in
+               a declarative manner. XML files specify the arrangement of UI elements such as buttons, text fields, and
+               images. Below is a basic template for an XML layout file in Android development:
+            </p>
+            <div class="chart" id="chart1">
+               <pre onclick="copyText(this)"><code class="language-python" id="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    &lt;Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click Me" />
+
+    <!-- Other UI elements go here -->
+
+&lt;/RelativeLayout>
+                  </code></pre>
+            </div>
+            </div>
+
+            <div class="container">
+               <h4>
+                  Designing Apps
+               </h4>
+               <p class="p">
+                  Designing apps involves creating user interfaces (UI) and experiences (UX) that are intuitive,
+                  visually appealing, and functional. It's about more than just making things look pretty; it's about
+                  ensuring that users can easily navigate through the app and accomplish their tasks efficiently.
+                  Designers consider factors such as layout, color scheme, typography, and interaction patterns to craft
+                  interfaces that resonate with the target audience. They also conduct user research and testing to
+                  gather feedback and iterate on the design to improve usability and user satisfaction.
+               </p>
+               <br><br>
+               <p class="p">
+                  `XML in App Design:`
+                  XML (eXtensible Markup Language) plays a crucial role in designing Android apps, particularly in
+                  defining the layout of UI elements. In Android development, UI layouts are typically defined using XML
+                  files, which specify the structure and appearance of screens or individual components within an app.
+                  XML provides a hierarchical structure for organizing UI elements such as buttons, text fields, images,
+                  and more. By separating the UI layout from the application logic, XML promotes code maintainability
+                  and allows for easier collaboration between designers and developers.
+               </p>
+               <br><br>
+               <p class="p">
+                  Here are some basic XML Templates Just Look Out them.
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+ &lt;LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    &lt;!--  Other UI elements go here -->
+
+ &lt;/LinearLayout>
+
+                  </code></pre>
+               </div>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    &lt;!-- UI elements go here -->
+
+&lt;/RelativeLayout>
+    </code></pre>
+               </div>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;androidx.constraintlayout.widget.ConstraintLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent">
+
+   &lt;!-- UI elements go here -->
+
+&lt;/androidx.constraintlayout.widget.ConstraintLayout>
+   </code></pre>
+               </div>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;TextView
+   android:id="@+id/textView"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Hello, World!"
+   android:textSize="24sp"
+   android:textColor="#000000"
+   android:layout_marginTop="16dp"/>
+   </code></pre>
+               </div>
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;Button
+   android:id="@+id/button"
+   android:layout_width="wrap_content"
+   android:layout_height="wrap_content"
+   android:text="Click Me"
+   android:layout_marginTop="16dp"/>
+   </code></pre>
+               </div>
+
+            </div>
+            <div class="container">
+               <h4>Java, XML, and Manifest Files</h4>
+               <p class="p">Below are the complete Java, XML, and Manifest files for an Android app, along with
+                  explanations of important elements.</p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+package com.example.myfirstapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+
+<redtag>public class MainActivity extends AppCompatActivity {</redtag>
+    <redtag>@Override</redtag>
+    <redtag>protected void onCreate(Bundle savedInstanceState) {</redtag>
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        <redtag>// Your Java code goes here</redtag>
+    <redtag>}</redtag>
+<redtag>}</redtag>
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Package:</redtag> The <redtag>package</redtag> statement at the top of the file declares the
+                  <redtag>package</redtag> to which this Java file belongs. In this case, it's <redtag>
+                     com.example.myfirstapp</redtag>, indicating that this file is part of the <redtag>myfirstapp
+                  </redtag> project within the <redtag>example</redtag> package in the <redtag>com</redtag> domain.
+                  <br><br>
+                  <redtag>Import Statements:</redtag> The <redtag>import</redtag> statements bring in classes from other
+                  packages that are used in this file. In this code, we're importing classes from the <redtag>
+                     androidx.appcompat.app</redtag> and <redtag>android.os</redtag> packages.
+                  <br><br>
+                  <redtag>Class Declaration:</redtag> The <redtag>public class MainActivity extends AppCompatActivity {
+                  </redtag> line declares a <redtag>public</redtag> class named <redtag>MainActivity</redtag> that
+                  <redtag>extends</redtag> the <redtag>AppCompatActivity</redtag> class. This means that <redtag>
+                     MainActivity</redtag> inherits properties and behaviors from <redtag>AppCompatActivity</redtag>.
+                  <br><br>
+                  <redtag>@Override:</redtag> This annotation indicates that the method that follows it overrides a
+                  method from the superclass. In this case, we're overriding the <redtag>onCreate</redtag> method.
+                  <br><br>
+                  <redtag>onCreate Method:</redtag> This method is called when the activity is first created. It's where
+                  you should initialize your activity, such as setting the layout with <redtag>setContentView</redtag>.
+                  <br><br>
+                  <redtag>super.onCreate(savedInstanceState):</redtag> This line calls the <redtag>onCreate</redtag>
+                  method of the superclass (<redtag>AppCompatActivity</redtag>) to perform the default initialization of
+                  the activity.
+                  <br><br>
+                  <redtag>setContentView(R.layout.activity_main):</redtag> This line sets the content view of the
+                  activity to the layout defined in <redtag>activity_main.xml</redtag>. This layout determines how the
+                  UI elements of the activity will be arranged and displayed.
+                  <br><br>
+                  <redtag>// Your Java code goes here:</redtag> This is a placeholder comment indicating where you can
+                  add your own Java code to customize the behavior of the activity.
+               </p>
+
+
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <redtag>&lt;!-- UI elements go here --></redtag>
+
+&lt;/RelativeLayout>
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: This XML layout file (activity_main.xml) defines the structure of
+                  the app's user interface using a RelativeLayout. It's linked with the MainActivity.java file to create
+                  the app's layout dynamically.</p>
+
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-xml" id="code">
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myfirstapp">
+
+    &lt;application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        &lt;activity android:name=".MainActivity">
+            &lt;intent-filter>
+                &lt;action android:name="android.intent.action.MAIN" />
+
+                &lt;category android:name="android.intent.category.LAUNCHER" />
+            &lt;/intent-filter>
+        &lt;/activity>
+    &lt;/application>
+
+&lt;/manifest>
+        </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: The <redtag>manifest</redtag> file is a crucial part of an Android
+                  app. It contains essential information like the app's package name, permissions, and components. In
+                  this snippet, the <redtag>&lt;manifest&gt;</redtag> tag encloses the entire manifest file. Inside it,
+                  the <redtag>&lt;application&gt;</redtag> tag holds the main components of the app, such as activities.
+                  The <redtag>&lt;activity&gt;</redtag> tag specifies the main activity of the app, which is the entry
+                  point for the app. The <redtag>&lt;intent-filter&gt;</redtag> tag defines the intent filters for the
+                  activity, including the MAIN and LAUNCHER categories.</p>
+            </div>
+
+
+            <div id="java" class="container">
+               <h4>
+                  Java From Basic
+               </h4>
+               <p class="p">
+
+               </p>
+               <p class="p">
+                  <redtag>Variables in Java</redtag>
+
+                  Variables in Java are containers used to store data values. They play a fundamental role in
+                  programming, allowing developers to store and manipulate data within a program. In Java, every
+                  variable has a specific data type, which determines the type of data it can hold and the operations
+                  that can be performed on it.
+                  <br><br>
+                  <redtag>Data Types:</redtag> Java supports various data types, including primitive and reference
+                  types. Primitive data types represent simple values, while reference types refer to objects. Some
+                  common primitive data types include:
+                  <br>
+                  - <redtag>int:</redtag> Used to store integer values.<br>
+                  - <redtag>double:</redtag> Used to store floating-point numbers.<br>
+                  - <redtag>boolean:</redtag> Used to store true or false values.<br>
+                  - <redtag>char:</redtag> Used to store single characters.<br>
+                  <br>
+                  Reference types include classes, interfaces, arrays, and enumerations.
+                  <br><br>
+                  <redtag>Declaration and Initialization:</redtag> In Java, variables must be declared before they can
+                  be used. Declaration involves specifying the variable's name and data type. Initialization is the
+                  process of assigning a value to a variable. For example:
+                  <br>
+                  <redtag>// Declaration</redtag>
+                  int age;
+                  <br>
+                  <redtag>// Initialization</redtag>
+                  age = 25;
+                  <br>
+                  Variables can also be declared and initialized in a single step:
+                  <br>
+                  <redtag>// Declaration and Initialization</redtag>
+                  int count = 10;
+                  <br><br>
+                  <redtag>Scope and Lifetime:</redtag> The scope of a variable refers to the part of the program where
+                  the variable is accessible. Java supports local, instance, and static variables, each with its own
+                  scope and lifetime. Local variables are declared within a method or block and have limited scope.
+                  Instance variables belong to a specific instance of a class and are accessible to all methods of the
+                  class. Static variables are shared among all instances of a class and exist for the entire duration of
+                  the program.
+                  <br><br>
+                  <redtag>Constants:</redtag> In addition to variables, Java also supports constants, which are
+                  variables whose values cannot be changed once initialized. Constants are declared using the <redtag>
+                     final</redtag> keyword.
+                  <br><br>
+                  <redtag>Example:</redtag>
+                  <redtag>final int MAX_VALUE = 100;</redtag>
+                  <br><br>
+                  <redtag>Convention:</redtag> It's a common practice in Java to follow naming conventions when naming
+                  variables. Variable names should be descriptive and meaningful, using camelCase format for
+                  readability.
+                  <br><br>
+                  <redtag>Conclusion:</redtag> Variables are an essential concept in Java programming, allowing
+                  developers to work with data dynamically. Understanding different types of variables and their usage
+                  is crucial for building robust and efficient Java applications.
+               </p>
+               <h4>Comments</h4>
+               <p class="p">
+                  <br>
+                  Comments are text in a program that are ignored by the compiler. They are used to provide explanations
+                  or documentation within the code. Comments are essential for improving code readability,
+                  understanding, and maintenance.<br><br>
+
+                  <redtag>Types of Comments:</redtag><br>
+                  1. <redtag>Single-line Comments:</redtag> These comments begin with // and continue until the end of
+                  the line. They are used for brief explanations on a single line.<br>
+                  Example: <code>// This is a single-line comment</code><br>
+                  2. <redtag>Multi-line Comments:</redtag> These comments begin with /* and end with */. They can span
+                  multiple lines and are often used for longer explanations or for commenting out large blocks of
+                  code.<br>
+                  Example:
+                  <code> <br>
+        /* <br>
+        This is a multi-line comment <br>
+        It can span multiple lines <br>
+        */ <br>
+    </code><br><br>
+
+                  <redtag>Documentation Comments:</redtag><br>
+                  Documentation comments, also known as Javadoc comments, begin with /** and end with */. They are used
+                  to generate documentation automatically using tools like Javadoc. Documentation comments should be
+                  used to describe classes, methods, and fields in detail.<br>
+                  Example:
+                  <code> <br>
+        /** <br>
+         * This is a documentation comment for a method. <br>
+         * It provides detailed information about the method's purpose, parameters, return value, etc. <br>
+         */ <br>
+    </code><br><br>
+
+                  <redtag>Best Practices:</redtag><br>
+                  - Write descriptive comments that explain the purpose of the code, not what the code is doing (unless
+                  it's not obvious).<br>
+                  - Keep comments up-to-date with changes to the code.<br>
+                  - Avoid unnecessary comments that simply restate the code.<br>
+                  - Use comments to clarify complex or non-obvious parts of the code.<br><br>
+
+                  <redtag>Conclusion:</redtag><br>
+                  Comments play a crucial role in Java programming by providing explanations, documentation, and context
+                  within the code. Understanding the different types of comments and best practices for their usage is
+                  essential for writing clear, maintainable, and well-documented Java code.
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Single-line comment
+/* 
+   Multi-line comment
+   This is a comment
+   that spans multiple lines
+*/
+/**
+ * Documentation comment
+ * This is a Javadoc comment
+ */
+    </code></pre>
+               </div>
+
+               <h4>Operators</h4>
+               <p class="p">
+                  Operators in Java are special symbols or keywords used to perform operations on operands. They are
+                  fundamental building blocks of any programming language and are used to manipulate data and perform
+                  various calculations.
+
+                  <br><br>
+
+                  <redtag>Types of Operators:</redtag><br>
+                  1. <redtag>Arithmetic Operators:</redtag> Arithmetic operators are used to perform mathematical
+                  operations such as addition, subtraction, multiplication, division, and modulus.<br>
+                  Example:
+                  <code><br><br>
+                      int x = 10;<br>
+                      int y = 5;<br>
+                      int sum = x + y; // Addition<br>
+                      int difference = x - y; // Subtraction<br>
+                      int product = x * y; // Multiplication<br>
+                      int quotient = x / y; // Division<br>
+                      int remainder = x % y; // Modulus
+                  </code><br><br>
+
+                  2. <redtag>Assignment Operators:</redtag> Assignment operators are used to assign values to
+                  variables.<br>
+                  Example:
+                  <code><br><br>
+                      int x = 10;<br>
+                      x += 5; // Equivalent to x = x + 5;<br>
+                      x -= 3; // Equivalent to x = x - 3;<br>
+                      x *= 2; // Equivalent to x = x * 2;<br>
+                      x /= 4; // Equivalent to x = x / 4;<br>
+                      x %= 3; // Equivalent to x = x % 3;
+                  </code><br><br>
+
+                  3. <redtag>Comparison Operators:</redtag> Comparison operators are used to compare two values and
+                  return a boolean result (true or false).<br>
+                  Example:
+                  <code><br><br>
+                      int a = 5;<br>
+                      int b = 10;<br>
+                      boolean isEqual = (a == b); // Equality comparison<br>
+                      boolean isNotEqual = (a != b); // Inequality comparison<br>
+                      boolean isGreaterThan = (a > b); // Greater than comparison<br>
+                      boolean isLessThan = (a < b); // Less than comparison<br>
+                      boolean isGreaterThanOrEqual = (a >= b); // Greater than or equal to comparison<br>
+                      boolean isLessThanOrEqual = (a <= b); // Less than or equal to comparison
+                  </code><br><br>
+
+                  4. <redtag>Logical Operators:</redtag> Logical operators are used to perform logical operations on
+                  boolean values.<br>
+                  Example:
+                  <code><br><br>
+                      boolean x = true;<br>
+                      boolean y = false;<br>
+                      boolean result1 = x && y; // Logical AND operation<br>
+                      boolean result2 = x || y; // Logical OR operation<br>
+                      boolean result3 = !x; // Logical NOT operation
+                  </code><br><br>
+
+                  5. <redtag>Bitwise Operators:</redtag> Bitwise operators are used to perform operations on individual
+                  bits of integers.<br>
+                  Example:
+                  <code><br><br>
+                      int a = 5; // Binary representation: 101<br>
+                      int b = 3; // Binary representation: 011<br>
+                      int result1 = a & b; // Bitwise AND operation: 001<br>
+                      int result2 = a | b; // Bitwise OR operation: 111<br>
+                      int result3 = a ^ b; // Bitwise XOR operation: 110<br>
+                      int result4 = ~a; // Bitwise NOT operation: 11111111111111111111111111111010 (32-bit representation)
+                  </code>
+
+                  <br><br>
+
+                  <redtag>Conclusion:</redtag><br>
+                  Operators are essential components of Java programming, allowing developers to perform various
+                  operations on data and control the flow of execution. Understanding different types of operators and
+                  their usage is crucial for writing efficient and effective Java code.
+               </p>
+
+
+            </div>
+            <div class="container">
+               <h4>
+                  Control Statements
+               </h4>
+               <p class="p">
+
+               <p class="p">
+                  Control statements are used to control the flow of execution in a Java program. They allow you to make
+                  decisions, loop through code blocks, and execute code based on specific conditions. Control statements
+                  play a crucial role in programming as they enable you to write dynamic and flexible code.
+               </p><br><br>
+               <p class="p">
+                  <redtag>Conditional Statements:</redtag><br>
+                  Conditional statements allow you to execute code based on specific conditions. In the example above,
+                  an <code>if-else</code> statement is used to check if the value of <code>x</code> is greater than 5.
+                  If the condition is true, it prints "x is greater than 5"; otherwise, it prints "x is not greater than
+                  5".
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Conditional Statements
+int x = 10;
+if (x > 5) {
+    System.out.println("x is greater than 5");
+} else {
+    System.out.println("x is not greater than 5");
+}
+    </code></pre>
+               </div>
+               <p class="p">
+                  <redtag>Looping Statements:</redtag><br>
+                  Looping statements are used to execute a block of code repeatedly. In the example above, three types
+                  of loops are demonstrated: <code>for</code>, <code>while</code>, and <code>do-while</code>. Each loop
+                  iterates through a block of code until a specific condition is met.
+               </p>
+
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Looping Statements
+for (int i = 0; i < 5; i++) {
+    System.out.println("Iteration " + (i + 1));
+}
+
+int i = 0;
+while (i < 5) {
+    System.out.println("Iteration " + (i + 1));
+    i++;
+}
+
+int j = 0;
+do {
+    System.out.println("Iteration " + (j + 1));
+    j++;
+} while (j < 5);
+    </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Switch Statement:</redtag><br>
+                  The <code>switch</code> statement allows you to perform different actions based on the value of a
+                  variable or expression. In the example above, the value of <code>day</code> is evaluated, and the
+                  corresponding case block is executed based on its value.
+               </p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Switch Statement
+int day = 3;
+switch (day) {
+    case 1:
+        System.out.println("Sunday");
+        break;
+    case 2:
+        System.out.println("Monday");
+        break;
+    case 3:
+        System.out.println("Tuesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+    </code></pre>
+               </div>
+
+               <br>
+               <p class="p">
+                  <redtag>Usage of Control Statements:</redtag><br>
+                  Control statements are extensively used in Java programming to implement various logic and
+                  decision-making processes. They allow you to create dynamic, interactive, and responsive applications
+                  by controlling the flow of execution based on specific conditions and user input.
+               </p>
+               <br><br>
+               <p class="p">
+                  <redtag>Conclusion:</redtag><br>
+                  Control statements are essential constructs in Java programming that enable you to control the flow of
+                  execution in your programs. They provide the flexibility to make decisions, iterate through code
+                  blocks, and handle different scenarios efficiently. Understanding and mastering control statements is
+                  crucial for writing effective and functional Java code.
+               </p>
+
+            </div>
+
+
+            <div class="container">
+               <h4>Arrays </h4>
+               <p class="p">
+                  Arrays are a fundamental data structure in Java used to store multiple values of the same type under a
+                  single variable name. They allow you to efficiently manage and manipulate collections of elements.
+                  Arrays can be of any data type, including primitive types like integers and characters, as well as
+                  reference types like objects.
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Declaration and Initialization of an Array
+int[] numbers = new int[5]; // Declares an array of integers with size 5
+String[] names = {"Alice", "Bob", "Charlie"}; // Declares and initializes an array of strings
+
+// Accessing Elements of an Array
+int x = numbers[0]; // Accesses the first element of the 'numbers' array
+String name = names[1]; // Accesses the second element of the 'names' array
+
+// Iterating Through an Array
+for (int i = 0; i < numbers.length; i++) {
+    System.out.println("Element at index " + i + ": " + numbers[i]);
+}
+
+// Multidimensional Arrays
+int[][] matrix = new int[3][3]; // Declares a 2D array of integers with dimensions 3x3
+matrix[0][0] = 1; // Assigns value to the element at row 0 and column 0
+    </code></pre>
+               </div>
+
+               <p class="p">
+                  <span>Explanation:</span><br>
+                  <redtag>Declaration and Initialization:</redtag> Arrays in Java are declared using square brackets [],
+                  followed by the array name and size (for fixed-size arrays) or directly initializing the array
+                  elements (for dynamic-size arrays).<br>
+                  <redtag>Accessing Elements:</redtag> Elements of an array are accessed using square brackets [] with
+                  the index of the element you want to access. Array indices start from 0.<br>
+                  <redtag>Iterating Through an Array:</redtag> Arrays can be traversed using loops like <code>for</code>
+                  or <code>foreach</code> to access and process each element sequentially.<br>
+                  <redtag>Multidimensional Arrays:</redtag> Java supports multidimensional arrays, allowing you to
+                  create arrays of arrays. They are useful for representing matrices, tables, or other complex data
+                  structures.
+               </p>
+            </div>
+
+            <div id="Methods" class="container">
+               <h4>Methods</h4>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Method Declaration and Invocation
+public void greet() {
+    System.out.println("Hello, World!");
+}
+
+public int add(int a, int b) {
+    return a + b;
+}
+
+// Calling Methods
+greet(); // Calling the greet() method
+int sum = add(3, 5); // Calling the add() method with arguments and storing the result
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Method Declaration and Invocation:</redtag><br>
+                  Methods are declared using the <code>returnType methodName(parameters)</code> syntax, where
+                  <code>returnType</code> specifies the data type of the value returned by the method (void if no value
+                  is returned), <code>methodName</code> is the name of the method, and <code>parameters</code> are
+                  optional input values. Method invocation involves calling the method by its name and passing any
+                  required arguments.
+               </p>
+
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Method Declaration and Invocation
+public void greet() {
+    System.out.println("Hello, World!");
+}
+
+public int add(int a, int b) {
+    return a + b;
+}
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Calling Methods:</redtag><br>
+                  Methods are called or invoked using their names followed by parentheses (). If the method accepts
+                  parameters, you provide the values when calling the method. The method execution begins when it is
+                  called, and it returns control to the calling code once it completes its task.
+               </p>
+            </div>
+            <div class="container">
+               <h4>Classes and Objects</h4>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Class Declaration
+public class Car {
+    // Instance Variables (Fields)
+    String brand;
+    String model;
+    int year;
+
+    // Constructor
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Method
+    public void displayInfo() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Year: " + year);
+    }
+}
+
+// Creating Objects
+Car car1 = new Car("Toyota", "Corolla", 2020);
+Car car2 = new Car("Honda", "Civic", 2019);
+
+// Accessing Fields and Methods
+car1.displayInfo();
+car2.displayInfo();
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Class Declaration:</redtag><br>
+                  Classes in Java are blueprints for creating objects. They define the structure and behavior of
+                  objects. In the example above, a class named <code>Car</code> is declared with instance variables
+                  (fields), a constructor, and a method.
+               </p>
+
+               <p class="p">
+                  <redtag>Constructor:</redtag><br>
+                  A constructor is a special method used for initializing objects. It has the same name as the class and
+                  is invoked when an object is created using the <code>new</code> keyword. The constructor initializes
+                  the instance variables of the object.
+               </p>
+
+               <p class="p">
+                  <redtag>Method:</redtag><br>
+                  Methods define the behavior of objects. They are functions associated with a class and can perform
+                  actions or provide information about the object's state. In the example, the
+                  <code>displayInfo()</code> method is defined to display information about a car object.
+               </p>
+
+               <p class="p">
+                  <redtag>Creating Objects:</redtag><br>
+                  Objects are instances of a class. They are created using the <code>new</code> keyword followed by the
+                  class name and constructor arguments (if any). In the example, two car objects (<code>car1</code> and
+                  <code>car2</code>) are created using the <code>Car</code> class constructor.
+               </p>
+
+               <p class="p">
+                  <redtag>Accessing Fields and Methods:</redtag><br>
+                  Fields and methods of an object are accessed using the dot operator (<code>.</code>). You can access
+                  instance variables and call methods of an object using the object's name followed by a dot and the
+                  field/method name. In the example, the <code>displayInfo()</code> method is called on each car object
+                  to display their information.
+               </p>
+            </div>
+
+            <div class="container">
+               <h4>Polymorphism</h4>
+               <p class="p">
+                  Polymorphism is a fundamental concept in object-oriented programming that allows objects of different
+                  classes to be treated as objects of a common superclass. It enables a single interface to represent
+                  different forms or behaviors. Polymorphism is achieved through method overriding and method
+                  overloading.
+               </p>
+               <br><br>
+               <p class="p">
+                  <redtag>Types of Polymorphism:</redtag><br><br>
+                  <redtag>1. Compile-time Polymorphism (Method Overloading):</redtag> It allows a class to have multiple
+                  methods with the same name but different parameters. The method to be called is determined at compile
+                  time based on the number and types of arguments.
+               </p>
+               <br><br>
+               <p class="p">
+                  <redtag>2. Runtime Polymorphism (Method Overriding):</redtag> It occurs when a subclass provides a
+                  specific implementation of a method that is already defined in its superclass. The method to be called
+                  is determined at runtime based on the actual type of the object.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Parent Class
+class Animal {
+    public void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+// Child Classes
+class Dog extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+// Main Method
+public class Main {
+    public static void main(String[] args) {
+        Animal animal1 = new Dog(); // Upcasting
+        Animal animal2 = new Cat(); // Upcasting
+
+        animal1.sound(); // Output: Dog barks
+        animal2.sound(); // Output: Cat meows
+    }
+}
+        </code></pre>
+               </div>
+
+
+
+               <p class="p">
+                  <redtag>Example:</redtag><br>
+                  In the example above, the <code>Animal</code> class is the superclass, and <code>Dog</code> and
+                  <code>Cat</code> are subclasses. Both <code>Dog</code> and <code>Cat</code> override the
+                  <code>sound()</code> method of the <code>Animal</code> class with their specific implementations. At
+                  runtime, the correct <code>sound()</code> method is called based on the actual type of the object.
+               </p>
+            </div>
+            <div class="container">
+               <h4>Exception Handling </h4>
+
+               <p class="p">
+                  Exception handling is a crucial aspect of programming that allows developers to gracefully handle
+                  runtime errors or exceptional situations that may occur during program execution. It enables the
+                  detection and resolution of errors, preventing the abrupt termination of the program and providing a
+                  more robust and reliable user experience. Exception handling promotes code stability, maintainability,
+                  and reliability by providing mechanisms to identify, catch, and handle errors effectively.
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example 1: ArithmeticException
+try {
+    int result = 10 / 0; // Division by zero
+} catch (ArithmeticException e) {
+    System.out.println("Exception caught: Division by zero");
+}
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 1: ArithmeticException</redtag><br>
+                  In this example, an <code>ArithmeticException</code> is caught when attempting to perform division by
+                  zero. The catch block prints a message indicating the division by zero error.
+               </p>
+            </div>
+
+            <div class="container">
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example 2: ArrayIndexOutOfBoundsException
+try {
+    int[] arr = new int[5];
+    System.out.println(arr[10]); // Accessing out-of-bounds index
+} catch (ArrayIndexOutOfBoundsException e) {
+    System.out.println("Exception caught: Array index out of bounds");
+}
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 2: ArrayIndexOutOfBoundsException</redtag><br>
+                  This example demonstrates catching an <code>ArrayIndexOutOfBoundsException</code> when accessing an
+                  array element at an out-of-bounds index. The catch block handles the error by printing a message
+                  indicating the array index out of bounds.
+               </p>
+            </div>
+
+            <div class="container">
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example 3: NullPointerException
+try {
+    String str = null;
+    System.out.println(str.length()); // Accessing length of null string
+} catch (NullPointerException e) {
+    System.out.println("Exception caught: Null pointer");
+}
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 3: NullPointerException</redtag><br>
+                  Here, a <code>NullPointerException</code> is caught when attempting to access the length of a null
+                  string. The catch block handles the error by printing a message indicating the null pointer exception.
+               </p>
+            </div>
+            <div class="container">
+               <h4>Collections Framework in Java</h4>
+
+               <p class="p">
+                  The Collections Framework in Java provides a comprehensive set of classes and interfaces to represent
+                  and manipulate collections of objects. It offers a unified architecture for working with collections,
+                  allowing developers to store, retrieve, and manipulate groups of objects efficiently. The framework
+                  includes interfaces such as <code>List</code>, <code>Set</code>, and <code>Map</code>, along with
+                  their respective implementation classes, providing a rich set of functionalities for managing data in
+                  various forms.
+               </p>
+               <p class="p">
+                  <redtag>Example 1: ArrayList</redtag><br>
+                  In this example, we demonstrate the usage of an <code>ArrayList</code>, which is a dynamic array
+                  implementation of the <code>List</code> interface in the Collections Framework. We create an
+                  <code>ArrayList</code> to store strings representing programming languages. Elements are added to the
+                  list using the <code>add()</code> method, and then the contents of the list are printed using a
+                  for-each loop.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example 1: ArrayList
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating an ArrayList
+        ArrayList<String> list = new ArrayList<>();
+
+        // Adding elements
+        list.add("Java");
+        list.add("Python");
+        list.add("C++");
+
+        // Printing elements
+        System.out.println("Elements in the ArrayList:");
+        for (String language : list) {
+            System.out.println(language);
+        }
+    }
+}
+        </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 2: HashSet</redtag><br>
+                  In this example, we demonstrate the usage of a <code>HashSet</code>, which is an implementation of the
+                  <code>Set</code> interface in the Collections Framework. We create a <code>HashSet</code> to store
+                  strings representing fruits. Elements are added to the set using the <code>add()</code> method. Notice
+                  that duplicate elements are not allowed in a <code>HashSet</code>. Finally, the contents of the set
+                  are printed.
+               </p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+          // Example 2: HashSet
+          import java.util.HashSet;
+          
+          public class Main {
+              public static void main(String[] args) {
+                  // Creating a HashSet
+                  HashSet<String> set = new HashSet<>();
+          
+                  // Adding elements
+                  set.add("Apple");
+                  set.add("Banana");
+                  set.add("Orange");
+                  set.add("Apple"); // Duplicate element
+          
+                  // Printing elements
+                  System.out.println("Elements in the HashSet:");
+                  for (String fruit : set) {
+                      System.out.println(fruit);
+                  }
+              }
+          }
+                  </code></pre>
+               </div>
+
+               <p class="p">
+                  <redtag>Example 3: LinkedList</redtag><br>
+                  In this example, we demonstrate the usage of a <code>LinkedList</code>, which is an implementation of
+                  the <code>List</code> interface in the Collections Framework. We create a <code>LinkedList</code> to
+                  store integers. Elements are added to the list using the <code>add()</code> method, and then the
+                  contents of the list are printed using a for-each loop.
+               </p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example 3: LinkedList
+import java.util.LinkedList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating a LinkedList
+        LinkedList<Integer> list = new LinkedList<>();
+
+        // Adding elements
+        list.add(10);
+        list.add(20);
+        list.add(30);
+
+        // Printing elements
+        System.out.println("Elements in the LinkedList:");
+        for (int num : list) {
+            System.out.println(num);
+        }
+    }
+}
+        </code></pre>
+               </div>
+            </div>
+            <div class="container">
+               <h4>Multithreading in Java</h4>
+               <p class="p">
+                  Multithreading is a programming concept that allows multiple threads of execution to run concurrently
+                  within the same process. Each thread represents an independent flow of control, enabling programs to
+                  perform multiple tasks simultaneously and efficiently utilize system resources. In Java,
+                  multithreading is achieved by extending the <code>Thread</code> class or implementing the
+                  <code>Runnable</code> interface.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+// Example: Creating Threads
+class MyThread extends Thread {
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Thread " + Thread.currentThread().getId() + " : " + i);
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        MyThread thread1 = new MyThread();
+        MyThread thread2 = new MyThread();
+
+        thread1.start();
+        thread2.start();
+    }
+}
+        </code></pre>
+               </div>
+
+
+
+               <p class="p">
+                  <redtag>Example:</redtag><br>
+                  In this example, we demonstrate the creation of threads in Java by extending the <code>Thread</code>
+                  class. We define a class <code>MyThread</code> that extends <code>Thread</code> and overrides the
+                  <code>run()</code> method to specify the thread's behavior. We then create two instances of
+                  <code>MyThread</code> and start them using the <code>start()</code> method. Each thread prints its ID
+                  and counts from 0 to 4.
+               </p>
+            </div>
+
+            <div class="container">
+               <h4>File Handling in Java</h4>
+
+               <p class="p">
+
+                  File handling in Java involves performing operations such as reading from and writing to files. It
+                  enables the manipulation of file system resources, allowing programs to interact with files stored on
+                  disk. In Java, file handling is achieved using classes from the <code>java.io</code> package, such as
+                  <code>File</code> and <code>FileWriter</code>, which provide methods for creating, reading, and
+                  writing files.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        // Define the file path
+        String filePath = "sample.txt";
+
+        // Write content to the file
+        try {
+            FileWriter writer = new FileWriter(filePath);
+            writer.write("Hello, world!");
+            writer.close();
+            System.out.println("Content written to the file successfully.");
+        } catch (IOException e) {
+            System.out.println("An error occurred while writing to the file.");
+            e.printStackTrace();
+        }
+
+        // Read content from the file
+        File file = new File(filePath);
+        if (file.exists()) {
+            System.out.println("File exists: " + filePath);
+            System.out.println("File content:");
+            // Print file content
+            // Here, you can add code to read and print the content of the file
+        } else {
+            System.out.println("File does not exist: " + filePath);
+        }
+    }
+}
+        </code></pre>
+               </div>
+
+
+               <p class="p">
+                  <redtag>Example:</redtag><br>
+                  In this example, we demonstrate file handling in Java by writing content to a file named
+                  <code>sample.txt</code> using a <code>FileWriter</code>. We then attempt to read the content of the
+                  file using a <code>File</code> object. If the file exists, we print its content to the console.
+                  Otherwise, we indicate that the file does not exist.
+               </p>
+               <p class="p">
+                  <redtag>Example 2: Reading from a File</redtag><br>
+                  This example demonstrates reading content from a file named <code>sample.txt</code>. We use a
+                  <code>FileReader</code> to read characters from the file and print them to the console until the end
+                  of the file is reached.
+               </p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        // Define the file path
+        String filePath = "sample.txt";
+
+        // Read content from the file
+        try {
+            FileReader reader = new FileReader(filePath);
+            int character;
+            System.out.println("File content:");
+            while ((character = reader.read()) != -1) {
+                System.out.print((char) character);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred while reading the file.");
+            e.printStackTrace();
+        }
+    }
+}
+        </code></pre>
+               </div>
+
+              
+            </div>
+            <p class="p">
+               <redtag>Example 3: Creating a Directory</redtag><br>
+               This example demonstrates creating a directory named <code>example_dir</code> using the
+               <code>mkdir()</code> method of the <code>File</code> class. We first check if the directory exists,
+               and if not, we create it. The success or failure of the directory creation is printed to the console.
+            </p>
+            <div class="container">
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        // Define the directory path
+        String directoryPath = "example_dir";
+
+        // Create a directory
+        File directory = new File(directoryPath);
+        if (!directory.exists()) {
+            if (directory.mkdir()) {
+                System.out.println("Directory created successfully: " + directoryPath);
+            } else {
+                System.out.println("Failed to create directory: " + directoryPath);
+            }
+        } else {
+            System.out.println("Directory already exists: " + directoryPath);
+        }
+    }
+}
+        </code></pre>
+               </div>
+
+              
+            </div>
+
+            <div class="container">
+               <div class="chart" id="chart4">
+                  <p class="p">
+                     <redtag>Example 4: Deleting a File</redtag><br>
+                     This example demonstrates deleting a file named <code>sample.txt</code> using the
+                     <code>delete()</code> method of the <code>File</code> class. We first check if the file exists, and if
+                     so, we attempt to delete it. The success or failure of the file deletion is printed to the console.
+                  </p>
+                  <pre onclick="copyText(this)"><code class="language-java" id="code">
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        // Define the file path
+        String filePath = "sample.txt";
+
+        // Delete a file
+        File file = new File(filePath);
+        if (file.exists()) {
+            if (file.delete()) {
+                System.out.println("File deleted successfully: " + filePath);
+            } else {
+                System.out.println("Failed to delete file: " + filePath);
+            }
+        } else {
+            System.out.println("File does not exist: " + filePath);
+        }
+    }
+}
+        </code></pre>
+               </div>
+            </div>
+
+<div id="AsynchronousProgramming" class="container">
+    <h4>Asynchronous Programming</h4>
+    <p class="p">
+      Asynchronous programming in Java allows tasks to execute concurrently, enabling improved performance and responsiveness in applications. CompletableFuture is a feature introduced in Java 8 that facilitates asynchronous programming by representing a future result that may be completed asynchronously.
+  </p>
+    <div class="chart" id="chart1">
+        <pre onclick="copyText(this)"><code class="language-java" id="code">
+import java.util.concurrent.CompletableFuture;
+
+public class Main {
+    public static void main(String[] args) {
+        // Create a CompletableFuture
+        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
+            // Simulate a time-consuming operation
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            // Return a result
+            return 42;
+        });
+
+        // Attach a callback to handle the result
+        future.thenAccept(result -> {
+            System.out.println("Result received: " + result);
+        });
+
+        System.out.println("Main thread continues executing...");
+
+        // Ensure that the program does not terminate immediately
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+        </code></pre>
+    </div>
+
+ 
+
+    <p class="p">
+        <redtag>Example:</redtag><br>
+        In this example, we demonstrate asynchronous programming with CompletableFuture. We create a CompletableFuture using the <code>supplyAsync</code> method, which executes a time-consuming operation asynchronously and returns a result. We attach a callback to the CompletableFuture using the <code>thenAccept</code> method to handle the result when it becomes available. Meanwhile, the main thread continues executing other tasks.
+    </p>
+</div>
+
+
+         </section>
+      </main>
+   </section>
+
+   <!--
+    <div class="container">
+               <h4>
+
+               </h4>
+               <p class="p">
+
+               </p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span> :
+
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-java.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+<script>
+   window.addEventListener('DOMContentLoaded', function () {
+      var paragraphs = document.querySelectorAll('.p');
+      paragraphs.forEach(function (paragraph) {
+         var text = paragraph.innerHTML;
+         // Regular expression to match text within **double asterisks**
+         var regex = /\*\*([^*]+)\*\*/g;
+         var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+         paragraph.innerHTML = styledText;
+      });
+   });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction to Web Development</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+
+         <h3><a href="WebDevelopment_Page_1.html">HTML</a></h3>
+         <p><a href="#IntroductiontoHTML">Introduction to HTML</a></p>
+         <p><a href="#BasicStructureofHTMLDocument">Basic Structure of HTML Document</a></p>
+         <p><a href="#HTMLElements">HTML Elements</a></p>
+         <p><a href="#HTMLForms">HTML Forms</a></p>
+         <p><a href="#HTMLTables">HTML Tables</a></p>
+         <p><a href="#HTMLSemanticElements">HTML Semantic Elements</a></p>
+         <p><a href="#HTMLMultimedia">HTML Multimedia</a></p>
+         <p><a href="#HTMLCanvas">HTML Canvas</a></p>
+         <p><a href="#HTMLSVG">HTML SVG</a></p>
+         <p><a href="#HTMLAccessibility">HTML Accessibility</a></p>
+         <p><a href="#HTML5APIs">HTML5 APIs</a></p>
+         <p><a href="#HTMLBoilerplateandBestPractices">HTML Boilerplate and Best Practices</a></p>
+         <p><a href="#HTMLTemplating">HTML Templating</a></p>
+         <p><a href="#HTMLLayoutTechniques">HTML Layout Techniques</a></p>
+         <p><a href="#HTMLResponsiveDesignPrinciples">HTML Responsive Design Principles</a></p>
+         <p><a href="#HTMLSEO">HTML SEO</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#Css">CSS</a></h3>
+         <p><a href="#CSSIntroduction">Introduction to CSS</a></p>
+         <p><a href="#CSSSyntaxandSelectors">CSS Syntax and Selectors</a></p>
+         <p><a href="#CSSBoxModel">CSS Box Model</a></p>
+         <p><a href="#CSSTypography">CSS Typography</a></p>
+         <p><a href="#CSSColorsandBackgrounds">CSS Colors and Backgrounds</a></p>
+         <p><a href="#CSSUnits">CSS Units</a></p>
+         <p><a href="#CSSLayoutTechniques">CSS Layout Techniques</a></p>
+         <p><a href="#CSSFlexboxLayout">CSS Flexbox Layout</a></p>
+         <p><a href="#CSSGridLayout">CSS Grid Layout</a></p>
+         <p><a href="#CSSResponsiveDesign">CSS Responsive Design</a></p>
+         <p><a href="#CSSTransitionsandAnimations">CSS Transitions and Animations</a></p>
+         <p><a href="#CSSTransformations">CSS Transformations</a></p>
+         <p><a href="#CSSSpecificityandCascade">CSS Specificity and Cascade</a></p>
+         <p><a href="#CSSPreprocessors">CSS Preprocessors</a></p>
+         <p><a href="#CSSFrameworks">CSS Frameworks</a></p>
+         <p><a href="#CSSBestPracticesandCodeOrganization">CSS Best Practices and Code Organization</a></p>
+         <p><a href="#CSSAccessibility">CSS Accessibility</a></p>
+         <p><a href="#CSSDebuggingTechniques">CSS Debugging Techniques</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="#JavaScript">JavaScript</a></h3>
+         <p><a href="#JavaScriptIntroduction">Introduction to JavaScript</a></p>
+         <p><a href="#JavaScriptVariablesandDataTypes">JavaScript Variables and Data Types</a></p>
+         <p><a href="#JavaScriptOperatorsandExpressions">JavaScript Operators and Expressions</a></p>
+         <p><a href="#JavaScriptFunctions">JavaScript Functions</a></p>
+         <p><a href="#JavaScriptControlFlow">JavaScript Control Flow</a></p>
+         <p><a href="#JavaScriptArraysandArrayMethods">JavaScript Arrays and Array Methods</a></p>
+         <p><a href="#JavaScriptObjectsandObjectOrientedProgramming">JavaScript Objects and Object-oriented
+               Programming</a></p>
+         <p><a href="#JavaScriptClassesandPrototypes">JavaScript Classes and Prototypes</a></p>
+         <p><a href="#JavaScriptDOMManipulation">JavaScript DOM Manipulation</a></p>
+         <p><a href="#JavaScriptEventsandEventHandling">JavaScript Events and Event Handling</a></p>
+         <p><a href="#JavaScriptAsynchronousProgramming">JavaScript Asynchronous Programming</a></p>
+         <p><a href="#JavaScriptErrorHandlingandDebugging">JavaScript Error Handling and Debugging</a></p>
+         <p><a href="#JavaScriptAJAX">JavaScript AJAX</a></p>
+         <p><a href="#JavaScriptJSON">JavaScript JSON</a></p>
+         <p><a href="#JavaScriptLocalStorageandSessionStorage">JavaScript Local Storage and Session Storage</a></p>
+         <p><a href="#JavaScriptCookies">JavaScript Cookies</a></p>
+         <p><a href="#JavaScriptRegularExpressions">JavaScript Regular Expressions</a></p>
+         <p><a href="#JavaScriptModulesandModuleBundlers">JavaScript Modules and Module Bundlers</a></p>
+         <p><a href="#JavaScriptAPIs">JavaScript APIs</a></p>
+         <p><a href="#JavaScriptSecurityBestPractices">JavaScript Security Best Practices</a></p>
+         <p><a href="#JavaScriptPerformanceOptimizationTechniques">JavaScript Performance Optimization Techniques</a>
+         </p>
+      </div>
+
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="IntroductiontoHTML">
+               <h4>
+                  What is HTML
+               </h4>
+               <p>
+                  HTML stands for HyperText Markup Language. It is the standard markup language used to create web
+                  pages. HTML is a combination of Hypertext and Markup language. Hypertext defines the link between web
+                  pages. A markup language is used to define the text document within the tag to define the structure of
+                  web pages. <br><br>
+                  This language is used to annotate (make notes for the computer) text so that a machine can understand
+                  it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language
+                  uses tags to define what manipulation has to be done on the text. <br> <br>
+                  HTML consists of various elements, that are responsible for telling search engines how to display page
+                  content. For example, headings, lists, images, links, and more.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+    &lt;title>First HTML Code</title>
+  &lt;/head>
+  &lt;body>
+    &lt;h2>Welcome To Web Dev</h2>
+    &lt;p>Hello World</p>
+  &lt;/body>
+&lt;/html>
+                  </code></pre>
+               </div>
+               <p><span>Explanation</span> : <br><br>
+                  1. `&lt;!DOCTYPE html>`:
+                  - This is a document type declaration that specifies the HTML version being used, which in this case
+                  is HTML5.
+                  - It informs the browser that the document is an HTML5 document.
+                  <br><br>
+                  2. `&lt;html>`:
+                  - This is the root element of the HTML document. All other elements are contained within it.
+                  - It encapsulates the entire HTML content of the page.
+                  <br><br>
+                  3. `&lt;head>`:
+                  - This is the head section of the HTML document.
+                  - It contains metadata about the document, such as the title, links to external stylesheets or
+                  scripts, and other data that isn't displayed directly on the page.
+                  <br><br>
+                  4. `&lt;title>`:
+                  - This element defines the title of the HTML document, which appears in the browser's title bar or
+                  tab.
+                  - It provides a concise description of the page's content or purpose.
+                  <br><br>
+                  5. `&lt;body>`:
+                  - This is the body section of the HTML document.
+                  - It contains the content that is displayed directly in the browser window.
+                  <br><br>
+                  6. `&lt;h2>`:
+                  - This is a heading element that defines a level 2 heading.
+                  - It displays text with a larger font size and bold formatting, typically used for section headings or
+                  titles.
+                  <br><br>
+                  7. `Welcome To Web Dev`:+
+
+                  - This is the text content of the `&lt;h2>` element.
+                  - It represents the heading displayed on the webpage.
+                  <br><br>
+                  8. `&lt;p>`:
+                  - This is a paragraph element.
+                  - It defines a block of text or content, typically used for longer passages of text.
+                  <br><br>
+                  9. `Hello World`:
+                  - This is the text content of the `&lt;p>` element.
+                  - It represents a simple greeting message that will be displayed as a paragraph on the webpage.
+               </p>
+            </div>
+            <div class="container" id="BasicStructureofHTMLDocument">
+               <h4>Basic Structure of HTML Document</h4>
+               <p>HTML (Hypertext Markup Language) is the standard markup language for creating web pages. A basic HTML
+                  document consists of the following structure:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Title of the document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- Content of the web page goes here --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: This HTML code represents the basic structure of an HTML document:</p>
+               <ul>
+                  <li><code>&lt;!DOCTYPE html&gt;</code>: This declaration defines the document type and version of HTML
+                     being used.</li>
+                  <li><code>&lt;html&gt;</code>: The root element of the HTML document. It contains all other HTML
+                     elements.</li>
+                  <li><code>&lt;head&gt;</code>: Contains meta-information about the document, such as character set,
+                     viewport settings, and title.</li>
+                  <li><code>&lt;meta&gt;</code>: Defines metadata about the HTML document, such as character set and
+                     viewport settings.</li>
+                  <li><code>&lt;title&gt;</code>: Sets the title of the HTML document, which appears in the browser's
+                     title bar or tab.</li>
+                  <li><code>&lt;body&gt;</code>: Contains the visible content of the HTML document, such as text,
+                     images, links, and other elements.</li>
+               </ul>
+            </div>
+            <div class="container" id="HTMLElements">
+               <h4>
+                  HTML Elements
+               </h4>
+               <p>
+                  An HTML Element is a collection of start and end tags with the content inserted in between them. HTML
+                  elements are building blocks of web pages, representing different types of content such as headings,
+                  paragraphs, links, and images.
+               </p>
+            </div>
+            <div class="container">
+               <br>
+               <p>**Headings (h1 to h6)**</p>
+               <p>HTML headings are used to define headings or titles for sections of content. There are six levels of
+                  headings, from <code>&lt;h1&gt;</code> (the most important) to <code>&lt;h6&gt;</code> (the least
+                  important).</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In HTML, headings are defined using the <code>&lt;h1&gt;</code> to
+                  <code>&lt;h6&gt;</code> elements. Each heading element represents a different level of importance,
+                  with <code>&lt;h1&gt;</code> being the most important and <code>&lt;h6&gt;</code> being the least
+                  important. Headings are commonly used to structure the content of a web page and improve its
+                  accessibility and readability.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Paragraph (<code>&lt;p&gt;</code>)**</p>
+               <p>The <code>&lt;p&gt;</code> element is used to define a paragraph of text. It is a block-level element
+                  and is commonly used to group and structure text content within an HTML document.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Example HTML Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+    
+    &lt;p&gt;This is a paragraph of text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec urna finibus, vestibulum justo ac, mattis odio.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In HTML, the <code>&lt;p&gt;</code> element is used to define paragraphs of
+                  text. It contains the content of the paragraph, such as text, links, images, or other elements.
+                  Paragraphs are block-level elements, meaning they create a new block of content that typically starts
+                  on a new line and is separated from surrounding content by vertical margins.</p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Unordered List (<code>&lt;ul&gt;</code>) and Ordered List (<code>&lt;ol&gt;</code>)**</p>
+               <p>The <code>&lt;ul&gt;</code> element is used to create an unordered list, while the
+                  <code>&lt;ol&gt;</code> element is used to create an ordered list. Both types of lists contain list
+                  items (<code>&lt;li&gt;</code>) that define individual items within the list.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In HTML, the <code>&lt;ul&gt;</code> element is used to create an unordered
+                  list, which represents a list of items in no particular order. Each item in the list is defined by an
+                  <code>&lt;li&gt;</code> element. Similarly, the <code>&lt;ol&gt;</code> element is used to create an
+                  ordered list, which represents a list of items in a specific order. The order of the items is
+                  determined by the sequence of the <code>&lt;li&gt;</code> elements within the <code>&lt;ol&gt;</code>
+                  element.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Anchor (<code>&lt;a&gt;</code>)**</p>
+               <p>The <code>&lt;a&gt;</code> element, commonly known as the anchor element, is used to create hyperlinks
+                  or links to other web pages, documents, or resources. The <code>&lt;a&gt;</code> element can include
+                  various attributes to specify the target destination, link text, and link behavior.</p>
+               <p>Here are five common attributes of the <code>&lt;a&gt;</code> element:</p>
+               <ul>
+                  <li><code>href</code>: Specifies the URL of the linked resource.</li>
+                  <li><code>target</code>: Specifies where to open the linked resource (e.g., in a new window or tab).
+                  </li>
+                  <li><code>title</code>: Specifies extra information about the linked resource (usually displayed as a
+                     tooltip).</li>
+                  <li><code>rel</code>: Specifies the relationship between the current document and the linked resource.
+                  </li>
+                  <li><code>download</code>: Specifies that the target resource should be downloaded when clicked,
+                     instead of navigating to it.</li>
+               </ul>
+               <p>Here are multiple ways of implementing the <code>&lt;a&gt;</code> element with different attributes:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!-- Basic hyperlink --&gt;
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Hyperlink with title attribute --&gt;
+&lt;a href="https://www.example.com" title="Go to Example"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Hyperlink with target attribute (opens in new tab) --&gt;
+&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Hyperlink with download attribute --&gt;
+&lt;a href="https://www.example.com/file.pdf" download&gt;Download PDF&lt;/a&gt;
+
+&lt;!-- Hyperlink with rel attribute --&gt;
+&lt;a href="https://www.example.com" rel="nofollow"&gt;Visit Example&lt;/a&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we demonstrate various ways of implementing the
+                  <code>&lt;a&gt;</code> element with different attributes:
+               </p>
+               <ul>
+                  <li>The first example shows a basic hyperlink with the <code>href</code> attribute specifying the URL
+                     of the linked resource.</li>
+                  <li>The second example adds the <code>title</code> attribute to provide additional information about
+                     the linked resource.</li>
+                  <li>The third example includes the <code>target</code> attribute with the value <code>"_blank"</code>
+                     to open the linked resource in a new tab or window.</li>
+                  <li>The fourth example uses the <code>download</code> attribute to specify that the linked resource
+                     should be downloaded when clicked.</li>
+                  <li>The fifth example demonstrates the use of the <code>rel</code> attribute to specify the
+                     relationship between the current document and the linked resource.</li>
+               </ul>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Image (<code>&lt;img&gt;</code>)**</p>
+               <p>The <code>&lt;img&gt;</code> element is used to embed images into an HTML document. It is a
+                  self-closing tag and does not have a closing tag. The <code>&lt;img&gt;</code> element requires the
+                  <code>src</code> attribute to specify the URL of the image to be displayed.
+               </p>
+               <p>Here are some common attributes of the <code>&lt;img&gt;</code> element:</p>
+               <ul>
+                  <li><code>src</code>: Specifies the URL of the image.</li>
+                  <li><code>alt</code>: Specifies an alternate text for the image, which is displayed if the image
+                     cannot be loaded or is inaccessible to screen readers.</li>
+                  <li><code>width</code>: Specifies the width of the image in pixels or as a percentage of the parent
+                     container.</li>
+                  <li><code>height</code>: Specifies the height of the image in pixels or as a percentage of the parent
+                     container.</li>
+                  <li><code>title</code>: Specifies extra information about the image (usually displayed as a tooltip).
+                  </li>
+                  <li><code>style</code>: Specifies CSS styles to apply to the image.</li>
+               </ul>
+               <p>Here's an example of using the <code>&lt;img&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;img src="example.jpg" alt="Example Image" width="200" height="150" title="Example Title" style="border: 1px solid #000;"&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;img&gt;</code> element to embed
+                  an image into the HTML document. We specify the <code>src</code> attribute to specify the URL of the
+                  image file. The <code>alt</code> attribute provides alternative text for the image, which is displayed
+                  if the image cannot be loaded or is inaccessible to screen readers. We also set the <code>width</code>
+                  and <code>height</code> attributes to control the size of the image, and the <code>title</code>
+                  attribute to provide extra information about the image. Additionally, we use the <code>style</code>
+                  attribute to apply a CSS border to the image.</p>
+               <br> <br>
+
+               <div class="container" id="BasicFlaskCode">
+                  <h4>Classes and IDs in HTML</h4>
+                  <p>Classes and IDs are attributes used to apply styles and target elements in HTML and CSS.</p>
+                  <p><strong>Class:</strong> The <code>class</code> attribute is used to apply one or more CSS classes
+                     to an element. Multiple elements can share the same class, and a single element can have multiple
+                     classes separated by spaces.</p>
+                  <p><strong>ID:</strong> The <code>id</code> attribute is used to uniquely identify an element in an
+                     HTML document. Each ID value must be unique within the document.</p>
+                  <p>Here's an example of using classes and IDs:</p>
+                  <div class="chart" id="chart1">
+                     <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;div id="container"&gt;
+    &lt;h2 class="heading"&gt;Welcome to our Website!&lt;/h2&gt;
+    &lt;p class="paragraph"&gt;This is a paragraph with a &lt;span id="highlighted"&gt;highlighted&lt;/span&gt; word.&lt;/p&gt;
+&lt;/div&gt;
+        </code></pre>
+                  </div>
+                  <p><span>Explanation</span>: In the example above, we have an outer <code>&lt;div&gt;</code> element
+                     with the <code>id</code> attribute set to <code>"container"</code>. Inside this container, we have
+                     an <code>&lt;h2&gt;</code> heading with the <code>class</code> attribute set to
+                     <code>"heading"</code>. This allows us to apply styles to all headings with the class
+                     <code>"heading"</code>. Similarly, we have a <code>&lt;p&gt;</code> paragraph with the
+                     <code>class</code> attribute set to <code>"paragraph"</code>, and within this paragraph, we have a
+                     <code>&lt;span&gt;</code> element with the <code>id</code> attribute set to
+                     <code>"highlighted"</code>. This ID can be used to target this specific element with CSS or
+                     JavaScript.
+                  </p>
+               </div>
+
+
+
+
+            </div> <br> <br>
+            <div class="container">
+               <p>**Division (<code>&lt;div&gt;</code>) and Span (<code>&lt;span&gt;</code>)**</p>
+               <p>The <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements are used as generic container
+                  elements to group and style content within an HTML document.</p>
+               <p>The <code>&lt;div&gt;</code> element is a block-level element, meaning it typically starts on a new
+                  line and stretches the entire width of its parent container. It is commonly used to create sections or
+                  divisions within a web page.</p>
+               <p>The <code>&lt;span&gt;</code> element, on the other hand, is an inline element, meaning it does not
+                  start on a new line and only takes up as much width as its content. It is commonly used to apply
+                  styles or manipulate individual parts of a block of text.</p>
+               <p>Here's an example of using the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;div id="container"&gt;
+    &lt;h2&gt;Welcome to our Website!&lt;/h2&gt;
+    &lt;p&gt;This is a &lt;span style="color: blue;"&gt;blue&lt;/span&gt; paragraph within a &lt;div&gt; element.&lt;/p&gt;
+    &lt;div class="section"&gt;
+        &lt;p&gt;This is another paragraph within a nested &lt;div&gt; element.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;div&gt;</code> element with the
+                  <code>id</code> attribute set to <code>"container"</code> to create a container for the content of our
+                  webpage. Inside the <code>&lt;div&gt;</code>, we have an <code>&lt;h2&gt;</code> heading and a
+                  <code>&lt;p&gt;</code> paragraph. Within the paragraph, we use the <code>&lt;span&gt;</code> element
+                  with the <code>style</code> attribute to change the color of the word "blue" to blue. We also have a
+                  nested <code>&lt;div&gt;</code> element with the class attribute set to <code>"section"</code>.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Input (<code>&lt;input&gt;</code>)**</p>
+               <p>The <code>&lt;input&gt;</code> element is used to create form controls that allow users to input data.
+                  It is a self-closing tag and does not have a closing tag. The behavior and appearance of the input
+                  element can be customized using various attributes.</p>
+               <p>Here are some common attributes of the <code>&lt;input&gt;</code> element:</p>
+               <ul>
+                  <li><code>type</code>: Specifies the type of input control (e.g., text, password, checkbox, radio,
+                     etc.).</li>
+                  <li><code>name</code>: Specifies the name of the input control, which is submitted with the form data.
+                  </li>
+                  <li><code>value</code>: Specifies the initial value of the input control.</li>
+                  <li><code>placeholder</code>: Specifies a short hint that describes the expected value of the input
+                     control (usually displayed when the input is empty).</li>
+                  <li><code>readonly</code>: Specifies that the input control is read-only and cannot be edited by the
+                     user.</li>
+                  <li><code>disabled</code>: Specifies that the input control is disabled and cannot be interacted with
+                     by the user.</li>
+                  <li><code>required</code>: Specifies that the input control is required and must be filled out before
+                     submitting the form.</li>
+               </ul>
+               <p>Here's an example of using the <code>&lt;input&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" placeholder="Enter your username" required&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" placeholder="Enter your password" required&gt;
+
+    &lt;label for="remember"&gt;Remember me:&lt;/label&gt;
+    &lt;input type="checkbox" id="remember" name="remember"&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;input&gt;</code> element to
+                  create form controls for a login form. We use the <code>type</code> attribute to specify the type of
+                  each input control (<code>text</code> for the username, <code>password</code> for the password, and
+                  <code>checkbox</code> for the "Remember me" option). We also use the <code>name</code> attribute to
+                  specify the name of each input control, which is submitted with the form data. The
+                  <code>placeholder</code> attribute provides a short hint for the expected value of each input control,
+                  and the <code>required</code> attribute specifies that the username and password fields are required
+                  to be filled out before submitting the form. Finally, we use a submit button created with another
+                  <code>&lt;input&gt;</code> element with <code>type="submit"</code> to submit the form.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Form (<code>&lt;form&gt;</code>)**</p>
+               <p>The <code>&lt;form&gt;</code> element is used to create an HTML form for collecting user input. It can
+                  contain various form controls such as text fields, checkboxes, radio buttons, and buttons. The form
+                  data is typically sent to a server for processing using the <code>action</code> attribute, and the
+                  HTTP method used for submitting the form is specified by the <code>method</code> attribute.</p>
+               <p>Here are some common attributes of the <code>&lt;form&gt;</code> element:</p>
+               <ul>
+                  <li><code>action</code>: Specifies the URL where the form data should be submitted.</li>
+                  <li><code>method</code>: Specifies the HTTP method used for submitting the form data (e.g.,
+                     <code>GET</code> or <code>POST</code>). Default is <code>GET</code>.
+                  </li>
+                  <li><code>target</code>: Specifies where to display the response after submitting the form (e.g.,
+                     <code>_self</code>, <code>_blank</code>, etc.).
+                  </li>
+                  <li><code>enctype</code>: Specifies how the form data should be encoded before sending it to the
+                     server (e.g., <code>application/x-www-form-urlencoded</code>, <code>multipart/form-data</code>,
+                     <code>text/plain</code>).
+                  </li>
+                  <li><code>autocomplete</code>: Specifies whether the browser should automatically complete the input
+                     values based on the user's previous input.</li>
+                  <li><code>novalidate</code>: Specifies that the form data should not be validated by the browser
+                     before submission.</li>
+               </ul>
+               <p>Here's an example of using the <code>&lt;form&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;form action="/submit" method="post" enctype="multipart/form-data"&gt;
+    &lt;label for="username"&gt;Username:&lt;/label&gt;
+    &lt;input type="text" id="username" name="username" required&gt;
+
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password" required&gt;
+
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;form&gt;</code> element to create
+                  a login form. We specify the <code>action</code> attribute to indicate the URL where the form data
+                  should be submitted. The <code>method</code> attribute is set to <code>post</code>, indicating that
+                  the form data should be sent using the POST method. We use the <code>enctype</code> attribute to
+                  specify <code>multipart/form-data</code> encoding, which is commonly used when uploading files. Inside
+                  the form, we have input fields for the username and password, each marked as <code>required</code> to
+                  ensure they are filled out before submission. Finally, we have a submit button created with an
+                  <code>&lt;input&gt;</code> element with <code>type="submit"</code>.
+               </p>
+            </div>
+            <div class="container" id="HTMLForms">
+               <h4>
+                  HTML Forms
+               </h4>
+               <p>
+                  HTML forms are essential for collecting information from users on web pages. They allow users to input
+                  data, such as text, selections, and submit buttons. Forms are created using the form element and
+                  consist of various form controls.
+               </p>
+
+            </div>
+
+            <br><br>
+            <div class="container">
+               <p>**Advanced Input Methods**</p>
+               <p>In addition to the basic usage of the <code>&lt;input&gt;</code> element, there are several advanced
+                  methods and attributes that can enhance the functionality and usability of forms.</p>
+               <p>Here are some advanced methods and attributes:</p>
+               <ul>
+                  <li><strong>Checkbox:</strong> Allows users to select one or more options from a list of choices.</li>
+                  <li><strong>Radio Button:</strong> Allows users to select only one option from a list of choices.</li>
+                  <li><strong>Select:</strong> Provides a dropdown menu for users to select one option from a list of
+                     choices.</li>
+                  <li><strong>File Upload:</strong> Allows users to upload files from their local device.</li>
+                  <li><strong>Date Input:</strong> Provides a date picker for users to select a date from a calendar.
+                  </li>
+                  <li><strong>Range Input:</strong> Allows users to select a value from a range using a slider.</li>
+                  <li><strong>Color Input:</strong> Provides a color picker for users to select a color.</li>
+                  <li><strong>Hidden Input:</strong> Stores data on the client-side without displaying it to the user.
+                  </li>
+                  <li><strong>Button Input:</strong> Creates a button that can be used to trigger JavaScript functions
+                     or submit forms.</li>
+               </ul>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!-- Checkbox --&gt;
+&lt;input type="checkbox" id="checkbox" name="checkbox" value="check"&gt;
+&lt;label for="checkbox"&gt;Checkbox&lt;/label&gt;
+
+&lt;!-- Radio Button --&gt;
+&lt;input type="radio" id="radio1" name="radio" value="option1"&gt;
+&lt;label for="radio1"&gt;Option 1&lt;/label&gt;
+&lt;input type="radio" id="radio2" name="radio" value="option2"&gt;
+&lt;label for="radio2"&gt;Option 2&lt;/label&gt;
+
+&lt;!-- Select --&gt;
+&lt;select id="select" name="select"&gt;
+    &lt;option value="option1"&gt;Option 1&lt;/option&gt;
+    &lt;option value="option2"&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- File Upload --&gt;
+&lt;input type="file" id="file" name="file"&gt;
+
+&lt;!-- Date Input --&gt;
+&lt;input type="date" id="date" name="date"&gt;
+
+&lt;!-- Range Input --&gt;
+&lt;input type="range" id="range" name="range" min="0" max="100"&gt;
+
+&lt;!-- Color Input --&gt;
+&lt;input type="color" id="color" name="color"&gt;
+
+&lt;!-- Hidden Input --&gt;
+&lt;input type="hidden" id="hidden" name="hidden" value="hidden value"&gt;
+
+&lt;!-- Button Input --&gt;
+&lt;button type="button" onclick="alert('Button clicked!')"&gt;Click Me&lt;/button&gt;
+&lt;button type="submit"&gt;Submit&lt;/button&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we demonstrate various advanced input methods using
+                  the <code>&lt;input&gt;</code> element and other related elements. We show examples of checkboxes,
+                  radio buttons, dropdown menus (select), file uploads, date inputs, range inputs, color inputs, hidden
+                  inputs, and button inputs. Each input method has its own specific attributes and behaviors, allowing
+                  for versatile and interactive forms.</p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Textarea (<code>&lt;textarea&gt;</code>)**</p>
+               <p>The <code>&lt;textarea&gt;</code> element is used to create a multiline text input field, allowing
+                  users to input large amounts of text.</p>
+               <p>Unlike the <code>&lt;input&gt;</code> element, which is used for single-line text input, the
+                  <code>&lt;textarea&gt;</code> element can handle multiple lines of text.
+               </p>
+               <p>The text entered into a <code>&lt;textarea&gt;</code> element is submitted as part of a form, just
+                  like the value of an <code>&lt;input&gt;</code> element.</p>
+               <p>Here's an example of using the <code>&lt;textarea&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;label for="message"&gt;Message:&lt;/label&gt;
+&lt;textarea id="message" name="message" rows="4" cols="50"&gt;
+Enter your message here...
+&lt;/textarea&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;textarea&gt;</code> element to
+                  create a text input field for entering messages. We set the <code>rows</code> attribute to define the
+                  number of visible rows in the textarea, and the <code>cols</code> attribute to define the number of
+                  visible columns. Users can input multiline text within this textarea, and the content will be
+                  submitted along with other form data when the form is submitted.</p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Select (<code>&lt;select&gt;</code>) and Option (<code>&lt;option&gt;</code>)**</p>
+               <p>The <code>&lt;select&gt;</code> element is used to create a dropdown list of options, allowing users
+                  to select one or more items from the list.</p>
+               <p>The <code>&lt;option&gt;</code> element is used to define individual options within a
+                  <code>&lt;select&gt;</code> element.
+               </p>
+               <p>Here are some common attributes of the <code>&lt;select&gt;</code> element:</p>
+               <ul>
+                  <li><code>multiple</code>: Specifies whether multiple options can be selected
+                     (<code>multiple="multiple"</code> or simply <code>multiple</code>).</li>
+                  <li><code>size</code>: Specifies the number of visible options when the dropdown list is expanded.
+                  </li>
+                  <li><code>disabled</code>: Specifies whether the dropdown list is disabled and cannot be interacted
+                     with by the user (<code>disabled="disabled"</code> or simply <code>disabled</code>).</li>
+               </ul>
+               <p>Here's an example of using the <code>&lt;select&gt;</code> and <code>&lt;option&gt;</code> elements:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
+&lt;select id="cars" name="cars"&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+    &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;select&gt;</code> element to
+                  create a dropdown list of car options. Inside the <code>&lt;select&gt;</code> element, we use multiple
+                  <code>&lt;option&gt;</code> elements to define individual car options. Each
+                  <code>&lt;option&gt;</code> element has a <code>value</code> attribute that specifies the value of the
+                  selected option, which is submitted with the form data. The text content of each
+                  <code>&lt;option&gt;</code> element represents the visible label of the option in the dropdown list.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Button (<code>&lt;button&gt;</code>)**</p>
+               <p>The <code>&lt;button&gt;</code> element is used to create a clickable button on a webpage. It can be
+                  used to trigger JavaScript functions, submit form data, or perform other user-defined actions.</p>
+               <p>Unlike the <code>&lt;input&gt;</code> element with <code>type="button"</code>, the
+                  <code>&lt;button&gt;</code> element can contain other elements such as text, images, or even nested
+                  HTML elements.
+               </p>
+               <p>Here's an example of using the <code>&lt;button&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;button type="button"&gt;Click Me&lt;/button&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;button&gt;</code> element to
+                  create a clickable button with the text "Click Me". The <code>type="button"</code> attribute
+                  explicitly specifies that this button should not submit the form when clicked. Instead, it triggers a
+                  JavaScript function or performs other actions as defined by the developer.</p>
+            </div>
+
+            <div class="container" id="HTMLTables">
+               <h4>
+                  HTML Tables
+               </h4>
+               <p>
+                  HTML tables are used to display data in rows and columns format. They are comprised of the following
+                  main elements:
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Table (<code>&lt;table&gt;</code>)**</p>
+               <p>The <code>&lt;table&gt;</code> element is used to create tables in HTML, allowing you to organize and
+                  display tabular data in rows and columns.</p>
+               <p>A table is made up of multiple elements:</p>
+               <ul>
+                  <li><code>&lt;table&gt;</code>: The container element for the entire table.</li>
+                  <li><code>&lt;tr&gt;</code>: Table rows, each containing one or more table data or table header cells.
+                  </li>
+                  <li><code>&lt;th&gt;</code>: Table header cells, used to define column headers.</li>
+                  <li><code>&lt;td&gt;</code>: Table data cells, used to define data within the table.</li>
+                  <li><code>&lt;caption&gt;</code>: Optional caption for the table.</li>
+               </ul>
+               <p>Here's an example of using the <code>&lt;table&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1"&gt;
+    &lt;caption&gt;Monthly Expenses&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Category&lt;/th&gt;
+        &lt;th&gt;Amount&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Food&lt;/td&gt;
+        &lt;td&gt;$200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Transportation&lt;/td&gt;
+        &lt;td&gt;$100&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Utilities&lt;/td&gt;
+        &lt;td&gt;$150&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;table&gt;</code> element to
+                  create a simple table displaying monthly expenses. We use <code>&lt;tr&gt;</code> elements to define
+                  each row of the table, with <code>&lt;th&gt;</code> elements used for the table header row and
+                  <code>&lt;td&gt;</code> elements used for the data rows. The optional <code>&lt;caption&gt;</code>
+                  element provides a title for the table. We use the <code>border</code> attribute to specify a border
+                  around the table.
+               </p>
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>**Table Caption (<code>&lt;caption&gt;</code>)**</p>
+               <p>The <code>&lt;caption&gt;</code> element is used to add a title or caption to an HTML table. It
+                  provides a brief description or summary of the table content.</p>
+               <p>The <code>&lt;caption&gt;</code> element should be placed immediately after the opening
+                  <code>&lt;table&gt;</code> tag, but before any <code>&lt;tr&gt;</code> elements.
+               </p>
+               <p>Here's an example of using the <code>&lt;caption&gt;</code> element:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1"&gt;
+    &lt;caption&gt;Monthly Expenses&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Category&lt;/th&gt;
+        &lt;th&gt;Amount&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Food&lt;/td&gt;
+        &lt;td&gt;$200&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Transportation&lt;/td&gt;
+        &lt;td&gt;$100&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Utilities&lt;/td&gt;
+        &lt;td&gt;$150&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;caption&gt;</code> element to add
+                  a title to the table, which reads "Monthly Expenses". This provides a brief description of the table
+                  content, making it easier for users to understand the purpose of the table.</p>
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>**Table Head (<code>&lt;thead&gt;</code>), Table Body (<code>&lt;tbody&gt;</code>), and Table Footer
+                  (<code>&lt;tfoot&gt;</code>)**</p>
+               <p>The <code>&lt;thead&gt;</code> element is used to group the header content in an HTML table. It
+                  typically contains one or more rows (<code>&lt;tr&gt;</code>) of header cells
+                  (<code>&lt;th&gt;</code>), defining column headings.</p>
+               <p>The <code>&lt;tbody&gt;</code> element is used to group the main content of the table. It contains one
+                  or more rows of table data cells (<code>&lt;td&gt;</code>), representing the actual data.</p>
+               <p>The <code>&lt;tfoot&gt;</code> element is used to group the footer content in an HTML table. It
+                  typically contains one or more rows of footer cells, which can be used to display summary information
+                  or totals.</p>
+               <p>Here's an example of using the <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and
+                  <code>&lt;tfoot&gt;</code> elements:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1"&gt;
+    &lt;caption&gt;Sales Report&lt;/caption&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Month&lt;/th&gt;
+            &lt;th&gt;Revenue&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;January&lt;/td&gt;
+            &lt;td&gt;$1000&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;February&lt;/td&gt;
+            &lt;td&gt;$1500&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;td colspan="2"&gt;Total&lt;/td&gt;
+            &lt;td&gt;$2500&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;thead&gt;</code> element to group
+                  the header content of the table, which includes column headings such as "Month" and "Revenue". Inside
+                  the <code>&lt;thead&gt;</code>, we use <code>&lt;tr&gt;</code> and <code>&lt;th&gt;</code> elements to
+                  define the rows and header cells respectively.</p>
+               <p>The main content of the table, containing actual data like month names and revenue figures, is grouped
+                  within the <code>&lt;tbody&gt;</code> element. Each row of data is represented by a
+                  <code>&lt;tr&gt;</code> element, with data cells (<code>&lt;td&gt;</code>) containing the actual data.
+               </p>
+               <p>The <code>&lt;tfoot&gt;</code> element is used to group the footer content of the table, which in this
+                  case contains a summary row with the total revenue. We use the <code>colspan</code> attribute to span
+                  the summary row across both columns, indicating that it covers the entire width of the table.</p>
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>**Table Row Span (<code>rowspan</code>) and Column Span (<code>colspan</code>)**</p>
+               <p>The <code>rowspan</code> attribute is used to specify the number of rows a table cell should span
+                  vertically, effectively merging multiple rows into a single cell.</p>
+               <p>The <code>colspan</code> attribute is used to specify the number of columns a table cell should span
+                  horizontally, effectively merging multiple columns into a single cell.</p>
+               <p>Here's an example of using the <code>rowspan</code> and <code>colspan</code> attributes:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1"&gt;
+    &lt;caption&gt;Merged Cells Example&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Month&lt;/th&gt;
+        &lt;th colspan="2"&gt;Revenue&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;January&lt;/td&gt;
+        &lt;td rowspan="2"&gt;$1000&lt;/td&gt;
+        &lt;td&gt;Product A&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;February&lt;/td&gt;
+        &lt;td&gt;Product B&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we have a table representing monthly revenue for two
+                  products. We use the <code>colspan="2"</code> attribute in the second header cell to span across two
+                  columns, indicating that it covers both "Product A" and "Product B" columns.</p>
+               <p>In the first data row, the cell containing "January" spans two rows vertically using the
+                  <code>rowspan="2"</code> attribute, effectively merging the two rows below it into a single cell. This
+                  cell contains the revenue value for January, and the corresponding cells for "Product A" and "Product
+                  B" are left empty.
+               </p>
+               <p>The second data row contains data for February, and the "Revenue" cell for "Product A" is empty since
+                  it's already merged with the January revenue cell.</p>
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>**Table Borders (<code>border</code>)**</p>
+               <p>The <code>border</code> attribute is used to specify whether a table should have borders or not. When
+                  the <code>border</code> attribute is set to a non-zero value, borders will be displayed around the
+                  table and its cells.</p>
+               <p>Here's an example of using the <code>border</code> attribute:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1"&gt;
+    &lt;caption&gt;Sales Report&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Month&lt;/th&gt;
+        &lt;th&gt;Revenue&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;January&lt;/td&gt;
+        &lt;td&gt;$1000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;February&lt;/td&gt;
+        &lt;td&gt;$1500&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>border="1"</code> attribute within
+                  the <code>&lt;table&gt;</code> tag to specify that the table should have a border. The value "1"
+                  indicates that a border should be displayed around the table and its cells.</p>
+               <p>The table contains a caption "Sales Report", followed by rows and columns of data representing monthly
+                  revenues. The borders help visually separate the cells and improve the readability of the table.</p>
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>**Table Cell Padding (<code>cellpadding</code>) and Cell Spacing (<code>cellspacing</code>)**</p>
+               <p>The <code>cellpadding</code> attribute is used to specify the amount of space between the content of a
+                  table cell and its border. It adds padding inside the cell.</p>
+               <p>The <code>cellspacing</code> attribute is used to specify the amount of space between adjacent cells
+                  in a table. It adds spacing between cells.</p>
+               <p>Here's an example of using the <code>cellpadding</code> and <code>cellspacing</code> attributes:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;table border="1" cellpadding="10" cellspacing="5"&gt;
+    &lt;caption&gt;Sales Report&lt;/caption&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Month&lt;/th&gt;
+        &lt;th&gt;Revenue&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;January&lt;/td&gt;
+        &lt;td&gt;$1000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;February&lt;/td&gt;
+        &lt;td&gt;$1500&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: In the example above, we use the <code>cellpadding="10"</code> attribute
+                  within the <code>&lt;table&gt;</code> tag to specify that each cell should have 10 pixels of padding
+                  inside it. This adds space between the content of each cell and its border.</p>
+               <p>We also use the <code>cellspacing="5"</code> attribute to specify that there should be 5 pixels of
+                  space between adjacent cells in the table. This adds spacing between the cells themselves.</p>
+               <p>The table contains a caption "Sales Report", followed by rows and columns of data representing monthly
+                  revenues. The cellpadding and cellspacing attributes help control the spacing and appearance of the
+                  table.</p>
+            </div>
+            <br><br>
+            <div class="container" id="HTMLSemanticElements">
+               <h4>
+                  HTML Semantic Elements
+               </h4>
+               <p>
+                  Semantic elements are HTML elements that carry meaning and convey information about the structure of
+                  the web page to both the browser and the developer. They describe the purpose of the content they
+                  contain, making it easier to understand the document's structure and improve accessibility and search
+                  engine optimization (SEO). Examples of semantic elements include `&lt;header>`, `&lt;nav>`,
+                  `&lt;article>`, `&lt;section>`, `&lt;footer>`, `&lt;main>`, `&lt;aside>`, `&lt;figure>`,
+                  `&lt;figcaption>`, `&lt;time>`, `&lt;address>`, and more.
+                  <br> <br>
+                  Non-semantic elements, on the other hand, are HTML elements that do not inherently carry meaning or
+                  convey information about the structure of the document. They are typically used for styling or layout
+                  purposes. Examples of non-semantic elements include `&lt;div>`, `&lt;span>`, `&lt;b>`, `&lt;i>`,
+                  `&lt;font>`, and others.
+               </p>
+
+            </div>
+            <br> <br>
+            <div class="container">
+               <p>Semantic elements in HTML are those elements that carry meaning and provide context to the content
+                  they contain. They help browsers and search engines understand the structure and purpose of the web
+                  page, which is beneficial for accessibility, SEO, and maintainability.</p>
+               <p>Here are some examples of semantic elements:</p>
+               <ul>
+                  <li><code>&lt;header&gt;</code>: Defines a header section.</li>
+                  <li><code>&lt;nav&gt;</code>: Defines a navigation section.</li>
+                  <li><code>&lt;article&gt;</code>: Defines an independent piece of content.</li>
+                  <li><code>&lt;section&gt;</code>: Defines a thematic grouping of content.</li>
+                  <li><code>&lt;footer&gt;</code>: Defines a footer section.</li>
+                  <li><code>&lt;main&gt;</code>: Defines the main content of the document.</li>
+                  <li><code>&lt;aside&gt;</code>: Defines content aside from the main content.</li>
+                  <li><code>&lt;figure&gt;</code>: Defines self-contained content, such as images, diagrams, or code
+                     snippets.</li>
+                  <li><code>&lt;figcaption&gt;</code>: Defines a caption for a <code>&lt;figure&gt;</code> element.</li>
+                  <li><code>&lt;time&gt;</code>: Defines a specific time or date.</li>
+                  <li><code>&lt;address&gt;</code>: Defines contact information for the author or owner of the document.
+                  </li>
+               </ul>
+               <p>Using semantic elements appropriately can improve the structure, accessibility, and SEO of your web
+                  pages.</p>
+               <br><br>
+               <p>Semantic HTML Example:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;header&gt;
+    &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section id="about"&gt;
+        &lt;h2&gt;About Us&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor nulla ut lacus eleifend, non lacinia nulla varius.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section id="services"&gt;
+        &lt;h2&gt;Our Services&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Web Development&lt;/li&gt;
+            &lt;li&gt;Graphic Design&lt;/li&gt;
+            &lt;li&gt;Digital Marketing&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;© 2024 Our Company. All rights reserved.&lt;/p&gt;
+&lt;/footer&gt;
+    </code></pre>
+               </div>
+               <br> <br>
+               <p>Non-Semantic HTML Example:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;div class="header"&gt;
+    &lt;h1&gt;Welcome to Our Website&lt;/h1&gt;
+    &lt;div class="navigation"&gt;
+        &lt;ul class="menu"&gt;
+            &lt;li class="item"&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="item"&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="item"&gt;&lt;a href="#services"&gt;Services&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="item"&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="content"&gt;
+    &lt;div class="about-section"&gt;
+        &lt;h2&gt;About Us&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor nulla ut lacus eleifend, non lacinia nulla varius.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="services-section"&gt;
+        &lt;h2&gt;Our Services&lt;/h2&gt;
+        &lt;ul class="service-list"&gt;
+            &lt;li class="service"&gt;Web Development&lt;/li&gt;
+            &lt;li class="service"&gt;Graphic Design&lt;/li&gt;
+            &lt;li class="service"&gt;Digital Marketing&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="footer"&gt;
+    &lt;p&gt;© 2024 Our Company. All rights reserved.&lt;/p&gt;
+&lt;/div&gt;
+    </code></pre>
+               </div>
+
+            </div>
+            <div class="container" id="HTMLMultimedia">
+               <h4>
+                  HTML Multimedia
+               </h4>
+               <p>
+                  HTML provides several elements and attributes to embed multimedia content such as images, audio, and
+                  video into web pages. This enhances the interactivity and engagement of web content.
+               </p>
+            </div> <br> <br>
+            <div class="container">
+               <p>**Images (<code>&lt;img&gt;</code>)**</p>
+               <p>The <code>&lt;img&gt;</code> tag is used to embed images in HTML documents. It is an empty element,
+                  meaning it does not have a closing tag, and requires the use of the <code>src</code> attribute to
+                  specify the image file's URL.</p>
+               <p>Here are different methods of implementing the <code>&lt;img&gt;</code> tag:</p>
+               <br>
+               <!-- Method 1: Basic image embedding -->
+               <p>Method 1: Basic Image Embedding</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;img src="image.jpg" alt="Description of image"&gt;
+        </code></pre>
+               </div>
+
+               <!-- Method 2: Image with specified width and height -->
+               <p>Method 2: Image with Specified Width and Height</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;
+        </code></pre>
+               </div>
+
+               <!-- Method 3: Image as a link -->
+               <p>Method 3: Image as a Link</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;a href="https://example.com"&gt;
+    &lt;img src="image.jpg" alt="Description of image"&gt;
+&lt;/a&gt;
+        </code></pre>
+               </div>
+
+               <!-- Method 4: Responsive Image -->
+               <p>Method 4: Responsive Image</p>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;style&gt;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+&lt;/style&gt;
+
+&lt;img src="image.jpg" alt="Description of image"&gt;
+        </code></pre>
+               </div>
+            </div>
+
+            <div class="container">
+               <p>**Audio (<code>&lt;audio&gt;</code>)**</p>
+               <p>The <code>&lt;audio&gt;</code> tag is used to embed audio content, such as music or sound effects,
+                  into HTML documents. It allows you to specify audio files in various formats and provides controls for
+                  playing, pausing, and adjusting volume.</p>
+               <p>Here's an example of using the <code>&lt;audio&gt;</code> tag:</p>
+
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support the audio element.
+&lt;/audio&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;audio&gt;</code> tag to embed an
+                  audio file with the controls attribute, which adds playback controls such as play, pause, and volume
+                  slider to the audio player.</p>
+               <p>We use the <code>&lt;source&gt;</code> tag inside the <code>&lt;audio&gt;</code> tag to specify the
+                  audio file's source and its MIME type using the <code>src</code> and <code>type</code> attributes,
+                  respectively. Multiple <code>&lt;source&gt;</code> tags can be used to provide alternative audio
+                  formats for better compatibility across different browsers.</p>
+               <p>If the browser does not support the <code>&lt;audio&gt;</code> element or the specified audio format,
+                  the text "Your browser does not support the audio element." will be displayed as fallback content.</p>
+            </div> <br><br>
+            <div class="container">
+               <p>**Video (<code>&lt;video&gt;</code>)**</p>
+               <p>The <code>&lt;video&gt;</code> tag is used to embed video content into HTML documents. It supports
+                  various video formats and provides controls for playback, volume adjustment, fullscreen mode, and
+                  more.</p>
+               <br>
+               <!-- Method 1: Basic video embedding -->
+               <h5>Method 1: Basic Video Embedding</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: This method embeds a basic video player with playback controls using the
+                  <code>controls</code> attribute. The <code>&lt;source&gt;</code> tag specifies the video file's source
+                  and its MIME type. Multiple <code>&lt;source&gt;</code> tags can be used to provide alternative video
+                  formats for better compatibility.</p>
+               <br>
+               <!-- Method 2: Autoplay video -->
+               <h5>Method 2: Autoplay Video</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;video autoplay controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: Adding the <code>autoplay</code> attribute to the <code>&lt;video&gt;</code>
+                  tag enables the video to start playing automatically when the page loads.</p>
+               <br>
+               <!-- Method 3: Looping video -->
+               <h5>Method 3: Looping Video</h5>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;video loop controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: The <code>loop</code> attribute causes the video to play in a continuous
+                  loop, restarting automatically once it reaches the end.</p>
+               <br>
+               <!-- Method 4: Muted video -->
+               <h5>Method 4: Muted Video</h5>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;video muted controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: Adding the <code>muted</code> attribute to the <code>&lt;video&gt;</code>
+                  tag mutes the audio of the video, making it play without sound.</p>
+               <br>
+               <!-- Method 5: Fullscreen video -->
+               <h5>Method 5: Fullscreen Video</h5>
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+&lt;/video&gt;
+        </code></pre>
+               </div>
+               <p><span>Explanation</span>: Most modern browsers provide a built-in fullscreen button within the video
+                  player controls. Users can click this button to enter fullscreen mode and view the video in
+                  fullscreen.</p>
+            </div>
+            <br><br>
+            <div class="container">
+               <p>** Embed (<code>&lt;embed&gt;</code>)**</p>
+               <p>The <code>&lt;embed&gt;</code> tag is used to embed external content, such as multimedia files or
+                  plugins, into an HTML document. It supports various types of content, including images, audio, video,
+                  Flash content, and more.</p>
+
+               <!-- Example of using the <embed> tag -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;embed src="video.mp4" type="video/mp4" width="640" height="360"&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;embed&gt;</code> tag to embed an
+                  external video file with the <code>src</code> attribute specifying the URL of the video file. The
+                  <code>type</code> attribute specifies the MIME type of the content. Additionally, the
+                  <code>width</code> and <code>height</code> attributes can be used to specify the dimensions of the
+                  embedded content.</p>
+            </div> <br><br>
+            <div class="container">
+               <p>**Object (<code>&lt;object&gt;</code>)**</p>
+               <p>The <code>&lt;object&gt;</code> tag is used to embed various types of external content, such as
+                  images, audio, video, interactive multimedia, and more, into an HTML document.</p>
+
+               <!-- Example of using the <object> tag -->
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;object data="image.jpg" type="image/jpeg" width="200" height="200"&gt;
+    &lt;param name="autoplay" value="true"&gt;
+    Your browser does not support the object tag.
+&lt;/object&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: In the example above, we use the <code>&lt;object&gt;</code> tag to embed an
+                  external image file with the <code>data</code> attribute specifying the URL of the image file. The
+                  <code>type</code> attribute specifies the MIME type of the content. Additionally, the
+                  <code>width</code> and <code>height</code> attributes can be used to specify the dimensions of the
+                  embedded content. Inside the <code>&lt;object&gt;</code> tag, we can also include
+                  <code>&lt;param&gt;</code> elements to specify parameters for the embedded content, such as autoplay.
+               </p>
+            </div>
+            <br><br>
+            <div class="container" id="HTMLCanvas">
+               <h4>HTML Canvas (<code>&lt;canvas&gt;</code>)</h4>
+               <p>The <code>&lt;canvas&gt;</code> tag is used to draw graphics, animations, or other visual images on a
+                  web page using JavaScript.</p>
+               <br>
+               <!-- Example 1: Basic Canvas Drawing -->
+               <h5>Example 1: Basic Canvas Drawing</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'red';
+    ctx.fillRect(10, 10, 150, 80);
+&lt;/script&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: This example demonstrates a basic canvas drawing. We create a canvas element
+                  with an id of 'myCanvas' and specify its width and height. In the JavaScript code, we get the canvas
+                  element by its id and obtain a 2D drawing context using the getContext() method. Then, we use various
+                  drawing methods of the context object to draw a filled rectangle on the canvas.</p>
+               <br>
+               <!-- Example 2: Drawing Lines -->
+               <h5>Example 2: Drawing Lines</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;canvas id="myCanvas" width="400" height="200"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.moveTo(50, 50);
+    ctx.lineTo(150, 150);
+    ctx.strokeStyle = 'blue';
+    ctx.lineWidth = 3;
+    ctx.stroke();
+&lt;/script&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: This example demonstrates drawing lines on a canvas. We use the beginPath()
+                  method to start a new path, moveTo() method to move the drawing cursor to a specified point, and
+                  lineTo() method
+            </div>
+            <br> <br>
+            <div class="container" id="HTMLSVG">
+               <h4>HTML SVG (<code>&lt;svg&gt;</code>)</h4>
+               <p>The <code>&lt;svg&gt;</code> tag is used to embed Scalable Vector Graphics (SVG) content into a web
+                  page. SVG allows for the creation of highly scalable and resolution-independent graphics.</p>
+               <br>
+               <!-- Example 1: Basic SVG Drawing -->
+               <h5>Example 1: Basic SVG Drawing</h5>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;svg width="200" height="100"&gt;
+    &lt;rect x="10" y="10" width="150" height="80" fill="blue"/&gt;
+&lt;/svg&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: This example demonstrates a basic SVG drawing. We use the
+                  <code>&lt;rect&gt;</code> element to draw a rectangle with specified attributes such as
+                  <code>x</code>, <code>y</code>, <code>width</code>, <code>height</code>, and <code>fill</code>
+                  (color).</p>
+               <br>
+               <!-- Example 2: Drawing Circle -->
+               <h5>Example 2: Drawing Circle</h5>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;svg width="200" height="200"&gt;
+    &lt;circle cx="100" cy="100" r="50" fill="red"/&gt;
+&lt;/svg&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: This example demonstrates drawing a circle using the
+                  <code>&lt;circle&gt;</code> element. The <code>cx</code> and <code>cy</code> attributes specify the
+                  center coordinates of the circle, and the <code>r</code> attribute specifies the radius. The
+                  <code>fill</code> attribute sets the color of the circle.</p>
+               <br>
+               <!-- Example 3: Drawing Path -->
+               <h5>Example 3: Drawing Path</h5>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;svg width="200" height="200"&gt;
+    &lt;path d="M10 10 L100 100 L150 50 Z" fill="green"/&gt;
+&lt;/svg&gt;
+        </code></pre>
+               </div>
+
+               <p><span>Explanation</span>: This example demonstrates drawing a path using the <code>&lt;path&gt;</code>
+                  element. The <code>d</code> attribute specifies the path data, which consists of a series of commands
+                  such as <code>M</code> (move to), <code>L</code> (line to), and <code>Z</code> (close path). The
+                  <code>fill</code> attribute sets the color of the filled path.</p>
+            </div>
+
+
+
+
+         </section>
+      </main>
+
+
+   </section>
+
+   <!--
+   <div class="container" id="BasicFlaskCode">
+               <h4>
+                   
+               </h4>
+               <p  >
+                  
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p  ><span>Explanation</span> :
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-html.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-size:25px; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

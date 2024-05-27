@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Introduction to Flask</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href=".\assets\css\chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+
+   </style>
+</head>
+
+<body>
+
+   <!-- header section starts  -->
+
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_1.html">What is Flask?</a></h3>
+         <p><a href="#Introduction">Introduction</a></p>
+         <p><a href="#BasicFlaskCode">Basic Flask Code</a></p>
+         <p><a href="#connectflasktohtml">Connect Flask to HTML</a></p>
+         <p><a href="#htmltemplatingwithJinja2">HTML Templating with Jinja2</a></p>
+         <p><a href="#formhandling">Form Handling</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_2.html">Data Parsing</a></h3>
+         <p><a href="#fetchmethod">JS Fetch Method</a></p>
+         <p><a href="#parsingarrayslists">Parsing Arrays and Lists</a></p>
+         <p><a href="#parsingimages">Parsing Images</a></p>
+         <p><a href="#parsingvideosaudios">Parsing Videos and Audios</a></p>
+         <p><a href="#mathcalculation">Math Calculation</a></p>
+         <p><a href="#controlstructures">Control Structures: If...Else</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_3.html">File Handling</a></h3>
+         <p><a href="#accessingfiles">Accessing Files</a></p>
+         <p><a href="#readingfiles">Reading Files</a></p>
+         <p><a href="#writingfiles">Writing Files</a></p>
+         <p><a href="#createfiles">Create Files</a></p>
+         <p><a href="#deletingfiles">Deleting Files</a></p>
+         <p><a href="#creatingfolders">Creating Folders</a></p>
+         <p><a href="#savingvideosaudios">Saving Videos/Audios</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_3.html">Firebase</a></h3>
+         <p><a href="#firebaseconnection">Connection</a></p>
+         <p><a href="#firebasestorage">Storage</a></p>
+         <p><a href="#firebaserealtimedatabase">Real-time Database</a></p>
+      </div>
+
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <!-- <h2>XML</h2> -->
+
+            <div class="container" id="Introduction">
+               <h4>
+                  What is Flask?
+               </h4>
+               <p class="p">
+
+               </p>
+               <div class="chart" id="chart1">
+                  <!-- <pre onclick="copyText(this)"><code class="language-python" id="code"></code></pre> -->
+               </div>
+               <p class="p"><span>Explanation</span> :
+                  Flask is a popular Python web framework used for building web applications. It is classified as a
+                  microframework because it focuses on simplicity and minimalism. Flask provides the basic tools and
+                  features necessary for web development, allowing developers to quickly create web applications and
+                  APIs.
+                  <br><br>
+                  Here are some key features and concepts associated with Flask:
+                  <br><br>
+                  1. `Routing`: Flask uses decorators to define URL routes and associate them with specific functions.
+                  For example, you can define a route for the homepage ("/") and specify the corresponding function to
+                  be executed when that route is accessed.
+                  <br><br>
+                  2. `HTTP Methods`: Flask supports different HTTP methods such as GET, POST, PUT, DELETE, etc. You can
+                  define routes to handle specific HTTP methods, allowing you to create RESTful APIs.
+                  <br><br>
+                  3. `Templates`: Flask integrates with Jinja2, a powerful templating engine. Templates allow you to
+                  separate the presentation logic from the application logic. You can define HTML templates and pass
+                  dynamic data to them for rendering.
+                  <br><br>
+                  4. `Request Handling`: Flask provides convenient ways to handle incoming requests and access data sent
+                  by the client. You can retrieve form data, query parameters, headers, and other request-related
+                  information.
+                  <br><br>
+                  5. `Sessions and Cookies`: Flask offers session management and cookie support, allowing you to store
+                  and retrieve user-specific data across requests. This is useful for implementing user authentication
+                  and maintaining user state.
+                  <br><br>
+                  6. `Database Integration`: Flask does not have an official database ORM (Object-Relational Mapping)
+                  like Django, but it can work with various database libraries and ORMs such as SQLAlchemy. This gives
+                  you flexibility in choosing the database technology you prefer.
+                  <br><br>
+                  7. `Extensions and Modularity`: Flask follows a "micro" philosophy, meaning it provides a minimal core
+                  and encourages the use of extensions to add additional functionality. There is a wide range of Flask
+                  extensions available for tasks like authentication, database integration, form validation, and more.
+                  <br><br>
+                  8. `Lightweight and Flexible`: Flask is known for its simplicity and flexibility. It allows developers
+                  to have granular control over their applications without imposing rigid structures. This makes it a
+                  popular choice for small to medium-sized projects and prototypes.
+                  <br><br>
+                  Flask is well-documented, has an active community, and is `easy to learn`, making it a versatile and
+                  `widely adopted` framework for web development in Python.
+               </p>
+            </div>
+            <div class="container">
+               <h4>
+                  Flask with Machine Learning
+               </h4>
+               <p class="p">
+
+               </p>
+               <div class="chart" id="chart1">
+                  <!-- <pre onclick="copyText(this)"><code class="language-python" id="code"></code></pre> -->
+               </div>
+               <p class="p"><span>Explanation</span> :
+                  Flask can be used in conjunction with machine learning models to create web applications that provide
+                  predictions, classifications, or any other functionality based on the trained models. Here's an
+                  overview of how Flask can be used in a machine learning context:
+                  <br><br>
+                  1. `Model Training:` Before using Flask with machine learning, you need to train your model using the
+                  appropriate machine learning libraries and techniques. This involves collecting and preparing the
+                  training data, selecting the appropriate model, and training it on the data.
+                  <br><br>
+                  2. `Model Serialization:` Once the model is trained, it needs to be serialized and saved to disk.
+                  Serialization allows you to save the model's parameters and structure, so it can be loaded and used
+                  later without retraining.
+                  <br><br>
+                  3. `Flask Application Setup:` Start by creating a new Flask application or integrating Flask into an
+                  existing one. This involves installing Flask and any necessary dependencies. You'll also need to
+                  define routes and views for your application.
+                  <br><br>
+                  4. `Model Loading:` In your Flask application, load the trained machine learning model into memory.
+                  You can use libraries like scikit-learn or TensorFlow to load the serialized model from disk.
+                  <br><br>
+                  5. `Define API Endpoints:` Use Flask's routing mechanism to define API endpoints that will handle the
+                  incoming requests. For example, you might create a route for a POST request that accepts data to be
+                  passed to the machine learning model for prediction.
+                  <br><br>
+                  6. `Data Processing:` In your Flask views, preprocess the incoming data as necessary before passing it
+                  to the machine learning model. This might involve transforming the data to match the model's input
+                  format, handling missing values, or normalizing the data.
+                  <br><br>
+                  7. `Model Inference:` Once the data is preprocessed, pass it to the loaded machine learning model for
+                  inference or prediction. Retrieve the model's output and format it appropriately for the response.
+                  <br><br>
+                  8. `API Response:` Return the predicted results as a response to the client's request. You can use
+                  Flask's built-in response mechanisms to return the results in various formats, such as JSON, HTML, or
+                  custom responses.
+                  <br><br>
+                  9. `Error Handling and Validation:` Handle any errors that may occur during data processing, model
+                  inference, or other parts of the application. Additionally, perform appropriate validation of the
+                  input data to ensure its integrity and quality.
+                  <br><br>
+                  10. `Deployment:` Deploy your Flask application with the machine learning functionality to a server or
+                  cloud platform. This allows users to access your web application and make predictions using the
+                  deployed machine learning model.
+                  <br><br>
+                  By combining Flask's web development capabilities with machine learning models, you can create
+                  powerful web applications that leverage the predictive capabilities of your trained models. These
+                  applications can provide real-time predictions, classifications, recommendations, or any other
+                  functionality based on your specific machine learning use case.
+               </p>
+            </div>
+            <div class="container" id="BasicFlaskCode">
+               <h4>
+                  Basic Flask Code
+               </h4>
+               <p class="p">
+                  Sure! Here's a basic example of a Flask application:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">from flask import Flask
+  
+  # Create a Flask application instance
+  app = Flask(__name__)
+  
+  # Define a route and associated function
+  @app.route('/')
+  def hello_world():
+      return 'Hello, World!'
+  
+  # Run the application if this script is executed directly
+  if __name__ == '__main__':
+      app.run()</code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+
+                  Let's break down the code:
+                  <br><br>
+                  1. First, we import the `Flask` class from the `flask` module.
+                  <br><br>
+                  2. We create an instance of the Flask application using `app = Flask(__name__)`. The `__name__`
+                  parameter is a special Python variable that represents the name of the current module.
+                  <br><br>
+                  3. Next, we define a route using the `@app.route` decorator. In this example, the route is `'/'`,
+                  which represents the root URL of the application. The associated function is `hello_world()`.
+                  <br><br>
+                  4. The `hello_world()` function is a simple function that returns the string `'Hello, World!'`.
+                  <br><br>
+                  5. Finally, we add a conditional block `if __name__ == '__main__':` to ensure that the Flask
+                  application is only run if the script is executed directly (not imported as a module). Inside this
+                  block, we call `app.run()` to start the Flask development server.
+                  <br><br>
+                  To run the Flask application, save the code in a file (e.g., `app.py`) and execute the file using a
+                  Python interpreter. You should see output indicating that the Flask development server is running. You
+                  can then access the application by navigating to `http://localhost:5000` in your web browser, and you
+                  should see the message "Hello, World!" displayed.
+                  <br><br>
+                  This is a basic starting point for a Flask application. From here, you can add more routes, define
+                  additional functions, and incorporate more complex functionality as needed for for your Project.
+               </p>
+            </div>
+            <div class="container" id="connectflasktohtml">
+               <h4>
+                  Connect Flask to HTML
+               </h4>
+               <p class="p">
+                  To connect Flask with HTML in a single code file, you can use Flask's templating engine, Jinja2.
+                  Here's an example of how you can integrate Flask and HTML in a single Python code file:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">from flask import Flask, render_template
+  
+  app = Flask(__name__)
+  
+  @app.route('/')
+  def home():
+      name = 'John Doe'
+      return render_template('index.html', name=name)
+  
+  if __name__ == '__main__':
+      app.run()</code></pre>
+               </div>
+               <p class="p">
+                  In the above code:
+                  <br><br>
+                  1. We import the Flask module and the `render_template` function, which is used to render HTML
+                  templates.
+                  <br><br>
+                  2. We create an instance of the Flask application and assign it to the `app` variable.
+                  <br><br>
+                  3. We define a route using the `@app.route` decorator. In this example, the root URL ("/") is
+                  associated with the `home` function.
+                  <br><br>
+                  4. Inside the `home` function, we define a variable `name` with the value 'John Doe'.
+                  <br><br>
+                  5. We use the `render_template` function to render the HTML template called 'index.html' and pass the
+                  `name` variable to the template.
+                  <br><br>
+                  6. Finally, we start the Flask application using `app.run()`.
+                  <br><br>
+                  Now, let's create the 'index.html' template in the same directory as the Python code:
+
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+      &lt;title>Flask HTML Integration&lt;/title>
+  &lt;/head>
+  &lt;body>
+      &lt;h1>Welcome, {{ name }}!&lt;/h1>
+  &lt;/body>
+  &lt;/html></code></pre>
+               </div>
+               <p class="p">
+
+                  In the HTML template:
+                  <br><br>
+                  1. We define a basic HTML structure.
+                  <br><br>
+                  2. We use double curly braces `{{ }}` to indicate a placeholder for the value of the `name`
+                  variable.<br><br>
+
+                  3. Inside the `&lt;h1>` tag, we use the `name` variable to display a personalized greeting.
+                  <br><br>
+                  When you run the Flask application and navigate to the root URL (http://localhost:5000/), you should
+                  see the rendered HTML template with the greeting "Welcome, John Doe!" displayed on the page.
+                  <br><br>
+                  This example demonstrates how Flask and HTML can be integrated in a single code file using Flask's
+                  templating engine. You can expand on this by adding more routes, templates, and functionality as per
+                  your application's requirements.
+               <pre onclick="copyText(this)"><code class="language-python" id="code">- app.py
+  - templates/      (Folder)
+      - index.html</code></pre>
+               </p>
+            </div>
+            <div class="container" id="htmltemplatingwithJinja2">
+               <h4>
+                  HTML Templating with Jinja2
+               </h4>
+               <p class="p">
+                  HTML Templating with Jinja2 is a feature of Flask that allows you to dynamically generate HTML pages
+                  by combining HTML code with variables, expressions, loops, conditionals, and other logic.
+                  <br><br>
+                  Jinja2 provides a flexible and powerful templating syntax that integrates seamlessly with Flask. It
+                  enables you to separate the presentation layer (HTML) from the application logic (Python code) and
+                  generate dynamic content based on the data provided.
+                  <br><br>
+                  Here's an example code snippet that demonstrates HTML Templating with Jinja2 in a Flask application:
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">from flask import Flask, render_template
+  
+  app = Flask(__name__)
+  
+  @app.route('/')
+  def home():
+      name = 'John Doe'
+      fruits = ['Apple', 'Banana', 'Orange']
+      return render_template('index.html', name=name, fruits=fruits)
+  
+  if __name__ == '__main__':
+      app.run()</code></pre>
+               </div>
+               <p class="p">
+                  In the above code:
+                  <br><br>
+                  1. We import the Flask module and the `render_template` function, which is used to render HTML
+                  templates.
+                  <br><br>
+                  2. We create an instance of the Flask application and assign it to the `app` variable.
+                  <br><br>
+                  3. We define a route using the `@app.route` decorator. In this example, the root URL ("/") is
+                  associated with the `home` function.
+                  <br><br>
+                  4. Inside the `home` function, we define two variables: `name` with the value 'John Doe' and `fruits`
+                  as a list of fruits.
+                  <br><br>
+                  5. We use the `render_template` function to render the HTML template called 'index.html' and pass the
+                  `name` and `fruits` variables to the template.
+                  <br><br>
+                  Now, let's create the 'index.html' template in a 'templates' directory in the same directory as the
+                  Python code:
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+      &lt;title>HTML Templating with Jinja2&lt;/title>
+  &lt;/head>
+  &lt;body>
+      &lt;h1>Welcome, {{ name }}!&lt;/h1>
+      &lt;ul>
+          {% for fruit in fruits %}
+              &lt;li>{{ fruit }}&lt;/li>
+          {% endfor %}
+      &lt;/ul>
+  &lt;/body>
+  &lt;/html></code></pre>
+               </div>
+               <p class="p">
+
+                  In the HTML template:
+                  <br><br>
+                  1. We define a basic HTML structure.
+                  <br><br>
+                  2. We use double curly braces `{{ }}` to indicate a placeholder for the value of the `name` variable.
+                  This will display the personalized greeting.
+                  <br><br>
+                  3. We use Jinja2's `{% %}` syntax to enclose a loop. In this example, we loop through each item in the
+                  `fruits` list and display it as a list item.
+                  <br><br>
+                  When you run the Flask application and navigate to the root URL (http://localhost:5000/), you should
+                  see the rendered HTML template with the personalized greeting and a list of fruits displayed on the
+                  page.
+                  <br><br>
+                  HTML Templating with Jinja2 allows you to create dynamic HTML pages in Flask by combining HTML code
+                  with logic and data from your Python code. You can use Jinja2's extensive features to control the
+                  flow, display data, apply conditions, and more in your HTML templates.
+               </p>
+            </div>
+            <div class="container" id="formhandling">
+               <h4>
+                  Form Handling
+               </h4>
+               <p class="p">
+                  Form handling refers to the process of receiving form data submitted by users through HTML forms in
+                  your Flask application. It involves extracting the form data, validating it, and processing it as per
+                  your application's requirements. Flask provides mechanisms to handle form submissions efficiently.
+                  <br><br>
+                  Here's an example code snippet demonstrating form handling in Flask:
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">from flask import Flask, render_template, request
+  
+  app = Flask(__name__)
+  
+  @app.route('/', methods=['GET', 'POST'])
+  def home():
+      if request.method == 'POST':
+          name = request.form.get('name')
+          email = request.form.get('email')
+          # Process the form data or perform any required validation
+  
+          # Example: Display a success message with the submitted data
+          message = f"Thank you, {name}! Your email {email} has been submitted successfully."
+          return render_template('index.html', message=message)
+  
+      return render_template('index.html')
+  
+  if __name__ == '__main__':
+      app.run()</code></pre>
+               </div>
+               <p class="p">
+                  In the above code:
+                  <br><br>
+                  1. We import the necessary Flask modules, including `request`, which allows us to access the form data
+                  submitted by users.
+                  <br><br>
+                  2. We define the `/` route with the `methods=['GET', 'POST']` parameter, indicating that the route
+                  accepts both GET and POST requests.<br><br>
+
+                  3. Inside the route function, we check the request method using `request.method`. If it's a POST
+                  request, it means the form has been submitted.
+                  <br><br>
+                  4. We use `request.form.get('field_name')` to retrieve the values of form fields. Replace
+                  `'field_name'` with the actual names of your form fields.
+                  <br><br>
+                  5. Once the form data is extracted, you can process it, validate it, or perform any required
+                  operations based on your application's logic.
+                  <br><br>
+                  6. In this example, we create a success message that includes the submitted name and email. We pass
+                  this message to the `index.html` template for rendering.
+                  <br><br>
+                  7. We render the `index.html` template, passing the `message` variable to display the success message.
+                  <br><br>
+                  8. If the request method is GET, we render the `index.html` template without any message.
+                  <br><br>
+                  9. The Flask application is started using `app.run()`.
+                  <br><br>
+                  In your HTML template (`templates/index.html`), you can create a form with appropriate input fields
+                  and an action that points to the `/` route. For example:
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+      &lt;title>Form Handling with Flask&lt;/title>
+  &lt;/head>
+  &lt;body>
+      &lt;h1>Submit Form&lt;/h1>
+      &lt;form method="POST" action="/">
+          &lt;label for="name">Name:&lt;/label>
+          &lt;input type="text" name="name" id="name" required>&lt;br>&lt;br>
+  
+          &lt;label for="email">Email:&lt;/label>
+          &lt;input type="email" name="email" id="email" required>&lt;br>&lt;br>
+  
+          &lt;input type="submit" value="Submit">
+      &lt;/form>
+  
+      {% if message %}
+          &lt;p>{{ message }}&lt;/p>
+      {% endif %}
+  &lt;/body>
+  &lt;/html></code></pre>
+               </div>
+               <p class="p">
+                  Above html code with designs ->
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">&lt;!DOCTYPE html>
+  &lt;html>
+  &lt;head>
+      &lt;title>Form Handling with Flask&lt;/title>
+      &lt;style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f5f5f5;
+              margin: 0;
+              padding: 0;
+          }
+  
+          .container {
+              max-width: 400px;
+              margin: 0 auto;
+              padding: 20px;
+              background-color: #fff;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              border-radius: 5px;
+              margin-top: 100px;
+          }
+  
+          h1 {
+              text-align: center;
+          }
+  
+          form {
+              margin-top: 20px;
+          }
+  
+          label {
+              display: block;
+              font-weight: bold;
+              margin-bottom: 5px;
+          }
+  
+          input[type="text"],
+          input[type="email"] {
+              width: 95%;
+              padding: 8px;
+              border-radius: 3px;
+              border: 1px solid #ccc;
+              margin-bottom: 10px;
+          }
+  
+          input[type="submit"] {
+              background-color: #4CAF50;
+              color: #fff;
+              padding: 10px 20px;
+              border: none;
+              border-radius: 3px;
+              cursor: pointer;
+          }
+  
+          input[type="submit"]:hover {
+              background-color: #45a049;
+          }
+  
+          p.success-message {
+              color: green;
+              margin-top: 10px;
+          }
+      &lt;/style>
+  &lt;/head>
+  &lt;body>
+      &lt;div class="container">
+          &lt;h1>Submit Form&lt;/h1>
+          &lt;form method="POST" action="/">
+              &lt;label for="name">Name:&lt;/label>
+              &lt;input type="text" name="name" id="name" required>&lt;br>
+  
+              &lt;label for="email">Email:&lt;/label>
+              &lt;input type="email" name="email" id="email" required>&lt;br>
+  
+              &lt;input type="submit" value="Submit">
+          &lt;/form>
+  
+          {% if message %}
+              &lt;p class="success-message">{{ message }}&lt;/p>
+          {% endif %}
+      &lt;/div>
+  &lt;/body>
+  &lt;/html>
+  </code></pre>
+               </div>
+               <p class="p">
+
+                  In the above HTML template, we create a simple form with two input fields for name and email. The
+                  form's method is set to POST, and the action points to the root route ("/"). When the form is
+                  submitted, the entered data will be sent to the Flask application for processing.
+                  <br><br>
+                  After submitting the form, the success message will be displayed below the form if the form data is
+                  successfully processed in the Flask route.
+                  <br><br>
+                  Remember to save the Flask code in the `app.py` file and the HTML template in the `templates/`
+                  directory. Run the Flask application, and you should be able to submit the form and see the success
+                  message displayed.
+               </p>
+            </div>
+         </section>
+      </main>
+
+
+   </section>
+
+   <!--
+   <div class="container">
+                <h4>
+  Connect Flask to HTML
+                </h4>
+          <p class="p">
+   
+       </p>
+  <div class="chart" id="chart1">
+                   <pre onclick="copyText(this)"><code class="language-python" id="code"></code></pre>
+              </div>
+  <p class="p">
+  
+  </p>
+  <div class="chart" id="chart1">
+                   <pre onclick="copyText(this)"><code class="language-html" id="code"></code></pre>
+  </div>
+  <p class="p">
+  
+  </p>
+  </div>Fff
+-->
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

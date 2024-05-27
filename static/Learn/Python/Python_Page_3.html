@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Intermediate Python</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+      <div class="info">
+         <h3><a href="Python_Page_1.html">Introduction</a></h3>
+         <p><a href="#Overview">Overview of Python</a></p>
+         <p><a href="#Introduction">Installation and setup</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_2.html">Basic Python Concepts</a></h3>
+         <p><a href="#variablesanddatatypes">Variables and Data Types</a></p>
+         <p><a href="#operators">Operators</a></p>
+         <p><a href="#controlflow">Control Flow (if statements, loops)</a></p>
+         <p><a href="#functions">Functions</a></p>
+         <p><a href="#datastructures">Data Structures (lists, tuples, dictionaries)</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_3.html">Intermediate Python</a></h3>
+         <p><a href="#filehandling">File Handling</a></p>
+         <p><a href="#errorhandling">Error Handling (try-except blocks)</a></p>
+         <p><a href="#modulesandpackages">Modules and Packages</a></p>
+         <p><a href="#oop">Object-Oriented Programming (Classes and Objects)</a></p>
+         <p><a href="#regex">Regular Expressions</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#advancedpython">Advanced Python</a></h3>
+         <p><a href="#decorators">Decorators</a></p>
+         <p><a href="#generatorsanditerators">Generators and Iterators</a></p>
+         <p><a href="#lambdafunctions">Lambda Functions</a></p>
+         <p><a href="#threadingandmultiprocessing">Threading and Multiprocessing</a></p>
+         <p><a href="#unittesting">Unit Testing</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#pythonanddatabases">Python and Databases</a></h3>
+         <p><a href="#introductiontodatabases">Introduction to Databases</a></p>
+         <p><a href="#workingwithsqlite">Working with SQLite (basic CRUD operations)</a></p>
+         <p><a href="#introductiontomysql">Introduction to MySQL</a></p>
+         <p><a href="#usingmysqlwithpython">Using MySQL with Python (CRUD operations)</a></p>
+         <p><a href="#advancedmysqlqueries">Advanced MySQL Queries</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#webdevelopmentwithpython">Web Development with Python</a></h3>
+         <p><a href="#introductiontowebdevelopment">Introduction to Web Development</a></p>
+         <p><a href="#flaskordjango">Flask or Django Framework</a></p>
+         <p><a href="#handlinghttprequests">Handling HTTP Requests</a></p>
+         <p><a href="#templating">Templating</a></p>
+         <p><a href="#workingwithdatabasesinwebapplications">Working with Databases in Web Applications</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#deploymentandscaling">Deployment and Scaling</a></h3>
+         <p><a href="#deploymentoptions">Deployment Options (e.g., Heroku, AWS)</a></p>
+         <p><a href="#scalingstrategies">Scaling Strategies</a></p>
+         <p><a href="#loadbalancing">Load Balancing</a></p>
+         <p><a href="#databasescalingstrategies">Database Scaling Strategies</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#additionaltopics">Additional Topics</a></h3>
+         <p><a href="#webscrapingwithpython">Web Scraping with Python</a></p>
+         <p><a href="#datavisualization">Data Visualization (using libraries like Matplotlib, Seaborn)</a></p>
+         <p><a href="#machinelearningwithpython">Machine Learning with Python (overview)</a></p>
+         <p><a href="#naturallanguageprocessing">Natural Language Processing (overview)</a></p>
+         <p><a href="#buildingapiswithpython">Building APIs with Python</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#projectideas">Project Ideas</a></h3>
+         <p><a href="#simplecrudapplicationwithmysql">Simple CRUD application with MySQL</a></p>
+         <p><a href="#webscrapingproject">Web Scraping Project</a></p>
+         <p><a href="#webapplicationwithflaskorDjangoandmysql">Web Application with Flask/Django and MySQL</a></p>
+         <p><a href="#dataanalysisproject">Data Analysis Project</a></p>
+         <p><a href="#machinelearningproject">Machine Learning Project</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#resourcesandfurtherlearning">Resources and Further Learning</a></h3>
+         <p><a href="#recommendedbooks">Recommended Books</a></p>
+         <p><a href="#onlinecoursesandtutorials">Online Courses and Tutorials</a></p>
+         <p><a href="#communityforumsandgroups">Community Forums and Groups</a></p>
+         <p><a href="#documentationandadditionalreading">Documentation and Additional Reading</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container" id="filehandling">
+               <h4>
+                  File Handling
+               </h4>
+               <p>File handling is an essential aspect of programming that allows you to read from and write to files on
+                  the disk. Python provides built-in functions and methods for working with files.
+               </p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Opening a File in Python**</p>
+               <p class="p">In Python, you can open files in various modes using different methods. Each method provides
+                  different capabilities and flexibility. Let's explore the different ways to open a file in Python and
+                  their respective explanations.</p>
+               <br>
+               <!-- Method 1: Using open() function -->
+               <h5>Method 1: Using <code>open()</code> function</h5>
+               <p class="p">The <code>open()</code> function is a built-in Python function used to open a file. It takes
+                  two parameters: the file path and the mode in which the file should be opened.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Opening a file in read mode
+file1 = open('file.txt', 'r')
+
+# Opening a file in write mode
+file2 = open('file.txt', 'w')
+
+# Opening a file in append mode
+file3 = open('file.txt', 'a')
+
+# Opening a file in binary read mode
+file4 = open('file.txt', 'rb')
+
+# Opening a file in binary write mode
+file5 = open('file.txt', 'wb')
+
+# Opening a file in binary append mode
+file6 = open('file.txt', 'ab')
+        </code></pre>
+               </div>
+
+               <!-- Method 2: Using with statement -->
+               <h5>Method 2: Using <code>with</code> statement</h5>
+               <p class="p">The <code>with</code> statement ensures that the file is properly closed after its suite
+                  finishes, even if an exception is raised during the operation.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Opening a file using with statement
+with open('file.txt', 'r') as file:
+    # Perform operations on the file
+    data = file.read()
+    print(data)
+        </code></pre>
+               </div>
+
+               <!-- Explanation -->
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate two methods to open a file
+                  in Python. The first method uses the <code>open()</code> function with different modes such as read
+                  (<code>'r'</code>), write (<code>'w'</code>), and append (<code>'a'</code>). The second method uses
+                  the <code>with</code> statement, which automatically closes the file after the block of code within
+                  the <code>with</code> statement executes.</p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Reading from a File in Python**</p>
+               <p class="p">Reading from a file in Python involves various methods to extract data from the file. You
+                  can read the entire contents of the file, read line by line, or read a specific number of characters.
+                  Let's explore the different methods for reading from a file in Python.</p>
+               <br>
+               <!-- Method 1: Reading entire file -->
+               <h5>Method 1: Reading Entire File</h5>
+               <p class="p">You can read the entire contents of the file using the <code>read()</code> method.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open the file
+with open('file.txt', 'r') as file:
+   # Read entire contents of the file
+   contents = file.read()
+   print(contents)
+
+   # Or using readlines() method
+   # lines = file.readlines()
+   # for line in lines:
+   #     print(line.strip())
+       </code></pre>
+               </div>
+               <!-- Method 2: Reading line by line -->
+               <h5>Method 2: Reading Line by Line</h5>
+               <p class="p">You can read the file line by line using a loop or the <code>readline()</code> method.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open the file
+with open('file.txt', 'r') as file:
+   # Read file line by line
+   for line in file:
+       print(line.strip())  # Strip newline character
+       # Or using readline() method
+       # line = file.readline()
+       # print(line.strip())
+       </code></pre>
+               </div>
+
+               <!-- Method 3: Reading a specific number of characters -->
+               <h5>Method 3: Reading a Specific Number of Characters</h5>
+               <p class="p">You can read a specific number of characters from the file using the <code>read()</code>
+                  method with a parameter specifying the number of characters to read.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open the file
+with open('file.txt', 'r') as file:
+   # Read 10 characters from the file
+   data = file.read(10)
+   print(data)
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate different methods for
+                  reading from a file in Python. You can read the entire contents of the file using the
+                  <code>read()</code> method, read line by line using a loop or <code>readline()</code> method, or read
+                  a specific number of characters using the <code>read()</code> method with a parameter.</p>
+            </div>
+            <br>
+
+            <div class="container">
+               <p>**Writing to a File**</p>
+               <p class="p">Writing to a file in Python allows you to save data to a file. You can create a new file or
+                  overwrite an existing file. Let's explore the different methods for writing to a file in Python.</p>
+               <br>
+               <!-- Method 1: Writing to a new file -->
+               <h5>Method 1: Writing to a New File</h5>
+               <p class="p">You can write to a new file using the <code>open()</code> function with the write
+                  (<code>'w'</code>) mode.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open a new file for writing
+with open('new_file.txt', 'w') as file:
+   # Write data to the file
+   file.write('Hello, World!\n')
+   file.write('This is a new file.\n')
+       </code></pre>
+               </div>
+               <br>
+               <!-- Method 2: Appending to an existing file -->
+               <h5>Method 2: Appending to an Existing File</h5>
+               <p class="p">You can append data to an existing file using the append (<code>'a'</code>) mode.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open an existing file for appending
+with open('existing_file.txt', 'a') as file:
+   # Append data to the file
+   file.write('Additional data.\n')
+       </code></pre>
+               </div>
+               <br>
+               <!-- Method 3: Writing to a file using writelines() method -->
+               <h5>Method 3: Writing to a File using <code>writelines()</code> Method</h5>
+               <p class="p">You can write a list of lines to a file using the <code>writelines()</code> method.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open a new file for writing
+with open('new_file.txt', 'w') as file:
+   # Write multiple lines to the file
+   lines = ['Line 1\n', 'Line 2\n', 'Line 3\n']
+   file.writelines(lines)
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate different methods for
+                  writing to a file in Python. You can write to a new file using the write mode (<code>'w'</code>),
+                  append to an existing file using the append mode (<code>'a'</code>), or write a list of lines to a
+                  file using the <code>writelines()</code> method.</p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Closing a File in Python**</p>
+               <p class="p">Closing a file in Python is important to ensure that resources are properly released and
+                  data is saved. You can close a file using the <code>close()</code> method or by using the
+                  <code>with</code> statement.</p>
+               <br>
+               <!-- Method 1: Closing a file using close() method -->
+               <h5>Method 1: Closing a file using <code>close()</code> method</h5>
+               <p class="p">You can explicitly close a file using the <code>close()</code> method.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open the file
+file = open('file.txt', 'r')
+
+# Perform operations on the file
+
+# Close the file
+file.close()
+       </code></pre>
+               </div>
+               <br>
+               <!-- Method 2: Closing a file using with statement -->
+               <h5>Method 2: Closing a file using <code>with</code> statement</h5>
+               <p class="p">You can use the <code>with</code> statement, which automatically closes the file after the
+                  block of code within the <code>with</code> statement executes.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Open the file using with statement
+with open('file.txt', 'r') as file:
+   # Perform operations on the file
+   data = file.read()
+   print(data)
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate different methods for
+                  closing a file in Python. You can explicitly close a file using the <code>close()</code> method or use
+                  the <code>with</code> statement, which automatically closes the file after the block of code within
+                  the <code>with</code> statement executes.</p>
+            </div>
+            <br>
+            <div class="container" id="errorhandling">
+               <h4>Exception Handling in Python</h4>
+               <p class="p">Exception handling in Python allows you to handle errors and exceptions that occur during
+                  the execution of a program. This helps in gracefully handling unexpected situations and prevents the
+                  program from crashing. Let's explore how to handle exceptions in Python.</p>
+               <br>
+               <!-- Try-Except block -->
+               <h5>Try-Except block</h5>
+               <p class="p">You can use a <code>try-except</code> block to handle exceptions in Python. The code inside
+                  the <code>try</code> block is executed, and if an exception occurs, it is caught by the
+                  <code>except</code> block.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+try:
+   # Code that may raise an exception
+   result = 10 / 0
+except ZeroDivisionError:
+   # Handle the exception
+   print("Error: Division by zero")
+       </code></pre>
+               </div>
+               <br>
+               <!-- Multiple Except blocks -->
+               <h5>Multiple Except blocks</h5>
+               <p class="p">You can use multiple <code>except</code> blocks to handle different types of exceptions.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+try:
+   # Code that may raise an exception
+   result = 10 / 0
+except ZeroDivisionError:
+   # Handle division by zero error
+   print("Error: Division by zero")
+except ValueError:
+   # Handle value error
+   print("Error: Invalid value")
+       </code></pre>
+               </div>
+               <br>
+               <!-- Finally block -->
+               <h5>Finally block</h5>
+               <p class="p">You can use a <code>finally</code> block to execute cleanup code, regardless of whether an
+                  exception occurred or not.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+try:
+   # Code that may raise an exception
+   result = 10 / 0
+except ZeroDivisionError:
+   # Handle division by zero error
+   print("Error: Division by zero")
+finally:
+   # Cleanup code
+   print("Cleaning up")
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate how to handle exceptions in
+                  Python using <code>try-except</code> blocks. The <code>try</code> block contains the code that may
+                  raise an exception, and the <code>except</code> block handles the exception if it occurs. You can also
+                  use multiple <code>except</code> blocks to handle different types of exceptions. The
+                  <code>finally</code> block is executed regardless of whether an exception occurred or not, making it
+                  useful for cleanup code.</p>
+            </div>
+            <div class="container" id="BasicFlaskCode" id="modulesandpackages">
+               <h4>
+                  Modules and Packages
+               </h4>
+               <p>
+                  Modules and packages are essential components of Python that enable code organization, reusability,
+                  and maintainability. They allow you to break down your code into smaller, manageable units and reuse
+                  code across different projects.
+               </p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Modules**</p>
+               <p class="p">Modules in Python are files containing Python code that can be imported and used in other
+                  Python scripts. Modules help in organizing code and making it reusable. Let's explore how to work with
+                  modules in Python.</p>
+               <br>
+               <!-- Importing a module -->
+               <h5>Importing a Module</h5>
+               <p class="p">You can import a module using the <code>import</code> keyword followed by the module name.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import math
+
+# Use functions and variables from the math module
+print(math.pi)
+print(math.sqrt(16))
+       </code></pre>
+               </div>
+               <br>
+               <!-- Importing specific functions or variables from a module -->
+               <h5>Importing Specific Functions or Variables from a Module</h5>
+               <p class="p">You can import specific functions or variables from a module using the <code>from</code>
+                  keyword.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from math import pi, sqrt
+
+# Use the imported functions and variables directly
+print(pi)
+print(sqrt(16))
+       </code></pre>
+               </div>
+               <br>
+               <!-- Renaming imported modules or functions -->
+               <h5>Renaming Imported Modules or Functions</h5>
+               <p class="p">You can rename imported modules or functions using the <code>as</code> keyword.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import math as m
+
+# Use the renamed module
+print(m.pi)
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate how to work with modules in
+                  Python. You can import entire modules using the <code>import</code> keyword, import specific functions
+                  or variables from a module using the <code>from</code> keyword, or rename imported modules or
+                  functions using the <code>as</code> keyword. Modules help in organizing code and making it reusable.
+               </p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Creating a Module**</p>
+               <p class="p">You can create your own modules in Python by writing Python code in a separate file and then
+                  importing and using that module in other Python scripts. Let's see how to create and use a module in
+                  Python.</p>
+               <br>
+               <!-- Creating a module -->
+               <h5>Creating a Module</h5>
+               <p class="p">Create a new Python file with the desired module name and write the Python code you want to
+                  include in the module.</p>
+               <p class="p"><strong>my_module.py</strong>:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# my_module.py
+
+def greet(name):
+   return f"Hello, {name}!"
+       </code></pre>
+               </div>
+               <br>
+               <!-- Using the created module -->
+               <h5>Using the Created Module</h5>
+               <p class="p">You can import and use the functions defined in the created module in other Python scripts.
+               </p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Import the created module
+import my_module
+
+# Use the greet function from the module
+message = my_module.greet("Alice")
+print(message)  # Output: Hello, Alice!
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate how to create and use a
+                  module in Python. First, we create a module by writing Python code in a separate file
+                  (<strong>my_module.py</strong>). Then, we import the module using the <code>import</code> keyword and
+                  use the functions defined in the module in our Python script. Creating and using modules helps in
+                  organizing code and promoting reusability.</p>
+            </div>
+            <br>
+            <div class="container">
+               <h4>Packages in Python</h4>
+               <p class="p">Packages in Python are a way of organizing related modules into a single directory
+                  hierarchy. A package can contain subpackages, modules, or both. Let's see how to create and use a
+                  package in Python.</p>
+               <br>
+               <!-- Creating a package -->
+               <p>**Creating a Package**</p>
+               <p class="p">To create a package, you need to organize your modules into a directory structure and
+                  include a special <code>__init__.py</code> file in each directory to indicate that it's a package.</p>
+               <p class="p">Let's create a package named <strong>temperature</strong> with a module
+                  <strong>convert.py</strong> that converts temperature from Kelvin to Celsius.</p>
+               <p class="p"><strong>temperature/convert.py</strong>:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# temperature/convert.py
+
+def kelvin_to_celsius(kelvin):
+   return kelvin - 273.15
+       </code></pre>
+               </div>
+               <p class="p"><strong>temperature/__init__.py</strong> (empty file):</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# temperature/__init__.py
+# This file can be empty or contain initialization code for the package.
+       </code></pre>
+               </div>
+               <br>
+               <!-- Using the package -->
+               <h5>Using the Package</h5>
+               <p class="p">You can import the package and its modules using dot notation.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Import the package and module
+import temperature.convert as convert
+
+# Use the kelvin_to_celsius function from the convert module
+temperature_in_kelvin = 300
+temperature_in_celsius = convert.kelvin_to_celsius(temperature_in_kelvin)
+print(temperature_in_celsius)  # Output: 26.85
+       </code></pre>
+               </div>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+temperature/
+├── __init__.py
+├── convert.py
+      </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate how to create and use a
+                  package in Python. We organize related modules into a directory structure and include a special
+                  <code>__init__.py</code> file in each directory to indicate that it's a package. Then, we can import
+                  the package and its modules using dot notation and use the functions defined in the modules.</p>
+            </div>
+
+            <br>
+            <div class="container">
+               <p>**Examples of Functions and Conditional Statements with Modules**</p>
+
+               <!-- Example 1: Function to check if a number is even -->
+               <h5>Example 1: Function to check if a number is even</h5>
+               <p class="p">Create a module named <strong>even_checker.py</strong> with a function that checks if a
+                  number is even.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# even_checker.py
+
+def is_even(number):
+   return number % 2 == 0
+       </code></pre>
+               </div>
+               <p class="p">Usage:</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import even_checker
+
+number = 6
+if even_checker.is_even(number):
+   print(f"{number} is even")
+else:
+   print(f"{number} is odd")
+       </code></pre>
+               </div>
+
+               <!-- Example 2: Function to calculate the area of a rectangle -->
+               <h5>Example 2: Function to calculate the area of a rectangle</h5>
+               <p class="p">Create a module named <strong>rectangle.py</strong> with a function that calculates the area
+                  of a rectangle.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# rectangle.py
+
+def calculate_area(length, width):
+   return length * width
+       </code></pre>
+               </div>
+               <p class="p">Usage:</p>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import rectangle
+
+length = 5
+width = 3
+area = rectangle.calculate_area(length, width)
+print(f"Area of rectangle: {area}")
+       </code></pre>
+               </div>
+
+               <!-- Example 3: Function to check if a string is a palindrome -->
+               <h5>Example 3: Function to check if a string is a palindrome</h5>
+               <p class="p">Create a module named <strong>palindrome_checker.py</strong> with a function that checks if
+                  a string is a palindrome.</p>
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# palindrome_checker.py
+
+def is_palindrome(string):
+   return string == string[::-1]
+       </code></pre>
+               </div>
+               <p class="p">Usage:</p>
+               <div class="chart" id="chart6">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import palindrome_checker
+
+word = "radar"
+if palindrome_checker.is_palindrome(word):
+   print(f"{word} is a palindrome")
+else:
+   print(f"{word} is not a palindrome")
+       </code></pre>
+               </div>
+
+               <!-- Example 4: Function to find the maximum of three numbers -->
+               <h5>Example 4: Function to find the maximum of three numbers</h5>
+               <p class="p">Create a module named <strong>max_finder.py</strong> with a function that finds the maximum
+                  of three numbers.</p>
+               <div class="chart" id="chart7">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# max_finder.py
+
+def find_max(num1, num2, num3):
+   return max(num1, num2, num3)
+       </code></pre>
+               </div>
+               <p class="p">Usage:</p>
+               <div class="chart" id="chart8">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import max_finder
+
+a = 10
+b = 20
+c = 15
+maximum = max_finder.find_max(a, b, c)
+print(f"The maximum of {a}, {b}, and {c} is: {maximum}")
+       </code></pre>
+               </div>
+
+               <!-- Example 5: Function to check if a year is a leap year -->
+               <h5>Example 5: Function to check if a year is a leap year</h5>
+               <p class="p">Create a module named <strong>leap_year_checker.py</strong> with a function that checks if a
+                  year is a leap year.</p>
+               <div class="chart" id="chart9">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# leap_year_checker.py
+
+def is_leap_year(year):
+   return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+       </code></pre>
+               </div>
+               <p class="p">Usage:</p>
+               <div class="chart" id="chart10">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+import leap_year_checker
+
+year = 2024
+if leap_year_checker.is_leap_year(year):
+   print(f"{year} is a leap year")
+else:
+   print(f"{year} is not a leap year")
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate how to create and use
+                  modules in Python with various functions and conditional statements. Each example illustrates a
+                  different scenario where modules can be useful for organizing and reusing code.</p>
+            </div>
+            <br>
+            <div class="container" id="oop">
+               <h4>
+                  Object-Oriented Programming
+               </h4>
+               <p>
+                  Object-oriented programming (OOP) is a programming paradigm that focuses on modeling software entities
+                  as objects that have attributes (data) and methods (functions). Python is an object-oriented
+                  programming language that supports the creation and use of classes and objects.
+               </p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Classes in Python**</p>
+               <p class="p">Classes in Python allow you to create objects that have their own attributes and methods.
+                  They provide a way to structure and organize code in a logical manner. Let's explore classes in more
+                  detail with multiple examples.</p>
+               <br>
+               <!-- Example 1: Creating a simple class -->
+               <h5>Example 1: Creating a simple class</h5>
+               <p class="p">Define a class named <strong>Person</strong> with a constructor that initializes the
+                  <code>name</code> attribute.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Person:
+   def __init__(self, name):
+       self.name = name
+
+# Create an instance of the Person class
+person1 = Person("Alice")
+print(person1.name)  # Output: Alice
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 2: Adding methods to a class -->
+               <h5>Example 2: Adding methods to a class</h5>
+               <p class="p">Add a method named <code>say_hello</code> to the <strong>Person</strong> class.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Person:
+   def __init__(self, name):
+       self.name = name
+   
+   def say_hello(self):
+       return f"Hello, my name is {self.name}!"
+
+# Create an instance of the Person class
+person2 = Person("Bob")
+print(person2.say_hello())  # Output: Hello, my name is Bob!
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 3: Class inheritance -->
+               <h5>Example 3: Class inheritance</h5>
+               <p class="p">Create a subclass named <strong>Student</strong> that inherits from the
+                  <strong>Person</strong> class.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Student(Person):
+   def __init__(self, name, student_id):
+       super().__init__(name)
+       self.student_id = student_id
+
+# Create an instance of the Student class
+student1 = Student("Charlie", "S001")
+print(student1.name)        # Output: Charlie
+print(student1.student_id)  # Output: S001
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 4: Class attributes -->
+               <h5>Example 4: Class attributes</h5>
+               <p class="p">Define a class attribute named <code>count</code> to keep track of the number of instances
+                  created.</p>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Dog:
+   count = 0  # Class attribute
+   
+   def __init__(self, name):
+       self.name = name
+       Dog.count += 1  # Increment count when a new instance is created
+
+# Create instances of the Dog class
+dog1 = Dog("Buddy")
+dog2 = Dog("Max")
+print(Dog.count)  # Output: 2
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 5: Class methods -->
+               <h5>Example 5: Class methods</h5>
+               <p class="p">Define a class method named <code>get_count</code> to retrieve the count of instances
+                  created.</p>
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Dog:
+   count = 0  # Class attribute
+   
+   def __init__(self, name):
+       self.name = name
+       Dog.count += 1  # Increment count when a new instance is created
+   
+   @classmethod
+   def get_count(cls):
+       return cls.count
+
+# Create instances of the Dog class
+dog3 = Dog("Rocky")
+dog4 = Dog("Luna")
+print(Dog.get_count())  # Output: 2
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In the above examples, we demonstrate various aspects of classes
+                  in Python. We create classes with constructors, methods, and attributes. We also explore class
+                  inheritance, class attributes, and class methods. Classes provide a powerful way to model real-world
+                  entities and organize code effectively.</p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Objects (Instances) in Python**</p>
+               <p class="p">In Python, objects are instances of classes. They encapsulate data (attributes) and behavior
+                  (methods). Let's explore objects in more detail with examples.</p>
+               <br>
+               <!-- Example 1: Creating objects -->
+               <h5>Example 1: Creating objects</h5>
+               <p class="p">Instantiate objects from the <strong>Person</strong> class defined in the previous example.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Person:
+   def __init__(self, name):
+       self.name = name
+
+# Create objects (instances) of the Person class
+person1 = Person("Alice")
+person2 = Person("Bob")
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 2: Accessing object attributes -->
+               <h5>Example 2: Accessing object attributes</h5>
+               <p class="p">Access and modify object attributes.</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Access object attributes
+print(person1.name)  # Output: Alice
+
+# Modify object attributes
+person2.name = "Charlie"
+print(person2.name)  # Output: Charlie
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 3: Calling object methods -->
+               <h5>Example 3: Calling object methods</h5>
+               <p class="p">Call methods defined in the class using objects.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Person:
+   def __init__(self, name):
+       self.name = name
+   
+   def say_hello(self):
+       return f"Hello, my name is {self.name}!"
+
+# Create an object of the Person class
+person3 = Person("David")
+
+# Call the say_hello method using the object
+print(person3.say_hello())  # Output: Hello, my name is David!
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 4: Multiple objects -->
+               <h5>Example 4: Multiple objects</h5>
+               <p class="p">Instantiate multiple objects of the same class.</p>
+               <div class="chart" id="chart4">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Create multiple objects of the Person class
+person4 = Person("Eve")
+person5 = Person("Frank")
+
+# Access and modify object attributes
+print(person4.name)  # Output: Eve
+print(person5.name)  # Output: Frank
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 5: Objects as parameters -->
+               <h5>Example 5: Objects as parameters</h5>
+               <p class="p">Pass objects as parameters to functions.</p>
+               <div class="chart" id="chart5">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+def greet_person(person):
+   return f"Hello, {person.name}!"
+
+# Call the greet_person function with an object as parameter
+print(greet_person(person1))  # Output: Hello, Alice!
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: Objects (instances) are created from classes in Python. They
+                  encapsulate data (attributes) and behavior (methods). In the examples above, we create objects, access
+                  their attributes, call their methods, create multiple instances, and pass objects as parameters to
+                  functions. Understanding objects is fundamental to object-oriented programming in Python.</p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Encapsulation, Inheritance, and Polymorphism in Python**</p>
+               <p class="p">Encapsulation, inheritance, and polymorphism are fundamental concepts in object-oriented
+                  programming (OOP). Let's explore these concepts in Python with examples.</p>
+               <br>
+               <!-- Example 1: Encapsulation -->
+               <h5>Example 1: Encapsulation</h5>
+               <p class="p">Encapsulation refers to the bundling of data (attributes) and methods that operate on the
+                  data within a single unit or class.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Car:
+   def __init__(self, brand, model):
+       self.brand = brand
+       self.model = model
+   
+   def drive(self):
+       return f"Driving {self.brand} {self.model}"
+
+# Create an object of the Car class
+car1 = Car("Toyota", "Corolla")
+
+# Access attributes and call methods
+print(car1.brand)        # Output: Toyota
+print(car1.model)        # Output: Corolla
+print(car1.drive())      # Output: Driving Toyota Corolla
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 2: Inheritance -->
+               <h5>Example 2: Inheritance</h5>
+               <p class="p">Inheritance allows a class (subclass) to inherit attributes and methods from another class
+                  (superclass).</p>
+               <div class="chart" id="chart2">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Vehicle:
+   def __init__(self, brand):
+       self.brand = brand
+   
+   def start(self):
+       return f"Starting {self.brand}"
+
+# Car class inherits from Vehicle
+class Car(Vehicle):
+   def __init__(self, brand, model):
+       super().__init__(brand)
+       self.model = model
+   
+   def drive(self):
+       return f"Driving {self.brand} {self.model}"
+
+# Create an object of the Car class
+car2 = Car("Ford", "Mustang")
+
+# Access attributes and call methods
+print(car2.brand)        # Output: Ford
+print(car2.model)        # Output: Mustang
+print(car2.start())      # Output: Starting Ford
+print(car2.drive())      # Output: Driving Ford Mustang
+       </code></pre>
+               </div>
+               <br>
+               <!-- Example 3: Polymorphism -->
+               <h5>Example 3: Polymorphism</h5>
+               <p class="p">Polymorphism allows objects of different classes to be treated as objects of a common
+                  superclass.</p>
+               <div class="chart" id="chart3">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+class Animal:
+   def make_sound(self):
+       pass
+
+class Dog(Animal):
+   def make_sound(self):
+       return "Woof!"
+
+class Cat(Animal):
+   def make_sound(self):
+       return "Meow!"
+
+# Create objects of different classes
+animal1 = Dog()
+animal2 = Cat()
+
+# Call the make_sound method
+print(animal1.make_sound())  # Output: Woof!
+print(animal2.make_sound())  # Output: Meow!
+       </code></pre>
+               </div>
+
+               <p class="p"><span>Explanation</span>: In this section, we explore encapsulation, inheritance, and
+                  polymorphism in Python. Encapsulation allows data and methods to be bundled within a class.
+                  Inheritance enables classes to inherit attributes and methods from other classes. Polymorphism allows
+                  objects of different classes to be treated as objects of a common superclass, facilitating code reuse
+                  and flexibility in programming.</p>
+            </div>
+            <div class="container" id="regex">
+               <h4>
+
+                  Regular Expressions
+               </h4>
+               <p>Regular expressions, often abbreviated as regex or regexp, are powerful tools for pattern matching and
+                  text manipulation. They provide a concise and flexible way to search, extract, and manipulate text
+                  data based on specific patterns. Python's re module provides support for working with regular
+                  expressions. Let's explore regular expressions in detail:
+               </p>
+            </div>
+<br>
+<div class="container">
+   <p>**Pattern Matching**</p>
+   <p class="p">Regular expressions (regex) are powerful tools for pattern matching and text manipulation. Python provides the <code>re</code> module for working with regular expressions. Let's explore how to use regular expressions in Python.</p>
+   <br>
+   <!-- Example 1: Matching a simple pattern -->
+   <h5>Example 1: Matching a simple pattern</h5>
+   <p class="p">Check if a string contains a specific pattern using the <code>re.search()</code> function.</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+import re
+
+# Define the pattern
+pattern = r'apple'
+
+# Search for the pattern in a string
+text = 'I have an apple'
+match = re.search(pattern, text)
+
+# Check if the pattern is found
+if match:
+   print('Pattern found!')
+else:
+   print('Pattern not found.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 2: Extracting matched groups -->
+   <h5>Example 2: Extracting matched groups</h5>
+   <p class="p">Extract specific parts of a string that match a pattern using groups.</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define a pattern with groups
+pattern = r'(\d{3})-(\d{3})-(\d{4})'
+
+# Search for the pattern in a string
+text = 'My phone number is 123-456-7890'
+match = re.search(pattern, text)
+
+# Extract matched groups
+if match:
+   area_code = match.group(1)
+   print('Area code:', area_code)
+   print('Full number:', match.group())
+else:
+   print('Pattern not found.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 3: Substituting matched patterns -->
+   <h5>Example 3: Substituting matched patterns</h5>
+   <p class="p">Replace matched patterns in a string with a specified value using the <code>re.sub()</code> function.</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define a pattern to match
+pattern = r'\bcat\b'
+
+# Replace matched patterns in a string
+text = 'I have a cat and a dog. My cat is black.'
+new_text = re.sub(pattern, 'dog', text)
+
+print(new_text)  # Output: I have a dog and a dog. My dog is black.
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 4: Splitting a string using a pattern -->
+   <h5>Example 4: Splitting a string using a pattern</h5>
+   <p class="p">Split a string into substrings using a specified pattern with the <code>re.split()</code> function.</p>
+   <div class="chart" id="chart4">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define a pattern to split by
+pattern = r'\s+'
+
+# Split a string using the pattern
+text = 'apple orange   banana'
+tokens = re.split(pattern, text)
+
+print(tokens)  # Output: ['apple', 'orange', 'banana']
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 5: Flags in regular expressions -->
+   <h5>Example 5: Flags in regular expressions</h5>
+   <p class="p">Use flags to modify the behavior of regular expression functions.</p>
+   <div class="chart" id="chart5">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define a pattern with case-insensitive flag
+pattern = r'apple'
+text = 'I have an Apple'
+match = re.search(pattern, text, re.IGNORECASE)
+
+if match:
+   print('Pattern found!')
+else:
+   print('Pattern not found.')
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Regular expressions provide a powerful way to search, extract, replace, and split strings based on patterns. In Python, the <code>re</code> module offers functions like <code>search()</code>, <code>sub()</code>, <code>split()</code>, etc., to work with regular expressions. Understanding regular expressions is essential for text processing and data manipulation tasks.</p>
+</div>
+<br>
+<div class="container">
+   <p>**Creating Regular Expressions in Python**</p>
+   <p class="p">Regular expressions (regex) are patterns used to match character combinations in strings. In Python, regular expressions are created using special syntax. Let's explore how to create regular expressions in Python.</p>
+   <br>
+   <!-- Example 1: Matching a single character -->
+   <h5>Example 1: Matching a single character</h5>
+   <p class="p">Match a single character using ordinary characters or metacharacters like <code>.</code>, <code>\d</code>, <code>\w</code>, etc.</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+import re
+
+# Match a single digit
+pattern1 = r'\d'
+
+# Match any single character except newline
+pattern2 = r'.'
+
+# Match a word character
+pattern3 = r'\w'
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 2: Matching specific characters -->
+   <h5>Example 2: Matching specific characters</h5>
+   <p class="p">Match specific characters or character ranges using square brackets <code>[]</code>.</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Match either 'a' or 'b'
+pattern1 = r'[ab]'
+
+# Match any lowercase letter
+pattern2 = r'[a-z]'
+
+# Match any digit or whitespace character
+pattern3 = r'[\d\s]'
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 3: Anchors -->
+   <h5>Example 3: Anchors</h5>
+   <p class="p">Use anchors to match positions in a string: <code>^</code> for the start of the string and <code>$</code> for the end of the string.</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Match a string that starts with 'hello'
+pattern1 = r'^hello'
+
+# Match a string that ends with 'world'
+pattern2 = r'world$'
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 4: Quantifiers -->
+   <h5>Example 4: Quantifiers</h5>
+   <p class="p">Use quantifiers to specify the number of occurrences of a character or group.</p>
+   <div class="chart" id="chart4">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Match zero or more occurrences of 'a'
+pattern1 = r'a*'
+
+# Match one or more occurrences of 'b'
+pattern2 = r'b+'
+
+# Match exactly three occurrences of 'c'
+pattern3 = r'c{3}'
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 5: Groups -->
+   <h5>Example 5: Groups</h5>
+   <p class="p">Use parentheses to create groups and capture parts of a matched pattern.</p>
+   <div class="chart" id="chart5">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Match 'hello' followed by one or more digits
+pattern1 = r'(hello)\d+'
+
+# Capture the area code and local number from a phone number
+pattern2 = r'(\d{3})-(\d{4})'
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Regular expressions are created using special syntax to define patterns for matching character combinations in strings. In Python, regex patterns are constructed using metacharacters, character classes, anchors, quantifiers, and groups. Understanding how to create regular expressions is essential for effective pattern matching and text processing tasks.</p>
+</div>
+<br>
+<div class="container">
+   <p>**Matching Strings**</p>
+   <p class="p">Matching strings using regular expressions involves searching for patterns within text data. In Python, the <code>re</code> module provides functions to perform string matching operations. Let's explore how to match strings using regular expressions in Python.</p>
+   <br>
+   <!-- Example 1: Using re.search() -->
+   <h5>Example 1: Using <code>re.search()</code></h5>
+   <p class="p">Search for a pattern within a string using the <code>re.search()</code> function.</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+import re
+
+# Define the pattern to search for
+pattern = r'apple'
+
+# Define the text to search within
+text = 'I have an apple and a banana.'
+
+# Search for the pattern in the text
+match = re.search(pattern, text)
+
+# Check if the pattern is found
+if match:
+   print('Pattern found at index', match.start())
+else:
+   print('Pattern not found.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 2: Using re.match() -->
+   <h5>Example 2: Using <code>re.match()</code></h5>
+   <p class="p">Match a pattern at the beginning of a string using the <code>re.match()</code> function.</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match at the beginning of the string
+pattern = r'apple'
+
+# Define the text to match against
+text = 'apple pie is delicious.'
+
+# Match the pattern at the beginning of the text
+match = re.match(pattern, text)
+
+# Check if the pattern is found
+if match:
+   print('Pattern matched at the beginning of the text.')
+else:
+   print('Pattern not found.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 3: Using re.findall() -->
+   <h5>Example 3: Using <code>re.findall()</code></h5>
+   <p class="p">Find all occurrences of a pattern within a string using the <code>re.findall()</code> function.</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to find
+pattern = r'apple'
+
+# Define the text to search within
+text = 'I have an apple and a banana, but I prefer applesauce.'
+
+# Find all occurrences of the pattern in the text
+matches = re.findall(pattern, text)
+
+# Print all matches
+print(matches)
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 4: Using re.finditer() -->
+   <h5>Example 4: Using <code>re.finditer()</code></h5>
+   <p class="p">Find all occurrences of a pattern and their positions within a string using the <code>re.finditer()</code> function.</p>
+   <div class="chart" id="chart4">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to find
+pattern = r'apple'
+
+# Define the text to search within
+text = 'I have an apple and a banana, but I prefer applesauce.'
+
+# Find all occurrences of the pattern and their positions
+matches = [(match.start(), match.end()) for match in re.finditer(pattern, text)]
+
+# Print matches and their positions
+for start, end in matches:
+   print(f"Match found at positions {start}-{end-1}")
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 5: Using re.fullmatch() -->
+   <h5>Example 5: Using <code>re.fullmatch()</code></h5>
+   <p class="p">Match the entire string against a pattern using the <code>re.fullmatch()</code> function.</p>
+   <div class="chart" id="chart5">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match the entire string
+pattern = r'apple'
+
+# Define the text to match against
+text = 'apple'
+
+# Check if the entire text matches the pattern
+match = re.fullmatch(pattern, text)
+
+if match:
+   print('Text fully matches the pattern.')
+else:
+   print('Text does not fully match the pattern.')
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Matching strings with regular expressions involves searching for specific patterns within text data. Python's <code>re</code> module provides functions like <code>search()</code>, <code>match()</code>, <code>findall()</code>, <code>finditer()</code>, and <code>fullmatch()</code> to perform string matching operations. These functions allow you to find patterns, extract matched substrings, and obtain information about matched positions within strings.</p>
+</div>
+<br>
+<div class="container">
+   <p>**Character Classes**</p>
+   <p class="p">Character classes in regular expressions allow you to match specific sets of characters. They provide a shorthand for specifying common character types or custom character ranges. Let's explore how to use character classes in regular expressions.</p>
+   <br>
+   <!-- Example 1: Matching digits -->
+   <h5>Example 1: Matching digits</h5>
+   <p class="p">Use <code>\d</code> to match any digit (0-9).</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+import re
+
+# Define the pattern to match digits
+pattern = r'\d'
+
+# Define the text to search within
+text = 'I have 3 apples and 5 bananas.'
+
+# Find all digits in the text
+matches = re.findall(pattern, text)
+
+# Print all matches
+print(matches)
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 2: Matching word characters -->
+   <h5>Example 2: Matching word characters</h5>
+   <p class="p">Use <code>\w</code> to match any alphanumeric character (a-z, A-Z, 0-9, and underscore).</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match word characters
+pattern = r'\w'
+
+# Define the text to search within
+text = 'Hello World!'
+
+# Find all word characters in the text
+matches = re.findall(pattern, text)
+
+# Print all matches
+print(matches)
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 3: Matching whitespace characters -->
+   <h5>Example 3: Matching whitespace characters</h5>
+   <p class="p">Use <code>\s</code> to match any whitespace character (space, tab, newline).</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match whitespace characters
+pattern = r'\s'
+
+# Define the text to search within
+text = 'Hello\tWorld\n'
+
+# Find all whitespace characters in the text
+matches = re.findall(pattern, text)
+
+# Print all matches
+print(matches)
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 4: Negating character classes -->
+   <h5>Example 4: Negating character classes</h5>
+   <p class="p">Use <code>\D</code>, <code>\W</code>, and <code>\S</code> to match any character except digits, word characters, and whitespace characters, respectively.</p>
+   <div class="chart" id="chart4">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match non-digits
+pattern1 = r'\D'
+
+# Define the pattern to match non-word characters
+pattern2 = r'\W'
+
+# Define the pattern to match non-whitespace characters
+pattern3 = r'\S'
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 5: Custom character classes -->
+   <h5>Example 5: Custom character classes</h5>
+   <p class="p">Define custom character classes using square brackets <code>[]</code> to match specific sets of characters.</p>
+   <div class="chart" id="chart5">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match vowels
+pattern1 = r'[aeiou]'
+
+# Define the pattern to match lowercase letters except 'a'
+pattern2 = r'[b-z]'
+
+# Define the pattern to match digits and special characters
+pattern3 = r'[0-9@#$]'
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Character classes in regular expressions provide a concise way to match specific sets of characters. Python's <code>re</code> module allows you to use shorthand notations like <code>\d</code>, <code>\w</code>, <code>\s</code> to match digits, word characters, and whitespace characters, respectively. Additionally, you can define custom character classes using square brackets to match specific character sets or ranges.</p>
+</div>
+<br>
+<div class="container">
+   <p>**Anchors and Quantifiers in Regular Expressions**</p>
+   <p class="p">Anchors and quantifiers are essential components of regular expressions used to specify positions and repetition in patterns. Anchors define where a pattern should occur within a string, while quantifiers specify how many times a character or group should repeat. Let's explore how to use anchors and quantifiers in regular expressions.</p>
+   <br>
+   <!-- Example 1: Start of string anchor (^) -->
+   <h5>Example 1: Start of string anchor (^)</h5>
+   <p class="p">Use <code>^</code> to match the start of a string.</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+import re
+
+# Define the pattern to match
+pattern = r'^Hello'
+
+# Define the text to search within
+text = 'Hello World!'
+
+# Check if the pattern matches the start of the text
+if re.search(pattern, text):
+   print('Pattern found at the start of the text.')
+else:
+   print('Pattern not found at the start of the text.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 2: End of string anchor ($) -->
+   <h5>Example 2: End of string anchor ($)</h5>
+   <p class="p">Use <code>$</code> to match the end of a string.</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match
+pattern = r'World$'
+
+# Define the text to search within
+text = 'Hello World!'
+
+# Check if the pattern matches the end of the text
+if re.search(pattern, text):
+   print('Pattern found at the end of the text.')
+else:
+   print('Pattern not found at the end of the text.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 3: Zero or one quantifier (?) -->
+   <h5>Example 3: Zero or one quantifier (?)</h5>
+   <p class="p">Use <code>?</code> to match zero or one occurrence of a character or group.</p>
+   <div class="chart" id="chart3">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match
+pattern = r'colou?r'
+
+# Define the text to search within
+text1 = 'color'
+text2 = 'colour'
+
+# Check if the pattern matches the text
+if re.search(pattern, text1):
+   print('Pattern found in text1.')
+if re.search(pattern, text2):
+   print('Pattern found in text2.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 4: Zero or more quantifier (*) -->
+   <h5>Example 4: Zero or more quantifier (*)</h5>
+   <p class="p">Use <code>*</code> to match zero or more occurrences of a character or group.</p>
+   <div class="chart" id="chart4">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match
+pattern = r'go*d'
+
+# Define the text to search within
+text1 = 'god'
+text2 = 'good'
+text3 = 'gooooood'
+
+# Check if the pattern matches the text
+if re.search(pattern, text1):
+   print('Pattern found in text1.')
+if re.search(pattern, text2):
+   print('Pattern found in text2.')
+if re.search(pattern, text3):
+   print('Pattern found in text3.')
+       </code></pre>
+   </div>
+   <br>
+   <!-- Example 5: One or more quantifier (+) -->
+   <h5>Example 5: One or more quantifier (+)</h5>
+   <p class="p">Use <code>+</code> to match one or more occurrences of a character or group.</p>
+   <div class="chart" id="chart5">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+# Define the pattern to match
+pattern = r'go+d'
+
+# Define the text to search within
+text1 = 'god'
+text2 = 'good'
+text3 = 'gooooood'
+
+# Check if the pattern matches the text
+if re.search(pattern, text1):
+   print('Pattern found in text1.')
+if re.search(pattern, text2):
+   print('Pattern found in text2.')
+if re.search(pattern, text3):
+   print('Pattern found in text3.')
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: Anchors (<code>^</code> and <code>$</code>) specify positions within a string where patterns should occur. Quantifiers (<code>?</code>, <code>*</code>, and <code>+</code>) define the number of occurrences of characters or groups. Using anchors and quantifiers in regular expressions allows for precise pattern matching and text processing tasks.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+   <!--
+   <div class="container" id="BasicFlaskCode">
+               <h4>
+                   
+               </h4>
+               <p>
+                  
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p><span>Explanation</span> :
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-size:25px; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

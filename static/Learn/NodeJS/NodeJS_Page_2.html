@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NodeJS Basics</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+   </style>
+   <style>
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+
+      /* Modify the styling for the boldtag element */
+      boldtag {
+         font-weight: 100;
+         font-size: small;
+         font-family: "Krona One", sans-serif;
+         font-size: inherit;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      
+      <div class="info">
+         <h3><a href="NodeJS_Page_1.html">NodeJS</a></h3>
+         <p><a href="#">Why use NodeJS</a></p>
+         <p><a href="#">Features of NodeJS</a></p>
+         <p><a href="#">Event-driven architecture</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Installation</a></h3>
+         <p><a href="#">Install NodeJS</a></p>
+         <p><a href="#">Environment setup</a></p>
+         <p><a href="#">Version management with NVM</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_2.html">Basics</a></h3>
+         <p><a href="#">Introduction to Programming</a></p>
+         <p><a href="#">npm Basics</a></p>
+         <p><a href="#">Variables and Data Types</a></p>
+         <p><a href="#">If...Else</a></p>
+         <p><a href="#">While Loop</a></p>
+         <p><a href="#">For Loop</a></p>
+         <p><a href="#">Functions and Scope</a></p>
+         <p><a href="#">Arrays and Lists</a></p>
+         <p><a href="#">Strings and String Manipulation</a></p>
+         <p><a href="#">Boolean Logic</a></p>
+         <p><a href="#">Type Casting and Coercion</a></p>
+         <p><a href="#">Math Operations</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_3.html">Modules</a></h3>
+         <p><a href="#">What are Modules</a></p>
+         <p><a href="#">Using Modules</a></p>
+         <p><a href="#">Express Js</a></p>
+         <p><a href="#">Multer</a></p>
+         <p><a href="#">Connection to HTML</a></p>
+         <p><a href="#">Custom Modules</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_4.html">Data Parsing</a></h3>
+         <p><a href="#">Hello World Application</a></p>
+         <p><a href="#">Data Parsing to HTML</a></p>
+         <p><a href="#">Form Handling</a></p>
+         <p><a href="#">Image Handling</a></p>
+         <p><a href="#">Video Handling</a></p>
+         <p><a href="#">JSON Handling</a></p>
+         <p><a href="#">Asynchronous programming</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_5html">File Handling</a></h3>
+         <p><a href="#">Accessing Files</a></p>
+         <p><a href="#">Reading Files</a></p>
+         <p><a href="#">Writing Files</a></p>
+         <p><a href="#">Create Files</a></p>
+         <p><a href="#">Deleting Files</a></p>
+         <p><a href="#">Creating Folders</a></p>
+         <p><a href="#">Saving Videos/Audios</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_6.html">Firebase</a></h3>
+         <p><a href="#">How to Connect</a></p>
+         <p><a href="#">Real-time Database</a></p>
+         <p><a href="#">Authentication</a></p>
+         <p><a href="#">Cloud Functions</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_7.html">Testing and Debugging</a></h3>
+         <p><a href="#">Unit Testing with Jest</a></p>
+         <p><a href="#">Debugging Techniques</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_8.html">Security</a></h3>
+         <p><a href="#">Input Validation</a></p>
+         <p><a href="#">Authentication Strategies</a></p>
+         <p><a href="#">Authorization Middleware</a></p>
+      </div>
+      <div class="info">
+         <h3><a href="NodeJS_Page_9.html">Deployment and Scaling</a></h3>
+         <p><a href="#">Containerization with Docker</a></p>
+         <p><a href="#">Deploying to Heroku</a></p>
+         <p><a href="#">Load Balancing</a></p>
+         <p><a href="#">Monitoring and Scaling</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+           <div class="container">
+    <h4>Introduction to Programming</h4>
+    <p class="p">Node.js is a powerful runtime environment for executing JavaScript code on the server-side. It is built on the V8 JavaScript engine, which powers Google Chrome, and provides a rich set of features for building scalable and high-performance web applications.</p>
+    
+    <ul class="p">
+        <li>JavaScript Runtime: Node.js allows developers to run JavaScript code outside of a web browser, making it possible to build server-side applications using JavaScript.</li>
+        <li>Event-Driven Architecture: Node.js uses an event-driven, non-blocking I/O model, allowing applications to handle multiple concurrent operations efficiently.</li>
+        <li>npm (Node Package Manager): npm is the default package manager for Node.js, providing access to a vast ecosystem of open-source libraries and modules.</li>
+        <li>Common Use Cases: Node.js is commonly used for building web servers, RESTful APIs, real-time applications, and command-line tools.</li>
+        <li>Scalability: Node.js applications can be easily scaled horizontally by adding more instances to handle increased load, making it suitable for handling large volumes of traffic.</li>
+        <li>Community and Support: Node.js has a large and active community of developers who contribute to its development, provide support, and create useful resources such as libraries, frameworks, and tutorials.</li>
+    </ul>
+</div>
+
+<div class="container">
+   <h4>NPM Node.js</h4>
+   <p class="p">NPM (Node Package Manager) is the default package manager for Node.js, used for installing, managing, and sharing packages of JavaScript code. NPM provides access to thousands of reusable packages, making it easy to extend the functionality of your Node.js applications. Let's explore some NPM basics in Node.js.</p>
+   <br>
+   <!-- Installation -->
+   <h5>Installation</h5>
+   <p class="p">NPM is included with Node.js, so you don't need to install it separately. To check if NPM is installed, you can run:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">npm --version</code></pre>
+   </div>
+   <br>
+   <!-- Usage -->
+   <h5>Usage</h5>
+   <p class="p">You can use NPM to install packages, manage dependencies, and run scripts:</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">// Install a package locally
+npm install express
+
+// Install a package globally
+npm install -g nodemon
+
+// Install packages listed in package.json
+npm install
+
+// Run scripts defined in package.json
+npm run start</code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: NPM simplifies the process of managing dependencies and running scripts in Node.js projects. By leveraging the vast ecosystem of NPM packages, you can easily enhance the functionality of your applications and streamline development workflows.</p>
+</div>
+
+
+
+
+
+
+
+<div class="container">
+   <h4>Connecting Node.js with HTML</h4>
+   <p class="p">You can connect Node.js with HTML to serve dynamic web pages or build web applications. Follow the steps below to create a basic setup.</p>
+   <br>
+   <!-- File Paths -->
+   <h5>File Paths</h5>
+   <ul class="p">
+       <li><strong>Node.js File:</strong> The Node.js file where you define your server logic, e.g., <code>server.js</code>.</li>
+       <li><strong>HTML File:</strong> The HTML file you want to serve, e.g., <code>index.html</code>.</li>
+   </ul>
+   <br>
+   <!-- Code Examples -->
+   <h5>Code Examples</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Route to serve HTML file
+app.get('/', (req, res) => {
+   res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js with HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Hello from Node.js!&lt;/h1&gt;
+   &lt;p&gt;This is a dynamic web page served by Node.js.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the Node.js file (<code>server.js</code>), we use Express.js to create a server. We define a route to handle the root endpoint (<code>'/'</code>) and serve the HTML file (<code>index.html</code>). In the HTML file, we create a basic HTML structure with a title, heading, and paragraph to demonstrate dynamic content served by Node.js.</p>
+</div>
+
+<div class="container">
+   <h4>Variables and Data Types in Node.js</h4>
+   <p class="p">In Node.js, variables are used to store data values, and data types define the type of data that can be stored in a variable. Let's explore variables and data types in Node.js and how they relate to passing data between the server and HTML.</p>
+   <br>
+   <!-- Variables and Data Types -->
+   <h5>Variables and Data Types</h5>
+   <ul class="p">
+       <li><strong>Variables:</strong> Variables are containers for storing data values. In JavaScript, variables can be declared using the <code>var</code>, <code>let</code>, or <code>const</code> keywords.</li>
+       <li><strong>Data Types:</strong> Data types define the type of data that can be stored in a variable. Common data types in Node.js include strings, numbers, booleans, objects, arrays, and functions.</li>
+   </ul>
+   <br>
+   <!-- Passing Variables and Data Types -->
+   <h5>Passing Variables and Data Types</h5>
+   <p class="p">In a Node.js server, variables and data types can be passed to HTML files to dynamically generate content. This can be achieved by embedding variables or data values in HTML templates using templating engines such as EJS (Embedded JavaScript).</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Data to pass to HTML
+   const name = 'John';
+   const age = 30;
+
+   // Render HTML with data
+   res.render('index', { name, age });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js with HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Hello, &lt;%= name %&gt;!&lt;/h1&gt;
+   &lt;p&gt;You are &lt;%= age %&gt; years old.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we define variables <code>name</code> and <code>age</code> in the Node.js server. We then pass these variables to the HTML file (<code>index.html</code>) using a templating engine. In the HTML file, we can access these variables and dynamically generate content based on their values.</p>
+</div>
+<div class="container">
+   <h4>Control Structures: If...Else in Node.js</h4>
+   <p class="p">In Node.js, you can use control structures like <code>if...else</code> to execute different code blocks based on specified conditions. Let's see an example of how to check conditions using <code>if...else</code> in Node.js and display the result in HTML.</p>
+   <br>
+   <!-- Example: Checking Marks -->
+   <h5>Example: Checking Marks</h5>
+   <p class="p">Suppose we have a Node.js server that checks the marks of a student and displays a message based on the marks obtained.</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Sample marks
+   const marks = 75;
+
+   // Check marks and determine message
+   let message;
+   if (marks >= 80) {
+       message = 'Excellent!';
+   } else if (marks >= 60) {
+       message = 'Good job!';
+   } else {
+       message = 'You can do better!';
+   }
+
+   // Render HTML with message
+   res.render('index', { message });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js If...Else Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Marks Checking Result&lt;/h1&gt;
+   &lt;p&gt;&lt;%= message %&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we check the marks obtained by a student using <code>if...else</code> statements in the Node.js server. Based on the marks, a corresponding message is determined and passed to the HTML file (<code>index.html</code>) using a templating engine. The HTML file then displays the message to the user.</p>
+</div>
+<div class="container">
+   <h4>While Loop in Node.js</h4>
+   <p class="p">In Node.js, you can use a <code>while</code> loop to execute a block of code repeatedly as long as a specified condition is true. Let's see an example of how to use a <code>while</code> loop in Node.js and display the result in HTML.</p>
+   <br>
+   <!-- Example: Counting Down -->
+   <h5>Example: Counting Down</h5>
+   <p class="p">Suppose we have a Node.js server that counts down from a specified number and displays each count in HTML.</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Initialize countdown
+   let count = 5;
+
+   // Countdown loop
+   let countdown = '';
+   while (count > 0) {
+       countdown += count + '... ';
+       count--;
+   }
+
+   // Render HTML with countdown
+   res.render('index', { countdown });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js While Loop Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Countdown&lt;/h1&gt;
+   &lt;p&gt;&lt;%= countdown %&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we use a <code>while</code> loop in the Node.js server to count down from 5 to 1. Each count is concatenated to a string, which is then passed to the HTML file (<code>index.html</code>) using a templating engine. The HTML file displays the countdown to the user.</p>
+</div>
+<div class="container">
+   <h4>For Loop in Node.js</h4>
+   <p class="p">In Node.js, you can use a <code>for</code> loop to execute a block of code repeatedly for a specified number of times. Let's see an example of how to use a <code>for</code> loop in Node.js and display the result in HTML.</p>
+   <br>
+   <!-- Example: Generating a Series -->
+   <h5>Example: Generating a Series</h5>
+   <p class="p">Suppose we have a Node.js server that generates a series of numbers and displays each number in HTML.</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Generate series
+   let series = '';
+   for (let i = 1; i <= 5; i++) {
+       series += i + ' ';
+   }
+
+   // Render HTML with series
+   res.render('index', { series });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js For Loop Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Series&lt;/h1&gt;
+   &lt;p&gt;&lt;%= series %&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we use a <code>for</code> loop in the Node.js server to generate a series of numbers from 1 to 5. Each number is concatenated to a string, which is then passed to the HTML file (<code>index.html</code>) using a templating engine. The HTML file displays the series to the user.</p>
+</div>
+<div class="container">
+   <h4>Functions and Scope in Node.js</h4>
+   <p class="p">Functions in Node.js allow you to encapsulate reusable blocks of code. Additionally, Node.js follows JavaScript's scoping rules, which determine the accessibility of variables within different parts of your code. Let's explore functions and scope in Node.js and demonstrate their usage.</p>
+   <br>
+   <!-- Functions -->
+   <h5>Functions</h5>
+   <p class="p">Functions in Node.js can be defined using the <code>function</code> keyword or arrow functions <code>() =&gt; {}</code>. They can accept parameters and return values as needed.</p>
+   <br>
+   <!-- Scope -->
+   <h5>Scope</h5>
+   <p class="p">Scope in Node.js refers to the accessibility of variables within different parts of your code. Variables declared inside a function have local scope, meaning they can only be accessed within that function. Variables declared outside of any function have global scope, meaning they can be accessed from anywhere in your code.</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Function to calculate area of a circle
+function calculateArea(radius) {
+   return Math.PI * radius ** 2;
+}
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Call function and pass data to HTML
+   const radius = 5;
+   const area = calculateArea(radius);
+
+   // Render HTML with area
+   res.render('index', { area });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js Functions and Scope&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Area of Circle&lt;/h1&gt;
+   &lt;p&gt;Area: &lt;%= area.toFixed(2) %&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we define a function <code>calculateArea</code> in the Node.js server to calculate the area of a circle. We then call this function and pass the radius value to it. The calculated area is then passed to the HTML file (<code>index.html</code>) using a templating engine and displayed to the user.</p>
+</div>
+<div class="container">
+   <h4>Arrays and Lists in Node.js</h4>
+   <p class="p">Arrays in Node.js are used to store multiple values in a single variable. They are a fundamental data structure and can hold elements of any data type, including numbers, strings, objects, and even other arrays. Let's explore arrays and lists in Node.js and demonstrate their usage.</p>
+   <br>
+   <!-- Arrays -->
+   <h5>Arrays</h5>
+   <p class="p">Arrays in Node.js can be declared and initialized using square brackets <code>[]</code>. Elements in an array are accessed using zero-based index notation.</p>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// server.js
+const express = require('express');
+const path = require('path');
+const app = express();
+
+// Set up view engine and views directory
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Sample array
+const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+
+// Route to serve HTML file with dynamic content
+app.get('/', (req, res) => {
+   // Pass array to HTML
+   res.render('index', { fruits });
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+   console.log('Server is running on port', PORT);
+});
+       </code></pre>
+   </div>
+   
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-html" id="code">
+<!-- index.html -->
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Node.js Arrays and Lists&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;h1&gt;Fruits List&lt;/h1&gt;
+   &lt;ul&gt;
+       &lt;% fruits.forEach(fruit => { %&gt;
+           &lt;li&gt;&lt;%= fruit %&gt;&lt;/li&gt;
+       &lt;% }); %&gt;
+   &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we declare an array <code>fruits</code> in the Node.js server to store the names of fruits. We then pass this array to the HTML file (<code>index.html</code>) using a templating engine. The HTML file loops through the array and displays each fruit name as a list item.</p>
+</div>
+<div class="container">
+   <h4>Strings and String Manipulation in Node.js</h4>
+   <p class="p">Strings in Node.js are sequences of characters enclosed within single or double quotes. String manipulation involves operations such as concatenation, splitting, slicing, and searching within strings. Let's explore strings and demonstrate string manipulation in Node.js.</p>
+   <br>
+   <!-- Strings -->
+   <h5>Strings</h5>
+   <p class="p">Strings in Node.js can be declared using single or double quotes:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const str1 = 'Hello, world!';
+const str2 = "Node.js is awesome!";
+       </code></pre>
+   </div>
+   <br>
+   <!-- String Manipulation -->
+   <h5>String Manipulation</h5>
+   <p class="p">String manipulation involves various operations:</p>
+   <ul class="p">
+       <li>Concatenation: Combining strings together.</li>
+       <li>Splitting: Breaking a string into an array of substrings.</li>
+       <li>Slicing: Extracting a portion of a string.</li>
+       <li>Searching: Finding substrings within a string.</li>
+   </ul>
+   
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// String Manipulation
+const str1 = 'Hello';
+const str2 = 'world';
+const greeting = str1 + ', ' + str2 + '!'; // Concatenation
+console.log(greeting); // Output: Hello, world!
+
+const sentence = 'Welcome to Node.js!';
+const words = sentence.split(' '); // Splitting
+console.log(words); // Output: ['Welcome', 'to', 'Node.js!']
+
+const subString = sentence.slice(8, 13); // Slicing
+console.log(subString); // Output: 'to No'
+
+const searchTerm = 'Node';
+const found = sentence.includes(searchTerm); // Searching
+console.log(found); // Output: true
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we demonstrate string manipulation operations such as concatenation, splitting, slicing, and searching in Node.js. These operations help manipulate strings and extract useful information from them.</p>
+</div>
+<div class="container">
+   <h4>Boolean Logic in Node.js</h4>
+   <p class="p">Boolean logic in Node.js involves working with boolean values, which can only be <code>true</code> or <code>false</code>. Boolean logic is commonly used in conditional statements, loops, and other control structures to make decisions based on conditions. Let's explore boolean logic and demonstrate its usage in Node.js.</p>
+   <br>
+   <!-- Examples -->
+   <h5>Examples</h5>
+   <p class="p">Boolean values can be assigned directly or result from comparison operations:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const isTrue = true;
+const isFalse = false;
+
+const num1 = 10;
+const num2 = 5;
+const isGreater = num1 > num2; // true
+const isEqual = num1 === num2; // false
+       </code></pre>
+   </div>
+   
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Boolean Logic
+const a = 10;
+const b = 5;
+
+const greaterThan = a > b;
+const lessThan = a < b;
+const equalTo = a === b;
+
+console.log(greaterThan); // Output: true
+console.log(lessThan);    // Output: false
+console.log(equalTo);     // Output: false
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above example, we demonstrate boolean logic in Node.js using comparison operators like <code>&gt;</code>, <code>&lt;</code>, and <code>===</code>. These operators return boolean values (<code>true</code> or <code>false</code>) based on the comparison result, which can be used to make decisions in your code.</p>
+</div>
+
+<div class="container">
+   <h4>Type Casting and Coercion in Node.js</h4>
+   <p class="p">Type casting and coercion in Node.js involve converting data from one type to another. Type casting refers to explicitly changing the data type, while coercion refers to implicit type conversion done by JavaScript. Let's explore type casting and coercion in Node.js with examples.</p>
+   <br>
+   <!-- Type Casting -->
+   <h5>Type Casting</h5>
+   <p class="p">Type casting involves explicitly converting data from one type to another:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const num1 = '10';
+const num2 = Number(num1); // Explicitly cast to number
+console.log(num2); // Output: 10
+
+const str1 = 5;
+const str2 = String(str1); // Explicitly cast to string
+console.log(str2); // Output: '5'
+       </code></pre>
+   </div>
+   
+   <!-- Coercion -->
+   <h5>Coercion</h5>
+   <p class="p">Coercion involves implicit type conversion done by JavaScript:</p>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const num1 = '10';
+const num2 = num1 * 1; // Implicit coercion to number
+console.log(num2); // Output: 10
+
+const str1 = 5;
+const str2 = str1 + ''; // Implicit coercion to string
+console.log(str2); // Output: '5'
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above examples, we demonstrate type casting and coercion in Node.js. Type casting involves explicitly converting data using functions like <code>Number()</code> and <code>String()</code>, while coercion involves implicit conversion done by JavaScript during operations like multiplication and concatenation.</p>
+</div>
+
+<div class="container">
+   <h4>Math Operations in Node.js</h4>
+   <p class="p">Math operations in Node.js involve performing arithmetic calculations on numeric data. Node.js provides built-in methods and properties in the <code>Math</code> object for common mathematical operations. Let's explore math operations in Node.js with examples.</p>
+   <br>
+   <!-- Examples -->
+   <h5>Examples</h5>
+   <p class="p">Node.js provides various math functions and properties:</p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+const num1 = 10;
+const num2 = 5;
+
+const sum = num1 + num2; // Addition
+const difference = num1 - num2; // Subtraction
+const product = num1 * num2; // Multiplication
+const quotient = num1 / num2; // Division
+
+const squareRoot = Math.sqrt(num1); // Square root
+const absoluteValue = Math.abs(num2); // Absolute value
+       </code></pre>
+   </div>
+   <br>
+   <!-- Code Example -->
+   <h5>Code Example</h5>
+   <div class="chart" id="chart2">
+       <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+// Math Operations
+const num1 = 10;
+const num2 = 5;
+
+const sum = num1 + num2;
+const difference = num1 - num2;
+const product = num1 * num2;
+const quotient = num1 / num2;
+
+const squareRoot = Math.sqrt(num1);
+const absoluteValue = Math.abs(num2);
+
+console.log(sum); // Output: 15
+console.log(difference); // Output: 5
+console.log(product); // Output: 50
+console.log(quotient); // Output: 2
+console.log(squareRoot); // Output: 3.1622776601683795
+console.log(absoluteValue); // Output: 5
+       </code></pre>
+   </div>
+   
+   <p class="p"><span>Explanation</span>: In the above examples, we perform common math operations in Node.js using arithmetic operators like <code>+</code>, <code>-</code>, <code>*</code>, and <code>/</code>. Additionally, we use the <code>Math</code> object to calculate the square root and absolute value of numbers.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+   </section>
+
+
+   <!--
+               <div class="container" id="">
+               <h4>
+                   
+               </h4>
+               <p class="p">
+                 
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-javascript" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p"><span>Explanation</span> :
+
+                  
+               </p>
+            </div>
+
+-->
+
+
+
+
+
+   <!-- Include Prism.js and its JavaScript language component for JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-javascript.min.js"></script>
+   <!-- Include Prism.js plugin for Node.js -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/node/prism-node.min.js"></script>
+
+   <!-- Your other script imports -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <script>
+      // This will highlight Node.js code blocks
+      Prism.highlightAll();
+   </script>
+   <script>
+      // Your other scripts
+      lightGallery(document.querySelector('.projects .box-container'));
+   </script>
+
+
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('.p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag>$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

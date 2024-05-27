@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>File Handling</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href=".\assets\css\chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- header section starts  -->
+
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_1.html">What is Flask?</a></h3>
+         <p><a href="#Introduction">Introduction</a></p>
+         <p><a href="#BasicFlaskCode">Basic Flask Code</a></p>
+         <p><a href="#connectflasktohtml">Connect Flask to HTML</a></p>
+         <p><a href="#htmltemplatingwithJinja2">HTML Templating with Jinja2</a></p>
+         <p><a href="#formhandling">Form Handling</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_2.html">Data Parsing</a></h3>
+         <p><a href="#fetchmethod">JS Fetch Method</a></p>
+         <p><a href="#jsondataparsing">Json Data Parsing</a></p>
+         <p><a href="#parsingarrayslists">Parsing Arrays and Lists</a></p>
+         <p><a href="#formhandling">Form Handling</a></p>
+         <p><a href="#parsingimages">Parsing Images</a></p>
+         <p><a href="#parsingvideosaudios">Parsing Videos and Audios</a></p>
+         <p><a href="#mathcalculation">Math Calculation</a></p>
+         <p><a href="#controlstructures">Control Structures: If...Else</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_3.html">File Handling</a></h3>
+         <p><a href="#accessingfiles">Accessing Files</a></p>
+         <p><a href="#readingfiles">Reading Files</a></p>
+         <p><a href="#writingfiles">Writing Files</a></p>
+         <p><a href="#createfiles">Create Files</a></p>
+         <p><a href="#deletingfiles">Deleting Files</a></p>
+         <p><a href="#creatingfolders">Creating Folders</a></p>
+         <p><a href="#savingvideosaudios">Saving Videos/Audios</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_4.html">Firebase</a></h3>
+         <p><a href="#firebaseconnection">Connection</a></p>
+         <p><a href="#firebasestorage">Storage</a></p>
+         <p><a href="#firebaserealtimedatabase">Real-time Database</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+<div class="container">
+    <p>
+       **Accessing Files**
+    </p>
+    <p class="p">
+        This section demonstrates how to access files using Flask.
+    </p>
+    <div class="chart" id="chart1">
+        <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, send_from_directory
+
+app = Flask(__name__)
+
+# Flask route to access files
+@app.route('/files/<path:filename>')
+def get_file(filename):
+    return send_from_directory('/path/to/directory', filename)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+        </code></pre>
+    </div>
+    <p class="p">
+        <span>Explanation:</span>
+        This Python code defines a Flask route '/files/<path:filename>' that accepts a filename as a parameter. The 'send_from_directory' function is used to send the file stored in the specified directory to the client.
+    </p>
+</div>
+<br>
+<div class="container">
+   <p>
+     **Reading Files**
+   </p>
+   <p class="p">
+       This section demonstrates how to read files using Flask.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, send_from_directory
+
+app = Flask(__name__)
+
+# Flask route to read files
+@app.route('/read/<path:filename>')
+def read_file(filename):
+   with open('/path/to/directory/' + filename, 'r') as file:
+       content = file.read()
+   return content
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+   </div>
+   <p class="p">
+       <span>Explanation:</span>
+       This Python code defines a Flask route '/read/<path:filename>' that accepts a filename as a parameter. It then reads the content of the specified file using the 'open' function with 'r' mode, and returns the content to the client.
+   </p>
+</div>
+<br>
+<div class="container">
+   <p>
+      **Writing Files**
+   </p>
+   <p class="p">
+       This section demonstrates how to write files using Flask.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask
+
+app = Flask(__name__)
+
+# Flask route to write files
+@app.route('/write')
+def write_file():
+   content = "This is a line to be written to the file."
+   with open('/path/to/directory/example.txt', 'w') as file:
+       file.write(content)
+   return 'File written successfully.'
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+   </div>
+   <p class="p">
+       <span>Explanation:</span>
+       This Python code defines a Flask route '/write' that writes a line of text to a file. It uses the 'open' function with 'w' mode to open the file for writing, then writes the content to the file using the 'write' method of the file object.
+   </p>
+</div>
+<br>
+
+<div class="container">
+   <p>
+      **Creating Files**
+   </p>
+   <p class="p">
+       This section demonstrates how to create files and add data to them using Flask.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask
+
+app = Flask(__name__)
+
+# Flask route to create files and add data
+@app.route('/create_and_add_data')
+def create_and_add_data():
+   filename = '/path/to/directory/example.txt'
+   content = "This is the content to be added to the file."
+   with open(filename, 'w') as file:
+       file.write(content)
+   return 'File created and data added successfully.'
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+   </div>
+   <p class="p">
+       <span>Explanation:</span>
+       This Python code defines a Flask route '/create_and_add_data' that creates a new file and adds data to it. It uses the 'open' function with 'w' mode to open the file for writing, then writes the content to the file using the 'write' method of the file object.
+   </p>
+</div>
+<br>
+
+<div class="container">
+   <p>
+      ** Creating Folders **
+   </p>
+   <p class="p">
+       This section demonstrates how to create folders and save files to them using Flask.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask
+import os
+
+app = Flask(__name__)
+
+# Flask route to create folders and save files
+@app.route('/create_folder_and_save_file')
+def create_folder_and_save_file():
+   folder_name = '/path/to/directory/example_folder'
+   file_name = os.path.join(folder_name, 'example.txt')
+   content = "This is the content to be added to the file."
+   # Create the folder if it doesn't exist
+   os.makedirs(folder_name, exist_ok=True)
+   # Write content to the file
+   with open(file_name, 'w') as file:
+       file.write(content)
+   return 'Folder created and file saved successfully.'
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+   </div>
+   <p class="p">
+       <span>Explanation:</span>
+       This Python code defines a Flask route '/create_folder_and_save_file' that creates a new folder and saves a file to it. It first defines the folder name and file name, then uses the 'os.makedirs' function to create the folder if it doesn't exist. After that, it writes content to the file using the 'open' function with 'w' mode.
+   </p>
+</div>
+<br>
+<div class="container">
+   <p>
+   **    Saving Videos **
+   </p>
+   <p class="p">
+       This section demonstrates how to save videos uploaded from a form to a folder in Flask.
+   </p>
+   <div class="chart" id="chart1">
+       <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, request, redirect, url_for
+import os
+
+app = Flask(__name__)
+
+# Route to upload videos
+@app.route('/upload_video', methods=['POST'])
+def upload_video():
+   if request.method == 'POST':
+       file = request.files['video']
+       if file:
+           folder_name = '/path/to/videos_folder'
+           os.makedirs(folder_name, exist_ok=True)
+           file.save(os.path.join(folder_name, file.filename))
+           return 'Video uploaded successfully.'
+   return redirect(url_for('index'))
+
+@app.route('/')
+def index():
+   return 'Welcome to Video Upload'
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+   </div>
+   <p class="p">
+       <span>Explanation:</span>
+       This Python code defines a Flask route '/upload_video' to handle video uploads. It checks if the request method is POST and if a file is present. If a file is found, it creates a new folder (if it doesn't exist already) and saves the uploaded video to that folder.
+   </p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+
+
+   </section>
+
+   <!--
+            <div class="container">
+               <h4>
+                 
+               </h4>
+               <p class="p">
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p">
+<span>Explanation:</span>
+               </p>
+            </div>
+-->
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-size:23px; font-family: "Krona One, sans-serif;  font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

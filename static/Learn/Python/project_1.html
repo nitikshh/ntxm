@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add Video To Drive</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      /* Ensure Prism.js code blocks are visible */
+      pre[class*="language-"] {
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+   <!-- header section starts  -->
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('Python_Page_1.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+      <div class="info">
+         <h3><a href="Python_Page_1.html">Introduction</a></h3>
+         <p><a href="#Overview">Overview of Python</a></p>
+         <p><a href="#Introduction">Installation and setup</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Python_Page_2.html">Basic Python Concepts</a></h3>
+         <p><a href="#variablesanddatatypes">Variables and Data Types</a></p>
+         <p><a href="#operators">Operators</a></p>
+         <p><a href="#controlflow">Control Flow (if statements, loops)</a></p>
+         <p><a href="#functions">Functions</a></p>
+         <p><a href="#datastructures">Data Structures (lists, tuples, dictionaries)</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#intermediatepython">Intermediate Python</a></h3>
+         <p><a href="#filehandling">File Handling</a></p>
+         <p><a href="#errorhandling">Error Handling (try-except blocks)</a></p>
+         <p><a href="#modulesandpackages">Modules and Packages</a></p>
+         <p><a href="#oop">Object-Oriented Programming (Classes and Objects)</a></p>
+         <p><a href="#regex">Regular Expressions</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#advancedpython">Advanced Python</a></h3>
+         <p><a href="#decorators">Decorators</a></p>
+         <p><a href="#generatorsanditerators">Generators and Iterators</a></p>
+         <p><a href="#lambdafunctions">Lambda Functions</a></p>
+         <p><a href="#threadingandmultiprocessing">Threading and Multiprocessing</a></p>
+         <p><a href="#unittesting">Unit Testing</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#pythonanddatabases">Python and Databases</a></h3>
+         <p><a href="#introductiontodatabases">Introduction to Databases</a></p>
+         <p><a href="#workingwithsqlite">Working with SQLite (basic CRUD operations)</a></p>
+         <p><a href="#introductiontomysql">Introduction to MySQL</a></p>
+         <p><a href="#usingmysqlwithpython">Using MySQL with Python (CRUD operations)</a></p>
+         <p><a href="#advancedmysqlqueries">Advanced MySQL Queries</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#webdevelopmentwithpython">Web Development with Python</a></h3>
+         <p><a href="#introductiontowebdevelopment">Introduction to Web Development</a></p>
+         <p><a href="#flaskordjango">Flask or Django Framework</a></p>
+         <p><a href="#handlinghttprequests">Handling HTTP Requests</a></p>
+         <p><a href="#templating">Templating</a></p>
+         <p><a href="#workingwithdatabasesinwebapplications">Working with Databases in Web Applications</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#deploymentandscaling">Deployment and Scaling</a></h3>
+         <p><a href="#deploymentoptions">Deployment Options (e.g., Heroku, AWS)</a></p>
+         <p><a href="#scalingstrategies">Scaling Strategies</a></p>
+         <p><a href="#loadbalancing">Load Balancing</a></p>
+         <p><a href="#databasescalingstrategies">Database Scaling Strategies</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#additionaltopics">Additional Topics</a></h3>
+         <p><a href="#webscrapingwithpython">Web Scraping with Python</a></p>
+         <p><a href="#datavisualization">Data Visualization (using libraries like Matplotlib, Seaborn)</a></p>
+         <p><a href="#machinelearningwithpython">Machine Learning with Python (overview)</a></p>
+         <p><a href="#naturallanguageprocessing">Natural Language Processing (overview)</a></p>
+         <p><a href="#buildingapiswithpython">Building APIs with Python</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#projectideas">Project Ideas</a></h3>
+         <p><a href="#simplecrudapplicationwithmysql">Simple CRUD application with MySQL</a></p>
+         <p><a href="#webscrapingproject">Web Scraping Project</a></p>
+         <p><a href="#webapplicationwithflaskorDjangoandmysql">Web Application with Flask/Django and MySQL</a></p>
+         <p><a href="#dataanalysisproject">Data Analysis Project</a></p>
+         <p><a href="#machinelearningproject">Machine Learning Project</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="#resourcesandfurtherlearning">Resources and Further Learning</a></h3>
+         <p><a href="#recommendedbooks">Recommended Books</a></p>
+         <p><a href="#onlinecoursesandtutorials">Online Courses and Tutorials</a></p>
+         <p><a href="#communityforumsandgroups">Community Forums and Groups</a></p>
+         <p><a href="#documentationandadditionalreading">Documentation and Additional Reading</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container">
+               <h4>
+                  Add Video To Drive By Python
+               </h4>
+
+               <p>
+                  We are Creating a Python Script to Just Add A Video to Google Drive
+               </p>
+             <div class="chart" id="chart1">
+    <pre onclick="copyText(this)"><code class="language-python" id="code">import os
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
+from oauth2client.service_account import ServiceAccountCredentials
+import progressbar</code></pre>
+</div>
+<p><span>Explanation</span> : 
+   <strong>import os</strong>: This imports the built-in <code>os</code> module, which provides a way of using operating system dependent functionality like reading or writing to the file system.<br><br>
+   <strong>from googleapiclient.discovery import build</strong>: This imports the <code>build</code> function from the <code>googleapiclient.discovery</code> module, which is used to construct a Resource object for interacting with a Google API service.<br><br>
+   <strong>from googleapiclient.http import MediaFileUpload</strong>: This imports the <code>MediaFileUpload</code> class from the <code>googleapiclient.http</code> module, which is used to upload files to Google services.<br><br>
+   <strong>from oauth2client.service_account import ServiceAccountCredentials</strong>: This imports the <code>ServiceAccountCredentials</code> class from the <code>oauth2client.service_account</code> module, which is used for authenticating using a service account with OAuth 2.0.<br><br>
+   <strong>import progressbar</strong>: This imports the <code>progressbar</code> module, which provides a visual indication of progress for long-running operations.
+</p>
+<h4>Step 2</h4>
+<p>Now we have a function to calculate the file size.</p>
+<div class="chart" id="chart1">
+    <pre onclick="copyText(this)"><code class="language-python" id="code">def get_file_size(file_path):
+    # Get the size of the file in bytes
+    return os.path.getsize(file_path)</code></pre>
+</div>
+<p><span>Explanation</span> : 
+   <ul>
+       <li><strong>def get_file_size(file_path):</strong> This defines a function named <code>get_file_size</code> that takes one argument, <code>file_path</code>.</li>
+       <li><strong># Get the size of the file in bytes:</strong> This is a comment explaining that the function will return the size of the file in bytes.</li>
+       <li><strong>return os.path.getsize(file_path)</strong>: This line uses the <code>os.path.getsize</code> method to get the size of the file specified by <code>file_path</code> and returns it.</li>
+   </ul>
+</p>
+
+<h4>Step 3</h4>
+
+<p>
+  This script demonstrates how to authenticate using a service account and upload a video to Google Drive. It includes a function that handles the authentication process, uploads the video in chunks, and provides a progress bar to indicate the upload status.
+</p>
+<div class="chart" id="chart1">
+    <pre onclick="copyText(this)"><code class="language-python" id="code">def authenticate_and_upload_video(video_path, folder_id):
+    # Authenticate using service account credentials
+    size = get_file_size(video_path)
+    print(f"File size: {size:.2f} bytes")
+
+    scope = [
+        'https://spreadsheets.google.com/feeds',
+        'https://www.googleapis.com/auth/drive'
+    ]
+    creds = ServiceAccountCredentials.from_json_keyfile_name(
+        'client_secrets.json', scope)
+
+    # Build Google Drive API service
+    drive_service = build('drive', 'v3', credentials=creds)
+
+    print('Uploading video to Google Drive............')
+
+    # Set the chunk size to 1 MB
+    chunk_size = 1024 * 1024
+    media = MediaFileUpload(video_path, mimetype='video/mp4', resumable=True, chunksize=chunk_size)
+    request = drive_service.files().create(
+        body={
+            'name': video_path.split('/')[-1],
+            'parents': [folder_id]
+        },
+        media_body=media
+    )
+
+    bar = progressbar.ProgressBar(maxval=size, widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])
+    bar.start()
+
+    response = None
+    try:
+        while response is None:
+            status, response = request.next_chunk()
+            if status:
+                bar.update(min(status.resumable_progress, size))
+    except Exception as e:
+        print(f"Error during upload: {e}")
+        print(f"Error details: {response}")
+        bar.finish()
+        return None
+
+    bar.finish()
+    print('Video upload completed.')
+
+    video_id = response['id']  # Get the ID of the uploaded video
+    print(f"Video uploaded successfully: {video_path.split('/')[-1]} (ID: {video_id})")
+
+    return video_id</code></pre>
+</div>
+<p><span>Explanation</span> : <br><br>
+   This function handles the authentication and upload process of a video to Google Drive:<br><br>
+   <ul>
+       <li><strong>def authenticate_and_upload_video(video_path, folder_id):</strong> Defines a function named <code>authenticate_and_upload_video</code> that takes two parameters: <code>video_path</code> (the path to the video file) and <code>folder_id</code> (the ID of the Google Drive folder).</li>
+       <li><strong>size = get_file_size(video_path)</strong>: Calls the <code>get_file_size</code> function to get the size of the video file in bytes and stores it in the variable <code>size</code>.</li>
+       <li><strong>print(f"File size: {size:.2f} bytes")</strong>: Prints the size of the file to the console.</li>
+       <li><strong>scope</strong>: Defines the scope for accessing Google Drive and Google Spreadsheets APIs.</li>
+       <li><strong>creds = ServiceAccountCredentials.from_json_keyfile_name('client_secrets.json', scope)</strong>: Authenticates using service account credentials from a JSON key file.</li>
+       <li><strong>drive_service = build('drive', 'v3', credentials=creds)</strong>: Builds the Google Drive API service using the authenticated credentials.</li>
+       <li><strong>print('Uploading video to Google Drive............')</strong>: Prints a message indicating the start of the upload process.</li>
+       <li><strong>chunk_size = 1024 * 1024</strong>: Sets the chunk size for the upload to 1 MB.</li>
+       <li><strong>media = MediaFileUpload(video_path, mimetype='video/mp4', resumable=True, chunksize=chunk_size)</strong>: Creates a <code>MediaFileUpload</code> object for the video file, specifying its MIME type and chunk size.</li>
+       <li><strong>request = drive_service.files().create(body={'name': video_path.split('/')[-1], 'parents': [folder_id]}, media_body=media)</strong>: Creates an upload request for the video file, setting its name and parent folder ID.</li>
+       <li><strong>bar = progressbar.ProgressBar(maxval=size, widgets=[progressbar.Bar('=', '[', ']'), ' ', progressbar.Percentage()])</strong>: Initializes a progress bar to visually indicate the upload progress.</li>
+       <li><strong>response = None</strong>: Initializes the response variable to <code>None</code>.</li>
+       <li><strong>while response is None:</strong>: Starts a loop to upload the video in chunks until the upload is complete.</li>
+       <li><strong>status, response = request.next_chunk()</strong>: Uploads the next chunk of the video file.</li>
+       <li><strong>if status: bar.update(min(status.resumable_progress, size))</strong>: Updates the progress bar based on the number of bytes uploaded so far.</li>
+       <li><strong>except Exception as e: ...</strong>: Handles any exceptions that occur during the upload process, prints the error message, and stops the progress bar.</li>
+       <li><strong>video_id = response['id']</strong>: Retrieves the ID of the uploaded video from the response.</li>
+       <li><strong>print(f"Video uploaded successfully: {video_path.split('/')[-1]} (ID: {video_id})")</strong>: Prints a success message with the video file name and its ID on Google Drive.</li>
+       <li><strong>return video_id</strong>: Returns the ID of the uploaded video.</li>
+   </ul>
+</p>
+
+
+<h4>step 4</h4>
+             <p>
+  This script contains the main method that executes the video upload process. It specifies the video file path and the Google Drive folder ID, calls the function to authenticate and upload the video, and then prints the result.
+</p>
+<div class="chart" id="chart1">
+    <pre onclick="copyText(this)"><code class="language-python" id="code">if __name__ == "__main__":
+    video_path_to_upload = 'videos/How our solar system works.mp4'
+    folder_id_to_upload = '1RUDPlOZH4SGM0JfF1LMwzTvnHaJlmRCj'
+
+    uploaded_video_id = authenticate_and_upload_video(video_path_to_upload, folder_id_to_upload)
+
+    if uploaded_video_id is not None:
+        print(f"Uploaded video ID: {uploaded_video_id}")
+    else:
+        print("File upload failed.")</code></pre>
+</div>
+<p><span>Explanation</span> : <br><br>
+   Here is the Main Method:<br><br>
+   <ul>
+       <li><strong>if __name__ == "__main__":</strong> This is a standard boilerplate in Python that ensures the following code block runs only if the script is executed directly, not when imported as a module.</li>
+       <li><strong>video_path_to_upload = 'videos/How our solar system works.mp4'</strong>: Defines the path to the video file that will be uploaded.</li>
+       <li><strong>folder_id_to_upload = '1RUDPlOZH4SGM0JfF1LMwzTvnHaJlmRCj'</strong>: Specifies the ID of the Google Drive folder where the video will be uploaded.</li>
+       <li><strong>uploaded_video_id = authenticate_and_upload_video(video_path_to_upload, folder_id_to_upload)</strong>: Calls the <code>authenticate_and_upload_video</code> function with the video path and folder ID as arguments, and stores the returned video ID in the variable <code>uploaded_video_id</code>.</li>
+       <li><strong>if uploaded_video_id is not None:</strong> Checks if the upload was successful by verifying that <code>uploaded_video_id</code> is not <code>None</code>.</li>
+       <li><strong>print(f"Uploaded video ID: {uploaded_video_id}")</strong>: If the upload was successful, prints the ID of the uploaded video.</li>
+       <li><strong>else: print("File upload failed.")</strong>: If the upload failed (i.e., <code>uploaded_video_id</code> is <code>None</code>), prints an error message.</li>
+   </ul>
+</p>
+
+
+
+
+
+            </div>
+         </section>
+      </main>
+
+
+
+   </section>
+
+   <!--
+   <div class="container" id="BasicFlaskCode">
+               <h4>
+                   
+               </h4>
+               <p  >
+                  
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p  ><span>Explanation</span> :
+
+               </p>
+            </div>
+-->
+
+
+
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-family: "Krona One, sans-serif;font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>

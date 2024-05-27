@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Basic Flask Methods</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href=".\assets\css\chapterPage.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/chapterPage.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+   <style>
+      code {
+         font-family: "Courier Prime", monospace;
+         font-weight: 400;
+         font-style: normal;
+      }
+
+      .courier-prime-bold {
+         font-family: "Courier Prime", monospace;
+         font-weight: 700;
+         font-style: normal;
+      }
+
+      pre[class*="language-"] {
+         font-family: "Courier Prime", monospace;
+         background: #ffffff;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- header section starts  -->
+
+   <header class="header">
+      <style>
+         .techxcelerate {
+            display: flex;
+            flex-direction: column;
+            margin: -15px 0;
+         }
+
+         .techxcelerate h1 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+            font-size: 40px;
+            color: black;
+         }
+
+         .techxcelerate div {
+            display: flex;
+            margin-top: -8px;
+         }
+
+         .techxcelerate div text {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 17px;
+            color: black;
+         }
+
+         .techxcelerate div span {
+            font-family: "Montserrat", sans-serif;
+            font-weight: bold;
+            font-size: 30px;
+            margin-top: -5px;
+            color: red;
+         }
+      </style>
+      <div class="techxcelerate">
+         <h1>NTXM</h1>
+         <div>
+            <text>Tech</text><span>X</span><text>celerate</text>
+         </div>
+      </div>
+
+      <nav class="navbar">
+         <a href="#" onclick="redirectTo('/techxcelerate/index.html')">home</a>
+         <a href="#">projects</a>
+      </nav>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="info-btn" class="fas fa-info-circle"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="login-btn" class="fas fa-user"></div>
+      </div>
+
+      <form action="" class="search-form">
+         <input type="search" name="" placeholder="search here..." id="search-box">
+         <label for="search-box" class="fas fa-search"></label>
+      </form>
+
+      <form action="" class="login-form">
+         <h3>login form</h3>
+         <input type="email" placeholder="enter your email" class="box">
+         <input type="password" placeholder="enter your password" class="box">
+         <div class="flex">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me">remember me</label>
+            <a href="#">forgot password?</a>
+         </div>
+         <input type="submit" value="login now" class="btn">
+         <p>don't have an account <a href="#">create one!</a></p>
+      </form>
+
+   </header>
+   <style>
+      .info h3 a {
+         text-decoration: none;
+         color: black;
+      }
+
+      .info p a {
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+   <div class="contact-info">
+
+      <div id="close-contact-info" class="fas fa-times"></div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_1.html">What is Flask?</a></h3>
+         <p><a href="#Introduction">Introduction</a></p>
+         <p><a href="#BasicFlaskCode">Basic Flask Code</a></p>
+         <p><a href="#connectflasktohtml">Connect Flask to HTML</a></p>
+         <p><a href="#htmltemplatingwithJinja2">HTML Templating with Jinja2</a></p>
+         <p><a href="#formhandling">Form Handling</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_2.html">Data Parsing</a></h3>
+         <p><a href="#fetchmethod">JS Fetch Method</a></p>
+         <p><a href="#jsondataparsing">Json Data Parsing</a></p>
+         <p><a href="#parsingarrayslists">Parsing Arrays and Lists</a></p>
+         <p><a href="#formhandling">Form Handling</a></p>
+         <p><a href="#parsingimages">Parsing Images</a></p>
+         <p><a href="#parsingvideosaudios">Parsing Videos and Audios</a></p>
+         <p><a href="#mathcalculation">Math Calculation</a></p>
+         <p><a href="#controlstructures">Control Structures: If...Else</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_3.html">File Handling</a></h3>
+         <p><a href="#accessingfiles">Accessing Files</a></p>
+         <p><a href="#readingfiles">Reading Files</a></p>
+         <p><a href="#writingfiles">Writing Files</a></p>
+         <p><a href="#createfiles">Create Files</a></p>
+         <p><a href="#deletingfiles">Deleting Files</a></p>
+         <p><a href="#creatingfolders">Creating Folders</a></p>
+         <p><a href="#savingvideosaudios">Saving Videos/Audios</a></p>
+      </div>
+
+      <div class="info">
+         <h3><a href="Flask_Page_3.html">Firebase</a></h3>
+         <p><a href="#firebaseconnection">Connection</a></p>
+         <p><a href="#firebasestorage">Storage</a></p>
+         <p><a href="#firebaserealtimedatabase">Real-time Database</a></p>
+      </div>
+
+      <div class="share">
+         <a href="#" class="fab fa-facebook-f"></a>
+         <a href="#" class="fab fa-twitter"></a>
+         <a href="#" class="fab fa-instagram"></a>
+         <a href="#" class="fab fa-linkedin"></a>
+      </div>
+
+   </div>
+
+
+
+
+
+
+
+   <section class="home">
+      <main>
+         <section>
+            <div class="container">
+               <h4>Data Parsing</h4>
+               <p class="p">In this example, we'll demonstrate how to pass variables from Flask to HTML templates.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    name = "John"
+    age = 30
+    return render_template('index.html', name=name, age=age)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+        </code></pre>
+               </div>
+               <p class="p">Above is the Python code where we define a Flask route '/' and pass variables 'name' and
+                  'age' to the 'index.html' template.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;title>Flask Template&lt;/title>
+&lt;/head>
+&lt;body>
+    &lt;h1>Hello, {{ name }}!&lt;/h1>
+    &lt;p>You are {{ age }} years old.&lt;/p>
+&lt;/body>
+&lt;/html>
+        </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates how we access the variables 'name' and 'age' passed from
+                  Flask using Jinja2 templating syntax.</p>
+            </div> <br>
+            <div class="container">
+               <p>**Passing Data to HTML using Fetch JS Method**</p>
+               <p class="p">In this example, we'll demonstrate how to use the Fetch API in JavaScript to retrieve data
+                  from a Flask server and display it on an HTML page.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/name')
+def name():
+   name = "John"
+   return name
+
+@app.route('/age')
+def age():
+   age = 37
+   return age
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines routes for retrieving the name and age.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Fetch Data&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;div>
+       &lt;p id="name">Name: &lt;/p>
+       &lt;p id="age">Age: &lt;/p>
+   &lt;/div>
+
+   &lt;script>
+       fetch('/name')
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('name').innerText += data;
+           });
+
+       fetch('/age')
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('age').innerText += data;
+           });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates how to use the Fetch API to retrieve data from Flask routes
+                  '/name' and '/age', and then dynamically update the content of ` &lt;p>` elements with the received
+                  data.</p>
+            </div><br>
+
+            <div class="container">
+               <p>**Passing Data to HTML using JSON Format**</p>
+               <p class="p">In this example, we'll demonstrate how to use JSON format to pass multiple pieces of data
+                  from Flask to HTML.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/user')
+def user():
+   name = "John"
+   age = 37
+   return jsonify(name=name, age=age)
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines a route '/user' and returns JSON data containing
+                  the user's name and age.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>User Data&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;div>
+       &lt;p id="userData">&lt;/p>
+   &lt;/div>
+
+   &lt;script>
+       fetch('/user')
+           .then(response => response.json())
+           .then(data => {
+               document.getElementById('userData').innerText = `Name: ${data.name}, Age: ${data.age}`;
+           });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates how to use the Fetch API to retrieve JSON data from the
+                  Flask route '/user' and display the user's name and age on the webpage.</p>
+            </div> <br>
+
+            <div class="container">
+               <p>**Parsing Arrays and Lists with Fetch Method**</p>
+               <p class="p">In this example, we'll demonstrate how to parse arrays and lists returned from a Flask
+                  server using the Fetch API.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/users')
+def users():
+   users = ["Alice", "Bob", "Charlie"]
+   return jsonify(users=users)
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines a route '/users' and returns an array of user
+                  names.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>User List&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;ul id="userList">&lt;/ul>
+
+   &lt;script>
+       fetch('/users')
+           .then(response => response.json())
+           .then(data => {
+               const userList = document.getElementById('userList');
+               data.users.forEach(user => {
+                   const listItem = document.createElement('li');
+                   listItem.textContent = user;
+                   userList.appendChild(listItem);
+               });
+           });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates how to use the Fetch API to retrieve an array of user names
+                  from the Flask route '/users' and dynamically create a list of users on the webpage.</p>
+            </div>
+
+
+
+            <br>
+            <div class="container">
+               <h4>Form Handling</h4>
+               <p class="p">In this example, we'll demonstrate how to handle form data in Flask and send it using the
+                  Fetch API.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Form Handling&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;form id="myForm">
+       &lt;label for="name">Name:&lt;/label>
+       &lt;input type="text" id="name" name="name">&lt;br>
+
+       &lt;label for="age">Age:&lt;/label>
+       &lt;input type="text" id="age" name="age">&lt;br>
+
+       &lt;button type="submit">Submit&lt;/button>
+   &lt;/form>
+
+   &lt;script>
+       document.getElementById('myForm').addEventListener('submit', function(event) {
+           event.preventDefault();
+           
+           const formData = new FormData(this);
+           
+           fetch('/submit-form', {
+               method: 'POST',
+               body: formData
+           })
+           .then(response => response.json())
+           .then(data => {
+               console.log(data);
+           })
+           .catch(error => {
+               console.error('Error:', error);
+           });
+       });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates a simple form with input fields for name and age. When the
+                  form is submitted, the data is sent to the '/submit-form' route in Flask using the Fetch API.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/submit-form', methods=['POST'])
+def submit_form():
+   name = request.form['name']
+   age = request.form['age']
+   return jsonify({'name': name, 'age': age})
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines a route '/submit-form' to handle form
+                  submissions. It retrieves the name and age from the form data and returns a JSON response containing
+                  the submitted data.</p>
+            </div>
+            <br>
+
+
+            <div class="container">
+               <p>**Parsing Images with Fetch Method (Including Image URL)**</p>
+               <p class="p">In this example, we'll demonstrate how to parse images and image URLs returned from a Flask
+                  server using the Fetch API.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, jsonify, send_file
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/image')
+def image():
+   return send_file('path/to/image.jpg', mimetype='image/jpg')
+
+@app.route('/image_data')
+def image_data():
+   image_data = {
+       'url': 'https://static.vecteezy.com/system/resources/thumbnails/025/284/015/small_2x/close-up-growing-beautiful-forest-in-glass-ball-and-flying-butterflies-in-nature-outdoors-spring-season-concept-generative-ai-photo.jpg',
+       'alt_text': 'Image Alt Text'
+   }
+   return jsonify(image_data)
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines a route '/image_data' and returns image data,
+                  including the image URL and alt text.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Image Viewer&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;img id="image" src="" alt="Image" />
+   &lt;img id="imageByUrl" src="" alt="Image By Url" />
+
+   &lt;script>
+       fetch('/image_data')
+           .then(response => response.json())
+           .then(data => {
+               const imageUrl = data.url;
+               const altText = data.alt_text;
+               document.getElementById('imageByUrl').src = imageUrl;
+               document.getElementById('imageByUrl').alt = altText;
+           });
+
+       fetch('/image')
+           .then(response => response.blob())
+           .then(blob => {
+               const imageUrl = URL.createObjectURL(blob);
+               document.getElementById('image').src = imageUrl;
+           });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p">The above HTML code demonstrates how to use the Fetch API to retrieve image data from the
+                  Flask route '/image_data', including the image URL and alt text, and display the image on the webpage.
+                  Additionally, it fetches the image directly from the '/image' route and displays it on the webpage.
+               </p>
+            </div>
+
+            <br>
+            <div class="container">
+               <p>**Parsing Images and Saving Them**</p>
+               <p class="p">In this example, we'll show how to upload images using a form, parse them in Flask, and save
+                  them to the parent directory.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+   return render_template('index.html')
+
+@app.route('/upload', methods=['POST'])
+def upload():
+   if request.method == 'POST':
+       file = request.files['file']
+       if file:
+           filename = file.filename
+           file.save(os.path.join(os.getcwd(), filename))
+           return 'File Uploaded Successfully'
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">Above is the Flask server code that defines a route '/upload' to handle file uploads. It
+                  saves the uploaded file to the parent directory of the Flask app.</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Image Upload&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;form action="/upload" method="post" enctype="multipart/form-data">
+       &lt;input type="file" name="file" accept="image/*">
+       &lt;input type="submit" value="Upload">
+   &lt;/form>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p>
+                  Here is the code with Fetch API
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+  &lt;!DOCTYPE html>
+  &lt;html lang="en">
+  &lt;head>
+      &lt;meta charset="UTF-8">
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+      &lt;title>Image Upload&lt;/title>
+  &lt;/head>
+  &lt;body>
+      &lt;form id="uploadForm">
+          &lt;input type="file" id="fileInput" accept="image/*">
+          &lt;input type="submit" value="Upload">
+      &lt;/form>
+  
+      &lt;script>
+          const uploadForm = document.getElementById('uploadForm');
+          const fileInput = document.getElementById('fileInput');
+  
+          uploadForm.addEventListener('submit', async (e) => {
+              e.preventDefault();
+  
+              const formData = new FormData();
+              formData.append('file', fileInput.files[0]);
+  
+              const response = await fetch('/upload', {
+                  method: 'POST',
+                  body: formData
+              });
+              
+              const result = await response.text();
+              console.log(result);
+          });
+      &lt;/script>
+  &lt;/body>
+  &lt;/html>
+      </code></pre>
+               </div>
+
+               <p class="p">The above HTML code creates a form for uploading images. When submitted, it sends the image
+                  file to the '/upload' route in Flask.</p>
+            </div>
+            <br>
+            <div class="container">
+               <p>**Parsing Audio and Videos and Saving to Parent Directory**</p>
+               <p class="p">To parse audio and videos and save them to the parent directory using Flask, follow these
+                  steps:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request
+import os
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return render_template('index.html')
+
+@app.route('/upload', methods=['POST'])
+def upload():
+  if request.method == 'POST':
+      file = request.files['file']
+      if file:
+          filename = file.filename
+          file.save(os.path.join(os.getcwd(), filename))
+          return 'File Uploaded Successfully'
+
+if __name__ == '__main__':
+  app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation:</span></p>
+               <ul class="p">
+                  <li>Imports the necessary modules such as Flask and os.</li>
+                  <li>Initializes the Flask application.</li>
+                  <li>Defines the route for the homepage ("/") and renders the "index.html" template.</li>
+                  <li>Defines the "/upload" route to handle file uploads via POST requests.</li>
+                  <li>Saves the uploaded file to the current working directory.</li>
+                  <li>Returns a success message if the file is uploaded successfully.</li>
+                  <li>Runs the Flask application if the script is executed directly.</li>
+               </ul>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+   &lt;meta charset="UTF-8">
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+   &lt;title>Audio/Video Upload&lt;/title>
+&lt;/head>
+&lt;body>
+   &lt;form id="uploadForm" enctype="multipart/form-data">
+       &lt;input type="file" id="fileInput" accept="audio/*,video/*">
+       &lt;input type="submit" value="Upload">
+   &lt;/form>
+
+   &lt;script>
+       const uploadForm = document.getElementById('uploadForm');
+       const fileInput = document.getElementById('fileInput');
+
+       uploadForm.addEventListener('submit', async (e) => {
+           e.preventDefault();
+
+           const formData = new FormData();
+           formData.append('file', fileInput.files[0]);
+
+           const response = await fetch('/upload', {
+               method: 'POST',
+               body: formData
+           });
+           
+           const result = await response.text();
+           console.log(result);
+       });
+   &lt;/script>
+&lt;/body>
+&lt;/html>
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation:</span></p>
+               <ul class="p">
+                  <li>Defines an HTML form with an input field for file uploads.</li>
+                  <li>Uses JavaScript to handle form submission via the fetch API.</li>
+                  <li>When the form is submitted, it prevents the default behavior (page refresh).</li>
+                  <li>Creates a new FormData object to store the file data.</li>
+                  <li>Appends the selected file to the FormData object.</li>
+                  <li>Sends a POST request to the "/upload" endpoint with the file data.</li>
+                  <li>Logs the server's response to the console.</li>
+               </ul>
+            </div>
+            <br>
+
+            <div class="container">
+               <p>**Math Calculation**</p>
+               <p class="p">To calculate the current flowing, by Flask and display the calculation result in HTML,
+                  follow these steps:</p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+  return render_template('index.html')
+
+@app.route('/calculate', methods=['POST'])
+def calculate():
+  if request.method == 'POST':
+      voltage = float(request.form['voltage'])
+      resistance = float(request.form['resistance'])
+      current = voltage / resistance
+      return jsonify({'current': current})
+
+if __name__ == '__main__':
+  app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation:</span></p>
+               <ul class="p">
+                  <li>Defines a Flask application.</li>
+                  <li>Defines the route for the homepage ("/") and renders the "index.html" template.</li>
+                  <li>Defines the "/calculate" route to handle POST requests for calculating the current.</li>
+                  <li>Extracts the voltage and resistance values from the form data.</li>
+                  <li>Calculates the current using Ohm's Law (current = voltage / resistance).</li>
+                  <li>Returns the current value as JSON data.</li>
+               </ul>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Current Calculation&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Current Calculation&lt;/h1&gt;
+    &lt;form id="calcForm"&gt;
+        &lt;label for="voltage"&gt;Voltage (V):&lt;/label&gt;
+        &lt;input type="number" id="voltage" name="voltage" step="any" required&gt;&lt;br&gt;
+        &lt;label for="resistance"&gt;Resistance (Ω):&lt;/label&gt;
+        &lt;input type="number" id="resistance" name="resistance" step="any" required&gt;&lt;br&gt;
+        &lt;button type="submit"&gt;Calculate Current&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;div id="result"&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        const calcForm = document.getElementById('calcForm');
+        const resultDiv = document.getElementById('result');
+
+        calcForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(calcForm);
+            
+            const response = await fetch('/calculate', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+            resultDiv.innerText = `Current: ${data.current} A`;
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+       </code></pre>
+               </div>
+               <p class="p"><span>Explanation:</span></p>
+               <ul class="p">
+                  <li>Defines an HTML form to input voltage and resistance values.</li>
+                  <li>Uses JavaScript to handle form submission via the fetch API.</li>
+                  <li>When the form is submitted, it prevents the default behavior (page refresh).</li>
+                  <li>Creates a new FormData object to store the form data.</li>
+                  <li>Sends a POST request to the "/calculate" endpoint with the form data.</li>
+                  <li>Receives the current calculation result from the Flask server as JSON data.</li>
+                  <li>Displays the current value in the resultDiv element.</li>
+               </ul>
+            </div>
+
+            <br>
+
+            <div class="container">
+               <p>
+                  ** Conditional Statements**
+               </p>
+               <p class="p">
+                  This section demonstrates how to use conditional statements in Flask routes and handle them in HTML
+                  using the Fetch API along with a form to input age.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+# Flask route with conditional statement
+@app.route('/check_age', methods=['GET', 'POST'])
+def check_age():
+   if request.method == 'POST':
+       age = int(request.form['age'])
+       if age >= 18:
+           return 'You are an adult.'
+       else:
+           return 'You are a minor.'
+   return render_template('index.html')
+
+if __name__ == '__main__':
+   app.run(debug=True)
+       </code></pre>
+               </div>
+               <p class="p">
+                  <span>Explanation:</span>
+                  This Python code defines a Flask route '/check_age' that accepts both GET and POST requests. When a
+                  POST request is received, it extracts the age from the form data and performs a conditional check. If
+                  the age is greater than or equal to 18, it returns 'You are an adult.' Otherwise, it returns 'You are
+                  a minor.' The route renders the 'index.html' template for GET requests.
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-html" id="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+   &lt;meta charset="UTF-8"&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+   &lt;title&gt;Conditional Statements&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+   &lt;form action="/check_age" method="post"&gt;
+       &lt;label for="age"&gt;Enter your age:&lt;/label&gt;
+       &lt;input type="number" id="age" name="age" required&gt;
+       &lt;button type="submit"&gt;Submit&lt;/button&gt;
+   &lt;/form&gt;
+   &lt;div id="age_result"&gt;&lt;/div&gt;
+
+   &lt;!-- JavaScript to fetch age data from Flask --&gt;
+   &lt;script&gt;
+       document.querySelector('form').addEventListener('submit', function(event) {
+           event.preventDefault();
+           fetch('/check_age', {
+               method: 'POST',
+               body: new FormData(document.querySelector('form'))
+           })
+           .then(response => response.text())
+           .then(data => {
+               document.getElementById('age_result').textContent = data;
+           });
+       });
+   &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+       </code></pre>
+               </div>
+               <p class="p">
+                  <span>Explanation:</span>
+                  This HTML code defines a form to input the age. When the form is submitted, the age data is sent to
+                  the Flask route '/check_age' using a POST request. The JavaScript fetches the age data from the Flask
+                  route and updates the 'age_result' div with the response.
+               </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+         </section>
+      </main>
+
+
+   </section>
+
+   <!--
+            <div class="container">
+               <h4>
+                 
+               </h4>
+               <p class="p">
+
+               </p>
+               <div class="chart" id="chart1">
+                  <pre onclick="copyText(this)"><code class="language-python" id="code">
+
+                  </code></pre>
+               </div>
+               <p class="p">
+<span>Explanation:</span>
+               </p>
+            </div>
+-->
+
+
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+   <!-- custom js file link  -->
+   <script src="./assets/js/chapterPage.js"></script>
+
+   <script>
+
+      lightGallery(document.querySelector('.projects .box-container'));
+
+   </script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js"></script>
+   <script>
+      Prism.highlightAll();
+   </script>
+   <script>
+      function copyText(element) {
+         var text = element.textContent;
+
+         navigator.clipboard.writeText(text)
+            .then(function () {
+               alert("Text copied to clipboard!");
+            })
+            .catch(function (error) {
+               console.error("Failed to copy text: ", error);
+            });
+      }
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            var regex = /`([^`]+)`/g;
+            var styledText = text.replace(regex, '<redtag class="backtick-text">$1</redtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+   <script>
+      window.addEventListener('DOMContentLoaded', function () {
+         var paragraphs = document.querySelectorAll('p');
+         paragraphs.forEach(function (paragraph) {
+            var text = paragraph.innerHTML;
+            // Regular expression to match text within **double asterisks**
+            var regex = /\*\*([^*]+)\*\*/g;
+            var styledText = text.replace(regex, '<boldtag style="font-weight: bold; font-size:23px; font-family: "Krona One, sans-serif;  font-weight: 400;">$1</boldtag>');
+            paragraph.innerHTML = styledText;
+         });
+      });
+   </script>
+</body>
+
+</html>
